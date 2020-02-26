@@ -8693,10 +8693,12 @@ react-fast-compare@^2.0.2:
   resolved "https://registry.yarnpkg.com/react-fast-compare/-/react-fast-compare-2.0.4.tgz#e84b4d455b0fec113e0402c329352715196f81f9"
   integrity sha512-suNP+J1VU1MWFKcyt7RtjiSWUjvidmQSlqu+eHslq+342xCbGTYmC0mEhPCOHxlW0CywylOC1u2DFAT+bv4dBw==
 
-react-github-corner@^2.3.0:
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/react-github-corner/-/react-github-corner-2.3.0.tgz#73ab17324b670c9cd955567b09663d385cfb05ef"
-  integrity sha512-yVh8wtAfVA5CQYn8ygyxtsuCMoyiSEBVnzQJ3ynyWxZ1BzT2MHop4baZn/PnUnU9Yh8mwhLS5Y1RVxM5zNotGw==
+react-github-corners@^0.2.1:
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/react-github-corners/-/react-github-corners-0.2.1.tgz#988b4a77a1ca6027569e075c6b0f271a2e526027"
+  integrity sha1-mItKd6HKYCdWngdcaw8nGi5SYCc=
+  dependencies:
+    react "*"
 
 react-helmet@^5.2.1:
   version "5.2.1"
@@ -8809,7 +8811,7 @@ react-side-effect@^1.1.0:
   dependencies:
     shallowequal "^1.0.1"
 
-react@^16.12.0:
+react@*, react@^16.12.0:
   version "16.12.0"
   resolved "https://registry.yarnpkg.com/react/-/react-16.12.0.tgz#0c0a9c6a142429e3614834d5a778e18aa78a0b83"
   integrity sha512-fglqy3k5E+81pA8s+7K0/T3DBCF0ZDOher1elBFzF7O6arXJgzyu/FW+COxFvAWXJoJN9KIZbT2LXlukwphYTA==
