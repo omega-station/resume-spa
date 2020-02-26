@@ -3,7 +3,7 @@ import { InMemoryCache } from 'apollo-cache-inmemory';
 import React from 'react';
 import { ApolloProvider } from 'react-apollo';
 import Router from '../Router';
-import GithubCorner from 'react-github-corner';
+import GithubCorner from 'react-github-corners';
 import StyledApp from './style';
 
 const client: DefaultClient<unknown> = new ApolloClient({
@@ -14,7 +14,7 @@ const client: DefaultClient<unknown> = new ApolloClient({
 const App = (): JSX.Element => {
   return (
     <StyledApp>
-      <GithubCorner href="https://github.com/omega-station/resume-spa" size="120" />
+      <GithubCorner url="https://github.com/omega-station/resume-spa" target="_blank" className="foo" />
       <ApolloProvider client={client}>
         <Router />
       </ApolloProvider>

@@ -1,10 +1,11 @@
 import styled from '@emotion/styled';
 
 const StyledApp = styled.div`
-  .github-corner {
+  .GithubCorner {
     position: fixed;
     top: 0;
     right: 0;
+    width: 120px;
   }
 `;
 
