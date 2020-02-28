@@ -38,9 +38,11 @@ const SectionDefault = (props: Props): JSX.Element => {
       <div dangerouslySetInnerHTML={{ __html: copy }}></div>
       {points && (
         <ul>
-          {points.map((point: any, i: number) => {
-            return <li key={i}>{point.item}</li>;
-          })}
+          {points.map(
+            (point: any, i: number): JSX.Element => (
+              <li key={i}>{point.item}</li>
+            )
+          )}
         </ul>
       )}
     </>

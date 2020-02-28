@@ -1,4 +1,8 @@
-export const getHeadings = (data: any): any => {
+export interface Headings {
+  [type: string]: string;
+}
+
+export const getHeadings = (data: any): Headings => {
   const resume = data.options.resume;
   return {
     about: resume.aboutHeading,

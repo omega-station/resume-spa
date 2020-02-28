@@ -9,12 +9,8 @@ const PageType1 = (): JSX.Element => {
     <StyledPage>
       <header>
         <div>
-          <div>
-            <Masthead isAscii={true} />
-          </div>
-          <div>
-            <Contact hasTitle={false} />
-          </div>
+          <Masthead isAscii={true} />
+          <Contact hasTitle={false} />
         </div>
         <MenuPage />
       </header>

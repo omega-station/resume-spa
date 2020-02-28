@@ -4,15 +4,18 @@ import Masthead from '../../../core/Masthead';
 import MenuPage from '../../../core/MenuPage';
 import MenuSection from '../../../core/MenuSection';
 import StyledHeader from './style';
+import Contact from '../../../core/Contact';
 
 const Header = (): JSX.Element => {
   const menuItem: JSX.Element = (
     <>
       {Array(5)
         .fill(0)
-        .map((value: number, i: number) => (
-          <img key={i} src={lemming} alt={`Lemming ${i + 1}`} />
-        ))}
+        .map(
+          (value: number, i: number): JSX.Element => (
+            <img key={i} src={lemming} alt={`Lemming ${i + 1}`} />
+          )
+        )}
     </>
   );
 
@@ -21,6 +24,7 @@ const Header = (): JSX.Element => {
       <MenuPage />
       <div>
         <Masthead />
+        <Contact hasTitle={false} />
         <MenuSection items={[menuItem]} />
       </div>
     </StyledHeader>
