@@ -36,8 +36,9 @@ const header = css`
         flex-basis: 30%;
         display: flex;
         flex-direction: column;
-        text-align: right;
         justify-content: center;
+        text-align: right;
+        margin: 0 40px 0 0;
 
         span {
           display: inline-block;

@@ -5,6 +5,7 @@ import Loading from '../Loading';
 import { GQL_QUERY } from './graphql';
 import { heading, subheading } from '../../core/Masthead/ascii';
 import { Props } from './definition';
+import StyledMasthead from './style';
 
 const MenuPage = (props: Props): JSX.Element => {
   const { isAscii = false }: Props = props;
@@ -16,7 +17,7 @@ const MenuPage = (props: Props): JSX.Element => {
   const settings: any = data.generalSettings;
 
   return (
-    <>
+    <StyledMasthead>
       {isAscii === false ? (
         <>
           <h1>{settings.title}</h1>
@@ -28,7 +29,7 @@ const MenuPage = (props: Props): JSX.Element => {
           <pre>{subheading.desktop}</pre>
         </>
       )}
-    </>
+    </StyledMasthead>
   );
 };
 

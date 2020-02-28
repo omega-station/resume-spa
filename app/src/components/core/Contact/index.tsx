@@ -1,9 +1,10 @@
 import React from 'react';
-import { useQuery, QueryResult } from 'react-apollo';
-import { GQL_QUERY } from './graphql';
+import { QueryResult, useQuery } from 'react-apollo';
 import Error from '../../core/Error';
 import Loading from '../../core/Loading';
-import { Props } from './definition';
+import { gqlContact, gqlSettings, Props } from './definition';
+import { GQL_QUERY } from './graphql';
+import StyledContact from './style';
 
 const Contact = (props: Props): JSX.Element => {
   const { hasTitle = true }: Props = props;
@@ -12,20 +13,19 @@ const Contact = (props: Props): JSX.Element => {
   if (loading) return <Loading />;
   if (error) return <Error />;
 
-  console.log(data);
-  const contact: any = data.options.contact;
-  const settings: any = data.generalSettings;
+  const resume: gqlContact = data.options.resume;
+  const settings: gqlSettings = data.generalSettings;
 
   return (
-    <>
+    <StyledContact>
       {hasTitle && <span>{settings.title}</span>}
-      <span>{contact.address1}</span>
-      <span>{contact.address2}</span>
-      <span>{contact.phone}</span>
+      <span>{resume.contactAddress1}</span>
+      <span>{resume.contactAddress2}</span>
+      <span>{resume.contactPhone}</span>
       <span>
-        <a href={`mailto:${contact.email}`}>{contact.email}</a>
+        <a href={`mailto:${resume.contactEmail}`}>{resume.contactEmail}</a>
       </span>
-    </>
+    </StyledContact>
   );
 };
 
