@@ -26,36 +26,40 @@ const SectionHistory = (props: Props): JSX.Element => {
 
   return (
     <>
-      {history.map((item: any, i: number) => (
-        <div key={i} className="history">
-          <div>
-            <span>{item.title}</span>
-            <span>{item.dates}</span>
-          </div>
-          {item.intro && (
+      {history.map(
+        (item: any, i: number): JSX.Element => (
+          <div key={i} className="history">
             <div>
-              <span>{item.intro}</span>
+              <span>{item.title}</span>
+              <span>{item.dates}</span>
             </div>
-          )}
-          <ul>
-            {item.points.map((point: any, j: number) => {
-              return <li key={j}>{point.item}</li>;
-            })}
-          </ul>
-          {item.skillset && (
+            {item.intro && (
+              <div>
+                <span>{item.intro}</span>
+              </div>
+            )}
             <ul>
-              {item.skillset.map((skillset: any, j: number) => {
-                return (
-                  <li key={j}>
-                    <span>{skillset.area}:</span>
-                    <span>{skillset.skills}</span>
-                  </li>
-                );
-              })}
+              {item.points.map(
+                (point: any, j: number): JSX.Element => (
+                  <li key={j}>{point.item}</li>
+                )
+              )}
             </ul>
-          )}
-        </div>
-      ))}
+            {item.skillset && (
+              <ul>
+                {item.skillset.map(
+                  (skillset: any, j: number): JSX.Element => (
+                    <li key={j}>
+                      <span>{skillset.area}:</span>
+                      <span>{skillset.skills}</span>
+                    </li>
+                  )
+                )}
+              </ul>
+            )}
+          </div>
+        )
+      )}
     </>
   );
 };

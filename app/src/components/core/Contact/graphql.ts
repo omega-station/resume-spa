@@ -7,11 +7,11 @@ export const GQL_QUERY = gql`
       title
     }
     options {
-      contact {
-        address1
-        address2
-        email
-        phone
+      resume {
+        contactAddress1
+        contactAddress2
+        contactEmail
+        contactPhone
       }
     }
   }
