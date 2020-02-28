@@ -18,7 +18,7 @@ const Section = (props: Props): JSX.Element => {
   if (loading) return <Loading />;
   if (error) return <Error />;
 
-  const heading: string = getHeadings(data)[type];
+  const heading: any = getHeadings(data)[type];
 
   let Component: (props: Props) => JSX.Element = SectionDefault;
   if (type === 'education' || type === 'work') {

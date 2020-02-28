@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { useQuery } from 'react-apollo';
 import Error from '../../../core/Error';
 import Loading from '../../../core/Loading';
@@ -20,32 +20,32 @@ const SectionSkillset = (props: Props): JSX.Element => {
   return (
     <>
       <div className="table">
-        {areas.map((item: any, i: number) => {
-          return (
-            <div key={i}>
+        {areas.map(
+          (item: any, i: number): JSX.Element => (
+            <div key={`${item.area}-${i}`}>
               <span>{item.area}</span>
               <span>{item.skills}</span>
             </div>
-          );
-        })}
+          )
+        )}
       </div>
       <div className="table">
         <div className="head">
           <span>Skill</span>
           <span>Proficiency</span>
         </div>
-        {proficiency.map((item: any, i: number) => {
-          return (
-            <>
-              {item.isVisible === 'true' && (
-                <div key={i}>
+        {proficiency.map(
+          (item: any, i: number): JSX.Element => (
+            <Fragment key={i}>
+              {item.isVisible && (
+                <div>
                   <span>{item.skill}</span>
                   <span className="bold">{getProficiency(item.proficiency)}</span>
                 </div>
               )}
-            </>
-          );
-        })}
+            </Fragment>
+          )
+        )}
       </div>
     </>
   );

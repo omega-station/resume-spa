@@ -41,11 +41,32 @@ const StyledHeader = styled.header`
     margin: 50px 0;
     text-align: center;
 
-    h1 {
-      font-size: 4.6rem;
+    div {
+      &:first-of-type {
+        h1 {
+          font-size: 4.6rem;
 
-      & + h2 {
-        font-size: 3rem;
+          &,
+          & + h2 {
+            font-weight: 600;
+          }
+
+          & + h2 {
+            font-size: 2.85rem;
+          }
+        }
+      }
+
+      &:last-of-type {
+        display: flex;
+        justify-content: space-between;
+        width: 760px;
+        margin: 30px auto 0;
+
+        span {
+          font-size: 1.15rem;
+          font-weight: 600;
+        }
       }
     }
 
