@@ -12,12 +12,13 @@ class Cursor {
   }
 
   public create = (): void => {
-    Particles[this.type].addStyle();
+    Particles[this.type].addStyle && Particles[this.type].addStyle();
     this.bindEvents();
     this.loop();
   };
 
   public destroy = (): void => {
+    Particle.removeStyle();
     this.unbindEvents();
   };
 
