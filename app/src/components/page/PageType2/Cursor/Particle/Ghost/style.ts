@@ -3,7 +3,7 @@ const width: string = '17px';
 const height: string = '26px';
 
 const style: string = `
-.cursor-particle-ghost {
+.cursor-particle {
   display: block;
   position: absolute;
   top: ${offset};

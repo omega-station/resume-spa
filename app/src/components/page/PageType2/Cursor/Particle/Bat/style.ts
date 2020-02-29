@@ -2,7 +2,7 @@ const offset: string = '0';
 const size: string = '40px';
 
 const style: string = `
-.cursor-particle-bat {
+.cursor-particle {
   display: block;
   position: absolute;
   top: ${offset};
