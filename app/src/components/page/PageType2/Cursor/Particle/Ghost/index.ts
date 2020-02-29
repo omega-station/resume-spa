@@ -4,14 +4,10 @@ import Particle from '..';
 class Ghost extends Particle {
   constructor(x: number, y: number) {
     super();
-    this.element.className = 'cursor-particle-ghost';
-    this.fadePoint = 40;
     this.lifeSpan = 60; // milliseconds
     this.position = { x: x - 10, y: y - 10 };
 
-    this.setStyle(style);
     this.update();
-
     document.body.appendChild(this.element);
   }
 
@@ -23,6 +19,10 @@ class Ghost extends Particle {
       }
     });
   };
+
+  static addStyle(): void {
+    super.addStyle(style);
+  }
 }
 
 export default Ghost;
