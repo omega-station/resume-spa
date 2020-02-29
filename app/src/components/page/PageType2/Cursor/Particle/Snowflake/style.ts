@@ -4,7 +4,7 @@ const size: string = '36px';
 
 const style: string = `
   display: block;
-  position: fixed;
+  position: absolute;
   top: ${offset};
   left: ${offset};
   color: ${color};
