@@ -8,7 +8,7 @@ const shadow: { a: string; b: string } = {
 
 const style: string = `
   display: block;
-  position: absolute;
+  position: fixed;
   top: ${offset};
   left: ${offset};
   width: ${size};
