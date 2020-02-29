@@ -1,11 +1,13 @@
-const offset: string = '0';
-const size: string = '28px';
+const offset: string = '5px';
+const color: string = 'skyblue';
+const size: string = '36px';
 
 const style: string = `
   display: block;
   position: fixed;
   top: ${offset};
   left: ${offset};
+  color: ${color};
   font-size: ${size};
   pointer-events: none;
   will-change: transform;

@@ -58,14 +58,22 @@ const StyledHeader = styled.header`
       }
 
       &:last-of-type {
+        ${border('2px', true)}
         display: flex;
         justify-content: space-between;
-        width: 760px;
+        align-items: center;
+        width: 900px;
         margin: 30px auto 0;
 
         span {
+          ${border()}
+          flex-basis: 25%;
           font-size: 1.15rem;
           font-weight: 600;
+
+          &:not(:first-of-type) {
+            margin: 0 0 0 2px;
+          }
         }
       }
     }
