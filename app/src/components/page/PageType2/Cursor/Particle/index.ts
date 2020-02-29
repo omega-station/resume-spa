@@ -1,39 +1,54 @@
 class Particle {
-  protected element: HTMLSpanElement = document.createElement('span');
-  protected isDead: boolean = false;
-  protected fadePoint: number = 50;
-  protected lifeSpan: number = 0;
-  protected scale: number = 0;
-  protected position: { x: number; y: number } = { x: 0, y: 0 };
-  protected velocity: { x: number; y: number } = { x: 0, y: 0 };
+  protected element: HTMLSpanElement;
+  protected isDead: boolean;
+  protected fadePoint: number;
+  protected lifeSpan: number;
+  protected scale: number;
+  protected position: { x: number; y: number };
+  protected velocity: { x: number; y: number };
 
-  protected setStyle = (css: string): void => {
-    if (!document.querySelector('#cursor-style')) {
-      const head: HTMLHeadElement = document.getElementsByTagName('head')[0];
-      const style: HTMLStyleElement = document.createElement('style');
+  constructor(style?: string) {
+    this.element = document.createElement('span');
+    this.element.className = 'cursor-particle';
+    style && (this.element.style.cssText = style);
 
-      style.type = 'text/css';
-      style.innerHTML = css;
-      style.setAttribute('id', 'cursor-style');
+    this.isDead = false;
+    this.fadePoint = 50;
+    this.lifeSpan = 0;
+    this.scale = 0;
+    this.position = { x: 0, y: 0 };
+    this.velocity = { x: 0, y: 0 };
+  }
 
-      head.appendChild(style);
-    }
-  };
-
-  protected update(doElse: Function): boolean {
+  protected update(doActions: Function): boolean {
     this.lifeSpan--;
+
     this.isDead = this.lifeSpan < 0;
     if (this.isDead) {
       this.element.parentNode && this.element.parentNode.removeChild(this.element);
     } else {
-      doElse();
+      doActions();
     }
+
     return this.isDead;
   }
 
-  constuctor() {
-    console.log('foo');
+  static addStyle(style: string): void {
+    if (style) {
+      const head: HTMLHeadElement = document.getElementsByTagName('head')[0];
+      const el: HTMLStyleElement = document.createElement('style');
+
+      el.type = 'text/css';
+      el.id = 'cursor-style';
+      el.innerHTML = style;
+
+      head.appendChild(el);
+    }
   }
+
+  static getRandom = (array: any[]): any => {
+    return array[Math.floor(Math.random() * array.length)];
+  };
 }
 
 export default Particle;
