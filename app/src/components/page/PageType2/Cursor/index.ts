@@ -1,21 +1,17 @@
-import getParticle from './Particle';
-import chars from './Particle/chars';
+import { Particles, Particle } from './Particle/utility';
 
 class Cursor {
   private type: string;
-  private charList: string[];
-  private charListLength: number;
   private width: number = window.innerWidth;
   private cursor: { x: number; y: number } = { x: this.width / 2, y: this.width / 2 };
-  private particles: any[] = [];
+  private particles: Particle[] = [];
 
-  constructor(type: string = 'emoji') {
-    this.type = type;
-    this.charList = type === 'emoji' ? chars.emoji : chars.snowflake;
-    this.charListLength = this.charList.length;
+  constructor(type?: string) {
+    const particleList = Object.keys(Particles);
+    this.type = type ? type : particleList[Math.floor(Math.random() * particleList.length)];
   }
 
-  public init = (type = 'emoji'): void => {
+  public create = (): void => {
     this.bindEvents();
     this.loop();
   };
@@ -46,7 +42,7 @@ class Cursor {
   private onMouseMove = (e: MouseEvent): void => {
     this.cursor.x = e.clientX;
     this.cursor.y = e.clientY;
-    this.addParticle(this.cursor.x, this.cursor.y, this.getChar());
+    this.addParticle(this.cursor.x, this.cursor.y);
   };
 
   private onTouchMove = (e: TouchEvent): void => {
@@ -55,7 +51,7 @@ class Cursor {
       let i: number;
       for (i = 0; i < length; i++) {
         const touches = e.touches[i];
-        this.addParticle(touches.clientX, touches.clientY, this.getChar());
+        this.addParticle(touches.clientX, touches.clientY);
       }
     }
   };
@@ -64,24 +60,22 @@ class Cursor {
     this.width = window.innerWidth;
   };
 
-  private addParticle = (x: number, y: number, char: string): void => {
-    const particle: any = getParticle(this.type);
-    particle.init(x, y, char);
+  private addParticle = (x: number, y: number): void => {
+    const particle: Particle = new Particles[this.type](x, y);
     this.particles.push(particle);
+    // console.log('addParticle', this.type, particle);
   };
 
   private updateParticles = (): void => {
     const length: number = this.particles.length;
+
     let i: number;
     for (i = 0; i < length; i++) {
-      const particle = this.particles[i];
+      const particle: Particle = this.particles[i];
       particle && particle.update() && (this.particles[i] = null);
     }
-    this.particles = this.particles.filter(item => item !== null);
-  };
 
-  private getChar = (): string => {
-    return this.charList[Math.floor(Math.random() * this.charListLength)];
+    this.particles = this.particles.filter(item => item !== null);
   };
 }
 

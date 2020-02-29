@@ -1,4 +1,4 @@
-const emoji: string[] = [
+const chars: string[] = [
   '😀',
   '😃',
   '😄',
@@ -108,6 +108,4 @@ const emoji: string[] = [
   '😾',
 ];
 
-const snowflake: string[] = ['❄️'];
-
-export default { emoji, snowflake };
+export default chars;
