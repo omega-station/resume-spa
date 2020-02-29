@@ -9,7 +9,7 @@ const PageType2 = (): JSX.Element => {
   const cursor: Cursor = new Cursor();
 
   useEffect(() => {
-    cursor.init();
+    cursor.create();
     return () => cursor.destroy();
   }, [cursor]);
 
