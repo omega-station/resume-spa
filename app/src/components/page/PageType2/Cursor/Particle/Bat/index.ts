@@ -4,16 +4,12 @@ import style from './style';
 class Bat extends Particle {
   constructor(x: number, y: number) {
     super();
-    this.element.className = 'cursor-particle-bat';
-    this.fadePoint = 50;
     this.lifeSpan = 200;
     this.scale = 100;
     this.position = { x: x - 15, y: y - 15 };
     this.velocity = { x: (Math.random() < 0.5 ? -1 : 1) * (Math.random() * 2), y: Math.random() * -1 + -2.5 };
 
-    this.setStyle(style);
     this.update();
-
     document.body.appendChild(this.element);
   }
 
@@ -30,6 +26,10 @@ class Bat extends Particle {
       }
     });
   };
+
+  static addStyle(): void {
+    super.addStyle(style);
+  }
 }
 
 export default Bat;

@@ -1,17 +1,18 @@
-import { Particles, Particle } from './Particle/utility';
+import { Particles, Particle as iParticle } from './Particle/utility';
+import Particle from './Particle';
 
 class Cursor {
   private type: string;
   private width: number = window.innerWidth;
   private cursor: { x: number; y: number } = { x: this.width / 2, y: this.width / 2 };
-  private particles: Particle[] = [];
+  private particles: iParticle[] = [];
 
   constructor(type?: string) {
-    const particleList = Object.keys(Particles);
-    this.type = type ? type : particleList[Math.floor(Math.random() * particleList.length)];
+    this.type = type ? type : Particle.getRandom(Object.keys(Particles));
   }
 
   public create = (): void => {
+    Particles[this.type].addStyle();
     this.bindEvents();
     this.loop();
   };
@@ -61,9 +62,8 @@ class Cursor {
   };
 
   private addParticle = (x: number, y: number): void => {
-    const particle: Particle = new Particles[this.type](x, y);
+    const particle: iParticle = new Particles[this.type](x, y);
     this.particles.push(particle);
-    // console.log('addParticle', this.type, particle);
   };
 
   private updateParticles = (): void => {
@@ -71,7 +71,7 @@ class Cursor {
 
     let i: number;
     for (i = 0; i < length; i++) {
-      const particle: Particle = this.particles[i];
+      const particle: iParticle = this.particles[i];
       particle && particle.update() && (this.particles[i] = null);
     }
 

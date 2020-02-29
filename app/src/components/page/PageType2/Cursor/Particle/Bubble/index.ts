@@ -3,15 +3,12 @@ import Particle from '..';
 
 class Bubble extends Particle {
   constructor(x: number, y: number) {
-    super();
-    this.element = document.createElement('span');
-    this.element.style.cssText = style;
+    super(style);
     this.lifeSpan = 250; // milliseconds
     this.position = { x: x - 10, y: y - 10 };
     this.velocity = { x: (Math.random() < 0.5 ? -1 : 1) * (Math.random() / 10), y: Math.random() * -1 + -0.4 };
 
     this.update();
-
     document.body.appendChild(this.element);
   }
 
