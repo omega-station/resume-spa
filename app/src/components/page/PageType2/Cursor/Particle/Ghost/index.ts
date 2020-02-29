@@ -21,7 +21,7 @@ class Ghost extends Particle {
   };
 
   static addStyle(): void {
-    super.addStyle(style);
+    super.createStyle(style);
   }
 }
 
