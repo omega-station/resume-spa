@@ -5,6 +5,8 @@ const StyledPage = styled.div`
   ${padding(true, '25px')};
 
   main {
+    display: none;
+
     section {
       &:not(:last-of-type) {
         margin: 0 0 40px;
@@ -129,8 +131,12 @@ const StyledPage = styled.div`
 
               &:last-of-type {
                 flex-basis: 66.66%;
+                /* font-size: 0.9vw; */
               }
             }
+          }
+
+          &:last-of-type {
           }
         }
       }
