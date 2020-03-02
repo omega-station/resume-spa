@@ -1,7 +1,7 @@
 import React from 'react';
 import { QueryResult, useQuery } from 'react-apollo';
 import Error from '../../core/Error';
-import Loading from '../../core/Loading';
+import Loading from '../Loading';
 import { gqlContact, gqlSettings, Props } from './definition';
 import { GQL_QUERY } from './graphql';
 import StyledContact from './style';

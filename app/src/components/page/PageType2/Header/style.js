@@ -3,6 +3,8 @@ import { color } from '../../../../utility/constant';
 import { border } from '../../../../utility/mixin';
 
 const StyledHeader = styled.header`
+  display: none;
+
   > nav {
     width: 600px;
     margin: 0 auto;
@@ -38,7 +40,7 @@ const StyledHeader = styled.header`
   }
 
   > div {
-    margin: 50px 0;
+    margin: 60px 0 120px;
     text-align: center;
 
     div {
@@ -63,7 +65,7 @@ const StyledHeader = styled.header`
         justify-content: space-between;
         align-items: center;
         width: 900px;
-        margin: 30px auto 0;
+        margin: 50px auto 70px;
 
         span {
           ${border()}
@@ -80,7 +82,7 @@ const StyledHeader = styled.header`
 
     nav {
       width: 800px;
-      margin: 50px auto 0;
+      margin: 0 auto;
 
       ul {
         ${border('3px', true)}

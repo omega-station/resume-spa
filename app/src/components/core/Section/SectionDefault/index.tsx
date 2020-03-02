@@ -1,7 +1,7 @@
 import React from 'react';
 import { useQuery } from 'react-apollo';
 import Error from '../../../core/Error';
-import Loading from '../../../core/Loading';
+import Loading from '../../Loading';
 import { Props } from '../definition';
 import { GQL_QUERY } from './graphql';
 
