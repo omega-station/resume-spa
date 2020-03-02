@@ -9,23 +9,21 @@ import StyledPage from './style';
 const PageType2 = (): JSX.Element => {
   const cursor: Cursor = new Cursor();
 
-  // useEffect(() => {
-  //   cursor.create();
-  //   return () => cursor.destroy();
-  // }, [cursor]);
+  useEffect(() => {
+    cursor.create();
+    return () => cursor.destroy();
+  }, [cursor]);
+
+  const section = ['about', 'skillset', 'work', 'education', 'interests', 'references', 'meta'];
 
   return (
     <StyledPage>
       <GithubCorner />
       <Header />
       <main>
-        <Section type="about" />
-        <Section type="skillset" />
-        <Section type="work" />
-        <Section type="education" />
-        <Section type="interests" />
-        <Section type="references" />
-        <Section type="meta" />
+        {section.map((type: string, i: number) => (
+          <Section key={i} type={type} />
+        ))}
       </main>
       <Footer />
     </StyledPage>

@@ -1,12 +1,11 @@
 import styled from '@emotion/styled';
+import { breakpoint } from '../../../utility/constant';
 import { border, padding } from '../../../utility/mixin';
 
 const StyledPage = styled.div`
   ${padding(true, '25px')};
 
   main {
-    display: none;
-
     section {
       &:not(:last-of-type) {
         margin: 0 0 40px;
@@ -25,7 +24,11 @@ const StyledPage = styled.div`
       }
 
       p {
-        width: 60%;
+        width: 100%;
+
+        @media (min-width: ${breakpoint.mobile[3]}) {
+          width: 60%;
+        }
 
         &:not(:last-of-type) {
           margin: 0 0 10px;
@@ -43,8 +46,12 @@ const StyledPage = styled.div`
 
       div {
         &.history {
-          width: 60%;
+          width: 100%;
           margin: 0 0 30px;
+
+          @media (min-width: ${breakpoint.mobile[3]}) {
+            width: 60%;
+          }
 
           > div {
             span {
@@ -52,35 +59,28 @@ const StyledPage = styled.div`
             }
 
             &:first-of-type {
-              display: flex;
-              justify-content: space-between;
-              margin: 0 0 5px;
+              margin: 0 0 10px;
 
-              span {
+              > span {
                 font-weight: 600;
-              }
-            }
 
-            &:last-of-type {
-              margin: 0 0 5px;
+                &:last-of-type {
+                  margin: 8px 0 0;
+
+                  @media (min-width: ${breakpoint.desktop[3]}) {
+                    margin: 0;
+                  }
+                }
+              }
             }
           }
 
           > ul {
             & + ul {
-              padding-left: 5px;
-
               li {
-                display: flex;
-                list-style: none;
-
                 span {
                   font-size: 1.1rem;
                   line-height: 1.3em;
-
-                  &:first-of-type {
-                    flex-basis: 110px;
-                  }
                 }
               }
             }
@@ -89,8 +89,9 @@ const StyledPage = styled.div`
 
         &.table {
           ${border('2px', true)};
-          width: 800px;
           width: 60%;
+          max-width: 800px;
+          display: none;
 
           &:not(:last-of-type) {
             margin: 0 0 30px;
@@ -131,7 +132,6 @@ const StyledPage = styled.div`
 
               &:last-of-type {
                 flex-basis: 66.66%;
-                /* font-size: 0.9vw; */
               }
             }
           }

@@ -4,6 +4,7 @@ import Error from '../../../core/Error';
 import Loading from '../../Loading';
 import { Props } from '../definition';
 import { GQL_QUERY } from './graphql';
+import StyledSection from './style';
 
 const SectionHistory = (props: Props): JSX.Element => {
   const { type }: Props = props;
@@ -25,12 +26,18 @@ const SectionHistory = (props: Props): JSX.Element => {
   }
 
   return (
-    <>
+    <StyledSection>
       {history.map(
         (item: any, i: number): JSX.Element => (
           <div key={i} className="history">
             <div>
-              <span>{item.title}</span>
+              <span>
+                {item.title && <span>{item.title},</span>}
+                {item.company && <span>{item.company},</span>}
+                {item.school && <span>{item.school},</span>}
+                {item.campus && <span>{item.campus},</span>}
+                <span>{item.location}</span>
+              </span>
               <span>{item.dates}</span>
             </div>
             {item.intro && (
@@ -60,7 +67,7 @@ const SectionHistory = (props: Props): JSX.Element => {
           </div>
         )
       )}
-    </>
+    </StyledSection>
   );
 };
 
