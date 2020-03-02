@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 import { border } from '../../../../utility/mixin';
 
 const StyledFooter = styled.footer`
+  display: none;
   margin: 120px 0 50px;
   text-align: center;
 
@@ -70,7 +71,7 @@ const StyledFooter = styled.footer`
     }
 
     &:nth-of-type(3) img {
-      height: 32px;
+      height: 36px;
       object-fit: cover;
     }
   }

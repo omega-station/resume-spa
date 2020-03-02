@@ -1,5 +1,5 @@
-const offset: string = '5px';
-const size: string = '36px';
+const offset: string = '12px';
+const size: string = '12px';
 
 const style: string = `
   display: block;
