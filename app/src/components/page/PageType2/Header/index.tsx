@@ -9,7 +9,7 @@ import Contact from '../../../core/Contact';
 const Header = (): JSX.Element => {
   const menuItem: JSX.Element = (
     <>
-      {Array(5)
+      {Array(21)
         .fill(0)
         .map(
           (value: number, i: number): JSX.Element => (
