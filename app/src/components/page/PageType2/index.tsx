@@ -1,4 +1,6 @@
 import React, { useEffect } from 'react';
+import { breakpoint } from '../../../utility/constant';
+import GithubCorner from '../../core/GithubCorner';
 import Section from '../../core/Section';
 import Cursor from './Cursor';
 import Footer from './Footer';
@@ -7,6 +9,7 @@ import StyledPage from './style';
 
 const PageType2 = (): JSX.Element => {
   const cursor: Cursor = new Cursor();
+  console.log(breakpoint);
 
   useEffect(() => {
     cursor.create();
@@ -15,6 +18,7 @@ const PageType2 = (): JSX.Element => {
 
   return (
     <StyledPage>
+      <GithubCorner isAnimated={true} />
       <Header />
       <main>
         <Section type="about" />
