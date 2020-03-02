@@ -3,7 +3,7 @@ import StyledCorner from './style';
 import { Props } from './definition';
 
 const GithubCorner = (props: Props) => {
-  const { isAnimated = false, fill = 'black', url = 'https://github.com/omega-station/resume-spa' }: Props = props;
+  const { isAnimated = true, fill = 'black', url = 'https://github.com/omega-station/resume-spa' }: Props = props;
   return (
     <StyledCorner isAnimated={isAnimated} fill={fill} href={url} target="_blank" rel="noopener noreferrer" aria-label="View source on GitHub">
       <svg viewBox="0 0 250 250" aria-hidden="true">
