@@ -14,6 +14,7 @@ const StyledCorner = styled.a<Props>`
 
     svg {
       ${transition('width')}
+      display: block;
       width: 80px;
 
       @media (min-width: ${breakpoint.tablet.portrait[0]}) {
@@ -25,12 +26,13 @@ const StyledCorner = styled.a<Props>`
       }
 
       & path {
+
         &:nth-of-type(1) {
           fill: ${props.fill};
-          ${props.isAnimated &&
+          /* ${props.isAnimated &&
             css`
-              animation: anim-color-cycle 2000ms infinite;
-            `}
+              animation: anim-color-cycle 200ms infinite;
+            `} */
         }
 
         &:nth-of-type(2) {
@@ -44,11 +46,21 @@ const StyledCorner = styled.a<Props>`
       }
     }
 
-    &:hover svg path:nth-of-type(2) {
-      animation: none;
+    &:hover svg path {
+      &:nth-of-type(1) {
+        animation: none;
 
-      @media (min-width: ${breakpoint.mobile[2]}) {
-        animation: anim-tail 560ms ease-in-out;
+        @media (min-width: ${breakpoint.mobile[2]}) {
+          animation: anim-color-cycle 500ms infinite;
+        }
+      }
+
+      &:nth-of-type(2) {
+        animation: none;
+
+        @media (min-width: ${breakpoint.mobile[2]}) {
+          animation: anim-tail 600ms ease-in-out;
+        }
       }
     }
 
