@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
-import { border } from '../../../../utility/mixin';
 import { breakpoint } from '../../../../utility/constant';
+import { border } from '../../../../utility/mixin';
 
 const StyledFooter = styled.footer`
   margin: 120px 0 50px;

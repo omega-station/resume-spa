@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { color, breakpoint } from '../../../../utility/constant';
+import { breakpoint, color } from '../../../../utility/constant';
 import { border, transition } from '../../../../utility/mixin';
 
 const StyledHeader = styled.header`
@@ -40,14 +40,19 @@ const StyledHeader = styled.header`
 
   > div {
     margin: 60px 0 120px;
-    margin: 4% 0 8%;
+    margin: 6% 0 10%;
     text-align: center;
+
+    @media (min-width: ${breakpoint.mobile[4]}) {
+      margin: 4% 0 8%;
+    }
 
     div {
       &:first-of-type {
 
         h1 {
-          font-size: 2.5rem;
+          font-size: 2.85rem;
+          margin: 0 0 6px;
 
           &,
           & + h2 {
@@ -58,11 +63,12 @@ const StyledHeader = styled.header`
           }
 
           & + h2 {
-            font-size: 1.6rem;
+            font-size: 1.8rem;
           }
 
           @media (min-width: ${breakpoint.mobile[4]}) {
             font-size: 4.6rem;
+            margin: 0;
 
             & + h2 {
               font-size: 2.85rem;
@@ -78,7 +84,11 @@ const StyledHeader = styled.header`
         width: 100%;
         max-width: 900px;
         margin: 50px auto 70px;
-        margin: 4% auto 5%;
+        margin: 6% auto;
+
+        @media (min-width: ${breakpoint.mobile[4]}) {
+          margin: 4% auto 5%;
+        }
 
         span {
           ${border()}

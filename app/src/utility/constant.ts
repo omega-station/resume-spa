@@ -1,6 +1,6 @@
 export const global = {
   padding: {
-    mobile: '4%',
+    mobile: '4.5%',
     desktop: '50px',
   },
 };

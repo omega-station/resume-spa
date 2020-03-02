@@ -5,7 +5,9 @@ export const GQL_QUERY = gql`
     options {
       resume {
         education {
-          title
+          school
+          campus
+          location
           dates
           points {
             item
@@ -13,6 +15,8 @@ export const GQL_QUERY = gql`
         }
         work {
           title
+          company
+          location
           dates
           intro
           points {
