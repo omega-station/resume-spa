@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { useQuery } from 'react-apollo';
 import Error from '../../../core/Error';
-import Loading from '../../../core/Loading';
+import Loading from '../../Loading';
 import { GQL_QUERY } from './graphql';
 import { Props } from '../definition';
 
