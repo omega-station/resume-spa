@@ -4,6 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { GQL_QUERY } from '../../../utility/graphql';
 import Error from '../Error';
 import Loading from '../Loading';
+import { Page } from './definition';
 import StyledNav from './style';
 
 const MenuPage = (): JSX.Element => {
@@ -14,21 +15,28 @@ const MenuPage = (): JSX.Element => {
   if (error) return <Error />;
 
   const pages: any = data.options.pages.items;
+  const visiblePages = pages.filter((item: Page) => item.isVisible);
 
   return (
     <StyledNav>
-      <ul>
-        {pages.map(
-          (item: { name: string; type: number }, i: number): JSX.Element => {
-            const className: string = location.pathname.includes(item.name) ? 'is-current' : '';
-            return (
-              <li key={i} className={className}>
-                <Link to={`/${item.name}`}>{item.name}</Link>
-              </li>
-            );
-          }
-        )}
-      </ul>
+      {visiblePages.length > 1 && (
+        <ul>
+          {pages.map(
+            (item: Page, i: number): JSX.Element => {
+              const className: string = location.pathname.includes(item.name) ? 'is-current' : '';
+              return (
+                <>
+                  {item.isVisible && (
+                    <li key={i} className={className}>
+                      <Link to={`/${item.name}`}>{item.name}</Link>
+                    </li>
+                  )}
+                </>
+              );
+            }
+          )}
+        </ul>
+      )}
     </StyledNav>
   );
 };

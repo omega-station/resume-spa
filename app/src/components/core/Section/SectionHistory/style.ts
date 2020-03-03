@@ -58,8 +58,8 @@ const StyledSection = styled.div`
 
           span {
             &:first-of-type {
-              min-width: 110px;
-              max-width: 110px;
+              min-width: 100px;
+              max-width: 100px;
             }
           }
         }
