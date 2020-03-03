@@ -7,7 +7,7 @@ import StyledApp from './style';
 
 const client: DefaultClient<unknown> = new ApolloClient({
   cache: new InMemoryCache(),
-  uri: 'http://dev.resume.omegastation.ca/graphql',
+  uri: `${process.env.REACT_APP_ENDPOINT_GRAPHQL_API}/graphql`,
 });
 
 const App = (): JSX.Element => {

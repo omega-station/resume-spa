@@ -4,6 +4,7 @@ import { border, padding } from '../../../utility/mixin';
 
 const StyledPage = styled.div`
   ${padding(true, '25px')};
+  max-width: 1024px;
 
   main {
     section {
@@ -26,10 +27,6 @@ const StyledPage = styled.div`
       p {
         width: 100%;
 
-        @media (min-width: ${breakpoint.mobile[3]}) {
-          width: 60%;
-        }
-
         &:not(:last-of-type) {
           margin: 0 0 10px;
         }
@@ -45,13 +42,10 @@ const StyledPage = styled.div`
       }
 
       div {
-        &.history {
-          width: 100%;
-          margin: 0 0 30px;
+        width: 100%;
 
-          @media (min-width: ${breakpoint.mobile[3]}) {
-            width: 60%;
-          }
+        &.history {
+          margin: 0 0 30px;
 
           > div {
             span {
@@ -75,23 +69,14 @@ const StyledPage = styled.div`
             }
           }
 
-          > ul {
-            & + ul {
-              li {
-                span {
-                  font-size: 1.1rem;
-                  line-height: 1.3em;
-                }
-              }
-            }
+          > ul + ul span {
+            font-size: 1rem;
+            line-height: 1.3em;
           }
         }
 
         &.table {
           ${border('2px', true)};
-          width: 60%;
-          max-width: 800px;
-          display: none;
 
           &:not(:last-of-type) {
             margin: 0 0 30px;
@@ -116,27 +101,33 @@ const StyledPage = styled.div`
               padding: 5px;
               font-size: 1.2rem;
               line-height: 1.3em;
+              overflow-wrap: anywhere;
 
               &:not(:first-of-type) {
                 margin: 0 0 0 2px;
               }
 
               &:first-of-type,
-              &.bold {
+              &.proficiency {
                 font-weight: 600;
               }
 
               &:first-of-type {
                 flex-basis: 33.33%;
+                min-width: 140px;
               }
 
               &:last-of-type {
                 flex-basis: 66.66%;
               }
-            }
-          }
 
-          &:last-of-type {
+              &.proficiency i {
+                margin-right: 8px;
+                font-size: 0.975rem;
+                font-style: normal;
+                letter-spacing: -0.1em;
+              }
+            }
           }
         }
       }

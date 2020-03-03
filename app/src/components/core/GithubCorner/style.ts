@@ -26,13 +26,8 @@ const StyledCorner = styled.a<Props>`
       }
 
       & path {
-
         &:nth-of-type(1) {
           fill: ${props.fill};
-          /* ${props.isAnimated &&
-            css`
-              animation: anim-color-cycle 200ms infinite;
-            `} */
         }
 
         &:nth-of-type(2) {
@@ -59,22 +54,20 @@ const StyledCorner = styled.a<Props>`
         animation: none;
 
         @media (min-width: ${breakpoint.mobile[2]}) {
-          animation: anim-tail 600ms ease-in-out;
+          animation: anim-octoarm 700ms ease-out infinite;
         }
       }
     }
 
-    @keyframes anim-tail {
+    @keyframes anim-octoarm {
       0%,
-      100% {
+      75% 100% {
         transform: rotate(0);
       }
-      20%,
-      60% {
+      35% {
         transform: rotate(-25deg);
       }
-      40%,
-      80% {
+      85% {
         transform: rotate(10deg);
       }
     }

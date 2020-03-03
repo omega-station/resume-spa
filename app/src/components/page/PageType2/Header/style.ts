@@ -43,10 +43,6 @@ const StyledHeader = styled.header`
     margin: 6% 0 10%;
     text-align: center;
 
-    @media (min-width: ${breakpoint.mobile[4]}) {
-      margin: 4% 0 8%;
-    }
-
     div {
       &:first-of-type {
 
@@ -85,10 +81,6 @@ const StyledHeader = styled.header`
         max-width: 900px;
         margin: 50px auto 70px;
         margin: 6% auto;
-
-        @media (min-width: ${breakpoint.mobile[4]}) {
-          margin: 4% auto 5%;
-        }
 
         span {
           ${border()}
@@ -141,12 +133,13 @@ const StyledHeader = styled.header`
           overflow: hidden;
 
           &:not(:first-of-type) {
-              margin: 2px 0 0;
-            }
-
+            margin: 2px 0 0;
+          }
 
           @media (min-width: ${breakpoint.tablet.portrait[2]}) {
+            &:not(:first-of-type) {
               margin: 0;
+            }
           }
 
           a {

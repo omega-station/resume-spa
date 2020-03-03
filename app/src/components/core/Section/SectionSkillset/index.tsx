@@ -13,8 +13,12 @@ const SectionSkillset = (props: Props): JSX.Element => {
 
   const { skillsetAreas: areas, skillsetProficiency: proficiency } = data.options.resume;
 
-  const getProficiency = (value: number): string => {
-    return `${'♥'.repeat(value / 2.25)} [${value}%]`;
+  const getProficiency = (value: number): JSX.Element => {
+    return (
+      <>
+        <i>{'♥ '.repeat(value / 2.25)}</i>[{value}%]
+      </>
+    );
   };
 
   return (
@@ -40,7 +44,7 @@ const SectionSkillset = (props: Props): JSX.Element => {
               {item.isVisible && (
                 <div>
                   <span>{item.skill}</span>
-                  <span className="bold">{getProficiency(item.proficiency)}</span>
+                  <span className="proficiency">{getProficiency(item.proficiency)}</span>
                 </div>
               )}
             </Fragment>

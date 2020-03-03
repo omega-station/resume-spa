@@ -16,6 +16,8 @@ const PageType2 = (): JSX.Element => {
 
   const section = ['about', 'skillset', 'work', 'education', 'interests', 'references', 'meta'];
 
+  // window.location.reload(false);
+
   return (
     <StyledPage>
       <GithubCorner />

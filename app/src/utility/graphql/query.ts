@@ -6,6 +6,7 @@ const GQL_QUERY = {
       options {
         pages {
           items {
+            isVisible
             name
             type
           }
