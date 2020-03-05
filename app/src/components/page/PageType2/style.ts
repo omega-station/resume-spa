@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { breakpoint } from '../../../utility/constant';
+import { breakpoint, color } from '../../../utility/constant';
 import { border, padding } from '../../../utility/mixin';
 
 const StyledPage = styled.div`
@@ -123,6 +123,7 @@ const StyledPage = styled.div`
 
               &.proficiency i {
                 margin-right: 8px;
+                color: ${color.solid.black};
                 font-size: 0.975rem;
                 font-style: normal;
                 letter-spacing: -0.1em;

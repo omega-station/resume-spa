@@ -15,14 +15,14 @@ const StyledCorner = styled.a<Props>`
     svg {
       ${transition('width')}
       display: block;
-      width: 80px;
+      width: 70px;
 
       @media (min-width: ${breakpoint.tablet.portrait[0]}) {
-        width: 120px;
+        width: 100px;
       }
 
       @media (min-width: ${breakpoint.desktop[1]}) {
-        width: 160px;
+        width: 130px;
       }
 
       & path {

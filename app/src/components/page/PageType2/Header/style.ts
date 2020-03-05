@@ -10,16 +10,17 @@ const StyledHeader = styled.header`
 
     ul {
       ${border('2px', true)}
+      display: flex;
+      flex-wrap: wrap;
+      margin: -2px 0 0 -2px;
+      padding: 0 2px 2px 0;
 
       li {
         ${border()}
-        width: 25%;
+        width: calc(50% - 2px);
+        margin: 2px 0 0 2px;
         padding: 10px 15px;
         text-align: center;
-
-        &:not(:first-of-type) {
-          margin: 0 0 0 2px;
-        }
 
         &.is-current a,
         a:hover {
@@ -33,6 +34,14 @@ const StyledHeader = styled.header`
         a {
           font-size: 1.25rem;
           text-decoration: underline;
+        }
+      }
+
+      @media (min-width: ${breakpoint.mobile[2]}) {
+        flex-wrap: nowrap;
+
+        li {
+          width: 25%;
         }
       }
     }
@@ -79,8 +88,11 @@ const StyledHeader = styled.header`
         flex-direction: column;
         width: 100%;
         max-width: 900px;
-        margin: 50px auto 70px;
-        margin: 6% auto;
+        margin: 12% auto 6%;
+
+        @media (min-width: ${breakpoint.mobile[3]}) {
+          margin: 6% auto;
+        }
 
         span {
           ${border()}

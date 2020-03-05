@@ -6,7 +6,9 @@ import MenuSection from '../../../core/MenuSection';
 import StyledHeader from './style';
 import Contact from '../../../core/Contact';
 
-const Header = (): JSX.Element => {
+const Header = (props: any): JSX.Element => {
+  const { data }: any = props;
+
   const menuItem: JSX.Element = (
     <>
       {Array(21)
@@ -21,11 +23,11 @@ const Header = (): JSX.Element => {
 
   return (
     <StyledHeader>
-      <MenuPage />
+      <MenuPage data={data} />
       <div>
-        <Masthead />
-        <Contact hasTitle={false} />
-        <MenuSection items={[menuItem]} />
+        <Masthead data={data} />
+        <Contact data={data} hasTitle={false} />
+        <MenuSection data={data} items={[menuItem]} />
       </div>
     </StyledHeader>
   );
