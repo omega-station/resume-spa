@@ -1,5 +1,5 @@
 import React from 'react';
-import { coding2, reading, ucDigger2, ucMain } from '../../../../images';
+import { coding, reading, ucDigger, ucMain } from '../../../../images';
 import StyledFooter from './style';
 
 const Footer = (): JSX.Element => {
@@ -18,7 +18,7 @@ const Footer = (): JSX.Element => {
       <div>
         <div>
           <div>
-            <img src={coding2} alt="" />
+            <img src={coding} alt="" />
           </div>
           <div>
             <p>
@@ -65,9 +65,9 @@ const Footer = (): JSX.Element => {
         </div>
       </div>
       <div>
-        <img src={ucDigger2} alt="" />
+        <img src={ucDigger} alt="" />
         <img src={ucMain} alt="" />
-        <img src={ucDigger2} alt="" />
+        <img src={ucDigger} alt="" />
       </div>
       {counter}
     </StyledFooter>

@@ -1,15 +1,16 @@
 import React, { Fragment } from 'react';
-import { useQuery } from 'react-apollo';
-import Error from '../../../core/Error';
-import Loading from '../../Loading';
-import { GQL_QUERY } from './graphql';
+// import { useQuery } from 'react-apollo';
+// import Error from '../../../core/Error';
+// import Loading from '../../Loading';
+// import { GQL_QUERY } from './graphql';
 import { Props } from '../definition';
 
 const SectionSkillset = (props: Props): JSX.Element => {
-  const { data, loading, error } = useQuery(GQL_QUERY);
+  const { data }: Props = props;
+  // const { data, loading, error } = useQuery(GQL_QUERY);
 
-  if (loading) return <Loading />;
-  if (error) return <Error />;
+  // if (loading) return <Loading />;
+  // if (error) return <Error />;
 
   const { skillsetAreas: areas, skillsetProficiency: proficiency } = data.options.resume;
 

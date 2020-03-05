@@ -1,4 +1,5 @@
 export interface Props {
+  data: any;
   hasTitle?: boolean;
 }
 

@@ -1,0 +1,14 @@
+{
+  "name": "resume.omegastation.ca",
+  "host": "omegastation.ca",
+  "protocol": "sftp",
+  "port": 22,
+  "username": "omega785",
+  "password": "gUP*2112",
+  "remotePath": "/home/omega785/public_html/_sub/resume-spa",
+  "watcher": {
+    "files": "app/build/**/*.*",
+    "autoUpload": true,
+    "autoDelete": true
+  }
+}

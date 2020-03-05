@@ -1,17 +1,17 @@
 import React from 'react';
-import { useQuery } from 'react-apollo';
-import Error from '../../../core/Error';
-import Loading from '../../Loading';
+// import { useQuery } from 'react-apollo';
+// import Error from '../../../core/Error';
+// import Loading from '../../Loading';
 import { Props } from '../definition';
-import { GQL_QUERY } from './graphql';
+// import { GQL_QUERY } from './graphql';
 import StyledSection from './style';
 
 const SectionHistory = (props: Props): JSX.Element => {
-  const { type }: Props = props;
-  const { data, loading, error } = useQuery(GQL_QUERY);
+  const { data, type }: Props = props;
+  // const { data, loading, error } = useQuery(GQL_QUERY);
 
-  if (loading) return <Loading />;
-  if (error) return <Error />;
+  // if (loading) return <Loading />;
+  // if (error) return <Error />;
 
   const { work, education } = data.options.resume;
   let history: any;
