@@ -15,9 +15,10 @@ const SectionSkillset = (props: Props): JSX.Element => {
   const { skillsetAreas: areas, skillsetProficiency: proficiency } = data.options.resume;
 
   const getProficiency = (value: number): JSX.Element => {
+    const hearts: string = '♥ '.repeat(value / 2.5); // 2.25
     return (
       <>
-        <i>{'♥ '.repeat(value / 2.25)}</i>[{value}%]
+        <i>{hearts}</i>[{value}%]
       </>
     );
   };

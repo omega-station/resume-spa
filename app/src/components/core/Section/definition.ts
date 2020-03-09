@@ -1,4 +1,4 @@
 export interface Props {
   data: any;
-  type: string;
+  type?: string;
 }

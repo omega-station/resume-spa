@@ -1,4 +1,5 @@
 import React from 'react';
+import { section } from '../../../../utility/constant';
 // import { useQuery } from 'react-apollo';
 // import Error from '../../../core/Error';
 // import Loading from '../../Loading';
@@ -17,18 +18,18 @@ const SectionDefault = (props: Props): JSX.Element => {
   let points: string[] = [];
 
   switch (type) {
-    case 'about':
+    case section[0]:
       copy = aboutIntro;
       points = aboutPoints;
       break;
-    case 'interests':
+    case section[4]:
       copy = interestsIntro;
       points = interestsPoints;
       break;
-    case 'references':
+    case section[5]:
       copy = referencesIntro;
       break;
-    case 'meta':
+    case section[6]:
       copy = metaCopy;
       break;
   }

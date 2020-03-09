@@ -1,7 +1,8 @@
 export interface Props {
   data: any;
+  items?: JSX.Element[];
 }
-export interface Page {
+export interface PageProps {
   isVisible: boolean;
   name: string;
   type: number;

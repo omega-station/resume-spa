@@ -6,11 +6,12 @@ import { getHeadings, Headings } from '../../../utility';
 // import Loading from '../Loading';
 import { Props } from './definition';
 import StyledNav from './style';
+import defaults from './defaults';
 
 export const getSlug = (value: string): string => value.toLowerCase().replace(/ /g, '-');
 
 const MenuSection = (props: Props): JSX.Element => {
-  const { data, items }: Props = props;
+  const { data, items, isIndexed, onMenuClick }: Props = { ...defaults, ...props };
   // const { data, loading, error }: QueryResult = useQuery(GQL_QUERY.SECTION_HEADING);
 
   // if (loading) return <Loading />;
@@ -20,12 +21,21 @@ const MenuSection = (props: Props): JSX.Element => {
 
   return (
     <StyledNav>
-      <ul>
+      <ul className="menu-section">
         {Object.values(headings).map(
           (value: string, i: number): JSX.Element => {
+            const url: string = `#${getSlug(value)}`;
+            const isSelected: string = i === 0 ? 'is-selected' : '';
             return (
-              <li key={i}>
-                <a href={`#${getSlug(value)}`}>{value}</a>
+              <li key={i} className={`menu-section-${i} ${isSelected}`}>
+                {isIndexed ? (
+                  <a href={url} onClick={() => onMenuClick && onMenuClick(i)}>
+                    <span>&lt;Press {i + 1} or ↑/↓&gt;</span>
+                    <span>{value}</span>
+                  </a>
+                ) : (
+                  <a href={url}>{value}</a>
+                )}
               </li>
             );
           }

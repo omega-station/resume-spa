@@ -1,10 +1,10 @@
 import styled from '@emotion/styled';
-import { breakpoint, color } from '../../../utility/constant';
-import { border, padding } from '../../../utility/mixin';
+import { color } from '../../../utility/constant';
+import { border, padding, defaults } from '../../../utility/mixin';
 
 const StyledPage = styled.div`
+  ${defaults('page', '768px')};
   ${padding(true, '25px')};
-  max-width: 1024px;
 
   main {
     section {
@@ -53,6 +53,7 @@ const StyledPage = styled.div`
             }
 
             &:first-of-type {
+              flex-direction: column !important;
               margin: 0 0 10px;
 
               > span {
@@ -60,10 +61,7 @@ const StyledPage = styled.div`
 
                 &:last-of-type {
                   margin: 8px 0 0;
-
-                  @media (min-width: ${breakpoint.desktop[3]}) {
-                    margin: 0;
-                  }
+                  text-align: left;
                 }
               }
             }
@@ -122,11 +120,11 @@ const StyledPage = styled.div`
               }
 
               &.proficiency i {
-                margin-right: 8px;
+                margin-right: 6px;
                 color: ${color.solid.black};
-                font-size: 0.975rem;
+                font-size: 0.85rem;
                 font-style: normal;
-                letter-spacing: -0.1em;
+                letter-spacing: -0.15em;
               }
             }
           }

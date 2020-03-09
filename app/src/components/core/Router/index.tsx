@@ -8,8 +8,7 @@ import Error from '../Error';
 import Loading from '../Loading';
 
 const Router = (): JSX.Element => {
-  // const { data, loading, error }: QueryResult = useQuery(GQL_QUERY.PAGE);
-  const { data, loading, error }: QueryResult = useQuery(GQL_QUERY.GLOBAL);
+  const { data, loading, error }: QueryResult = useQuery(GQL_QUERY.GLOBAL); //GQL_QUERY.PAGE
 
   if (loading) return <Loading />;
   if (error) return <Error />;

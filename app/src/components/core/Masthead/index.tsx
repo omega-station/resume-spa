@@ -4,11 +4,12 @@ import React from 'react';
 // import Loading from '../Loading';
 // import { GQL_QUERY } from './graphql';
 import { heading, subheading } from '../../core/Masthead/ascii';
+import defaults from './defaults';
 import { Props } from './definition';
 import StyledMasthead from './style';
 
 const MenuPage = (props: Props): JSX.Element => {
-  const { data, isAscii = false }: Props = props;
+  const { data, isAscii }: Props = { ...defaults, ...props };
   // const { data, loading, error }: QueryResult = useQuery(GQL_QUERY);
 
   // if (loading) return <Loading />;
@@ -25,8 +26,14 @@ const MenuPage = (props: Props): JSX.Element => {
         </>
       ) : (
         <>
-          <pre>{heading.desktop}</pre>
-          <pre>{subheading.desktop}</pre>
+          <div className="ascii ascii-desktop">
+            <pre>{heading.desktop}</pre>
+            <pre>{subheading.desktop}</pre>
+          </div>
+          <div className="ascii ascii-mobile">
+            <pre>{heading.mobile}</pre>
+            <pre>{subheading.mobile}</pre>
+          </div>
         </>
       )}
     </StyledMasthead>

@@ -28,14 +28,12 @@ const StyledFooter = styled.footer`
             display: flex;
             flex-direction: column;
             justify-content: center;
-            flex-basis: 30%;
 
             &:not(:first-of-type) {
               margin: 2px 0 0;
             }
 
             &:nth-of-type(2) {
-              flex-basis: 40%;
               padding: 10px;
 
               p {
@@ -47,8 +45,25 @@ const StyledFooter = styled.footer`
           @media (min-width: ${breakpoint.mobile[3]}) {
             flex-direction: row;
 
-            div:not(:first-of-type) {
-              margin: 0 0 0 2px;
+            div {
+              width: 30%;
+
+              &:nth-of-type(2) {
+                width: 40%;
+              }
+
+              &:not(:first-of-type) {
+                margin: 0 0 0 2px;
+              }
+
+              img {
+                display: block;
+                max-width: 300px;
+                max-height: 200px;
+                width: auto;
+                height: auto;
+                object-fit: cover;
+              }
             }
           }
         }

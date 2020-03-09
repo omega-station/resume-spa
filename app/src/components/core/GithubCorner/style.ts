@@ -1,8 +1,8 @@
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
-import { breakpoint } from '../../../utility/constant';
-import { transition } from '../../../utility/mixin';
 import anim from '../../../utility/anim';
+import { breakpoint, color } from '../../../utility/constant';
+import { transition } from '../../../utility/mixin';
 import { Props } from './definition';
 
 const StyledCorner = styled.a<Props>`
@@ -11,21 +11,31 @@ const StyledCorner = styled.a<Props>`
     position: fixed;
     top: 0;
     right: 0;
+    border: 0 !important;
+
+    ${props.isLeft &&
+      css`
+        left: 0;
+        right: auto;
+        transform: scale(-1, 1);
+      `}
 
     svg {
       ${transition('width')}
       display: block;
-      width: 70px;
+      width: 60px;
 
-      @media (min-width: ${breakpoint.tablet.portrait[0]}) {
+      @media (min-width: ${breakpoint.mobile[3]}) {
         width: 100px;
       }
 
-      @media (min-width: ${breakpoint.desktop[1]}) {
-        width: 130px;
+      @media (min-width: ${breakpoint.tablet.landscape[0]}) {
+        width: 140px;
       }
 
       & path {
+        ${transition('fill', '.3s', 'ease-out')};
+
         &:nth-of-type(1) {
           fill: ${props.fill};
         }
@@ -36,17 +46,22 @@ const StyledCorner = styled.a<Props>`
 
         &:nth-of-type(2),
         &:nth-of-type(3) {
-          fill: #fff;
+          fill: ${props.color};
         }
       }
     }
 
     &:hover svg path {
+      &:nth-of-type(2),
+      &:nth-of-type(3) {
+        fill: ${color.solid.white};
+      }
+
       &:nth-of-type(1) {
         animation: none;
 
         @media (min-width: ${breakpoint.mobile[2]}) {
-          animation: anim-color-cycle 500ms infinite;
+          animation: anim-color-cycle 800ms infinite;
         }
       }
 

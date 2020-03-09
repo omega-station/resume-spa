@@ -5,32 +5,34 @@ import { getHeadings } from '../../../utility';
 // import Error from '../Error';
 // import Loading from '../Loading';
 import { getSlug } from '../MenuSection';
+import defaults from './defaults';
 import { Props } from './definition';
 import SectionDefault from './SectionDefault';
 import SectionHistory from './SectionHistory';
 import SectionSkillset from './SectionSkillset';
 import StyledSection from './style';
+import { section } from '../../../utility/constant';
 
 const Section = (props: Props): JSX.Element => {
-  const { data, type }: Props = props;
+  const { data, type }: Props = { ...defaults, ...props };
   // const { data, loading, error }: QueryResult = useQuery(GQL_QUERY.SECTION_HEADING);
 
   // if (loading) return <Loading />;
   // if (error) return <Error />;
 
-  const heading: any = getHeadings(data)[type];
+  const heading: any = getHeadings(data)[type as string];
 
   let Component: (props: Props) => JSX.Element = SectionDefault;
-  if (type === 'education' || type === 'work') {
+  if (type === section[2] || type === section[3]) {
     Component = SectionHistory;
-  } else if (type === 'skillset') {
+  } else if (type === section[1]) {
     Component = SectionSkillset;
   }
 
   return (
-    <StyledSection id={getSlug(heading)} className={`section-${heading}`}>
+    <StyledSection id={getSlug(heading)} className={`section-${getSlug(heading)}`}>
       <h2>{heading}</h2>
-      <Component type={type} data={data} />
+      <Component data={data} type={type} />
     </StyledSection>
   );
 };
