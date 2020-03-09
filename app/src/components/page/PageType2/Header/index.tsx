@@ -5,10 +5,10 @@ import MenuPage from '../../../core/MenuPage';
 import MenuSection from '../../../core/MenuSection';
 import StyledHeader from './style';
 import Contact from '../../../core/Contact';
+import { Props } from './definition';
 
-const Header = (props: any): JSX.Element => {
-  const { data }: any = props;
-
+const Header = (props: Props): JSX.Element => {
+  const { data }: Props = props;
   const menuItem: JSX.Element = (
     <>
       {Array(21)

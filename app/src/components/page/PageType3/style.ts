@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import WebFont from 'webfontloader';
 import { color } from '../../../utility/constant';
-import { padding } from '../../../utility/mixin';
+import { padding, defaults } from '../../../utility/mixin';
 
 WebFont.load({
   google: {
@@ -10,6 +10,7 @@ WebFont.load({
 });
 
 const StyledPage = styled.div`
+  ${defaults()};
   ${padding()};
 
   * {

@@ -5,9 +5,10 @@ import React from 'react';
 import { gqlContact, gqlSettings, Props } from './definition';
 // import { GQL_QUERY } from './graphql';
 import StyledContact from './style';
+import defaults from './defaults';
 
 const Contact = (props: Props): JSX.Element => {
-  const { data, hasTitle = true }: Props = props;
+  const { data, hasContainer, hasTitle }: Props = { ...defaults, ...props };
   // const { data, loading, error }: QueryResult = useQuery(GQL_QUERY);
 
   // if (loading) return <Loading />;
@@ -16,15 +17,21 @@ const Contact = (props: Props): JSX.Element => {
   const resume: gqlContact = data && data.options.resume;
   const settings: gqlSettings = data && data.generalSettings;
 
-  return (
-    <StyledContact>
-      {hasTitle && <span>{settings.title}</span>}
+  const contact: JSX.Element = (
+    <>
       <span>{resume.contactAddress1}</span>
       <span>{resume.contactAddress2}</span>
       <span>{resume.contactPhone}</span>
       <span>
         <a href={`mailto:${resume.contactEmail}`}>{resume.contactEmail}</a>
       </span>
+    </>
+  );
+
+  return (
+    <StyledContact>
+      {hasTitle && <span>{settings.title}</span>}
+      {hasContainer ? <span>{contact}</span> : contact}
     </StyledContact>
   );
 };

@@ -33,6 +33,17 @@ export const border = (width = '1px', isInverse = false) => css`
     `}
 `;
 
+export const defaults = (type = 'page', maxWidth: string = 'none'): SerializedStyles => css`
+  ${type === 'page' &&
+    css`
+      position: relative;
+      min-width: 320px;
+      max-width: ${maxWidth};
+      height: 100%;
+      background-color: ${color.solid.white};
+    `}
+`;
+
 export const hover = (padding: string = '2px', border: string = '2px'): SerializedStyles => css`
   padding-bottom: ${padding};
   border-bottom: ${border} solid transparent;

@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import WebFont from 'webfontloader';
-import { transition } from '../../../utility/mixin';
 import { color } from '../../../utility/constant';
+import { defaults, transition } from '../../../utility/mixin';
 
 WebFont.load({
   google: {
@@ -10,6 +10,8 @@ WebFont.load({
 });
 
 const StyledPage = styled.div`
+  ${defaults()};
+
   * {
     font-family: Teko, sans-serif;
   }

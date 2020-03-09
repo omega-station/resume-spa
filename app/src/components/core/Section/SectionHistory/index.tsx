@@ -1,4 +1,5 @@
 import React from 'react';
+import { section } from '../../../../utility/constant';
 // import { useQuery } from 'react-apollo';
 // import Error from '../../../core/Error';
 // import Loading from '../../Loading';
@@ -17,10 +18,10 @@ const SectionHistory = (props: Props): JSX.Element => {
   let history: any;
 
   switch (type) {
-    case 'work':
+    case section[2]:
       history = work;
       break;
-    case 'education':
+    case section[3]:
       history = education;
       break;
   }

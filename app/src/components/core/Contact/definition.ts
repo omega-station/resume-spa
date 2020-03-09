@@ -1,5 +1,6 @@
 export interface Props {
   data: any;
+  hasContainer?: boolean;
   hasTitle?: boolean;
 }
 

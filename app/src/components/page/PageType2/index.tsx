@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
-import GithubCorner from '../../core/GithubCorner';
+import { section } from '../../../utility/constant';
+import GitHubCorner from '../../core/GitHubCorner';
 import Section from '../../core/Section';
 import { PropsPageType as Props } from '../Page/definition';
 import Cursor from './Cursor';
@@ -16,11 +17,9 @@ const PageType2 = (props: Props): JSX.Element => {
     return () => cursor.destroy();
   }, [cursor]);
 
-  const section = ['about', 'skillset', 'work', 'education', 'interests', 'references', 'meta'];
-
   return (
     <StyledPage>
-      <GithubCorner />
+      <GitHubCorner isLeft={true} />
       <Header data={data} />
       <main>
         {section.map((type: string, i: number) => (

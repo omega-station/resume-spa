@@ -3,24 +3,13 @@
 
 html,
 body,
-body {
+#root {
   height: 100%;
 }
 
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-body.pagetype-1 {
-  background-image: linear-gradient(0deg, rgb(0, 18, 0) 25%, black 25%, black 50%, rgb(0, 18, 0) 50%, rgb(0, 18, 0) 75%, black 75%, black 100%);
-  background-size: 4px 4px;
-}
-
-body.pagetype-2,
-body.pagetype-3,
-body.pagetype-4 {
-  background-color: white;
 }
 
 * {

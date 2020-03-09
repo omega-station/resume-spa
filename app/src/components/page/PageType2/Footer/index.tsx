@@ -4,7 +4,6 @@ import StyledFooter from './style';
 
 const Footer = (): JSX.Element => {
   const url = 'https://en.wikipedia.org/wiki/Webring';
-
   const counter = (
     <div>
       <a href="https://www.hitwebcounter.com/" target="_blank" rel="noopener noreferrer">
@@ -12,7 +11,6 @@ const Footer = (): JSX.Element => {
       </a>
     </div>
   );
-
   return (
     <StyledFooter>
       <div>

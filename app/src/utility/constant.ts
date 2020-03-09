@@ -15,6 +15,9 @@ export const breakpoint = {
 };
 
 export const color = {
+  alpha: {
+    black: 'rgba(0, 0, 0, .35)',
+  },
   solid: {
     black: 'rgb(0, 0, 0)',
     blue: 'rgb(0, 0, 255)',
@@ -33,7 +36,8 @@ export const color = {
   pagetype: {
     1: {
       alpha: {
-        green: 'rgba(0, 128, 0, 0.6)',
+        green: 'rgba(0, 200, 0, 0.7)',
+        green2: 'rgba(0, 200, 0, 0.4)',
       },
       solid: {
         green: 'rgb(0, 128, 0)',
@@ -44,5 +48,7 @@ export const color = {
     4: {},
   },
 };
+
+export const section = ['about', 'skillset', 'work', 'education', 'interests', 'references', 'meta'];
 
 export const transition = { duration: '0.3s' };
