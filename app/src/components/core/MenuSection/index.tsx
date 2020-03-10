@@ -30,7 +30,7 @@ const MenuSection = (props: Props): JSX.Element => {
               <li key={i} className={`menu-section-${i} ${isSelected}`}>
                 {isIndexed ? (
                   <a href={url} onClick={() => onMenuClick && onMenuClick(i)}>
-                    <span>&lt;Press {i + 1} or ↑/↓&gt;</span>
+                    <span>Press &lt;{i + 1}&gt; or &lt;↑/↓&gt;</span>
                     <span>{value}</span>
                   </a>
                 ) : (

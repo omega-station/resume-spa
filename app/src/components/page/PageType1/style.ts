@@ -4,8 +4,7 @@ import { backgroundStriped, defaults, padding, transition } from '../../../utili
 
 const StyledPage = styled.div`
   ${defaults()};
-  background-image: linear-gradient(0deg, rgb(0, 18, 0) 25%, black 25%, black 50%, rgb(0, 18, 0) 50%, rgb(0, 18, 0) 75%, black 75%, black 100%);
-  background-size: 4px 4px;
+  ${backgroundStriped('black')};
 
   * {
     color: ${color.pagetype[1].solid.green};
@@ -79,11 +78,11 @@ const StyledPage = styled.div`
             }
 
             @media (min-width: ${breakpoint.tablet.portrait[1]}) {
-              padding: 0 15%;
+              padding: 0 12%;
 
               span:first-of-type {
                 display: inline-block;
-                margin: 0 40px 0 0;
+                margin: 0 60px 0 0;
               }
             }
           }

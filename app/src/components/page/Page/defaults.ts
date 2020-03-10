@@ -1,7 +1,8 @@
 import { PropsPage } from './definition';
+import { data } from '../../../utility/graphql/data';
 
 const defaults: PropsPage = {
-  data: {},
+  data,
   type: 1,
 };
 

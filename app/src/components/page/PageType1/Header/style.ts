@@ -54,9 +54,16 @@ const StyledHeader = styled.header`
 
     ul {
       width: 100%;
-      max-width: 360px;
 
       li {
+        &:not(:first-of-type) {
+          margin: 0 0 0 25px;
+        }
+
+        &:last-of-type {
+          margin-left: auto;
+        }
+
         a,
         span {
           ${transition('background-color', '.2s')}
@@ -82,17 +89,19 @@ const StyledHeader = styled.header`
         }
 
         span {
-          &:last-of-type {
+          &:nth-of-type(5),
+          &:nth-of-type(6) {
             display: none;
           }
         }
       }
 
       @media (min-width: ${breakpoint.tablet.portrait[1]}) {
-        max-width: 520px;
-
-        li span:last-of-type {
-          display: inline-block;
+        li span {
+          &:nth-of-type(5),
+          &:nth-of-type(6) {
+            display: inline-block;
+          }
         }
       }
     }
