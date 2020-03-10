@@ -26,3 +26,7 @@ export const getHeadings = (data: any, allowed: number[] = []): Headings => {
 
   return headings;
 };
+
+export const getRandom = (max: number): number => {
+  return Math.floor(Math.random() * Math.floor(max));
+};

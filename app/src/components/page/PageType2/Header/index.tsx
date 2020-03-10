@@ -9,7 +9,7 @@ import { Props } from './definition';
 
 const Header = (props: Props): JSX.Element => {
   const { data }: Props = props;
-  const menuItem: JSX.Element = (
+  const items: JSX.Element = (
     <>
       {Array(21)
         .fill(0)
@@ -27,7 +27,7 @@ const Header = (props: Props): JSX.Element => {
       <div>
         <Masthead data={data} />
         <Contact data={data} hasTitle={false} />
-        <MenuSection data={data} items={[menuItem]} />
+        <MenuSection data={data} items={[items]} />
       </div>
     </StyledHeader>
   );

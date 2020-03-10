@@ -9,7 +9,7 @@ import { PropsPage as Props, PropsPageType } from './definition';
 
 const Page = (props: Props) => {
   const { data, type }: Props = { ...defaults, ...props };
-  const settings = data.generalSettings;
+  const settings = data && data.generalSettings;
 
   const getPage = (data: any, type: number): JSX.Element => {
     const PageType: (props: PropsPageType) => JSX.Element = [PageType1, PageType2, PageType3, PageType4][type - 1];

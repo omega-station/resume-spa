@@ -8,11 +8,7 @@ const GitHubCorner = (props: Props) => {
   const [isSmall, setIsSmall] = useState(false);
 
   useEffect(() => {
-    const handler = () => {
-      // console.log('GitHubCorner', window.scrollY, isSmall);
-      setIsSmall(window.scrollY > 500);
-    };
-
+    const handler = () => setIsSmall(window.scrollY > 500);
     window.addEventListener('scroll', handler);
     return () => window.removeEventListener('scroll', handler);
   }, [isSmall]);

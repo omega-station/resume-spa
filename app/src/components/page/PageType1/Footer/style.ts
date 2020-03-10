@@ -1,15 +1,16 @@
 import styled from '@emotion/styled';
 import { breakpoint, color } from '../../../../utility/constant';
-import { backgroundStriped, padding } from '../../../../utility/mixin';
+// import { backgroundStriped, padding } from '../../../../utility/mixin';
+import { padding } from '../../../../utility/mixin';
 
 const StyledFooter = styled.footer`
-  ${backgroundStriped()};
   ${padding(true, '10px', '15px')};
   display: flex;
   align-items: center;
   position: fixed;
   bottom: 0;
   left: 0;
+  border-top: 3px solid ${color.pagetype[1].solid.green};
 
   @media (min-width: ${breakpoint.desktop[3]}) {
     ${padding(true, '4px', '4px')};
@@ -41,6 +42,7 @@ const StyledFooter = styled.footer`
       &,
       * {
         color: ${color.solid.black};
+        color: ${color.pagetype[1].solid.green};
         font-size: 1.25rem;
         font-size: 1.6rem;
         font-weight: 500;
@@ -80,6 +82,7 @@ const StyledFooter = styled.footer`
 
           a:hover {
             border-bottom: 2px solid ${color.solid.black};
+            border-bottom: 2px solid ${color.pagetype[1].solid.green};
           }
         }
       }

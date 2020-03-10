@@ -41,6 +41,8 @@ export const color = {
       },
       solid: {
         green: 'rgb(0, 128, 0)',
+        green2: 'rgb(0, 20, 0)',
+        green3: 'rgb(0, 200, 0)',
       },
     },
     2: {},
