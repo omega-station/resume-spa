@@ -1,10 +1,10 @@
 import React from 'react';
-import { lemming } from '../../../../images';
-import Masthead from '../../../core/Masthead';
-import MenuPage from '../../../core/MenuPage';
-import MenuSection from '../../../core/MenuSection';
+import { lemming } from '../../../../../images';
+import Masthead from '../../../../core/Masthead';
+import MenuPage from '../../../../core/MenuPage';
+import MenuSection from '../../../../core/MenuSection';
 import StyledHeader from './style';
-import Contact from '../../../core/Contact';
+import Contact from '../../../../core/Contact';
 import { Props } from './definition';
 
 const Header = (props: Props): JSX.Element => {

@@ -54,6 +54,7 @@ export const data: any = {
       educationHeading: 'Education',
       education: [
         {
+          school: 'Concordia University',
           campus: 'Sir George Williams Campus',
           dates: 'Jan 2005 to Dec 2006',
           location: 'Montreal, QC',
@@ -62,9 +63,9 @@ export const data: any = {
               item: 'Visual Communication and Design',
             },
           ],
-          school: 'Concordia University',
         },
         {
+          school: 'Fanshawe College of Applied Arts & Technology',
           campus: 'Oxford Campus',
           dates: 'Sep 1997 to Dec 1998',
           location: 'London, ON',
@@ -76,9 +77,9 @@ export const data: any = {
               item: 'Graduated with Dean’s Honour',
             },
           ],
-          school: 'Fanshawe College of Applied Arts & Technology',
         },
         {
+          school: 'Humber College of Applied Arts & Technology',
           campus: 'North Campus',
           dates: 'Sep 1989 to Apr 1992',
           location: 'Toronto, ON',
@@ -87,7 +88,6 @@ export const data: any = {
               item: 'Film & Television Production',
             },
           ],
-          school: 'Humber College of Applied Arts & Technology',
         },
       ],
       interestsHeading: 'Interests',
@@ -225,7 +225,6 @@ export const data: any = {
           intro: 'Design, implement, and optimize:',
           location: 'Vancouver, BC',
           title: 'Principal/Web Developer',
-          skillset: null,
           points: [
             {
               item: 'Small- to medium-sized websites',
@@ -237,6 +236,7 @@ export const data: any = {
               item: 'Static and dynamic content',
             },
           ],
+          skillset: null,
         },
         {
           company: 'Origami Software Corp.',
@@ -244,6 +244,14 @@ export const data: any = {
           intro: 'Implemented core React components for custom SharePoint solution',
           location: 'Vancouver, BC',
           title: 'Front-end Developer (React)',
+          points: [
+            {
+              item: 'Contract position',
+            },
+            {
+              item: 'Ongoing maintenance',
+            },
+          ],
           skillset: [
             {
               skills: 'React DOM, JavaScript ES6+/TypeScript, CSS (in JS), HTML5',
@@ -258,14 +266,6 @@ export const data: any = {
               area: 'Applications',
             },
           ],
-          points: [
-            {
-              item: 'Contract position',
-            },
-            {
-              item: 'Ongoing maintenance',
-            },
-          ],
         },
         {
           company: 'Powershifter Media Inc.',
@@ -273,6 +273,14 @@ export const data: any = {
           intro: 'Implementing, optimizing, and maintaining:',
           location: 'Vancouver, BC',
           title: 'Front-end Developer',
+          points: [
+            {
+              item: 'Various medium- to large-sized websites',
+            },
+            {
+              item: 'Static and dynamic content',
+            },
+          ],
           skillset: [
             {
               skills: 'PHP, HTML5, CSS/Sass, JavaScript/jQuery, AJAX',
@@ -287,14 +295,6 @@ export const data: any = {
               area: 'Applications',
             },
           ],
-          points: [
-            {
-              item: 'Various medium- to large-sized websites',
-            },
-            {
-              item: 'Static and dynamic content',
-            },
-          ],
         },
         {
           company: 'Hot Tomali Communications Inc.',
@@ -302,6 +302,17 @@ export const data: any = {
           intro: 'Designed, implemented, and optimized:',
           location: 'Vancouver, BC',
           title: 'Web Developer',
+          points: [
+            {
+              item: 'Dynamic Content Management System (HotCMS) and support modules',
+            },
+            {
+              item: 'Various small- to medium-sized websites',
+            },
+            {
+              item: 'Static and dynamic content',
+            },
+          ],
           skillset: [
             {
               skills: 'PHP/CodeIgniter/Smarty, HTML, CSS, JavaScript/jQuery, SQL, AJAX',
@@ -314,17 +325,6 @@ export const data: any = {
             {
               skills: 'Photoshop, Flash',
               area: 'Applications',
-            },
-          ],
-          points: [
-            {
-              item: 'Dynamic Content Management System (HotCMS) and support modules',
-            },
-            {
-              item: 'Various small- to medium-sized websites',
-            },
-            {
-              item: 'Static and dynamic content',
             },
           ],
         },

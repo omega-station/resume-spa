@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
-import { breakpoint, color } from '../../../../utility/constant';
-import { border, transition } from '../../../../utility/mixin';
+import { breakpoint, color } from '../../../../../utility/constant';
+import { border, transition } from '../../../../../utility/mixin';
 
 const StyledHeader = styled.header`
   > nav {

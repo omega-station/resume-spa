@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
-import { breakpoint, color } from '../../../../utility/constant';
+import { breakpoint, color } from '../../../../../utility/constant';
 // import { backgroundStriped, padding } from '../../../../utility/mixin';
-import { padding } from '../../../../utility/mixin';
+import { padding } from '../../../../../utility/mixin';
 
 const StyledFooter = styled.footer`
   ${padding(true, '10px', '15px')};

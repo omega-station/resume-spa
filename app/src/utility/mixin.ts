@@ -14,6 +14,8 @@ export const animation = (name: string = 'slideup', duration: string = '1500ms',
 const black: string = color.solid.black;
 const green: string = color.pagetype[1].solid.green;
 const green2: string = color.pagetype[1].solid.green2;
+const green3: string = color.pagetype[1].solid.green3;
+
 export const backgroundStriped = (color: string = 'green'): SerializedStyles => css`
   ${color === 'black' &&
     css`
@@ -23,6 +25,11 @@ export const backgroundStriped = (color: string = 'green'): SerializedStyles => 
   ${color === 'green' &&
     css`
       background-image: linear-gradient(0deg, ${green} 25%, ${black} 25%, ${black} 50%, ${green} 50%, ${green} 75%, ${black} 75%, ${black} 100%);
+    `}
+
+  ${color === 'light-green' &&
+    css`
+      background-image: linear-gradient(0deg, ${green3} 25%, ${black} 25%, ${black} 50%, ${green3} 50%, ${green3} 75%, ${black} 75%, ${black} 100%);
     `}
 
   background-size: 4px 4px;

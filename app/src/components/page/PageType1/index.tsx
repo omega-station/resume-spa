@@ -4,12 +4,13 @@ import GitHubCorner from '../../core/GitHubCorner';
 import MenuSection from '../../core/MenuSection';
 import defaults from '../Page/defaults';
 import { PropsPageType as Props } from '../Page/definition';
-import Footer from './Footer';
-import Header from './Header';
+import Footer from './components/Footer';
+import Header from './components/Header';
+import Typed from './components/Typed';
+import Window from './components/Window';
 import StyledPage from './style';
-import { RefMenu, RefMode, setPageKeys, setSectionKeys } from './utility';
-import Window from './Window';
-import Typed from './Typed';
+import { getTyped } from './utility/typed';
+import { RefMenu, RefMode, setPageKeys, setSectionKeys } from './utility/useeffect';
 
 const PageType1 = (props: Props): JSX.Element => {
   const { data }: Props = { ...defaults, ...props };
@@ -18,6 +19,9 @@ const PageType1 = (props: Props): JSX.Element => {
   const mode: RefMode = useRef('section');
   const page: RefMenu = useRef(0);
   const section: RefMenu = useRef(0);
+
+  section.current = 1;
+  const typed = getTyped(section, resume);
 
   const onMenuClick = (i: number): any => {
     // console.log('onMenuClick', i);
@@ -33,26 +37,14 @@ const PageType1 = (props: Props): JSX.Element => {
     return () => window.removeEventListener('keydown', handler);
   }, []);
 
-  const aboutPoints = resume.aboutPoints.map((point: { item: string }) => `<li>${point.item}</li>`).join('');
-  const interestsPoints = resume.interestsPoints.map((point: { item: string }) => `<li>${point.item}</li>`).join('');
-
   return (
     <StyledPage>
       <GitHubCorner color={color.pagetype[1].solid.green} fill={color.alpha.black} />
       <Header data={data} />
       <main>
         <MenuSection data={data} isIndexed={true} onMenuClick={onMenuClick} />
-        <Window heading={resume.aboutHeading}>
-          <Typed strings={[`<p>${resume.aboutIntro}</p>\n${aboutPoints}`]} />
-        </Window>
-        <Window heading={resume.interestsHeading}>
-          <Typed strings={[`<p>${resume.interestsIntro}</p>\n${interestsPoints}`]} />
-        </Window>
-        <Window heading={resume.referencesHeading}>
-          <Typed strings={[`<p>${resume.referencesIntro}</p>`]} />
-        </Window>
-        <Window heading={resume.metaHeading}>
-          <Typed strings={[`<p>${resume.metaCopy}</p>`]} />
+        <Window heading={typed.heading}>
+          <Typed strings={[typed.strings]} />
         </Window>
       </main>
       <Footer data={data} />
