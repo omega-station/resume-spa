@@ -25,6 +25,11 @@ const StyledCorner = styled.a<Props>`
       display: block;
       width: 60px;
 
+      ${props.isSmall &&
+        css`
+          width: 60px !important;
+        `}
+
       @media (min-width: ${breakpoint.mobile[3]}) {
         width: 100px;
       }
@@ -34,10 +39,12 @@ const StyledCorner = styled.a<Props>`
       }
 
       & path {
-        ${transition('fill', '.3s', 'ease-out')};
+        ${transition('fill', '0.3s', 'ease-out')};
 
         &:nth-of-type(1) {
           fill: ${props.fill};
+          /* fill-opacity: 0;
+          transition: fill-opacity 1s ease-in-out !important; */
         }
 
         &:nth-of-type(2) {
@@ -59,6 +66,7 @@ const StyledCorner = styled.a<Props>`
 
       &:nth-of-type(1) {
         animation: none;
+        /* fill-opacity: 1; */
 
         @media (min-width: ${breakpoint.mobile[2]}) {
           animation: anim-color-cycle 800ms infinite;

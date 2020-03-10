@@ -72,11 +72,11 @@ const StyledHeader = styled.header`
           line-height: 1.175em;
         }
 
-        &.is-selected a {
+        &.is-current a {
           background-color: ${color.pagetype[1].alpha.green2};
         }
 
-        &.is-current a,
+        &.is-selected a,
         a:hover {
           background-color: ${color.pagetype[1].alpha.green};
         }

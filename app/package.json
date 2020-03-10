@@ -51,6 +51,7 @@
     "@types/webfontloader": "^1.6.29",
     "apollo-storybook-react": "^0.2.4",
     "awesome-typescript-loader": "^5.2.1",
+    "babel-plugin-transform-remove-console": "^6.9.4",
     "graphql-tools": "^4.0.7",
     "react-app-rewire-uglifyjs": "^0.1.1",
     "react-app-rewired": "^2.1.5",

@@ -3,6 +3,7 @@ import { Props } from './definition';
 
 const defaults: Props = {
   isLeft: false,
+  isSmall: false,
   ariaLabel: 'View source on GitHub',
   color: color.solid.white,
   fill: color.solid.black,
