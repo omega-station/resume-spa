@@ -2,8 +2,10 @@ import React from 'react';
 import { QueryResult, useQuery } from 'react-apollo';
 import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
 import { GQL_QUERY } from '../../../utility/graphql';
-import Page from '../../page/Page';
-import { PropsPage } from '../../page/Page/definition';
+import PageType1 from '../../page/PageType1';
+import PageType2 from '../../page/PageType2';
+import PageType3 from '../../page/PageType3';
+import PageType4 from '../../page/PageType4';
 import Error from '../Error';
 import Loading from '../Loading';
 
@@ -21,7 +23,19 @@ const Router = (): JSX.Element => {
     <BrowserRouter>
       <Redirect exact from="/" to={`/${frontpage}`} />
       <Switch>
-        {items.map(
+        <Route path={`/1984`}>
+          <PageType1 data={data} />
+        </Route>
+        <Route path={`/1996`}>
+          <PageType2 data={data} />
+        </Route>
+        <Route path={`/2008`}>
+          <PageType3 data={data} />
+        </Route>
+        <Route path={`/2020`}>
+          <PageType4 data={data} />
+        </Route>
+        {/* {items.map(
           (item: PropsPage, i: number): JSX.Element => {
             const { name, type }: PropsPage = item;
             return (
@@ -30,7 +44,7 @@ const Router = (): JSX.Element => {
               </Route>
             );
           }
-        )}
+        )} */}
       </Switch>
     </BrowserRouter>
   );
