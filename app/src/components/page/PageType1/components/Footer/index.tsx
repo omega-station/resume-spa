@@ -1,5 +1,5 @@
 import React from 'react';
-import Contact from '../../../core/Contact';
+import Contact from '../../../../core/Contact';
 import StyledFooter from './style';
 import { Props } from './definition';
 

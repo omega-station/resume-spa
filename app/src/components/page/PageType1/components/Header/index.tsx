@@ -1,6 +1,6 @@
 import React from 'react';
-import Masthead from '../../../core/Masthead';
-import MenuPage from '../../../core/MenuPage';
+import Masthead from '../../../../core/Masthead';
+import MenuPage from '../../../../core/MenuPage';
 import StyledHeader from './style';
 import { Props } from './definition';
 

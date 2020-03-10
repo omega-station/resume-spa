@@ -1,5 +1,5 @@
 import React from 'react';
-import { coding, reading, ucDigger, ucMain } from '../../../../images';
+import { coding, reading, ucDigger, ucMain } from '../../../../../images';
 import StyledFooter from './style';
 
 const Footer = (): JSX.Element => {

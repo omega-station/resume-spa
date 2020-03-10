@@ -5,6 +5,11 @@ import React, { Fragment } from 'react';
 // import { GQL_QUERY } from './graphql';
 import { Props } from '../definition';
 
+export const getProficiencyString = (percentage: number | string, multiplier: number = 2.5, char: string = '♥'): string => {
+  const _percentage = typeof percentage === 'string' ? parseInt(percentage) : percentage;
+  return char.repeat(_percentage / multiplier);
+};
+
 const SectionSkillset = (props: Props): JSX.Element => {
   const { data }: Props = props;
   // const { data, loading, error } = useQuery(GQL_QUERY);
@@ -15,10 +20,9 @@ const SectionSkillset = (props: Props): JSX.Element => {
   const { skillsetAreas: areas, skillsetProficiency: proficiency } = data.options.resume;
 
   const getProficiency = (value: number): JSX.Element => {
-    const hearts: string = '♥ '.repeat(value / 2.5); // 2.25
     return (
       <>
-        <i>{hearts}</i>[{value}%]
+        <i>{getProficiencyString(value)}</i>[{value}%]
       </>
     );
   };

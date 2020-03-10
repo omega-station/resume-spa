@@ -3,9 +3,9 @@ import { section } from '../../../utility/constant';
 import GitHubCorner from '../../core/GitHubCorner';
 import Section from '../../core/Section';
 import { PropsPageType as Props } from '../Page/definition';
-import Cursor from './Cursor';
-import Footer from './Footer';
-import Header from './Header';
+import Cursor from './components/Cursor';
+import Footer from './components/Footer';
+import Header from './components/Header';
 import StyledPage from './style';
 
 const PageType2 = (props: Props): JSX.Element => {
