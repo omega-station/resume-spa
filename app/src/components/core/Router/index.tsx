@@ -8,7 +8,7 @@ import Error from '../Error';
 import Loading from '../Loading';
 
 const Router = (): JSX.Element => {
-  const { data, loading, error }: QueryResult = useQuery(GQL_QUERY.GLOBAL); //GQL_QUERY.PAGE
+  const { data, loading, error }: QueryResult = useQuery(GQL_QUERY.PAGE);
 
   if (loading) return <Loading />;
   if (error) return <Error />;
@@ -26,7 +26,7 @@ const Router = (): JSX.Element => {
             const { name, type }: PropsPage = item;
             return (
               <Route key={i} path={`/${name}`}>
-                <Page type={type} data={data} />
+                <Page type={type} />
               </Route>
             );
           }

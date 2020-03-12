@@ -9,8 +9,8 @@ import { data } from '../../../../utility/graphql/data';
 
 storiesOf('core/Section', module)
   .addDecorator(withKnobs)
-  .add('default', () => <Section data={data} />)
+  .add('default', () => <Section />)
   .add('withKnobs', () => {
     const type: string = select('Name', _.invert(getHeadings(data)), section[0]);
-    return <Section data={data} type={type} />;
+    return <Section type={type} />;
   });

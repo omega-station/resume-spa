@@ -3,13 +3,12 @@ import { storiesOf } from '@storybook/react';
 import React from 'react';
 import StoryRouter from 'storybook-react-router';
 import Page from '..';
-import { data } from '../../../../utility/graphql/data';
 import defaults from '../defaults';
 
 storiesOf('page/Page', module)
   .addDecorator(StoryRouter())
   .addDecorator(withKnobs)
-  .add('default', () => <Page data={data} />)
+  .add('default', () => <Page />)
   .add('withKnobs', () => {
     const type: string = options(
       'Type',
@@ -22,5 +21,5 @@ storiesOf('page/Page', module)
       (defaults.type as number).toString(),
       { display: 'inline-radio' }
     );
-    return <Page data={data} type={parseInt(type)} />;
+    return <Page type={parseInt(type)} />;
   });

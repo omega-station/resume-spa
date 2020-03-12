@@ -1,21 +1,21 @@
 import React from 'react';
-// import { QueryResult, useQuery } from 'react-apollo';
-// import Error from '../Error';
-// import Loading from '../Loading';
-// import { GQL_QUERY } from './graphql';
+import { QueryResult, useQuery } from 'react-apollo';
 import { heading, subheading } from '../../core/Masthead/ascii';
+import Error from '../Error';
+import Loading from '../Loading';
 import defaults from './defaults';
 import { Props } from './definition';
+import { GQL_QUERY } from './graphql';
 import StyledMasthead from './style';
 
 const MenuPage = (props: Props): JSX.Element => {
-  const { data, isAscii }: Props = { ...defaults, ...props };
-  // const { data, loading, error }: QueryResult = useQuery(GQL_QUERY);
+  const { isAscii }: Props = { ...defaults, ...props };
+  const { data, loading, error }: QueryResult = useQuery(GQL_QUERY);
 
-  // if (loading) return <Loading />;
-  // if (error) return <Error />;
+  if (loading) return <Loading />;
+  if (error) return <Error />;
 
-  const settings: any = data && data.generalSettings;
+  const settings: any = data.generalSettings;
 
   return (
     <StyledMasthead>

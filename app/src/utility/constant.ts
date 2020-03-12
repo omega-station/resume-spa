@@ -37,7 +37,7 @@ export const color = {
     1: {
       alpha: {
         green: 'rgba(0, 200, 0, 0.7)',
-        green2: 'rgba(0, 200, 0, 0.4)',
+        green2: 'rgba(0, 200, 0, 0.5)',
       },
       solid: {
         green: 'rgb(0, 128, 0)',

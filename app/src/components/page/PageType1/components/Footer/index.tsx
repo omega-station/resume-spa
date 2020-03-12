@@ -4,10 +4,9 @@ import StyledFooter from './style';
 import { Props } from './definition';
 
 const Footer = (props: Props): JSX.Element => {
-  const { data }: Props = props;
   return (
     <StyledFooter>
-      <Contact data={data} hasContainer={true} />
+      <Contact hasContainer={true} hasDescription={true} />
     </StyledFooter>
   );
 };

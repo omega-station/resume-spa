@@ -3,13 +3,12 @@ import { storiesOf } from '@storybook/react';
 import React from 'react';
 import Contact from '..';
 import defaults from '../defaults';
-import { data } from '../../../../utility/graphql/data';
 
 storiesOf('core/Contact', module)
   .addDecorator(withKnobs)
-  .add('default', () => <Contact data={data} />)
+  .add('default', () => <Contact />)
   .add('withKnobs', () => {
     const hasContainer: boolean = boolean('Has Container?', defaults.hasContainer as boolean);
     const hasTitle: boolean = boolean('Has Title?', defaults.hasTitle as boolean);
-    return <Contact data={data} hasContainer={hasContainer} hasTitle={hasTitle} />;
+    return <Contact hasContainer={hasContainer} hasTitle={hasTitle} />;
   });

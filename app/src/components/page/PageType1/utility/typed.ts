@@ -1,15 +1,14 @@
 import { getProficiencyString as getProf } from '../../../core/Section/SectionSkillset';
-import { RefMenu } from './useeffect';
 
-export const getTyped = (section: RefMenu, resume: any): { [key: string]: string } => {
-  switch (section.current) {
+export const getTyped = (section: number, resume: any): { [key: string]: string } => {
+  switch (section) {
     case 0:
       const aboutPoints = resume.aboutPoints.map((point: { item: string }) => `<li>${point.item}</li>`).join('');
-      return { heading: resume.aboutHeading, strings: `<span>${resume.aboutIntro}</span><ul>${aboutPoints}</ul>` };
+      return { heading: resume.aboutHeading, strings: `${resume.aboutIntro}<ul>${aboutPoints}</ul>` };
     case 1:
       return {
         heading: resume.skillsetHeading,
-        strings: `<div class="table">${getSkillset(resume)[0]}</div><div class="table">${getSkillset(resume)[1]}</div>`,
+        strings: `<div class="skillset">${getSkillset(resume)[0]}</div><div class="skillset">${getSkillset(resume)[1]}</div>`,
       };
     case 2:
       const work = resume.work.map((item: any) => getHistory(item)).join('');
@@ -19,11 +18,11 @@ export const getTyped = (section: RefMenu, resume: any): { [key: string]: string
       return { heading: resume.educationHeading, strings: encode(education) };
     case 4:
       const interestsPoints = resume.interestsPoints.map((point: { item: string }) => `<li>${point.item}</li>`).join('');
-      return { heading: resume.interestsHeading, strings: `<span>${resume.interestsIntro}</span><ul>${interestsPoints}</ul>` };
+      return { heading: resume.interestsHeading, strings: `${resume.interestsIntro}<ul>${interestsPoints}</ul>` };
     case 5:
-      return { heading: resume.referencesHeading, strings: `<span>${resume.referencesIntro}</span>` };
+      return { heading: resume.referencesHeading, strings: resume.referencesIntro };
     case 6:
-      return { heading: resume.metaHeading, strings: `<span>${resume.metaCopy}</span>` };
+      return { heading: resume.metaHeading, strings: resume.metaCopy };
     default:
       return { heading: '', strings: '' };
   }
@@ -33,7 +32,6 @@ const encode = (value: string): string => value.replace(/&/g, '&amp;');
 
 const getHistory = (item: any): string => {
   const points = item.points.map((point: any): string => `<li>${point.item}</li>`).join('');
-
   const skillset =
     item.skillset &&
     item.skillset
@@ -47,21 +45,21 @@ const getHistory = (item: any): string => {
       .join('');
 
   return `
-  <div class="history">
-    <div>
-      <span>
-        ${item.title ? `<span>${item.title},</span>` : ``}
-        ${item.company ? `<span>${item.company},</span>` : ``}
-        ${item.school ? `<span>${item.school},</span>` : ``}
-        ${item.campus ? `<span>${item.campus},</span>` : ``}
-        <span>${item.location}</span>
-      </span>
-      <span>${item.dates}</span>
-    </div>
-    ${item.intro ? `<div><span>${item.intro}</span></div>` : ``}
-    <ul>${points}</ul>
-    ${skillset ? `<ul>${skillset}</ul>` : ``}
-  </div>`;
+    <div class="history">
+      <div>
+        <span>
+          ${item.title ? `<span>${item.title},</span>` : ``}
+          ${item.company ? `<span>${item.company},</span>` : ``}
+          ${item.school ? `<span>${item.school},</span>` : ``}
+          ${item.campus ? `<span>${item.campus},</span>` : ``}
+          <span>${item.location}</span>
+        </span>
+        <span>${item.dates}</span>
+      </div>
+      ${item.intro ? `<div><span>${item.intro}</span></div>` : ``}
+      <ul>${points}</ul>
+      ${skillset ? `<ul>${skillset}</ul>` : ``}
+    </div>`;
 };
 
 const getSkillset = (resume: any): string[] => {
@@ -76,7 +74,7 @@ const getSkillset = (resume: any): string[] => {
     ${resume.skillsetProficiency
       .map(
         (item: { isVisible: boolean; skill: string; proficiency: string }) =>
-          item.isVisible && `<div><span>${item.skill}:</span><span>${getProf(item.proficiency, 2.25, '+')} [${item.proficiency}%]</span></div>`
+          item.isVisible && `<div><span>${item.skill}:</span><span>${getProf(item.proficiency, 2.1, '+')} [${item.proficiency}%]</span></div>`
       )
       .join('')}`;
 

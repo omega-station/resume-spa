@@ -87,6 +87,10 @@ const StyledPage = styled.div`
             }
           }
 
+          &.is-current a {
+            background-color: ${color.pagetype[1].alpha.green2};
+          }
+
           &:hover a,
           &.is-selected a {
             background-color: ${color.pagetype[1].alpha.green} !important;
