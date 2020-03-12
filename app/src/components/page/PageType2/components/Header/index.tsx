@@ -8,7 +8,6 @@ import Contact from '../../../../core/Contact';
 import { Props } from './definition';
 
 const Header = (props: Props): JSX.Element => {
-  const { data }: Props = props;
   const items: JSX.Element = (
     <>
       {Array(21)
@@ -23,11 +22,11 @@ const Header = (props: Props): JSX.Element => {
 
   return (
     <StyledHeader>
-      <MenuPage data={data} />
+      <MenuPage />
       <div>
-        <Masthead data={data} />
-        <Contact data={data} hasTitle={false} />
-        <MenuSection data={data} items={[items]} />
+        <Masthead />
+        <Contact hasTitle={false} />
+        <MenuSection items={[items]} />
       </div>
     </StyledHeader>
   );

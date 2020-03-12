@@ -9,9 +9,8 @@ import Header from './components/Header';
 import StyledPage from './style';
 
 const PageType2 = (props: Props): JSX.Element => {
-  const { data }: Props = props;
-
   const cursor: Cursor = new Cursor();
+
   useEffect(() => {
     cursor.create();
     return () => cursor.destroy();
@@ -20,10 +19,10 @@ const PageType2 = (props: Props): JSX.Element => {
   return (
     <StyledPage>
       <GitHubCorner isLeft={true} />
-      <Header data={data} />
+      <Header />
       <main>
         {section.map((type: string, i: number) => (
-          <Section key={i} type={type} data={data} />
+          <Section key={i} type={type} />
         ))}
       </main>
       <Footer />

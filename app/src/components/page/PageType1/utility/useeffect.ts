@@ -1,74 +1,87 @@
 import { MutableRefObject } from 'react';
 
-type Element = HTMLElement | null;
+export type Element = HTMLElement | null;
+export type RefNumber = MutableRefObject<number>;
+export type RefString = MutableRefObject<string>;
 
-export type RefMenu = MutableRefObject<number>;
-export type RefMode = MutableRefObject<string>;
-
-export const setPageKeys = (e: KeyboardEvent, refMenu: RefMenu, refMode: RefMode): void => {
-  setMenuKeys('page', e, refMenu, refMode, 'ArrowLeft', 'ArrowRight', 0, 3);
+export const setPageKeys = (e: KeyboardEvent, index: RefNumber, mode: RefString): void => {
+  setMenuKeys('page', mode, index, e, 'ArrowLeft', 'ArrowRight', 0, 3);
 };
 
-export const setSectionKeys = (e: KeyboardEvent, refMenu: RefMenu, refMode: RefMode): void => {
+export const setSectionKeys = (e: KeyboardEvent, index: RefNumber, mode: RefString, current: number, setCurrent: Function, setIsWindow: Function): void => {
   const key: number = parseInt(e.key);
 
   if (key >= 1 && key <= 7) {
-    refMenu.current = key - 1;
-    setSelected('section', refMenu, refMode);
+    index.current = key - 1;
+    mode.current = 'section';
+    setClass('section', index.current);
   }
 
-  setMenuKeys('section', e, refMenu, refMode, 'ArrowUp', 'ArrowDown', 0, 6);
+  setMenuKeys('section', mode, index, e, 'ArrowUp', 'ArrowDown', 0, 6, current, setCurrent, setIsWindow);
 };
 
-const getElement = (type: string, refMenu: RefMenu): Element => {
-  const selector: string = `.menu-${type}-${refMenu.current}`;
-  return document.querySelector(selector);
-};
-
-const setSelected = (type: string, refMenu: RefMenu, refMode: RefMode, isReset: boolean = false): void => {
-  // console.log('setSelected', `.menu-${type} li`, refMenu && refMenu.current);
-  document.querySelectorAll(`.menu-${type} li`).forEach(el => el.classList.remove('is-selected'));
-  if (isReset === false) {
-    const el: Element = getElement(type, refMenu);
-    el && el.classList.add('is-selected');
-  }
-  refMode.current = type;
+export const setClass = (type: string, index: number, isCurrent: boolean = false): void => {
+  // console.log('setClass', type, index, isCurrent);
+  const selector = `is-${isCurrent ? 'current' : 'selected'}`;
+  document.querySelectorAll(`.menu-${type} li`).forEach(el => el.classList.remove(selector));
+  document.querySelector(`.menu-${type}-${index}`)?.classList.add(selector);
 };
 
 const setMenuKeys = (
   type: string,
+  mode: RefString,
+  index: RefNumber,
   e: KeyboardEvent,
-  refMenu: RefMenu,
-  refMode: RefMode,
   key1: string,
   key2: string,
   limitLower: number,
-  limitUpper: number
+  limitUpper: number,
+  current?: number,
+  setCurrent?: Function,
+  setIsWindow?: Function
 ): void => {
-  const key: number = parseInt(e.key);
+  //
 
   // arrow keys
   if (e.key === key1 || e.key === key2) {
-    console.log('setMenuKeys :: arrows', type, refMenu.current);
-    e.key === key1 && --refMenu.current < limitLower && (refMenu.current = limitUpper);
-    e.key === key2 && ++refMenu.current > limitUpper && (refMenu.current = limitLower);
-    setSelected(type, refMenu, refMode);
+    // console.log('setMenuKeys :: arrows', type, index);
+    e.key === key1 && --index.current < limitLower && (index.current = limitUpper);
+    e.key === key2 && ++index.current > limitUpper && (index.current = limitLower);
+    mode.current = type;
+    setClass(type, index.current);
   }
 
-  // trigger event
-  if (type === refMode.current && e.keyCode === 13) {
-    console.log('setMenuKeys :: trigger', type, refMenu.current);
+  // trigger: enter/13 space/32
+  if (type === mode.current && [13, 32].includes(e.keyCode)) {
+    // console.log('setMenuKeys :: trigger', type, index.current, current?.current);
 
     if (type === 'page') {
       const link: Element = document.querySelector('.menu-page li.is-selected a');
-      link && link.click && link.click();
+      link?.click();
+    }
+
+    console.log('setMenuKeys :: trigger', type, index.current, current);
+    if (type === 'section' && index.current !== current && setCurrent && setIsWindow) {
+      // console.log('setMenuKeys :: trigger', type, index.current, current);
+      setCurrent(index.current);
+      setIsWindow(false);
+      setTimeout((): void => {
+        setIsWindow(true);
+      }, 0);
     }
   }
 
-  // reset menu
-  if (type === refMode.current && (key === 0 || e.key === 'Esc' || e.key === 'Escape' || e.keyCode === 27)) {
-    refMenu.current = type === 'page' ? 0 : -1;
-    setSelected(type, refMenu, refMode, type !== 'page');
-    console.log('setMenuKeys :: reset', type, refMenu.current);
+  // reset: esc/27 zero/48
+  if (type === mode.current && [27, 48].includes(e.keyCode)) {
+    if (type === 'page') {
+      index.current = 0;
+    }
+
+    if (type === 'section' && setCurrent && setIsWindow) {
+      setCurrent(-1);
+      setIsWindow(false);
+    }
+
+    setClass(type, index.current);
   }
 };

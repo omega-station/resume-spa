@@ -1,3 +1,1 @@
-export interface Props {
-  data: any;
-}
+export interface Props {}

@@ -1,9 +1,9 @@
 import { Props } from './definition';
 
 const defaults: Props = {
-  data: {},
   hasContainer: false,
   hasTitle: true,
+  hasDescription: false,
 };
 
 export default defaults;

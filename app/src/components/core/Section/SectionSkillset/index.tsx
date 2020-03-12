@@ -1,9 +1,9 @@
 import React, { Fragment } from 'react';
-// import { useQuery } from 'react-apollo';
-// import Error from '../../../core/Error';
-// import Loading from '../../Loading';
-// import { GQL_QUERY } from './graphql';
+import { useQuery } from 'react-apollo';
+import Error from '../../../core/Error';
+import Loading from '../../Loading';
 import { Props } from '../definition';
+import { GQL_QUERY } from './graphql';
 
 export const getProficiencyString = (percentage: number | string, multiplier: number = 2.5, char: string = '♥'): string => {
   const _percentage = typeof percentage === 'string' ? parseInt(percentage) : percentage;
@@ -11,11 +11,10 @@ export const getProficiencyString = (percentage: number | string, multiplier: nu
 };
 
 const SectionSkillset = (props: Props): JSX.Element => {
-  const { data }: Props = props;
-  // const { data, loading, error } = useQuery(GQL_QUERY);
+  const { data, loading, error } = useQuery(GQL_QUERY);
 
-  // if (loading) return <Loading />;
-  // if (error) return <Error />;
+  if (loading) return <Loading />;
+  if (error) return <Error />;
 
   const { skillsetAreas: areas, skillsetProficiency: proficiency } = data.options.resume;
 

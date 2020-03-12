@@ -1,21 +1,21 @@
 import React from 'react';
-// import { QueryResult, useQuery } from 'react-apollo';
-// import Error from '../../core/Error';
-// import Loading from '../Loading';
-import { gqlContact, gqlSettings, Props } from './definition';
-// import { GQL_QUERY } from './graphql';
-import StyledContact from './style';
+import { QueryResult, useQuery } from 'react-apollo';
+import Error from '../../core/Error';
+import Loading from '../Loading';
 import defaults from './defaults';
+import { gqlContact, gqlSettings, Props } from './definition';
+import { GQL_QUERY } from './graphql';
+import StyledContact from './style';
 
 const Contact = (props: Props): JSX.Element => {
-  const { data, hasContainer, hasTitle }: Props = { ...defaults, ...props };
-  // const { data, loading, error }: QueryResult = useQuery(GQL_QUERY);
+  const { hasContainer, hasTitle, hasDescription }: Props = { ...defaults, ...props };
+  const { data, loading, error }: QueryResult = useQuery(GQL_QUERY);
 
-  // if (loading) return <Loading />;
-  // if (error) return <Error />;
+  if (loading) return <Loading />;
+  if (error) return <Error />;
 
-  const resume: gqlContact = data && data.options.resume;
-  const settings: gqlSettings = data && data.generalSettings;
+  const resume: gqlContact = data.options.resume;
+  const settings: gqlSettings = data.generalSettings;
 
   const contact: JSX.Element = (
     <>
@@ -30,7 +30,12 @@ const Contact = (props: Props): JSX.Element => {
 
   return (
     <StyledContact>
-      {hasTitle && <span>{settings.title}</span>}
+      {hasTitle && (
+        <span>
+          {settings.title}
+          {hasDescription && ` • ${settings.description}`}
+        </span>
+      )}
       {hasContainer ? <span>{contact}</span> : contact}
     </StyledContact>
   );

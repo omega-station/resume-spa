@@ -60,6 +60,10 @@ export const defaults = (type = 'page', maxWidth: string = 'none'): SerializedSt
       max-width: ${maxWidth};
       height: 100%;
       background-color: ${color.solid.white};
+
+      nav {
+        user-select: none;
+      }
     `}
 `;
 

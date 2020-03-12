@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.593c8f8b.chunk.css",
+    "main.js": "/main.8702e55f5d4259efdf9b.bundle.js",
+    "main.css.map": "/static/css/main.593c8f8b.chunk.css.map",
+    "main.js.map": "/main.8702e55f5d4259efdf9b.bundle.js.map",
+    "runtime~main.js": "/runtime~main.8702e55f5d4259efdf9b.bundle.js",
+    "runtime~main.js.map": "/runtime~main.8702e55f5d4259efdf9b.bundle.js.map",
+    "vendors~main.js": "/vendors~main.8702e55f5d4259efdf9b.bundle.js",
+    "vendors~main.js.map": "/vendors~main.8702e55f5d4259efdf9b.bundle.js.map",
+    "iframe.html": "/iframe.html",
+    "precache-manifest.f9a402b7bb33096e079f005f73d1f644.js": "/precache-manifest.f9a402b7bb33096e079f005f73d1f644.js",
+    "service-worker.js": "/service-worker.js",
+    "static/media/index.css": "/static/media/MorePerfectDOSVGA.6d2ae464.woff",
+    "static/media/coding.webp": "/static/media/coding.72752c00.webp",
+    "static/media/lemming.gif": "/static/media/lemming.b39a77c6.gif",
+    "static/media/reading.webp": "/static/media/reading.b2b3b608.webp",
+    "static/media/style.css": "/static/media/style.5ae4a044.css",
+    "static/media/uc-digger.gif": "/static/media/uc-digger.0f8edb1a.gif",
+    "static/media/uc-main.gif": "/static/media/uc-main.0301e731.gif",
+    "vendors~main.8702e55f5d4259efdf9b.bundle.js.LICENSE.txt": "/vendors~main.8702e55f5d4259efdf9b.bundle.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "runtime~main.8702e55f5d4259efdf9b.bundle.js",
+    "vendors~main.8702e55f5d4259efdf9b.bundle.js",
+    "static/css/main.593c8f8b.chunk.css",
+    "main.8702e55f5d4259efdf9b.bundle.js"
+  ]
+}

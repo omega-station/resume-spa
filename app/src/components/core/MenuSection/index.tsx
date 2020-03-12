@@ -1,23 +1,23 @@
 import React from 'react';
-// import { QueryResult, useQuery } from 'react-apollo';
+import { QueryResult, useQuery } from 'react-apollo';
 import { getHeadings, Headings } from '../../../utility';
-// import { GQL_QUERY } from '../../../utility/graphql';
-// import Error from '../Error';
-// import Loading from '../Loading';
+import { GQL_QUERY } from '../../../utility/graphql';
+import Error from '../Error';
+import Loading from '../Loading';
+import defaults from './defaults';
 import { Props } from './definition';
 import StyledNav from './style';
-import defaults from './defaults';
 
 export const getSlug = (value: string): string => value.toLowerCase().replace(/ /g, '-');
 
 const MenuSection = (props: Props): JSX.Element => {
-  const { data, items, isIndexed, onMenuClick }: Props = { ...defaults, ...props };
-  // const { data, loading, error }: QueryResult = useQuery(GQL_QUERY.SECTION_HEADING);
+  const { items, isIndexed, onMenuClick }: Props = { ...defaults, ...props };
+  const { data, loading, error }: QueryResult = useQuery(GQL_QUERY.SECTION_HEADING);
 
-  // if (loading) return <Loading />;
-  // if (error) return <Error />;
+  if (loading) return <Loading />;
+  if (error) return <Error />;
 
-  const headings: Headings = data && getHeadings(data);
+  const headings: Headings = getHeadings(data);
 
   return (
     <StyledNav>
