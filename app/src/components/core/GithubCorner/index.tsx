@@ -5,7 +5,7 @@ import StyledCorner from './style';
 
 const GitHubCorner = (props: Props) => {
   const { isLeft, color, fill, url, ariaLabel }: Props = { ...defaults, ...props };
-  const [isSmall, setIsSmall] = useState(false);
+  const [isSmall, setIsSmall] = useState<boolean>(false);
 
   useEffect(() => {
     const handler = () => setIsSmall(window.scrollY > 500);
