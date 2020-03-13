@@ -29,6 +29,7 @@ const Page = (props: Props) => {
           <title>
             {settings.title} • {settings.description}
           </title>
+          <body className={`pagetype-${type}`} />
         </Helmet>
         <PageType />
       </>

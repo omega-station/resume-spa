@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import WebFont from 'webfontloader';
 import { color } from '../../../utility/constant';
-import { padding, defaults } from '../../../utility/mixin';
+import { boxShadow, defaults, padding } from '../../../utility/mixin';
 
 WebFont.load({
   google: {
@@ -11,56 +11,75 @@ WebFont.load({
 
 const StyledPage = styled.div`
   ${defaults()};
-  ${padding()};
+  ${padding(true)};
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: stretch;
+  height: 100%;
 
   * {
     font-family: 'PT Sans', sans-serif;
   }
 
-  main {
-    nav {
-      position: fixed;
-      top: calc(50% - 160px);
-      right: 0;
+  > div {
+    width: 100%;
+    max-width: 960px;
+    height: 100%;
 
-      ul {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-end;
+    main {
+      display: flex;
+      height: 100%;
+      background-color: ${color.solid.white};
 
-        li {
-          &:not(:first-of-type) {
-            margin: 1px 0 0;
+      > * {
+        padding: 20px 0;
+      }
+
+      > aside {
+        ${boxShadow('10px', 0, '25px', 0, 0.1)};
+        width: 200px;
+        padding-left: 20px;
+        padding-right: 20px;
+
+        > div {
+          &:first-of-type {
+            width: 145px;
+            margin: 0 auto;
+
+            h4 {
+              height: 20px;
+              font-size: 0.85em;
+              margin: 0 0 4px;
+            }
+
+            a {
+              ${boxShadow(0, 0, '2px', '1px', 0.1)};
+
+              &,
+              img {
+                display: block;
+                height: 187px;
+              }
+
+              &:hover {
+              }
+            }
           }
 
-          &.is-current a,
-          a:hover {
-            color: ${color.solid.grey.medium};
-          }
-
-          &.is-current a {
-            background-color: ${color.solid.white};
-          }
-
-          &:not(.is-current) a:hover {
-            width: 140px;
-            color: ${color.solid.white};
-            background-color: ${color.solid.grey.light2};
-          }
-
-          a {
-            display: inline-block;
-            width: 110px;
-            padding: 17px 25px 13px;
-            background-color: ${color.solid.grey.medium};
-            border: 1px solid ${color.solid.grey.medium};
-            border-radius: 15px 0 0 15px;
-            color: ${color.solid.white};
-            font-size: 1.7rem;
-            font-weight: 600;
-            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, width 0.3s ease-in-out;
-          }
+          /* &:last-of-type {
+            width: 160px;
+            height: 200px;
+            margin: 0 auto;
+            padding: 5px;
+          } */
         }
+      }
+
+      > div {
+        width: calc(100% - 200px);
+        padding-left: 30px;
+        padding-right: 60px;
       }
     }
   }

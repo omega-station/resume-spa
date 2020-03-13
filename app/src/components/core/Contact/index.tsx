@@ -33,7 +33,12 @@ const Contact = (props: Props): JSX.Element => {
       {hasTitle && (
         <span>
           {settings.title}
-          {hasDescription && ` • ${settings.description}`}
+          {hasDescription && (
+            <>
+              <i>•</i>
+              {settings.description}
+            </>
+          )}
         </span>
       )}
       {hasContainer ? <span>{contact}</span> : contact}

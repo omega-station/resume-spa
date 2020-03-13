@@ -1,8 +1,6 @@
-import { IconName, IconPrefix } from '@fortawesome/fontawesome-svg-core';
-
 export interface Props {
+  /** Custom icon */
   icon?: string;
+  /** Custom message */
   message?: string;
 }
-
-export type Icon = [IconPrefix, IconName];

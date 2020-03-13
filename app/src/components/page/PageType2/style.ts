@@ -122,9 +122,9 @@ const StyledPage = styled.div`
               &.proficiency i {
                 margin-right: 6px;
                 color: ${color.solid.black};
-                font-size: 0.85rem;
+                font-size: 0.93rem;
                 font-style: normal;
-                letter-spacing: -0.15em;
+                letter-spacing: -0.1em;
               }
             }
           }

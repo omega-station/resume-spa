@@ -10,8 +10,18 @@ body,
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: white;
 }
 
 * {
   box-sizing: border-box;
+}
+
+body.pagetype-1 {
+  background-image: linear-gradient(0, rgb(0, 20, 0) 25%, black 25%, black 50%, rgb(0, 20, 0) 50%, rgb(0, 20, 0) 75%, black 75%, black 100%);
+  background-size: 4px 4px;
+}
+
+body.pagetype-3 {
+  background-color: lightgray;
 }

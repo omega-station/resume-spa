@@ -5,7 +5,7 @@ import Loading from '../../Loading';
 import { Props } from '../definition';
 import { GQL_QUERY } from './graphql';
 
-export const getProficiencyString = (percentage: number | string, multiplier: number = 2.5, char: string = '♥'): string => {
+export const getProficiencyString = (percentage: number | string, multiplier: number = 2.5, char: string = '☻'): string => {
   const _percentage = typeof percentage === 'string' ? parseInt(percentage) : percentage;
   return char.repeat(_percentage / multiplier);
 };

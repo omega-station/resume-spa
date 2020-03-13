@@ -37,6 +37,15 @@ const PageType1 = (props: Props): JSX.Element => {
   };
 
   useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent): void => {
+      [32, 37, 38, 39, 40].includes(e.keyCode) && e.preventDefault();
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
+
+  useEffect(() => {
     // console.log('useEffect firing... current:', current);
     setClass('section', current, true);
 
@@ -50,15 +59,15 @@ const PageType1 = (props: Props): JSX.Element => {
   }, [current]);
 
   useEffect(() => {
-    const handlerClick = (e: MouseEvent) => {
+    const handleClick = (e: MouseEvent) => {
       if (isWindow) {
         const el: Element = document.querySelector('.window-section');
         el?.contains(e.target as Node) === false && setIsWindow(false);
       }
     };
 
-    window.addEventListener('click', handlerClick);
-    return () => window.removeEventListener('click', handlerClick);
+    window.addEventListener('click', handleClick);
+    return () => window.removeEventListener('click', handleClick);
   }, [isWindow]);
 
   if (loading) return <Loading />;
