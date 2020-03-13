@@ -1,4 +1,4 @@
-import React, { Dispatch, SetStateAction, useState } from 'react';
+import React, { useState } from 'react';
 import { QueryResult, useQuery } from 'react-apollo';
 import { TagCloud } from 'react-tagcloud';
 import Error from '../../core/Error';
@@ -14,7 +14,7 @@ import StyledPage from './style';
 
 const PageType3 = (props: Props): JSX.Element => {
   const { data, loading, error }: QueryResult = useQuery(GQL_QUERY);
-  const [section, setSection]: [number, Dispatch<SetStateAction<number>>] = useState(0);
+  const [section, setSection] = useState<number>(0);
 
   if (loading) return <Loading />;
   if (error) return <Error />;

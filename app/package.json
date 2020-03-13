@@ -4,9 +4,8 @@
   "author": {
     "name": "Paul Kevin Koehler",
     "email": "paul@omegastation.ca",
-    "url": "http://resume.omegastation.ca"
+    "url": "http://omegastation.ca"
   },
-  "homepage": "https://github.com/omega-station/resume-spa",
   "repository": "gitlab:omega-station/resume-spa",
   "license": "MIT",
   "version": "0.4.0",
