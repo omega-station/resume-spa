@@ -6,7 +6,7 @@ import { Props } from './definition';
 const Footer = (props: Props): JSX.Element => {
   return (
     <StyledFooter>
-      <Contact hasContainer={true} hasDescription={true} />
+      <Contact hasContainer={true} hasDescription={false} />
     </StyledFooter>
   );
 };

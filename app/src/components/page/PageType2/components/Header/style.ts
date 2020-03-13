@@ -166,7 +166,7 @@ const StyledHeader = styled.header`
             display: none;
             width: 32px;
 
-            &:nth-of-type(-n+7) {
+            &:nth-of-type(-n+8) {
               display: inline;
             }
 

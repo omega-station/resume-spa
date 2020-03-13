@@ -26,6 +26,7 @@ export const color = {
       light2: 'rgb(200, 200, 200)',
       medium: 'rgb(128, 128, 128)',
       medium2: 'rgb(140, 140, 140)',
+      dark: 'rgb(60, 60, 60)',
     },
     orange: {
       dark: 'rgb(255, 140, 0)',

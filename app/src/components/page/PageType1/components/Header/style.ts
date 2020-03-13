@@ -71,7 +71,7 @@ const StyledHeader = styled.header`
           position: relative;
           top: 1px;
           height: 33px;
-          padding: 0 5px;
+          padding: 0 15px;
           color: ${color.solid.black};
           font-size: 1.5rem;
           font-size: 1.75rem;

@@ -4,7 +4,6 @@ import { backgroundStriped, defaults, padding, transition } from '../../../utili
 
 const StyledPage = styled.div`
   ${defaults()};
-  ${backgroundStriped('black')};
 
   * {
     color: ${color.pagetype[1].solid.green};
@@ -25,7 +24,7 @@ const StyledPage = styled.div`
     ${padding(true, '30px', '30px')};
 
     @media (min-width: ${breakpoint.tablet.portrait[1]}) {
-      ${padding(true, '80px', '120px')};
+      ${padding(true, '85px', '95px')};
     }
 
     > nav {

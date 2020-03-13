@@ -32,3 +32,5 @@ export const getRandom = (min: number, max: number): number => {
   const _max: number = Math.floor(max);
   return Math.floor(Math.random() * (_max - _min)) + _min;
 };
+
+export const getArrayRandom = (array: any[]): any => array[Math.floor(Math.random() * array.length)];

@@ -52,6 +52,17 @@ export const border = (width = '1px', isInverse = false) => css`
     `}
 `;
 
+export const boxShadow = (
+  offsetX: number | string = 0,
+  offsetY: number | string = 0,
+  radiusBlur: number | string = '3px',
+  radiusSpread: number | string = 0,
+  alpha: number = 0.3,
+  isInset: boolean = false
+): SerializedStyles => css`
+  box-shadow: ${isInset && 'inset'} ${offsetX} ${offsetY} ${radiusBlur} ${radiusSpread} rgba(0, 0, 0, ${alpha});
+`;
+
 export const defaults = (type = 'page', maxWidth: string = 'none'): SerializedStyles => css`
   ${type === 'page' &&
     css`
@@ -59,7 +70,6 @@ export const defaults = (type = 'page', maxWidth: string = 'none'): SerializedSt
       min-width: 320px;
       max-width: ${maxWidth};
       height: 100%;
-      background-color: ${color.solid.white};
 
       nav {
         user-select: none;

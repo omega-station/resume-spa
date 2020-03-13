@@ -7,9 +7,6 @@ const StyledFooter = styled.footer`
   ${padding(true, '10px', '15px')};
   display: flex;
   align-items: center;
-  position: fixed;
-  bottom: 0;
-  left: 0;
   border-top: 3px solid ${color.pagetype[1].solid.green};
 
   @media (min-width: ${breakpoint.desktop[3]}) {
@@ -53,6 +50,22 @@ const StyledFooter = styled.footer`
         font-weight: 600;
         text-align: right;
         margin: 0 0 10px;
+
+        i {
+          margin: 0 8px;
+          font-style: normal;
+          animation: anim-blink 1.8s infinite;
+
+          @keyframes anim-blink {
+            0%,
+            100% {
+              opacity: 0;
+            }
+            50% {
+              opacity: 1;
+            }
+          }
+        }
 
         @media (min-width: ${breakpoint.mobile[3]}) {
           width: 25%;

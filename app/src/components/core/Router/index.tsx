@@ -19,7 +19,6 @@ const Router = (): JSX.Element => {
 
   return (
     <BrowserRouter>
-      <Redirect exact from="/" to={`/${frontpage}`} />
       <Switch>
         {items.map(
           (item: PropsPage, i: number): JSX.Element => {
@@ -31,6 +30,7 @@ const Router = (): JSX.Element => {
             );
           }
         )}
+        <Route render={() => <Redirect exact from="/" to={`/${frontpage}`} />} />
       </Switch>
     </BrowserRouter>
   );
