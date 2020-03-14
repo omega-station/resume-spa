@@ -8,7 +8,7 @@ import { GQL_QUERY } from './graphql';
 import StyledContact from './style';
 
 const Contact = (props: Props): JSX.Element => {
-  const { hasContainer, hasTitle, hasDescription }: Props = { ...defaults, ...props };
+  const { hasContainer, hasTitle, hasDescription, isCityPostal }: Props = { ...defaults, ...props };
   const { data, loading, error }: QueryResult = useQuery(GQL_QUERY);
 
   if (loading) return <Loading />;
@@ -19,8 +19,11 @@ const Contact = (props: Props): JSX.Element => {
 
   const contact: JSX.Element = (
     <>
-      <span>{resume.contactAddress1}</span>
-      <span>{resume.contactAddress2}</span>
+      <span>{resume.contactAddress}</span>
+      <span>
+        {resume.contactCity} {isCityPostal && resume.contactPostal}
+      </span>
+      {isCityPostal === false && <span>{resume.contactPostal}</span>}
       <span>{resume.contactPhone}</span>
       <span>
         <a href={`mailto:${resume.contactEmail}`}>{resume.contactEmail}</a>

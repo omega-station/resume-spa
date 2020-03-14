@@ -4,8 +4,9 @@ import Error from '../../../core/Error';
 import Loading from '../../Loading';
 import { Props } from '../definition';
 import { GQL_QUERY } from './graphql';
+import StyledSection from './style';
 
-export const getProficiencyString = (percentage: number | string, multiplier: number = 2.5, char: string = '☻'): string => {
+export const getProficiencyString = (percentage: number | string, multiplier: number = 3.5, char: string = '☻'): string => {
   const _percentage = typeof percentage === 'string' ? parseInt(percentage) : percentage;
   return char.repeat(_percentage / multiplier);
 };
@@ -27,8 +28,8 @@ const SectionSkillset = (props: Props): JSX.Element => {
   };
 
   return (
-    <>
-      <div className="table">
+    <StyledSection>
+      <div className="skillset">
         {areas.map(
           (item: any, i: number): JSX.Element => (
             <div key={`${item.area}-${i}`}>
@@ -38,7 +39,7 @@ const SectionSkillset = (props: Props): JSX.Element => {
           )
         )}
       </div>
-      <div className="table">
+      <div className="skillset">
         <div className="head">
           <span>Skill</span>
           <span>Proficiency</span>
@@ -56,7 +57,7 @@ const SectionSkillset = (props: Props): JSX.Element => {
           )
         )}
       </div>
-    </>
+    </StyledSection>
   );
 };
 

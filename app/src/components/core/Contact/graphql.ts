@@ -8,10 +8,11 @@ export const GQL_QUERY = gql`
     }
     options {
       resume {
-        contactAddress1
-        contactAddress2
+        contactAddress
+        contactCity
         contactEmail
         contactPhone
+        contactPostal
       }
     }
   }

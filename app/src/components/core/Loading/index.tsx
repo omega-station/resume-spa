@@ -10,13 +10,13 @@ const Loading = (props: Props) => {
   const { message }: Props = { ...defaults, ...props };
   const icon: IconProp = ['fas', 'cog'];
   return (
-    <StyledLoading>
+    <StyledLoading className="loading">
       {message === '' ? (
-        <>
+        <span>
           <FontAwesomeIcon icon={icon} />
           <FontAwesomeIcon icon={icon} />
           <FontAwesomeIcon icon={icon} />
-        </>
+        </span>
       ) : (
         <p>{message}</p>
       )}

@@ -17,10 +17,11 @@ const GQL_QUERY = {
           pageFront
         }
         resume {
-          contactAddress1
-          contactAddress2
+          contactAddress
+          contactCity
           contactEmail
           contactPhone
+          contactPostal
 
           aboutHeading
           aboutIntro

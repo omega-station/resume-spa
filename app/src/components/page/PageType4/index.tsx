@@ -1,9 +1,8 @@
 import React from 'react';
 import MenuPage from '../../core/MenuPage';
-import { PropsPageType as Props } from '../Page/definition';
 import StyledPage from './style';
 
-const PageType4 = (props: Props): JSX.Element => {
+const PageType4 = (): JSX.Element => {
   return (
     <StyledPage>
       <header>

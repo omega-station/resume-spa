@@ -27,10 +27,12 @@ export const getHeadings = (data: any, allowed: number[] = []): Headings => {
   return headings;
 };
 
-export const getRandom = (min: number, max: number): number => {
+export const getRandomElement = (array: any[]): any => array[Math.floor(Math.random() * array.length)];
+
+export const getRandomInt = (min: number, max: number): number => {
   const _min: number = Math.ceil(min);
   const _max: number = Math.floor(max);
   return Math.floor(Math.random() * (_max - _min)) + _min;
 };
 
-export const getArrayRandom = (array: any[]): any => array[Math.floor(Math.random() * array.length)];
+export const getRGBA = (rgb: string, alpha: number): string => rgb.replace('rgb', 'rgba').replace(')', `, ${alpha})`);

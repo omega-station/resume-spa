@@ -48,7 +48,7 @@ class Particle {
     el && head.removeChild(el);
   }
 
-  public static getRandom = (array: any[]): any => {
+  public static getRandomInt = (array: any[]): any => {
     return array[Math.floor(Math.random() * array.length)];
   };
 }

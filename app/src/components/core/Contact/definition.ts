@@ -2,11 +2,13 @@ export interface Props {
   hasContainer?: boolean;
   hasTitle?: boolean;
   hasDescription?: boolean;
+  isCityPostal?: boolean;
 }
 
 export interface gqlContact {
-  contactAddress1: string;
-  contactAddress2: string;
+  contactAddress: string;
+  contactCity: string;
+  contactPostal: string;
   contactEmail: string;
   contactPhone: string;
 }

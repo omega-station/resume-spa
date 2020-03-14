@@ -19,7 +19,7 @@ const StyledPage = styled.div`
   header {
     width: 100%;
     padding: 20px;
-    background-color: ${color.solid.orange.dark};
+    background-color: ${color.core.orange.dark};
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
 
     nav {
@@ -32,14 +32,14 @@ const StyledPage = styled.div`
         li {
           ${transition('box-shadow', '.15s')};
           text-align: center;
-          background: ${color.solid.orange.dark};
+          background: ${color.core.orange.dark};
           background: linear-gradient(
             150deg,
-            ${color.solid.orange.medium} 0%,
+            ${color.core.orange.medium} 0%,
             rgb(255, 192, 76) 65%,
-            ${color.solid.white} 75%,
+            ${color.core.white} 75%,
             rgb(255, 162, 49) 85%,
-            ${color.solid.orange.dark} 100%
+            ${color.core.orange.dark} 100%
           );
           border: 1px solid white;
           border-radius: 8px;
@@ -53,7 +53,7 @@ const StyledPage = styled.div`
           a {
             display: inline-block;
             padding: 6px 15px 2px;
-            color: ${color.solid.white};
+            color: ${color.core.white};
             font-size: 1.6rem;
             line-height: 1.6rem;
             text-shadow: 0 0 3px rgba(0, 0, 0, 0.3);

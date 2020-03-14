@@ -1,12 +1,17 @@
 import styled from '@emotion/styled';
 import { color } from '../../../../../utility/constant';
-import { boxShadow, transition } from '../../../../../utility/mixin';
+import { boxShadow } from '../../../../../utility/mixin';
 
 const StyledHeader = styled.header`
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+
   nav {
     &:first-of-type {
       height: 60px;
-      background-color: ${color.solid.grey.medium};
+      background-color: ${color.core.grey.medium};
 
       ul {
         display: flex;
@@ -24,20 +29,20 @@ const StyledHeader = styled.header`
             ${boxShadow(0, '2px', '4px', 0, 0.3)};
             display: inline-block;
             padding: 3px 8px 2px;
-            background-color: ${color.solid.grey.medium};
-            border: 1px solid ${color.solid.grey.medium2};
+            background-color: ${color.core.grey.medium};
+            border: 1px solid ${color.core.grey.medium2};
             border-radius: 5px;
-            color: ${color.solid.white};
+            color: ${color.core.white};
             font-size: 0.8em;
             font-weight: 600;
             line-height: 1.3em;
-            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, width 0.3s ease-in-out;
+            /* transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, width 0.3s ease-in-out; */
           }
 
           &.is-current a,
           a:hover {
-            color: ${color.solid.grey.medium};
-            background-color: ${color.solid.white};
+            color: ${color.core.grey.medium};
+            background-color: ${color.core.white};
           }
         }
       }
@@ -47,7 +52,7 @@ const StyledHeader = styled.header`
       position: relative;
       ${boxShadow(0, '2px', '3px')};
       height: 30px;
-      background-color: ${color.solid.grey.dark};
+      background-color: ${color.core.grey.dark};
       z-index: 100;
 
       ul {
@@ -59,13 +64,12 @@ const StyledHeader = styled.header`
         align-items: center;
 
         li {
-          ${transition('border-bottom')};
-          color: ${color.solid.white};
+          color: ${color.core.white};
           cursor: pointer;
           font-size: 0.9rem;
           font-weight: 700;
           line-height: 1em;
-          border-bottom: 1px solid transparent;
+          /* transition: border-bottom 0.2s ease-in-out, color 0.2s ease-in-out; */
 
           &:not(:last-of-type) {
             margin: 0 20px 0 0;
@@ -73,7 +77,7 @@ const StyledHeader = styled.header`
 
           &:hover,
           &.is-current {
-            border-bottom-color: ${color.solid.white};
+            color: ${color.pagetype[3].red};
           }
 
           &.is-current {
@@ -87,6 +91,7 @@ const StyledHeader = styled.header`
   > div {
     position: relative;
     height: 160px;
+    user-select: none;
     z-index: 200;
 
     > div {
@@ -98,14 +103,14 @@ const StyledHeader = styled.header`
         bottom: 0;
         left: 0;
         width: 100%;
-        padding: 16px 0 14px 20px;
+        height: 100%;
+        padding: 65px 0 0 20px;
         background: rgb(0, 0, 0);
-        background: linear-gradient(90deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0) 66.66%);
-        user-select: none;
+        background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 66.66%);
 
         h1,
         h2 {
-          color: ${color.solid.white};
+          color: ${color.core.white};
           line-height: 0.92em;
         }
 
@@ -119,6 +124,12 @@ const StyledHeader = styled.header`
           font-size: 2.15rem;
           font-weight: 500;
         }
+      }
+
+      img {
+        width: 960px;
+        height: 160px;
+        object-fit: cover;
       }
     }
   }

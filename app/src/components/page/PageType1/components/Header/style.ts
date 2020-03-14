@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { getRGBA } from '../../../../../utility';
 import { breakpoint, color } from '../../../../../utility/constant';
 import { backgroundStriped, padding, transition } from '../../../../../utility/mixin';
 
@@ -72,7 +73,7 @@ const StyledHeader = styled.header`
           top: 1px;
           height: 33px;
           padding: 0 15px;
-          color: ${color.solid.black};
+          color: ${color.core.black};
           font-size: 1.5rem;
           font-size: 1.75rem;
           font-weight: 500;
@@ -80,12 +81,12 @@ const StyledHeader = styled.header`
         }
 
         &.is-current a {
-          background-color: ${color.pagetype[1].alpha.green2};
+          background-color: ${getRGBA(color.pagetype[1].green.light, 0.5)};
         }
 
         &.is-selected a,
         a:hover {
-          background-color: ${color.pagetype[1].alpha.green};
+          background-color: ${getRGBA(color.pagetype[1].green.light, 0.7)};
         }
 
         span {

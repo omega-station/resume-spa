@@ -7,7 +7,7 @@ const StyledFooter = styled.footer`
   ${padding(true, '10px', '15px')};
   display: flex;
   align-items: center;
-  border-top: 3px solid ${color.pagetype[1].solid.green};
+  border-top: 3px solid ${color.pagetype[1].green.medium};
 
   @media (min-width: ${breakpoint.desktop[3]}) {
     ${padding(true, '4px', '4px')};
@@ -38,8 +38,8 @@ const StyledFooter = styled.footer`
     > span {
       &,
       * {
-        color: ${color.solid.black};
-        color: ${color.pagetype[1].solid.green};
+        color: ${color.core.black};
+        color: ${color.pagetype[1].green.medium};
         font-size: 1.25rem;
         font-size: 1.6rem;
         font-weight: 500;
@@ -94,8 +94,8 @@ const StyledFooter = styled.footer`
           }
 
           a:hover {
-            border-bottom: 2px solid ${color.solid.black};
-            border-bottom: 2px solid ${color.pagetype[1].solid.green};
+            border-bottom: 2px solid ${color.core.black};
+            border-bottom: 2px solid ${color.pagetype[1].green.medium};
           }
         }
       }

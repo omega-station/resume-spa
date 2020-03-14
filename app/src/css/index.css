@@ -10,11 +10,15 @@ body,
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: white;
+  background-color: black;
 }
 
 * {
   box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
 }
 
 body.pagetype-1 {
@@ -24,4 +28,46 @@ body.pagetype-1 {
 
 body.pagetype-3 {
   background-color: lightgray;
+}
+
+body.pagetype-2,
+body.pagetype-4 {
+  background-color: white;
+}
+
+#root > .error,
+#root > .loading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+  margin: -2% 0 0;
+}
+
+#root > .error {
+  animation: anim-pulse 2s infinite;
+  color: darkred;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 3rem;
+  font-weight: 600;
+  perspective: 600px;
+  user-select: none;
+}
+
+#root > .error > span + span {
+  position: relative;
+  top: -10px;
+  transform: rotateX(240deg) scale(1.035);
+  opacity: 0.12;
+}
+
+@keyframes anim-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.05;
+  }
 }

@@ -26,11 +26,17 @@ export const GQL_QUERY = gql`
             mediaItemUrl
           }
         }
+        tagcloudHeading
       }
       resume {
         metaSections {
           name
           heading
+        }
+        skillsetProficiency {
+          count: proficiency
+          value: skill
+          isTagcloud
         }
       }
     }
