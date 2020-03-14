@@ -5,7 +5,7 @@ import style from './style';
 class Emoji extends Particle {
   constructor(x: number, y: number) {
     super(style);
-    this.element.innerHTML = Particle.getRandom(chars);
+    this.element.innerHTML = Particle.getRandomInt(chars);
     this.lifeSpan = 1200; // milliseconds
     this.scale = 1500;
     this.position = { x: x - 20, y: y - 20 };

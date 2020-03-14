@@ -5,8 +5,8 @@ const defaults: Props = {
   isLeft: false,
   isSmall: false,
   ariaLabel: 'View source on GitHub',
-  color: color.solid.white,
-  fill: color.solid.black,
+  color: color.core.white,
+  fill: color.core.black,
   url: 'https://github.com/omega-station/resume-spa',
 };
 

@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { QueryResult, useQuery } from 'react-apollo';
+import { getRGBA } from '../../../utility';
 import { color } from '../../../utility/constant';
 import { Element, RefNumber, RefString } from '../../../utility/definition';
 import { GQL_QUERY } from '../../../utility/graphql';
@@ -70,7 +71,7 @@ const PageType1 = (): JSX.Element => {
 
   return (
     <StyledPage>
-      <GitHubCorner color={color.pagetype[1].solid.green} fill={color.alpha.black} />
+      <GitHubCorner color={color.pagetype[1].green.medium} fill={getRGBA(color.core.black, 0.35)} />
       <Header />
       <main>
         <MenuSection isIndexed={true} onMenuClick={onMenuClick} />

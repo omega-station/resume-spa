@@ -15,71 +15,192 @@ const StyledPage = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: stretch;
-  height: 100%;
 
   * {
     font-family: 'PT Sans', sans-serif;
   }
 
   > div {
+    position: relative;
     width: 100%;
     max-width: 960px;
-    height: 100%;
+    min-height: 100%;
+    padding: 250px 0 0;
+
+    main,
+    footer {
+      a {
+        display: inline-block;
+        border-bottom: 1px solid transparent;
+        color: ${color.pagetype[3].red};
+        line-height: 0.9em;
+
+        &:hover {
+          border-bottom-color: ${color.pagetype[3].red};
+        }
+      }
+    }
 
     main {
       display: flex;
-      height: 100%;
-      background-color: ${color.solid.white};
+      min-height: 100%;
+      padding: 0;
 
       > * {
         padding: 20px 0;
+        background-color: ${color.core.white};
       }
 
       > aside {
         ${boxShadow('10px', 0, '25px', 0, 0.1)};
+        position: relative;
         width: 200px;
-        padding-left: 20px;
-        padding-right: 20px;
+        /* padding-left: 10px;
+        padding-right: 10px; */
+        z-index: 50;
 
         > div {
+          h4 {
+            margin: 0 0 4px;
+            color: ${color.pagetype[3].red};
+            font-size: 0.85em;
+            font-weight: 600;
+          }
+
           &:first-of-type {
-            width: 145px;
-            margin: 0 auto;
+            width: 170px;
+            margin: 0 auto 30px;
 
             h4 {
-              height: 20px;
-              font-size: 0.85em;
-              margin: 0 0 4px;
+              color: ${color.core.black};
             }
 
-            a {
-              ${boxShadow(0, 0, '2px', '1px', 0.1)};
+            > div {
+              padding: 5px;
+              border: 1px solid ${color.core.grey.light2};
+              border-radius: 4px;
 
-              &,
-              img {
-                display: block;
-                height: 187px;
-              }
-
-              &:hover {
+              span {
+                word-break: break-all;
               }
             }
           }
 
-          /* &:last-of-type {
-            width: 160px;
-            height: 200px;
-            margin: 0 auto;
-            padding: 5px;
-          } */
+          &:last-of-type {
+            width: 100%;
+            text-align: center;
+
+            a {
+              svg {
+                font-size: 64px;
+                color: ${color.pagetype[3].red};
+
+                &:last-of-type {
+                  display: none;
+                }
+              }
+
+              &:hover svg {
+                &:first-of-type {
+                  display: none;
+                }
+                &:last-of-type {
+                  display: inline;
+                }
+              }
+            }
+          }
         }
       }
 
       > div {
         width: calc(100% - 200px);
-        padding-left: 30px;
-        padding-right: 60px;
+        padding: 35px 60px 100px 40px;
+
+        section {
+          a {
+            display: inline-block;
+            border-bottom: 1px solid transparent;
+            color: ${color.pagetype[3].red};
+            line-height: 0.9em;
+
+            &:hover {
+              border-bottom-color: ${color.pagetype[3].red};
+            }
+          }
+
+          h2 {
+            margin: 0 0 20px;
+            color: ${color.pagetype[3].red};
+            font-size: 1.4rem;
+            font-weight: 600;
+          }
+
+          li,
+          p {
+            font-size: 1rem;
+            line-height: 1.4em;
+          }
+
+          p {
+            &:first-of-type {
+              font-weight: 600;
+
+              a {
+                border-bottom-width: 2px;
+              }
+            }
+
+            &:not(:last-of-type) {
+              margin: 0 0 15px;
+            }
+          }
+
+          ul {
+            margin: 15px 0 0;
+            padding: 0 0 0 25px;
+
+            li {
+              list-style: disc;
+              padding: 0 0 0 5px;
+            }
+          }
+
+          div {
+            &.history {
+              margin: 0;
+              padding: 5px 0 25px;
+            }
+
+            &.skillset {
+              div {
+                &.head {
+                  display: none;
+                }
+
+                span {
+                  font-size: 1rem;
+
+                  &:first-of-type {
+                    color: ${color.pagetype[3].red2};
+                  }
+
+                  &.proficiency {
+                    font-size: 0.8rem;
+                    color: ${color.pagetype[3].red2};
+
+                    i {
+                      position: relative;
+                      top: 3px;
+                      color: ${color.pagetype[3].red};
+                      letter-spacing: 0.02em;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     }
   }

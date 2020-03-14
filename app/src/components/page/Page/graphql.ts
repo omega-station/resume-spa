@@ -6,13 +6,5 @@ export const GQL_QUERY = gql`
       description
       title
     }
-    options {
-      resume {
-        contactAddress1
-        contactAddress2
-        contactEmail
-        contactPhone
-      }
-    }
   }
 `;

@@ -1,12 +1,13 @@
 import styled from '@emotion/styled';
-import { color, breakpoint } from '../../../utility/constant';
+import { getRGBA } from '../../../utility';
+import { breakpoint, color } from '../../../utility/constant';
 import { backgroundStriped, defaults, padding, transition } from '../../../utility/mixin';
 
 const StyledPage = styled.div`
   ${defaults()};
 
   * {
-    color: ${color.pagetype[1].solid.green};
+    color: ${color.pagetype[1].green.medium};
     font-family: 'Fixedsys Excelsior', monospace;
   }
 
@@ -16,7 +17,7 @@ const StyledPage = styled.div`
     text-decoration: none;
 
     &:hover {
-      border-bottom-color: ${color.pagetype[1].solid.green};
+      border-bottom-color: ${color.pagetype[1].green.medium};
     }
   }
 
@@ -52,7 +53,7 @@ const StyledPage = styled.div`
           a,
           span {
             min-height: 38px;
-            color: ${color.solid.black};
+            color: ${color.core.black};
             font-size: 1.75rem;
           }
 
@@ -87,12 +88,12 @@ const StyledPage = styled.div`
           }
 
           &.is-current a {
-            background-color: ${color.pagetype[1].alpha.green2};
+            background-color: ${getRGBA(color.pagetype[1].green.light, 0.5)};
           }
 
           &:hover a,
           &.is-selected a {
-            background-color: ${color.pagetype[1].alpha.green} !important;
+            background-color: ${getRGBA(color.pagetype[1].green.light, 0.7)} !important;
           }
         }
       }

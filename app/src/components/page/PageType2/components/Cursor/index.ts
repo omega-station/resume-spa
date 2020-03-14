@@ -8,7 +8,7 @@ class Cursor {
   private particles: iParticle[] = [];
 
   constructor(type?: string) {
-    this.type = type ? type : Particle.getRandom(Object.keys(Particles));
+    this.type = type ? type : Particle.getRandomInt(Object.keys(Particles));
   }
 
   public create = (): void => {

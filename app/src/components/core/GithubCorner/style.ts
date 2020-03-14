@@ -61,7 +61,7 @@ const StyledCorner = styled.a<Props>`
     &:hover svg path {
       &:nth-of-type(2),
       &:nth-of-type(3) {
-        fill: ${color.solid.white};
+        fill: ${color.core.white};
       }
 
       &:nth-of-type(1) {

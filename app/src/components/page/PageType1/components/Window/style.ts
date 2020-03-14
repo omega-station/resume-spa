@@ -1,5 +1,6 @@
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
+import { getRGBA } from '../../../../../utility';
 import { color } from '../../../../../utility/constant';
 import { backgroundStriped } from '../../../../../utility/mixin';
 import { StylesProps as Props } from './definition';
@@ -13,7 +14,7 @@ const StyledWindow = styled.div<Props>`
     width: ${`${props.width}px`};
     height: ${`${props.height}px`};
     background-color: black;
-    border: 1px double ${color.solid.black};
+    border: 1px double ${color.core.black};
     font-size: 1.15rem;
     line-height: 1.5em;
     z-index: 1000;
@@ -27,7 +28,7 @@ const StyledWindow = styled.div<Props>`
       height: 35px;
       margin: -1px 0 0 -1px;
       padding: 0 0 0 20px;
-      color: ${color.solid.black};
+      color: ${color.core.black};
       font-size: 1.4em;
       line-height: 35px;
     }
@@ -36,13 +37,13 @@ const StyledWindow = styled.div<Props>`
       overflow: scroll;
       height: calc(100% - 35px);
       padding: 0;
-      border: 1px double ${color.pagetype[1].solid.green4};
+      border: 1px double ${color.pagetype[1].green.dark2};
 
       .scrollbar-container {
         padding: 20px 25px 20px;
 
         .ps__rail-y {
-          background-color: ${color.pagetype[1].solid.green4};
+          background-color: ${color.pagetype[1].green.dark2};
 
           &,
           div {
@@ -52,26 +53,26 @@ const StyledWindow = styled.div<Props>`
 
           .ps__thumb-y {
             right: 0;
-            background-color: ${color.pagetype[1].solid.green};
+            background-color: ${color.pagetype[1].green.medium};
           }
         }
 
         > span > span {
           a {
             padding: 0 4px;
-            background-color: ${color.pagetype[1].alpha.green};
+            background-color: ${getRGBA(color.pagetype[1].green.light, 0.7)};
             border: 0;
-            color: ${color.solid.black};
+            color: ${color.core.black};
             transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 
             &:hover {
-              background-color: ${color.pagetype[1].alpha.green2};
-              color: ${color.pagetype[1].alpha.green};
+              background-color: ${getRGBA(color.pagetype[1].green.light, 0.5)};
+              color: ${getRGBA(color.pagetype[1].green.light, 0.7)};
             }
           }
 
           & > p:first-of-type {
-            color: ${color.pagetype[1].solid.green3};
+            color: ${color.pagetype[1].green.light};
           }
 
           p {
@@ -99,7 +100,7 @@ const StyledWindow = styled.div<Props>`
                 margin: 0 0 10px;
 
                 > span:first-of-type span {
-                  color: ${color.pagetype[1].solid.green3};
+                  color: ${color.pagetype[1].green.light};
                 }
               }
             }
@@ -148,7 +149,7 @@ const StyledWindow = styled.div<Props>`
                 }
 
                 span {
-                  color: ${color.pagetype[1].solid.green3};
+                  color: ${color.pagetype[1].green.light};
                 }
               }
 
@@ -157,7 +158,7 @@ const StyledWindow = styled.div<Props>`
 
                 &:first-of-type {
                   width: 33.33%;
-                  color: ${color.pagetype[1].solid.green3};
+                  color: ${color.pagetype[1].green.light};
                 }
 
                 &:last-of-type {

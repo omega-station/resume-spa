@@ -24,7 +24,7 @@ const StyledHeader = styled.header`
 
         &.is-current a,
         a:hover {
-          color: ${color.solid.blue};
+          color: ${color.core.blue};
         }
 
         &.is-current a {

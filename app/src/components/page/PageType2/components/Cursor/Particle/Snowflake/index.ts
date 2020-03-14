@@ -6,7 +6,7 @@ const chars: string[] = ['❄️', '❅', '❆'];
 class Snowflake extends Particle {
   constructor(x: number, y: number) {
     super(style);
-    this.element.innerHTML = Particle.getRandom(chars);
+    this.element.innerHTML = Particle.getRandomInt(chars);
     this.lifeSpan = Math.floor(Math.random() * 60) + 120; // milliseconds
     this.scale = 180;
     this.position = { x: x - 20, y: y - 20 };

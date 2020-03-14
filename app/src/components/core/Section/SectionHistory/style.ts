@@ -3,6 +3,8 @@ import { breakpoint } from '../../../../utility/constant';
 
 const StyledSection = styled.div`
   .history {
+    margin: 0 0 30px;
+
     > div {
       &:first-of-type {
         display: flex;
@@ -17,9 +19,11 @@ const StyledSection = styled.div`
         }
 
         > span {
+          font-weight: 600;
+
           &:first-of-type {
-            flex-basis: 66.66%;
             display: flex;
+            flex-basis: 66.66%;
             flex-direction: column;
 
             @media (max-width: ${breakpoint.mobile[2]}) {

@@ -10,10 +10,13 @@ const Error = (props: Props): JSX.Element => {
   const { message, icon }: Props = { ...defaults, ...props };
   const _icon: IconProp = (icon as string).split(/^(fa[brs])-(.+)$/).filter(x => x) as IconProp;
   return (
-    <StyledError>
-      <p>
+    <StyledError className="error">
+      <span>
         {message} <FontAwesomeIcon icon={_icon} />
-      </p>
+      </span>
+      <span>
+        {message} <FontAwesomeIcon icon={_icon} />
+      </span>
     </StyledError>
   );
 };

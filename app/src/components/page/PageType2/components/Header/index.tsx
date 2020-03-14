@@ -25,7 +25,7 @@ const Header = (props: Props): JSX.Element => {
       <MenuPage />
       <div>
         <Masthead />
-        <Contact hasTitle={false} />
+        <Contact hasTitle={false} isCityPostal={true} />
         <MenuSection items={[items]} />
       </div>
     </StyledHeader>

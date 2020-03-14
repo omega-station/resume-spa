@@ -11,44 +11,55 @@ export const animation = (name: string = 'slideup', duration: string = '1500ms',
   }
 `;
 
-const black: string = color.solid.black;
-const green: string = color.pagetype[1].solid.green;
-const green2: string = color.pagetype[1].solid.green2;
-const green3: string = color.pagetype[1].solid.green3;
+const black: string = color.core.black;
+const green: { [key: string]: string } = {
+  light: color.pagetype[1].green.light,
+  medium: color.pagetype[1].green.medium,
+  dark: color.pagetype[1].green.dark,
+};
 
 export const backgroundStriped = (color: string = 'green'): SerializedStyles => css`
   ${color === 'black' &&
     css`
-      background-image: linear-gradient(0deg, ${green2} 25%, ${black} 25%, ${black} 50%, ${green2} 50%, ${green2} 75%, ${black} 75%, ${black} 100%);
+      background-image: linear-gradient(0, ${green.dark} 25%, ${black} 25%, ${black} 50%, ${green.dark} 50%, ${green.dark} 75%, ${black} 75%, ${black} 100%);
     `}
 
   ${color === 'green' &&
     css`
-      background-image: linear-gradient(0deg, ${green} 25%, ${black} 25%, ${black} 50%, ${green} 50%, ${green} 75%, ${black} 75%, ${black} 100%);
+      background-image: linear-gradient(
+        0,
+        ${green.medium} 25%,
+        ${black} 25%,
+        ${black} 50%,
+        ${green.medium} 50%,
+        ${green.medium} 75%,
+        ${black} 75%,
+        ${black} 100%
+      );
     `}
 
   ${color === 'light-green' &&
     css`
-      background-image: linear-gradient(0deg, ${green3} 25%, ${black} 25%, ${black} 50%, ${green3} 50%, ${green3} 75%, ${black} 75%, ${black} 100%);
+      background-image: linear-gradient(0, ${green.light} 25%, ${black} 25%, ${black} 50%, ${green.light} 50%, ${green.light} 75%, ${black} 75%, ${black} 100%);
     `}
 
   background-size: 4px 4px;
 `;
 
 export const border = (width = '1px', isInverse = false) => css`
-  border: ${width} solid ${color.solid.black};
+  border: ${width} solid ${color.core.black};
   padding: 2px;
 
   ${isInverse === false &&
     css`
-      border-bottom-color: ${color.solid.grey.medium2};
-      border-right-color: ${color.solid.grey.medium2};
+      border-bottom-color: ${color.core.grey.medium2};
+      border-right-color: ${color.core.grey.medium2};
     `}
 
   ${isInverse === true &&
     css`
-      border-top-color: ${color.solid.grey.medium2};
-      border-left-color: ${color.solid.grey.medium2};
+      border-top-color: ${color.core.grey.medium2};
+      border-left-color: ${color.core.grey.medium2};
     `}
 `;
 

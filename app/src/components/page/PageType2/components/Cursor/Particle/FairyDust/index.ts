@@ -7,8 +7,8 @@ const color: string[] = ['#D61C59', '#E7D84B', '#1B8798'];
 class FairyDust extends Particle {
   constructor(x: number, y: number) {
     super(style);
-    this.element.style.color = Particle.getRandom(color);
-    this.element.innerHTML = Particle.getRandom(chars);
+    this.element.style.color = Particle.getRandomInt(color);
+    this.element.innerHTML = Particle.getRandomInt(chars);
     this.lifeSpan = 480; // milliseconds
     this.scale = 480;
     this.position = { x: x - 20, y: y - 20 };
