@@ -1,8 +1,7 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { QueryResult, useQuery } from 'react-apollo';
 import { TagCloud } from 'react-tagcloud';
-import '../../../utility/font-awesome';
+import FontAwesomeIcon from '../../../utility/font-awesome';
 import Error from '../../core/Error';
 import GitHubCorner from '../../core/GitHubCorner';
 import Link from '../../core/Link';
@@ -10,12 +9,27 @@ import Loading from '../../core/Loading';
 import Section from '../../core/Section';
 import Footer from './components/Footer';
 import Header from './components/Header';
-import { GQL_QUERY, gqlResume, gqlAside } from './graphql';
+import { gqlAside, gqlResume, GQL_QUERY } from './graphql';
 import StyledPage from './style';
 
 const PageType3 = (): JSX.Element => {
   const { data, loading, error }: QueryResult = useQuery(GQL_QUERY);
   const [section, setSection] = useState<number>(0);
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+
+  useEffect(() => {
+    setIsMenuOpen(false);
+  }, [section]);
+
+  useEffect(() => {
+    const handleResize = (): void => setIsMenuOpen(false);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [isMenuOpen]);
+
+  const handleMenuToogle = (): void => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   if (loading) return <Loading />;
   if (error) return <Error />;
@@ -25,19 +39,21 @@ const PageType3 = (): JSX.Element => {
 
   const cloud = {
     colorOptions: { hue: 'white', luminosity: 'dark' },
+    maxSize: 24,
+    minSize: 14,
     tags: data.options.resume.skillsetProficiency.filter((x: any) => x.isTagcloud),
   };
 
   return (
     <StyledPage>
-      <GitHubCorner />
+      <GitHubCorner isLeft={true} />
       <div>
-        <Header section={section} onClick={setSection} />
+        <Header section={section} isMenuOpen={isMenuOpen} onClickMenuItem={setSection} onClickMenuToggle={handleMenuToogle} />
         <main>
           <aside>
             <div>
               <h4>{resume.tagcloudHeading}</h4>
-              <TagCloud minSize={14} maxSize={24} shuffle={true} tags={cloud.tags} colorOptions={cloud.colorOptions} />
+              <TagCloud minSize={cloud.minSize} maxSize={cloud.maxSize} shuffle={true} tags={cloud.tags} colorOptions={cloud.colorOptions} />
             </div>
             <div>
               <h4>{resume.resumeHeading}</h4>

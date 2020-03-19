@@ -39,7 +39,7 @@ const StyledWindow = styled.div<Props>`
       width: 100%;
       height: 35px;
       margin: -1px 0 0 -1px;
-      padding: 0 5px 0 20px;
+      padding: 0 12px;
       line-height: 35px;
 
       span,
@@ -52,15 +52,13 @@ const StyledWindow = styled.div<Props>`
       }
 
       svg {
+        cursor: pointer;
         font-size: 1.6em;
       }
 
       @media (min-width: ${breakpoint.tablet.landscape[0]}) {
         width: calc(${props.window.width}px - 2px);
-
-        svg {
-          display: none;
-        }
+        padding: 0 12px 0 20px;
       }
     }
 
@@ -71,7 +69,11 @@ const StyledWindow = styled.div<Props>`
       border: 1px double ${color.pagetype[1].green.dark2};
 
       .scrollbar-container {
-        padding: 20px 25px 20px;
+        padding: 12px;
+
+        @media (min-width: ${breakpoint.tablet.landscape[0]}) {
+          padding: 20px;
+        }
 
         .ps__rail-y {
           background-color: ${color.pagetype[1].green.dark2};
@@ -91,14 +93,14 @@ const StyledWindow = styled.div<Props>`
         > span > span {
           a {
             padding: 0 4px;
-            background-color: ${getRGBA(color.pagetype[1].green.light, 0.7)};
+            background-color: ${getRGBA(color.pagetype[1].green.light, 0.6)};
             border: 0;
             color: ${color.core.black};
             transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 
             &:hover {
-              background-color: ${getRGBA(color.pagetype[1].green.light, 0.5)};
-              color: ${getRGBA(color.pagetype[1].green.light, 0.7)};
+              background-color: ${color.pagetype[1].green.light};
+              /* color: ${getRGBA(color.pagetype[1].green.light, 0.7)}; */
             }
           }
 

@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import WebFont from 'webfontloader';
-import { color } from '../../../utility/constant';
-import { boxShadow, defaults, padding } from '../../../utility/mixin';
+import { breakpoint, color } from '../../../utility/constant';
+import { boxShadow, defaults, padding, transition } from '../../../utility/mixin';
 
 WebFont.load({
   google: {
@@ -25,7 +25,11 @@ const StyledPage = styled.div`
     width: 100%;
     max-width: 960px;
     min-height: 100%;
-    padding: 250px 0 0;
+    padding: 240px 0 0;
+
+    @media (min-width: ${breakpoint.tablet.landscape[0]}) {
+      padding: 230px 0 0;
+    }
 
     main,
     footer {
@@ -43,8 +47,13 @@ const StyledPage = styled.div`
 
     main {
       display: flex;
+      flex-direction: column;
       min-height: 100%;
       padding: 0;
+
+      @media (min-width: ${breakpoint.tablet.landscape[0]}) {
+        flex-direction: row;
+      }
 
       > * {
         padding: 20px 0;
@@ -52,12 +61,32 @@ const StyledPage = styled.div`
       }
 
       > aside {
-        ${boxShadow('10px', 0, '25px', 0, 0.1)};
+        ${transition('padding-bottom')};
         position: relative;
-        width: 200px;
-        /* padding-left: 10px;
-        padding-right: 10px; */
+        width: 100%;
+        order: 1;
         z-index: 50;
+        margin: 10px 0 162px;
+        padding: 0 0 40px;
+
+        @media (min-width: ${breakpoint.mobile[2]}) {
+          margin-bottom: 131px;
+        }
+
+        @media (min-width: ${breakpoint.mobile[3]}) {
+          margin-bottom: 68px;
+        }
+
+        @media (min-width: ${breakpoint.tablet.portrait[2]}) {
+          margin-bottom: 47px;
+        }
+
+        @media (min-width: ${breakpoint.tablet.landscape[0]}) {
+          ${boxShadow('10px', 0, '25px', 0, 0.1)};
+          width: 200px;
+          margin: 0;
+          order: 0;
+        }
 
         > div {
           h4 {
@@ -68,8 +97,13 @@ const StyledPage = styled.div`
           }
 
           &:first-of-type {
-            width: 170px;
-            margin: 18px auto 30px;
+            width: 100%;
+            margin: 18px 0 30px;
+            padding: 0 30px;
+
+            @media (min-width: ${breakpoint.tablet.landscape[0]}) {
+              padding: 0 15px;
+            }
 
             > div {
               padding: 5px;
@@ -111,8 +145,13 @@ const StyledPage = styled.div`
       }
 
       > div {
-        width: calc(100% - 200px);
-        padding: 35px 60px 100px 40px;
+        width: 100%;
+        padding: 30px 30px 40px;
+
+        @media (min-width: ${breakpoint.tablet.landscape[0]}) {
+          width: calc(100% - 200px);
+          padding: 35px 60px 100px 40px;
+        }
 
         section {
           a {

@@ -38,7 +38,6 @@ const StyledFooter = styled.footer`
 
       @media (min-width: ${breakpoint.desktop[1]}) {
         flex-direction: row;
-        margin: 0;
 
         &:first-of-type {
           li {
@@ -76,6 +75,10 @@ const StyledFooter = styled.footer`
       justify-content: space-between;
 
       ul {
+        &:first-of-type {
+          margin: 0;
+        }
+
         &:last-of-type {
           align-items: flex-end;
         }

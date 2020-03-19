@@ -10,7 +10,14 @@ storiesOf('page/Page/PageType3/Header', module)
   .addDecorator(StoryRouter())
   .addDecorator(withKnobs)
   .addDecorator(withProvider)
-  .add('default', () => <Header section={defaults.section} onClick={defaults.onClick} />)
+  .add('default', () => (
+    <Header
+      section={defaults.section}
+      isMenuOpen={defaults.isMenuOpen}
+      onClickMenuItem={defaults.onClickMenuItem}
+      onClickMenuToggle={defaults.onClickMenuToggle}
+    />
+  ))
   .add('withKnobs', () => {
     const section: number = number('Section', defaults.section, {
       range: true,
@@ -18,5 +25,7 @@ storiesOf('page/Page/PageType3/Header', module)
       max: 6,
       step: 1,
     });
-    return <Header section={section} onClick={defaults.onClick} />;
+    return (
+      <Header section={section} isMenuOpen={defaults.isMenuOpen} onClickMenuItem={defaults.onClickMenuItem} onClickMenuToggle={defaults.onClickMenuToggle} />
+    );
   });
