@@ -1,20 +1,11 @@
 import gql from 'graphql-tag';
+import GQL_FRAGMENT from '../../../../utility/graphql/fragment';
 
 export const GQL_QUERY = gql`
   query {
     options {
-      resume {
-        skillsetHeading
-        skillsetAreas {
-          area
-          skills
-        }
-        skillsetProficiency {
-          isVisible
-          skill
-          proficiency
-        }
-      }
+      ...sectionSkillset
     }
   }
+  ${GQL_FRAGMENT.OPTIONS.RESUME.SECTION_SKILLSET}
 `;

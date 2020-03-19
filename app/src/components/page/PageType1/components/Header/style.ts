@@ -11,7 +11,7 @@ const StyledHeader = styled.header`
       ${padding(true, '10px', '25px')};
 
       pre {
-        ${transition('font-size')};
+        ${transition('font-size', '.1s')};
 
         &:first-of-type {
           font-size: 1.5vw;
@@ -55,29 +55,33 @@ const StyledHeader = styled.header`
 
     ul {
       width: 100%;
+      max-width: 420px;
+
+      @media (min-width: ${breakpoint.desktop[3]}) {
+        max-width: none;
+      }
 
       li {
-        &:not(:first-of-type) {
-          margin: 0 0 0 25px;
-        }
-
-        &:last-of-type {
-          margin-left: auto;
+        &.list-item-extra {
+          display: none;
         }
 
         a,
         span {
-          ${transition('background-color', '.2s')}
           display: inline-block;
           position: relative;
           top: 1px;
           height: 33px;
-          padding: 0 15px;
+          padding: 0 5px;
           color: ${color.core.black};
-          font-size: 1.5rem;
           font-size: 1.75rem;
           font-weight: 500;
           line-height: 1.175em;
+          transition: background-color 0.2s ease-in-out, padding 0.2s ease-in-out;
+
+          @media (min-width: ${breakpoint.mobile[1]}) {
+            padding: 0 15px;
+          }
         }
 
         &.is-current a {
@@ -93,6 +97,20 @@ const StyledHeader = styled.header`
           &:nth-of-type(5),
           &:nth-of-type(6) {
             display: none;
+          }
+        }
+
+        @media (min-width: ${breakpoint.desktop[3]}) {
+          &:not(:first-of-type) {
+            margin: 0 0 0 25px;
+          }
+
+          &:last-of-type {
+            margin-left: auto;
+          }
+
+          &.list-item-extra {
+            display: block;
           }
         }
       }

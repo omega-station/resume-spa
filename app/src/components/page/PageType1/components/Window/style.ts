@@ -1,36 +1,67 @@
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 import { getRGBA } from '../../../../../utility';
-import { color } from '../../../../../utility/constant';
+import { breakpoint, color } from '../../../../../utility/constant';
 import { backgroundStriped } from '../../../../../utility/mixin';
 import { StylesProps as Props } from './definition';
 
 const StyledWindow = styled.div<Props>`
   ${props => css`
     ${backgroundStriped('black')};
-    position: absolute;
-    top: ${`${props.top}px`};
-    left: ${`${props.left}px`};
-    width: ${`${props.width}px`};
-    height: ${`${props.height}px`};
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-color: black;
     border: 1px double ${color.core.black};
-    font-size: 1.15rem;
+    font-size: 1rem;
     line-height: 1.5em;
     z-index: 1000;
 
+    @media (min-width: ${breakpoint.tablet.landscape[0]}) {
+      position: absolute;
+      top: ${`${props.window.top}px`};
+      left: ${`${props.window.left}px`};
+      width: ${`${props.window.width}px`};
+      height: ${`${props.window.height}px`};
+      font-size: 1.15rem;
+    }
+
     header {
       ${backgroundStriped('light-green')};
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       position: relative;
       top: 1px;
       left: 1px;
-      width: calc(${props.width}px - 2px);
+      width: 100%;
       height: 35px;
       margin: -1px 0 0 -1px;
-      padding: 0 0 0 20px;
-      color: ${color.core.black};
-      font-size: 1.4em;
+      padding: 0 5px 0 20px;
       line-height: 35px;
+
+      span,
+      svg path {
+        color: ${color.core.black};
+      }
+
+      span {
+        font-size: 1.4em;
+      }
+
+      svg {
+        font-size: 1.6em;
+      }
+
+      @media (min-width: ${breakpoint.tablet.landscape[0]}) {
+        width: calc(${props.window.width}px - 2px);
+
+        svg {
+          display: none;
+        }
+      }
     }
 
     main {
@@ -119,14 +150,21 @@ const StyledWindow = styled.div<Props>`
 
                   li {
                     display: flex;
+                    flex-direction: column;
+                    margin: 0 0 10px;
 
-                    span {
-                      &:first-of-type {
-                        width: 20%;
-                      }
+                    @media (min-width: ${breakpoint.mobile[4]}) {
+                      flex-direction: row;
+                      margin: 0;
 
-                      &:last-of-type {
-                        width: 80%;
+                      span {
+                        &:first-of-type {
+                          width: 20%;
+                        }
+
+                        &:last-of-type {
+                          width: 80%;
+                        }
                       }
                     }
                   }
@@ -157,12 +195,23 @@ const StyledWindow = styled.div<Props>`
                 display: block;
 
                 &:first-of-type {
-                  width: 33.33%;
+                  width: 45%;
                   color: ${color.pagetype[1].green.light};
                 }
 
                 &:last-of-type {
-                  width: 66.66%;
+                  width: 55%;
+                  word-break: break-word;
+                }
+
+                @media (min-width: ${breakpoint.mobile[4]}) {
+                  &:first-of-type {
+                    width: 33.33%;
+                  }
+
+                  &:last-of-type {
+                    width: 66.66%;
+                  }
                 }
               }
             }

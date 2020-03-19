@@ -1,8 +1,8 @@
 import { Props } from './definition';
 
-const defaults: Props = {
+const defaultProps: Props = {
   icon: 'fas-exclamation-triangle',
   message: 'Something went wrong',
 };
 
-export default defaults;
+export default defaultProps;

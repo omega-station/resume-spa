@@ -1,19 +1,8 @@
 export interface Props {
-  hasContainer?: boolean;
-  hasTitle?: boolean;
+  /** Display description? */
   hasDescription?: boolean;
-  isCityPostal?: boolean;
-}
-
-export interface gqlContact {
-  contactAddress: string;
-  contactCity: string;
-  contactPostal: string;
-  contactEmail: string;
-  contactPhone: string;
-}
-
-export interface gqlSettings {
-  title: string;
-  description: string;
+  /** Display title? */
+  hasTitle?: boolean;
+  /** Display postal code immediately after city? */
+  isPostalWithCity?: boolean;
 }

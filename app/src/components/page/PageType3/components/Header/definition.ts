@@ -1,7 +1,6 @@
 export interface Props {
+  /** Section */
   section: number;
-  images: any;
-  sections: any;
-  settings: { [key: string]: string };
+  /** OnClick callback */
   onClick: (i: number) => void;
 }

@@ -1,6 +1,6 @@
-import { PropsPage } from './definition';
+import { Props } from './definition';
 
-const defaults: PropsPage = {
+const defaults: Props = {
   type: 1,
 };
 

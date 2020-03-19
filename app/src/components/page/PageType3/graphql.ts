@@ -1,19 +1,11 @@
 import gql from 'graphql-tag';
 
+export type gqlAside = any;
+export type gqlResume = any;
+
 export const GQL_QUERY = gql`
   query {
-    generalSettings {
-      description
-      title
-    }
     options {
-      images {
-        header {
-          mediaItemUrl
-          sizes(size: LARGE)
-          srcSet(size: LARGE)
-        }
-      }
       aside {
         resumeHeading
         resumeImage {

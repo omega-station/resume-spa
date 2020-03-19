@@ -1,10 +1,3 @@
-export const global = {
-  padding: {
-    mobile: '4.5%',
-    desktop: '50px',
-  },
-};
-
 export const breakpoint = {
   mobile: { ...['375px', '420px', '480px', '640px', '720px'] },
   tablet: {
@@ -49,6 +42,11 @@ export const color = {
     },
     4: {},
   },
+};
+
+export const padding = {
+  mobile: '4.5%',
+  desktop: '50px',
 };
 
 export const section = ['about', 'skillset', 'work', 'education', 'interests', 'references', 'meta'];

@@ -1,50 +1,48 @@
 import React from 'react';
 import { QueryResult, useQuery } from 'react-apollo';
+import { gqlDefault } from '../../../utility/graphql/definition';
 import Error from '../../core/Error';
 import Loading from '../Loading';
 import defaults from './defaults';
-import { gqlContact, gqlSettings, Props } from './definition';
+import { Props } from './definition';
 import { GQL_QUERY } from './graphql';
 import StyledContact from './style';
 
 const Contact = (props: Props): JSX.Element => {
-  const { hasContainer, hasTitle, hasDescription, isCityPostal }: Props = { ...defaults, ...props };
+  const { hasDescription, hasTitle, isPostalWithCity }: Props = { ...defaults, ...props };
   const { data, loading, error }: QueryResult = useQuery(GQL_QUERY);
 
   if (loading) return <Loading />;
   if (error) return <Error />;
 
-  const resume: gqlContact = data.options.resume;
-  const settings: gqlSettings = data.generalSettings;
-
-  const contact: JSX.Element = (
-    <>
-      <span>{resume.contactAddress}</span>
-      <span>
-        {resume.contactCity} {isCityPostal && resume.contactPostal}
-      </span>
-      {isCityPostal === false && <span>{resume.contactPostal}</span>}
-      <span>{resume.contactPhone}</span>
-      <span>
-        <a href={`mailto:${resume.contactEmail}`}>{resume.contactEmail}</a>
-      </span>
-    </>
-  );
+  const resume: gqlDefault = data.options.resume;
+  const settings: gqlDefault = data.generalSettings;
 
   return (
     <StyledContact>
       {hasTitle && (
-        <span>
-          {settings.title}
+        <ul className="contact-0">
+          <li>{settings.title}</li>
           {hasDescription && (
             <>
-              <i>•</i>
-              {settings.description}
+              <li>•</li>
+              <li>{settings.description}</li>
             </>
           )}
-        </span>
+        </ul>
       )}
-      {hasContainer ? <span>{contact}</span> : contact}
+      <ul className="contact-1">
+        <li>{resume.contactAddress}</li>
+        <li>
+          {resume.contactCity}
+          {isPostalWithCity && <>&nbsp;&nbsp;{resume.contactPostal}</>}
+        </li>
+        {isPostalWithCity === false && <li>{resume.contactPostal}</li>}
+        <li>{resume.contactPhone}</li>
+        <li>
+          <a href={`mailto:${resume.contactEmail}`}>{resume.contactEmail}</a>
+        </li>
+      </ul>
     </StyledContact>
   );
 };

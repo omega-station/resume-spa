@@ -22,10 +22,10 @@ const StyledPage = styled.div`
   }
 
   main {
-    ${padding(true, '30px', '30px')};
+    ${padding(true, '7%', '7%')};
 
-    @media (min-width: ${breakpoint.tablet.portrait[1]}) {
-      ${padding(true, '85px', '95px')};
+    @media (min-width: ${breakpoint.tablet.landscape[0]}) {
+      ${padding(true, '4.5%', '4.5%')};
     }
 
     > nav {
@@ -42,10 +42,10 @@ const StyledPage = styled.div`
 
           &:not(:first-of-type) {
             ${transition('margin', '.2s')};
-            margin: 15px 0 0;
+            margin: 3.25% 0 0;
 
-            @media (min-width: ${breakpoint.tablet.portrait[1]}) {
-              margin: 30px 0 0;
+            @media (min-width: ${breakpoint.tablet.landscape[0]}) {
+              margin: 25px 0 0;
             }
           }
 
@@ -71,18 +71,23 @@ const StyledPage = styled.div`
 
             span {
               display: inline-block;
+              margin: 0 auto;
 
               &:first-of-type {
                 display: none;
               }
             }
 
-            @media (min-width: ${breakpoint.tablet.portrait[1]}) {
+            @media (min-width: ${breakpoint.desktop[3]}) {
               padding: 0 12%;
 
-              span:first-of-type {
-                display: inline-block;
-                margin: 0 60px 0 0;
+              span {
+                margin: 0;
+
+                &:first-of-type {
+                  display: inline-block;
+                  margin: 0 60px 0 0;
+                }
               }
             }
           }

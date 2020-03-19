@@ -5,12 +5,12 @@ import Error from '../Error';
 import Loading from '../Loading';
 import defaults from './defaults';
 import { Props } from './definition';
-import { GQL_QUERY } from './graphql';
+import GQL_QUERY from '../../../utility/graphql/query';
 import StyledMasthead from './style';
 
 const MenuPage = (props: Props): JSX.Element => {
   const { isAscii }: Props = { ...defaults, ...props };
-  const { data, loading, error }: QueryResult = useQuery(GQL_QUERY);
+  const { data, loading, error }: QueryResult = useQuery(GQL_QUERY.SETTINGS);
 
   if (loading) return <Loading />;
   if (error) return <Error />;

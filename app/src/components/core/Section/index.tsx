@@ -15,7 +15,7 @@ import StyledSection from './style';
 
 const Section = (props: Props): JSX.Element => {
   const { type }: Props = { ...defaults, ...props };
-  const { data, loading, error }: QueryResult = useQuery(GQL_QUERY.SECTION_HEADING);
+  const { data, loading, error }: QueryResult = useQuery(GQL_QUERY.HEADINGS);
 
   if (loading) return <Loading />;
   if (error) return <Error />;
