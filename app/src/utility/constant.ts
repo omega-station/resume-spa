@@ -1,7 +1,7 @@
 export const breakpoint = {
   mobile: { ...['375px', '420px', '480px', '640px', '720px'] },
   tablet: {
-    portrait: { ...['768px', '800px', '880px'] },
+    portrait: { ...['768px', '800px', '880px', '920px'] },
     landscape: { ...['1024px'] },
   },
   desktop: { ...['1200px', '1280px', '1440px', '1600px', '1800px'] },
@@ -35,8 +35,7 @@ export const color = {
     },
     2: {},
     3: {
-      grey: 'rgb(151, 153, 156)',
-      orange: 'rgb(249, 163, 2)',
+      grey: 'rgb(160, 160, 160)',
       red: 'rgb(173, 42, 36)',
       red2: 'rgb(97, 0, 0)',
     },

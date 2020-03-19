@@ -12,6 +12,7 @@ const StyledCorner = styled.a<Props>`
     top: 0;
     right: 0;
     border: 0 !important;
+    z-index: 1000;
 
     ${props.isLeft &&
       css`
@@ -43,8 +44,6 @@ const StyledCorner = styled.a<Props>`
 
         &:nth-of-type(1) {
           fill: ${props.fill};
-          /* fill-opacity: 0;
-          transition: fill-opacity 1s ease-in-out !important; */
         }
 
         &:nth-of-type(2) {
@@ -66,7 +65,6 @@ const StyledCorner = styled.a<Props>`
 
       &:nth-of-type(1) {
         animation: none;
-        /* fill-opacity: 1; */
 
         @media (min-width: ${breakpoint.mobile[2]}) {
           animation: anim-color-cycle 800ms infinite;

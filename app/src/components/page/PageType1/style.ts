@@ -25,7 +25,7 @@ const StyledPage = styled.div`
     ${padding(true, '7%', '7%')};
 
     @media (min-width: ${breakpoint.tablet.landscape[0]}) {
-      ${padding(true, '4.5%', '4.5%')};
+      ${padding(true, '5.5%', '5.5%')};
     }
 
     > nav {

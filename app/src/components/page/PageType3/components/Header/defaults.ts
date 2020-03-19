@@ -2,7 +2,9 @@ import { Props } from './definition';
 
 const defaults: Props = {
   section: 0,
-  onClick: () => {},
+  isMenuOpen: false,
+  onClickMenuItem: () => {},
+  onClickMenuToggle: () => {},
 };
 
 export default defaults;
