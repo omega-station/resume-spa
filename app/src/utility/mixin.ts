@@ -1,5 +1,5 @@
 import { css, SerializedStyles } from '@emotion/core';
-import { breakpoint, color, global, transition as _transition } from './constant';
+import { breakpoint, color, padding as _padding, transition as _transition } from './constant';
 
 export const animation = (name: string = 'slideup', duration: string = '1500ms', fillmode: string = 'forwards'): SerializedStyles => css`
   @media (min-width: 480px) {
@@ -15,7 +15,7 @@ const black: string = color.core.black;
 const green: { [key: string]: string } = {
   light: color.pagetype[1].green.light,
   medium: color.pagetype[1].green.medium,
-  dark: color.pagetype[1].green.dark,
+  dark: color.pagetype[1].green.dark2,
 };
 
 export const backgroundStriped = (color: string = 'green'): SerializedStyles => css`
@@ -99,15 +99,15 @@ export const hover = (padding: string = '2px', border: string = '2px'): Serializ
 `;
 
 export const padding = (isOnlySides: boolean = false, top: string = '0', bottom: string = '0'): SerializedStyles => css`
-  ${_padding(isOnlySides, top, bottom, global.padding.mobile)}
+  ${doPadding(isOnlySides, top, bottom, _padding.mobile)}
   transition: padding ${_transition.duration} ease-in-out;
 
   @media (min-width: ${breakpoint.desktop[0]}) {
-    ${_padding(isOnlySides, top, bottom, global.padding.desktop)}
+    ${doPadding(isOnlySides, top, bottom, _padding.desktop)}
   }
 `;
 
-const _padding = (isOnlySides: boolean, top: string, bottom: string, padding: string): SerializedStyles => css`
+const doPadding = (isOnlySides: boolean, top: string, bottom: string, padding: string): SerializedStyles => css`
   ${isOnlySides === true &&
     css`
       padding: ${top} ${padding} ${bottom};

@@ -61,26 +61,23 @@ const StyledPage = styled.div`
 
         > div {
           h4 {
-            margin: 0 0 4px;
+            margin: 0 0 6px;
             color: ${color.pagetype[3].red};
-            font-size: 0.85em;
+            font-size: 0.9em;
             font-weight: 600;
           }
 
           &:first-of-type {
             width: 170px;
-            margin: 0 auto 30px;
-
-            h4 {
-              color: ${color.core.black};
-            }
+            margin: 18px auto 30px;
 
             > div {
               padding: 5px;
-              border: 1px solid ${color.core.grey.light2};
               border-radius: 4px;
+              background-color: ${color.core.grey.light2};
 
               span {
+                color: ${color.core.white} !important;
                 word-break: break-all;
               }
             }

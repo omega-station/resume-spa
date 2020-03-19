@@ -1,11 +1,25 @@
 import React from 'react';
+import { QueryResult, useQuery } from 'react-apollo';
+import Error from '../../../../core/Error';
+import Loading from '../../../../core/Loading';
 import MenuPage from '../../../../core/MenuPage';
+import defaults from './defaults';
 import { Props } from './definition';
 import StyledHeader from './style';
+import { GQL_QUERY } from './graphql';
 
 const Header = (props: Props): JSX.Element => {
-  const { section, images, sections, settings, onClick } = props;
+  const { section, onClick } = { ...defaults, ...props };
+  const { data, loading, error }: QueryResult = useQuery(GQL_QUERY);
+
+  if (loading) return <Loading />;
+  if (error) return <Error />;
+
+  const settings: any = data.generalSettings;
+  const images: any = data.options.images.header;
+  const sections: any = data.options.resume.metaSections;
   const image = images[section];
+
   return (
     <StyledHeader>
       <MenuPage />

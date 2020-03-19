@@ -1,11 +1,16 @@
+import { Dispatch, SetStateAction } from 'react';
+
 export interface Props {
+  /** Child elements */
   children: any;
+  /** Heading */
   heading?: string;
+  /** Is in testing context */
+  isTest?: boolean;
+  /** onClose callback */
+  onClickClose?: () => void;
 }
 
 export interface StylesProps {
-  top: number;
-  left: number;
-  width: number;
-  height: number;
+  window: { [key: string]: number };
 }

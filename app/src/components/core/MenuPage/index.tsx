@@ -10,7 +10,7 @@ import StyledNav from './style';
 
 const MenuPage = (props: Props): JSX.Element => {
   const { items }: Props = { ...defaults, ...props };
-  const { data, loading, error }: QueryResult = useQuery(GQL_QUERY.PAGE);
+  const { data, loading, error }: QueryResult = useQuery(GQL_QUERY.PAGES);
   const location: any = useLocation();
 
   if (loading) return <Loading />;
@@ -38,7 +38,14 @@ const MenuPage = (props: Props): JSX.Element => {
               );
             }
           )}
-          {items && items.map((item: JSX.Element, i: number): JSX.Element => <li key={i}>{item}</li>)}
+          {items &&
+            items.map(
+              (item: JSX.Element, i: number): JSX.Element => (
+                <li key={i} className="list-item-extra">
+                  {item}
+                </li>
+              )
+            )}
         </ul>
       )}
     </StyledNav>

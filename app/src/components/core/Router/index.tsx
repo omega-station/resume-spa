@@ -3,12 +3,12 @@ import { QueryResult, useQuery } from 'react-apollo';
 import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
 import { GQL_QUERY } from '../../../utility/graphql';
 import Page from '../../page/Page';
-import { PropsPage } from '../../page/Page/definition';
+import { Props as PropsPage } from '../../page/Page/definition';
 import Error from '../Error';
 import Loading from '../Loading';
 
 const Router = (): JSX.Element => {
-  const { data, loading, error }: QueryResult = useQuery(GQL_QUERY.PAGE);
+  const { data, loading, error }: QueryResult = useQuery(GQL_QUERY.PAGES);
 
   if (loading) return <Loading />;
   if (error) return <Error />;

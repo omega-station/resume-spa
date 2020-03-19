@@ -3,11 +3,13 @@ import { storiesOf } from '@storybook/react';
 import React from 'react';
 import StoryRouter from 'storybook-react-router';
 import Page from '..';
+import { withProvider } from '../../../../utility/apollo';
 import defaults from '../defaults';
 
 storiesOf('page/Page', module)
   .addDecorator(StoryRouter())
   .addDecorator(withKnobs)
+  .addDecorator(withProvider)
   .add('default', () => <Page />)
   .add('withKnobs', () => {
     const type: string = options(

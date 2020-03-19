@@ -10,7 +10,7 @@ import Loading from '../../core/Loading';
 import Section from '../../core/Section';
 import Footer from './components/Footer';
 import Header from './components/Header';
-import { GQL_QUERY } from './graphql';
+import { GQL_QUERY, gqlResume, gqlAside } from './graphql';
 import StyledPage from './style';
 
 const PageType3 = (): JSX.Element => {
@@ -20,22 +20,19 @@ const PageType3 = (): JSX.Element => {
   if (loading) return <Loading />;
   if (error) return <Error />;
 
-  const settings: any = data.generalSettings;
-  const resume: any = data.options.aside;
-  const images: any = data.options.images.header;
-  const sections: any = data.options.resume.metaSections;
+  const resume: gqlAside = data.options.aside;
+  const sections: gqlResume = data.options.resume.metaSections;
 
   const cloud = {
-    colorOptions: { hue: 'red', luminosity: 'dark' },
+    colorOptions: { hue: 'white', luminosity: 'dark' },
     tags: data.options.resume.skillsetProficiency.filter((x: any) => x.isTagcloud),
   };
-  console.log(cloud);
 
   return (
     <StyledPage>
       <GitHubCorner />
       <div>
-        <Header settings={settings} images={images} section={section} sections={sections} onClick={setSection} />
+        <Header section={section} onClick={setSection} />
         <main>
           <aside>
             <div>

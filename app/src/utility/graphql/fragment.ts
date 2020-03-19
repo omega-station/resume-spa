@@ -1,22 +1,21 @@
 import gql from 'graphql-tag';
 
 const GQL_FRAGMENT = {
-  OPTIONS: {
-    CONTACT: gql`
-      fragment contact on Options {
-        contact {
-          address1
-          address2
-          email
-          phone
-        }
-      }
-    `,
+  // gqlDefault
+  GENERAL_SETTINGS: gql`
+    fragment settings on GeneralSettings {
+      description
+      title
+    }
+  `,
 
+  OPTIONS: {
+    // gqlPages
     PAGES: gql`
       fragment pages on Options {
         pages {
           items {
+            isVisible
             name
             type
           }
@@ -26,8 +25,37 @@ const GQL_FRAGMENT = {
     `,
 
     RESUME: {
-      ABOUT: gql`
-        fragment about on Options {
+      // gqlDefault
+      CONTACT: gql`
+        fragment contact on Options {
+          resume {
+            contactAddress
+            contactCity
+            contactEmail
+            contactPhone
+            contactPostal
+          }
+        }
+      `,
+
+      // gqlDefault
+      HEADINGS: gql`
+        fragment headings on Options {
+          resume {
+            aboutHeading
+            educationHeading
+            interestsHeading
+            metaHeading
+            referencesHeading
+            skillsetHeading
+            workHeading
+          }
+        }
+      `,
+
+      // gqlSectionAbout
+      SECTION_ABOUT: gql`
+        fragment sectionAbout on Options {
           resume {
             aboutHeading
             aboutIntro
@@ -38,8 +66,62 @@ const GQL_FRAGMENT = {
         }
       `,
 
-      SKILLSET: gql`
-        fragment skillset on Options {
+      SECTION_EDUCATION: gql`
+        fragment sectionEducation on Options {
+          resume {
+            educationHeading
+            education {
+              campus
+              dates
+              location
+              school
+              points {
+                item
+              }
+            }
+          }
+        }
+      `,
+
+      // gqlSectionInterests
+      SECTION_INTERESTS: gql`
+        fragment sectionInterests on Options {
+          resume {
+            interestsHeading
+            interestsIntro
+            interestsPoints {
+              item
+            }
+          }
+        }
+      `,
+
+      // gqlSectionMeta
+      SECTION_META: gql`
+        fragment sectionMeta on Options {
+          resume {
+            metaCopy
+            metaHeading
+            metaSections {
+              name
+              heading
+            }
+          }
+        }
+      `,
+
+      // gqlDefault
+      SECTION_REFERENCES: gql`
+        fragment sectionReferences on Options {
+          resume {
+            referencesHeading
+            referencesIntro
+          }
+        }
+      `,
+
+      SECTION_SKILLSET: gql`
+        fragment sectionSkillset on Options {
           resume {
             skillsetHeading
             skillsetAreas {
@@ -47,22 +129,25 @@ const GQL_FRAGMENT = {
               skills
             }
             skillsetProficiency {
+              isTagcloud
               isVisible
-              skill
               proficiency
+              skill
             }
           }
         }
       `,
 
-      WORK: gql`
-        fragment work on Options {
+      SECTION_WORK: gql`
+        fragment sectionWork on Options {
           resume {
             workHeading
             work {
-              title
+              company
               dates
               intro
+              location
+              title
               points {
                 item
               }
@@ -74,60 +159,8 @@ const GQL_FRAGMENT = {
           }
         }
       `,
-
-      EDUCATION: gql`
-        fragment education on Options {
-          resume {
-            educationHeading
-            education {
-              title
-              dates
-              points {
-                item
-              }
-            }
-          }
-        }
-      `,
-
-      INTERESTS: gql`
-        fragment interests on Options {
-          resume {
-            interestsHeading
-            interestsIntro
-            interestsPoints {
-              item
-            }
-          }
-        }
-      `,
-
-      REFERENCES: gql`
-        fragment references on Options {
-          resume {
-            referencesHeading
-            referencesIntro
-          }
-        }
-      `,
-
-      META: gql`
-        fragment meta on Options {
-          resume {
-            metaHeading
-            metaCopy
-          }
-        }
-      `,
     },
   },
-
-  SETTINGS: gql`
-    fragment settings on GeneralSettings {
-      description
-      title
-    }
-  `,
 };
 
 export default GQL_FRAGMENT;

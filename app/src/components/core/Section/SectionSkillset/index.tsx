@@ -2,7 +2,6 @@ import React, { Fragment } from 'react';
 import { useQuery } from 'react-apollo';
 import Error from '../../../core/Error';
 import Loading from '../../Loading';
-import { Props } from '../definition';
 import { GQL_QUERY } from './graphql';
 import StyledSection from './style';
 
@@ -11,7 +10,7 @@ export const getProficiencyString = (percentage: number | string, multiplier: nu
   return char.repeat(_percentage / multiplier);
 };
 
-const SectionSkillset = (props: Props): JSX.Element => {
+const SectionSkillset = (): JSX.Element => {
   const { data, loading, error } = useQuery(GQL_QUERY);
 
   if (loading) return <Loading />;

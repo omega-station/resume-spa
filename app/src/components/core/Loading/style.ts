@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import { padding } from '../../../utility/mixin';
 
 const StyledLoading = styled.div`
-  ${padding()};
+  ${padding(true, '20px', '20px')};
   text-align: center;
 
   &,
@@ -26,8 +26,8 @@ const StyledLoading = styled.div`
     }
 
     &:nth-of-type(3) {
-      top: 27px;
-      right: 50px;
+      top: 23px;
+      right: 53px;
       font-size: 1.5em;
       animation: anim-spin 1.5s linear infinite reverse;
     }

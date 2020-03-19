@@ -11,8 +11,8 @@ import StyledNav from './style';
 export const getSlug = (value: string): string => value.toLowerCase().replace(/ /g, '-');
 
 const MenuSection = (props: Props): JSX.Element => {
-  const { items, isIndexed, onMenuClick }: Props = { ...defaults, ...props };
-  const { data, loading, error }: QueryResult = useQuery(GQL_QUERY.SECTION_HEADING);
+  const { items, isIndexed, onClickMenu }: Props = { ...defaults, ...props };
+  const { data, loading, error }: QueryResult = useQuery(GQL_QUERY.HEADINGS);
 
   if (loading) return <Loading />;
   if (error) return <Error />;
@@ -29,7 +29,7 @@ const MenuSection = (props: Props): JSX.Element => {
             return (
               <li key={i} className={`menu-section-${i} ${isSelected}`}>
                 {isIndexed ? (
-                  <a href={url} onClick={() => onMenuClick && onMenuClick(i)}>
+                  <a href={url} onClick={() => onClickMenu && onClickMenu(i)}>
                     <span>Press &lt;{i + 1}&gt; or &lt;↑/↓&gt;</span>
                     <span>{value}</span>
                   </a>
@@ -40,7 +40,14 @@ const MenuSection = (props: Props): JSX.Element => {
             );
           }
         )}
-        {items && items.map((item: JSX.Element, i: number): JSX.Element => <li key={i}>{item}</li>)}
+        {items &&
+          items.map(
+            (item: JSX.Element, i: number): JSX.Element => (
+              <li key={i} className="list-item-extra">
+                {item}
+              </li>
+            )
+          )}
       </ul>
     </StyledNav>
   );

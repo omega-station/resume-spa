@@ -1,117 +1,61 @@
 import gql from 'graphql-tag';
+import GQL_FRAGMENT from './fragment';
 
 const GQL_QUERY = {
   GLOBAL: gql`
     query {
       generalSettings {
-        title
-        description
+        ...settings
       }
       options {
-        pages {
-          items {
-            isVisible
-            name
-            type
-          }
-          pageFront
-        }
-        resume {
-          contactAddress
-          contactCity
-          contactEmail
-          contactPhone
-          contactPostal
-
-          aboutHeading
-          aboutIntro
-          aboutPoints {
-            item
-          }
-
-          educationHeading
-          education {
-            campus
-            dates
-            location
-            points {
-              item
-            }
-            school
-          }
-
-          interestsHeading
-          interestsIntro
-          interestsPoints {
-            item
-          }
-
-          metaCopy
-          metaHeading
-
-          referencesHeading
-          referencesIntro
-
-          skillsetHeading
-          skillsetAreas {
-            area
-            skills
-          }
-          skillsetProficiency {
-            isVisible
-            proficiency
-            skill
-          }
-
-          workHeading
-          work {
-            company
-            dates
-            intro
-            location
-            title
-            skillset {
-              skills
-              area
-            }
-            points {
-              item
-            }
-          }
-        }
+        ...pages
+        ...contact
+        ...sectionAbout
+        ...sectionEducation
+        ...sectionInterests
+        ...sectionMeta
+        ...sectionReferences
+        ...sectionSkillset
+        ...sectionWork
       }
     }
+    ${GQL_FRAGMENT.GENERAL_SETTINGS}
+    ${GQL_FRAGMENT.OPTIONS.PAGES}
+    ${GQL_FRAGMENT.OPTIONS.RESUME.CONTACT}
+    ${GQL_FRAGMENT.OPTIONS.RESUME.SECTION_ABOUT}
+    ${GQL_FRAGMENT.OPTIONS.RESUME.SECTION_EDUCATION}
+    ${GQL_FRAGMENT.OPTIONS.RESUME.SECTION_INTERESTS}
+    ${GQL_FRAGMENT.OPTIONS.RESUME.SECTION_META}
+    ${GQL_FRAGMENT.OPTIONS.RESUME.SECTION_REFERENCES}
+    ${GQL_FRAGMENT.OPTIONS.RESUME.SECTION_SKILLSET}
+    ${GQL_FRAGMENT.OPTIONS.RESUME.SECTION_WORK}
   `,
 
-  PAGE: gql`
+  PAGES: gql`
     query {
       options {
-        pages {
-          items {
-            isVisible
-            name
-            type
-          }
-          pageFront
-        }
+        ...pages
       }
     }
+    ${GQL_FRAGMENT.OPTIONS.PAGES}
   `,
 
-  SECTION_HEADING: gql`
+  HEADINGS: gql`
     query {
       options {
-        resume {
-          aboutHeading
-          skillsetHeading
-          workHeading
-          educationHeading
-          interestsHeading
-          referencesHeading
-          metaHeading
-        }
+        ...headings
       }
     }
+    ${GQL_FRAGMENT.OPTIONS.RESUME.HEADINGS}
+  `,
+
+  SETTINGS: gql`
+    query {
+      generalSettings {
+        ...settings
+      }
+    }
+    ${GQL_FRAGMENT.GENERAL_SETTINGS}
   `,
 };
 

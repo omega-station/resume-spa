@@ -1,5 +1,6 @@
-export interface PropsPage {
+export interface Props {
+  /** Page name */
   name?: string;
+  /** Page type */
   type?: number;
 }
-export interface PropsPageType {}

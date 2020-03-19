@@ -104,7 +104,7 @@ const StyledHeader = styled.header`
         left: 0;
         width: 100%;
         height: 100%;
-        padding: 65px 0 0 20px;
+        padding: 70px 0 0 20px;
         background: rgb(0, 0, 0);
         background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 66.66%);
 
@@ -121,8 +121,10 @@ const StyledHeader = styled.header`
 
         h2 {
           margin: 0 0 0 4px;
-          font-size: 2.15rem;
+          color: ${color.core.grey.light2};
+          font-size: 1.5rem;
           font-weight: 500;
+          letter-spacing: 0.21em;
         }
       }
 

@@ -1,13 +1,12 @@
 import React from 'react';
 import { lemming } from '../../../../../images';
+import Contact from '../../../../core/Contact';
 import Masthead from '../../../../core/Masthead';
 import MenuPage from '../../../../core/MenuPage';
 import MenuSection from '../../../../core/MenuSection';
 import StyledHeader from './style';
-import Contact from '../../../../core/Contact';
-import { Props } from './definition';
 
-const Header = (props: Props): JSX.Element => {
+const Header = (): JSX.Element => {
   const items: JSX.Element = (
     <>
       {Array(21)
@@ -25,7 +24,7 @@ const Header = (props: Props): JSX.Element => {
       <MenuPage />
       <div>
         <Masthead />
-        <Contact hasTitle={false} isCityPostal={true} />
+        <Contact hasTitle={false} isPostalWithCity={true} />
         <MenuSection items={[items]} />
       </div>
     </StyledHeader>

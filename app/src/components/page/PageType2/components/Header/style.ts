@@ -93,32 +93,38 @@ const StyledHeader = styled.header`
         max-width: 900px;
         margin: 12% auto 6%;
 
-        @media (min-width: ${breakpoint.mobile[3]}) {
-          margin: 6% auto;
-        }
-
-        span {
-          ${border()}
+        ul {
           display: flex;
           flex-direction: column;
           justify-content: center;
-          flex-basis: 25%;
-          font-size: 1.15rem;
-          font-weight: 600;
-          padding: 8px;
 
-          &:not(:first-of-type) {
-            margin: 2px 0 0 0;
+          li {
+            ${border()}
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex-basis: 25%;
+            font-size: 1.15rem;
+            font-weight: 600;
+            padding: 8px;
+
+            &:not(:last-of-type) {
+              margin: 0 0 2px 0;
+            }
           }
         }
 
         @media (min-width: ${breakpoint.mobile[3]}) {
-          flex-direction: row;
-          justify-content: space-between;
-          align-items: stretch;
+          margin: 6% auto;
 
-          span:not(:first-of-type) {
-            margin: 0 0 0 2px;
+          ul {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: stretch;
+
+            li:not(:last-of-type) {
+              margin: 0 2px 0 0;
+            }
           }
         }
       }

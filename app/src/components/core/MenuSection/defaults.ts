@@ -3,7 +3,7 @@ import { Props } from './definition';
 const defaults: Props = {
   items: [],
   isIndexed: false,
-  onMenuClick: () => {},
+  onClickMenu: () => {},
 };
 
 export default defaults;
