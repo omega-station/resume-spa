@@ -23,6 +23,8 @@ const PageType1 = (): JSX.Element => {
   const section: RefNumber = useRef(0);
   const [sectionIndex, setSectionIndex] = useState<number>(-1);
   const [isWindowOpen, setIsWindowOpen] = useState<boolean>(false);
+  const width = window.screen.width;
+  const height = window.screen.height;
 
   useEffect(() => {
     const handleClick = (e: MouseEvent) => {
@@ -33,7 +35,9 @@ const PageType1 = (): JSX.Element => {
     };
 
     const handleResize = (): void => {
-      resetSection(-1, setSectionIndex, setIsWindowOpen);
+      if (window.screen.width !== width || window.screen.height !== height) {
+        resetSection(-1, setSectionIndex, setIsWindowOpen);
+      }
     };
 
     window.addEventListener('click', handleClick);
@@ -43,7 +47,7 @@ const PageType1 = (): JSX.Element => {
       window.removeEventListener('click', handleClick);
       window.removeEventListener('resize', handleResize);
     };
-  }, [isWindowOpen]);
+  }, [isWindowOpen, width, height]);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent): void => {
@@ -66,11 +70,11 @@ const PageType1 = (): JSX.Element => {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [sectionIndex]);
 
-  const onClickMenu = (index: number): void => {
+  const handleClickMenu = (index: number): void => {
     setSection(index, section, mode, setSectionIndex, setIsWindowOpen);
   };
 
-  const onClickWindow = (): void => {
+  const handleClickWindow = (): void => {
     resetSection(-1, setSectionIndex, setIsWindowOpen);
   };
 
@@ -84,9 +88,9 @@ const PageType1 = (): JSX.Element => {
       <GitHubCorner color={color.pagetype[1].green.medium} />
       <Header />
       <main>
-        <MenuSection isIndexed={true} onClickMenu={onClickMenu} />
+        <MenuSection isIndexed={true} onClickMenu={handleClickMenu} />
         {isWindowOpen && (
-          <Window heading={typed.heading} onClickClose={onClickWindow}>
+          <Window heading={typed.heading} onClickClose={handleClickWindow}>
             <Typed strings={[typed.strings]} />
           </Window>
         )}

@@ -21,11 +21,20 @@ const StyledPage = styled.div`
   }
 
   > div {
+    ${transition('padding')};
     position: relative;
     width: 100%;
     max-width: 960px;
     min-height: 100%;
-    padding: 240px 0 0;
+    padding: 170px 0 0;
+
+    @media (min-width: ${breakpoint.mobile[3]}) {
+      padding: 200px 0 0;
+    }
+
+    @media (min-width: ${breakpoint.tablet.portrait[0]}) {
+      padding: 240px 0 0;
+    }
 
     @media (min-width: ${breakpoint.tablet.landscape[0]}) {
       padding: 230px 0 0;
@@ -66,19 +75,15 @@ const StyledPage = styled.div`
         width: 100%;
         order: 1;
         z-index: 50;
-        margin: 10px 0 162px;
+        margin: 10px 0 102px;
         padding: 0 0 40px;
 
         @media (min-width: ${breakpoint.mobile[2]}) {
-          margin-bottom: 131px;
+          margin-bottom: 64px;
         }
 
-        @media (min-width: ${breakpoint.mobile[3]}) {
-          margin-bottom: 68px;
-        }
-
-        @media (min-width: ${breakpoint.tablet.portrait[2]}) {
-          margin-bottom: 47px;
+        @media (min-width: ${breakpoint.tablet.portrait[0]}) {
+          margin-bottom: 45px;
         }
 
         @media (min-width: ${breakpoint.tablet.landscape[0]}) {
@@ -99,11 +104,7 @@ const StyledPage = styled.div`
           &:first-of-type {
             width: 100%;
             margin: 18px 0 30px;
-            padding: 0 30px;
-
-            @media (min-width: ${breakpoint.tablet.landscape[0]}) {
-              padding: 0 15px;
-            }
+            padding: 0 20px;
 
             > div {
               padding: 5px;
@@ -146,7 +147,7 @@ const StyledPage = styled.div`
 
       > div {
         width: 100%;
-        padding: 30px 30px 40px;
+        padding: 30px 20px 40px;
 
         @media (min-width: ${breakpoint.tablet.landscape[0]}) {
           width: calc(100% - 200px);
@@ -206,6 +207,26 @@ const StyledPage = styled.div`
             &.history {
               margin: 0;
               padding: 5px 0 25px;
+
+              > div {
+                &:first-of-type {
+                  margin: 0 0 8px;
+
+                  > span {
+                    &:first-of-type {
+                      margin: 0 0 8px;
+
+                      @media (min-width: ${breakpoint.desktop[3]}) {
+                        margin: 0;
+                      }
+                    }
+                  }
+                }
+              }
+
+              > ul {
+                margin-top: 10px;
+              }
             }
 
             &.skillset {
