@@ -16,18 +16,24 @@ const PageType3 = (): JSX.Element => {
   const { data, loading, error }: QueryResult = useQuery(GQL_QUERY);
   const [section, setSection] = useState<number>(0);
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+  const width = window.screen.width;
+  const height = window.screen.height;
 
   useEffect(() => {
     setIsMenuOpen(false);
   }, [section]);
 
   useEffect(() => {
-    const handleResize = (): void => setIsMenuOpen(false);
+    const handleResize = (): void => {
+      if (window.screen.width !== width || window.screen.height !== height) {
+        setIsMenuOpen(false);
+      }
+    };
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
-  }, [isMenuOpen]);
+  }, [isMenuOpen, width, height]);
 
-  const handleMenuToogle = (): void => {
+  const handleClickMenuToogle = (): void => {
     setIsMenuOpen(!isMenuOpen);
   };
 
@@ -48,7 +54,7 @@ const PageType3 = (): JSX.Element => {
     <StyledPage>
       <GitHubCorner isLeft={true} />
       <div>
-        <Header section={section} isMenuOpen={isMenuOpen} onClickMenuItem={setSection} onClickMenuToggle={handleMenuToogle} />
+        <Header section={section} isMenuOpen={isMenuOpen} onClickMenuItem={setSection} onClickMenuToggle={handleClickMenuToogle} />
         <main>
           <aside>
             <div>

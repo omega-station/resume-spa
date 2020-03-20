@@ -13,6 +13,7 @@ const StyledWindow = styled.div<Props>`
     left: 0;
     width: 100%;
     height: 100%;
+    min-height: 100%;
     background-color: black;
     border: 1px double ${color.core.black};
     font-size: 1rem;
@@ -47,13 +48,14 @@ const StyledWindow = styled.div<Props>`
         color: ${color.core.black};
       }
 
-      span {
-        font-size: 1.4em;
+      span,
+      svg {
+        font-size: 1.7em;
       }
 
       svg {
         cursor: pointer;
-        font-size: 1.6em;
+        font-size: 1.7em;
       }
 
       @media (min-width: ${breakpoint.tablet.landscape[0]}) {
@@ -100,7 +102,6 @@ const StyledWindow = styled.div<Props>`
 
             &:hover {
               background-color: ${color.pagetype[1].green.light};
-              /* color: ${getRGBA(color.pagetype[1].green.light, 0.7)}; */
             }
           }
 

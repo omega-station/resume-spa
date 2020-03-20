@@ -2,7 +2,7 @@ import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 import { getRGBA } from '../../../../../utility';
 import { breakpoint, color } from '../../../../../utility/constant';
-import { boxShadow } from '../../../../../utility/mixin';
+import { boxShadow, transition } from '../../../../../utility/mixin';
 import { PropsStyled } from './definition';
 
 const StyledHeader = styled.header<PropsStyled>`
@@ -11,7 +11,7 @@ const StyledHeader = styled.header<PropsStyled>`
   left: 0;
   width: 100%;
   max-width: 960px;
-  z-index: 100;
+  z-index: 500;
 
   nav {
     width: 100%;
@@ -47,6 +47,7 @@ const StyledHeader = styled.header<PropsStyled>`
             font-size: 0.8em;
             font-weight: 600;
             line-height: 1.3em;
+            white-space: nowrap;
           }
 
           &.is-current a,
@@ -68,7 +69,7 @@ const StyledHeader = styled.header<PropsStyled>`
         position: relative;
         width: 100%;
         min-height: inherit;
-        padding: 0 20px;
+        padding: 0 20px 5px;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
@@ -76,6 +77,7 @@ const StyledHeader = styled.header<PropsStyled>`
 
         @media (min-width: 840px) {
           flex-direction: row;
+          padding-bottom: 0;
         }
 
         li {
@@ -85,9 +87,9 @@ const StyledHeader = styled.header<PropsStyled>`
           padding: 10px 20px;
           color: ${color.core.white};
           cursor: pointer;
-          font-size: 0.9rem;
+          font-size: 1.1rem;
           font-weight: 700;
-          line-height: 1.1em;
+          line-height: 1em;
           text-align: center;
 
           &:not(:first-of-type) {
@@ -121,6 +123,8 @@ const StyledHeader = styled.header<PropsStyled>`
             height: auto;
             padding: 0;
             border: 0 !important;
+            font-size: 0.9rem;
+            line-height: 1.1em;
 
             &:not(:first-of-type) {
               margin: 0 0 0 18px;
@@ -143,7 +147,6 @@ const StyledHeader = styled.header<PropsStyled>`
 
   > div {
     position: relative;
-    min-height: 160px;
     user-select: none;
     z-index: 200;
 
@@ -211,10 +214,19 @@ const StyledHeader = styled.header<PropsStyled>`
       }
 
       img {
+        ${transition('height')};
         display: block;
         width: 960px;
-        height: 160px;
+        height: 90px;
         object-fit: cover;
+
+        @media (min-width: ${breakpoint.mobile[3]}) {
+          height: 120px;
+        }
+
+        @media (min-width: ${breakpoint.tablet.portrait[0]}) {
+          height: 160px;
+        }
       }
     }
   }

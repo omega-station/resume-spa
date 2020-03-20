@@ -18,15 +18,9 @@ const StyledFooter = styled.footer`
     margin: 0 auto;
     padding: 8px 20px;
     background-color: ${color.core.grey.dark};
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
-    justify-content: flex-start;
-
-    @media (min-width: ${breakpoint.mobile[2]}) {
-      flex-direction: row;
-      /* align-items: center; */
-      justify-content: space-between;
-    }
+    justify-content: space-between;
 
     ul {
       flex-direction: column;
@@ -34,38 +28,44 @@ const StyledFooter = styled.footer`
 
       li {
         color: ${color.core.white};
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         font-weight: 600;
         line-height: 1.5em;
+
+        @media (min-width: ${breakpoint.tablet.landscape[0]}) {
+          font-size: 0.9rem;
+        }
       }
 
       &:first-of-type {
         margin: 0 0 10px;
 
-        @media (min-width: ${breakpoint.mobile[3]}) {
+        @media (min-width: ${breakpoint.mobile[2]}) {
           margin: 0;
         }
       }
 
       &:last-of-type {
-        @media (min-width: ${breakpoint.mobile[2]}) {
-          align-items: flex-end;
-        }
+        align-items: flex-end;
 
-        @media (min-width: ${breakpoint.mobile[3]}) {
+        @media (min-width: ${breakpoint.mobile[2]}) {
           flex-direction: row;
           flex-wrap: wrap;
           justify-content: flex-end;
-          width: 400px;
+          width: 280px;
+
+          li:not(:first-of-type) {
+            margin: 0 0 0 12px;
+          }
+        }
+
+        @media (min-width: ${breakpoint.tablet.portrait[0]}) {
+          flex-wrap: nowrap;
+          width: 80%;
 
           li:not(:first-of-type) {
             margin: 0 0 0 18px;
           }
-        }
-
-        @media (min-width: ${breakpoint.tablet.portrait[2]}) {
-          flex-wrap: nowrap;
-          width: 80%;
         }
       }
     }
