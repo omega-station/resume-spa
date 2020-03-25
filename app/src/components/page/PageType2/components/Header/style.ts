@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { breakpoint, color } from '../../../../../utility/constant';
+import { viewport, color } from '../../../../../utility/constant';
 import { border, transition } from '../../../../../utility/mixin';
 
 const StyledHeader = styled.header`
@@ -9,7 +9,7 @@ const StyledHeader = styled.header`
     margin: 0 auto;
 
     ul {
-      ${border('2px', true)}
+      ${border(2, true)}
       display: flex;
       flex-wrap: wrap;
       margin: -2px 0 0 -2px;
@@ -24,7 +24,7 @@ const StyledHeader = styled.header`
 
         &.is-current a,
         a:hover {
-          color: ${color.core.blue};
+          color: ${color.blue};
         }
 
         &.is-current a {
@@ -37,7 +37,7 @@ const StyledHeader = styled.header`
         }
       }
 
-      @media (min-width: ${breakpoint.mobile[0]}) {
+      @media (min-width: ${viewport.mobile[0]}) {
         flex-wrap: nowrap;
 
         li {
@@ -51,7 +51,7 @@ const StyledHeader = styled.header`
     margin: 10% 0;
     text-align: center;
 
-    @media (min-width: ${breakpoint.mobile[3]}) {
+    @media (min-width: ${viewport.mobile[3]}) {
       margin: 6% 0 10%;
     }
 
@@ -74,7 +74,7 @@ const StyledHeader = styled.header`
             font-size: 1.8rem;
           }
 
-          @media (min-width: ${breakpoint.mobile[4]}) {
+          @media (min-width: ${viewport.mobile[4]}) {
             font-size: 4.6rem;
             margin: 0;
 
@@ -86,7 +86,7 @@ const StyledHeader = styled.header`
       }
 
       &:last-of-type {
-        ${border('2px', true)}
+        ${border(2, true)}
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -114,7 +114,7 @@ const StyledHeader = styled.header`
           }
         }
 
-        @media (min-width: ${breakpoint.mobile[3]}) {
+        @media (min-width: ${viewport.mobile[3]}) {
           margin: 6% auto;
 
           ul {
@@ -136,9 +136,9 @@ const StyledHeader = styled.header`
       margin: 0 auto;
 
       ul {
-        ${border('3px', true)}
+        ${border(3, true)}
 
-        @media (min-width: ${breakpoint.tablet.portrait[2]}) {
+        @media (min-width: ${viewport.tablet.portrait[2]}) {
           display: grid;
           grid-template-columns: repeat(4, 1fr);
           grid-template-rows: repeat(2, 1fr);
@@ -158,7 +158,7 @@ const StyledHeader = styled.header`
             margin: 2px 0 0;
           }
 
-          @media (min-width: ${breakpoint.tablet.portrait[2]}) {
+          @media (min-width: ${viewport.tablet.portrait[2]}) {
             &:not(:first-of-type) {
               margin: 0;
             }
@@ -180,11 +180,11 @@ const StyledHeader = styled.header`
               margin: 0 0 0 5px;
             }
 
-            @media (min-width: ${breakpoint.mobile[0]}) {
+            @media (min-width: ${viewport.mobile[0]}) {
               display: inline !important;
             }
 
-            @media (min-width: ${breakpoint.tablet.portrait[2]}) {
+            @media (min-width: ${viewport.tablet.portrait[2]}) {
               display: none !important;
 
               &:nth-of-type(-n+4) {

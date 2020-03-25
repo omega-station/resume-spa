@@ -8,8 +8,6 @@ import defaults from './defaults';
 import { Props } from './definition';
 import StyledNav from './style';
 
-export const getSlug = (value: string): string => value.toLowerCase().replace(/ /g, '-');
-
 const MenuSection = (props: Props): JSX.Element => {
   const { items, isIndexed, onClickMenu }: Props = { ...defaults, ...props };
   const { data, loading, error }: QueryResult = useQuery(GQL_QUERY.HEADINGS);
@@ -22,19 +20,19 @@ const MenuSection = (props: Props): JSX.Element => {
   return (
     <StyledNav>
       <ul className="menu-section">
-        {Object.values(headings).map(
-          (value: string, i: number): JSX.Element => {
-            const url: string = `#${getSlug(value)}`;
+        {Object.entries(headings).map(
+          (item: string[], i: number): JSX.Element => {
+            const url: string = `#${item[0]}`;
             const isSelected: string = i === 0 ? 'is-selected' : '';
             return (
               <li key={i} className={`menu-section-${i} ${isSelected}`}>
                 {isIndexed ? (
                   <a href={url} onClick={() => onClickMenu && onClickMenu(i)}>
                     <span>Press &lt;{i + 1}&gt; or &lt;↑/↓&gt;</span>
-                    <span>{value}</span>
+                    <span>{item[1]}</span>
                   </a>
                 ) : (
-                  <a href={url}>{value}</a>
+                  <a href={url}>{item[1]}</a>
                 )}
               </li>
             );

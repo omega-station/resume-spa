@@ -1,7 +1,7 @@
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 import { getRGBA } from '../../../../../utility';
-import { breakpoint, color } from '../../../../../utility/constant';
+import { viewport, color } from '../../../../../utility/constant';
 import { boxShadow, transition } from '../../../../../utility/mixin';
 import { PropsStyled } from './definition';
 
@@ -18,7 +18,7 @@ const StyledHeader = styled.header<PropsStyled>`
 
     &:first-of-type {
       height: 35px;
-      background-color: ${color.core.grey.dark};
+      background-color: ${color.grey.dark};
 
       ul {
         display: flex;
@@ -26,7 +26,7 @@ const StyledHeader = styled.header<PropsStyled>`
         align-items: center;
         height: 100%;
 
-        @media (min-width: ${breakpoint.mobile[2]}) {
+        @media (min-width: ${viewport.mobile[2]}) {
           justify-content: flex-end;
           padding: 0 20px 0 0;
         }
@@ -37,13 +37,13 @@ const StyledHeader = styled.header<PropsStyled>`
           }
 
           a {
-            ${boxShadow(0, '2px', '4px', 0, 0.3)};
+            ${boxShadow(0, 2, 4, 0, 0.3)};
             display: inline-block;
             padding: 3px 8px 2px;
-            background-color: ${color.core.grey.dark};
-            border: 1px solid ${color.core.grey.medium};
+            background-color: ${color.grey.dark};
+            border: 1px solid ${color.grey.medium};
             border-radius: 5px;
-            color: ${color.core.white};
+            color: ${color.white};
             font-size: 0.8em;
             font-weight: 600;
             line-height: 1.3em;
@@ -52,7 +52,7 @@ const StyledHeader = styled.header<PropsStyled>`
 
           &.is-current a,
           a:hover {
-            background-color: ${getRGBA(color.core.black, 0.5)};
+            background-color: ${getRGBA(color.black, 0.5)};
           }
         }
       }
@@ -60,9 +60,9 @@ const StyledHeader = styled.header<PropsStyled>`
 
     &:last-of-type {
       position: relative;
-      ${boxShadow(0, '2px', '3px')};
+      ${boxShadow(0, 2, 3)};
       min-height: 35px;
-      background-color: ${color.core.grey.dark};
+      background-color: ${color.grey.dark};
       z-index: 100;
 
       ul {
@@ -85,7 +85,7 @@ const StyledHeader = styled.header<PropsStyled>`
           width: 100%;
           height: 35px;
           padding: 10px 20px;
-          color: ${color.core.white};
+          color: ${color.white};
           cursor: pointer;
           font-size: 1.1rem;
           font-weight: 700;
@@ -93,12 +93,12 @@ const StyledHeader = styled.header<PropsStyled>`
           text-align: center;
 
           &:not(:first-of-type) {
-            border-top: 1px solid ${color.core.grey.medium};
+            border-top: 1px solid ${color.grey.medium};
           }
 
           &:hover,
           &.is-current {
-            color: ${color.pagetype[3].red};
+            color: ${color.red.medium};
           }
 
           &.is-current {
@@ -113,7 +113,7 @@ const StyledHeader = styled.header<PropsStyled>`
             width: auto;
             border: 0;
             padding: 7px 0 0;
-            color: ${color.core.white} !important;
+            color: ${color.white} !important;
             font-size: 1.3rem;
           }
 
@@ -172,7 +172,7 @@ const StyledHeader = styled.header<PropsStyled>`
             position: absolute;
             bottom: 12px;
             left: 20px;
-            color: ${color.core.white};
+            color: ${color.white};
             line-height: 0.92em;
           }
 
@@ -181,12 +181,12 @@ const StyledHeader = styled.header<PropsStyled>`
             font-size: 1.95rem;
             font-weight: 700;
 
-            @media (min-width: ${breakpoint.mobile[2]}) {
+            @media (min-width: ${viewport.mobile[2]}) {
               margin: 0 0 2.325vw;
               font-size: 6.45vw;
             }
 
-            @media (min-width: ${breakpoint.tablet.portrait[3]}) {
+            @media (min-width: ${viewport.tablet.portrait[3]}) {
               margin: 0 0 20px;
               font-size: 3.675rem;
             }
@@ -194,18 +194,18 @@ const StyledHeader = styled.header<PropsStyled>`
 
           h2 {
             margin: 0 0 0 2px;
-            color: ${color.core.grey.medium};
-            color: ${color.pagetype[3].red};
+            color: ${color.grey.medium};
+            color: ${color.red.medium};
             font-size: 0.84rem;
             font-weight: 700;
             letter-spacing: 0.21em;
 
-            @media (min-width: ${breakpoint.mobile[2]}) {
+            @media (min-width: ${viewport.mobile[2]}) {
               margin: 0 0 0 0.4vw;
               font-size: 2.78vw;
             }
 
-            @media (min-width: ${breakpoint.tablet.portrait[3]}) {
+            @media (min-width: ${viewport.tablet.portrait[3]}) {
               margin: 0 0 0 4px;
               font-size: 1.58rem;
             }
@@ -220,11 +220,11 @@ const StyledHeader = styled.header<PropsStyled>`
         height: 90px;
         object-fit: cover;
 
-        @media (min-width: ${breakpoint.mobile[3]}) {
+        @media (min-width: ${viewport.mobile[3]}) {
           height: 120px;
         }
 
-        @media (min-width: ${breakpoint.tablet.portrait[0]}) {
+        @media (min-width: ${viewport.tablet.portrait[0]}) {
           height: 160px;
         }
       }

@@ -47,7 +47,7 @@ const StyledSection = styled.div`
 
         &.proficiency i {
           margin-right: 6px;
-          color: ${color.core.black};
+          color: ${color.black};
           font-size: 0.93rem;
           font-style: normal;
           letter-spacing: -0.1em;

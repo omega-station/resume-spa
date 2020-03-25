@@ -1,15 +1,15 @@
 import styled from '@emotion/styled';
-import { breakpoint, color } from '../../../../../utility/constant';
+import { viewport, color } from '../../../../../utility/constant';
 import { padding } from '../../../../../utility/mixin';
 
 const StyledFooter = styled.footer`
-  ${padding(true, '10px', '15px')};
+  ${padding('10px', '15px')};
   display: flex;
   align-items: center;
-  border-top: 3px solid ${color.pagetype[1].green.medium};
+  border-top: 3px solid ${color.green.medium};
 
-  @media (min-width: ${breakpoint.desktop[3]}) {
-    ${padding(true, '10px', '10px')};
+  @media (min-width: ${viewport.desktop[3]}) {
+    ${padding('10px')};
   }
 
   &,
@@ -36,7 +36,7 @@ const StyledFooter = styled.footer`
         }
       }
 
-      @media (min-width: ${breakpoint.desktop[1]}) {
+      @media (min-width: ${viewport.desktop[1]}) {
         flex-direction: row;
 
         &:first-of-type {
@@ -63,14 +63,14 @@ const StyledFooter = styled.footer`
         }
       }
 
-      @media (min-width: ${breakpoint.desktop[3]}) {
+      @media (min-width: ${viewport.desktop[3]}) {
         &:last-of-type {
           max-width: none;
         }
       }
     }
 
-    @media (min-width: ${breakpoint.mobile[3]}) {
+    @media (min-width: ${viewport.mobile[3]}) {
       flex-direction: row;
       justify-content: space-between;
 

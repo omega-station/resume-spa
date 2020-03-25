@@ -1,7 +1,7 @@
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 import { getRGBA } from '../../../../../utility';
-import { breakpoint, color } from '../../../../../utility/constant';
+import { viewport, color } from '../../../../../utility/constant';
 import { backgroundStriped } from '../../../../../utility/mixin';
 import { StylesProps as Props } from './definition';
 
@@ -15,17 +15,18 @@ const StyledWindow = styled.div<Props>`
     height: 100%;
     min-height: 100%;
     background-color: black;
-    border: 1px double ${color.core.black};
+    border: 1px double ${color.black};
     font-size: 1rem;
     line-height: 1.5em;
     z-index: 1000;
 
-    @media (min-width: ${breakpoint.tablet.landscape[0]}) {
+    @media (min-width: ${viewport.tablet.landscape[0]}) {
       position: absolute;
       top: ${`${props.window.top}px`};
       left: ${`${props.window.left}px`};
       width: ${`${props.window.width}px`};
       height: ${`${props.window.height}px`};
+      min-height: 0;
       font-size: 1.15rem;
     }
 
@@ -45,11 +46,10 @@ const StyledWindow = styled.div<Props>`
 
       span,
       svg path {
-        color: ${color.core.black};
+        color: ${color.black};
       }
 
-      span,
-      svg {
+      span {
         font-size: 1.7em;
       }
 
@@ -58,27 +58,36 @@ const StyledWindow = styled.div<Props>`
         font-size: 1.7em;
       }
 
-      @media (min-width: ${breakpoint.tablet.landscape[0]}) {
+      @media (min-width: ${viewport.tablet.landscape[0]}) {
         width: calc(${props.window.width}px - 2px);
-        padding: 0 12px 0 20px;
+        padding: 0 15px 0 20px;
+
+        span {
+          font-size: 1.4em;
+        }
       }
     }
 
     main {
       overflow: scroll;
       height: calc(100% - 35px);
+      min-height: calc(100% - 35px);
       padding: 0;
-      border: 1px double ${color.pagetype[1].green.dark2};
+      border: 1px double ${color.green.dark2};
+
+      @media (min-width: ${viewport.tablet.landscape[0]}) {
+        min-height: 0;
+      }
 
       .scrollbar-container {
         padding: 12px;
 
-        @media (min-width: ${breakpoint.tablet.landscape[0]}) {
+        @media (min-width: ${viewport.tablet.landscape[0]}) {
           padding: 20px;
         }
 
         .ps__rail-y {
-          background-color: ${color.pagetype[1].green.dark2};
+          background-color: ${color.green.dark2};
 
           &,
           div {
@@ -88,25 +97,25 @@ const StyledWindow = styled.div<Props>`
 
           .ps__thumb-y {
             right: 0;
-            background-color: ${color.pagetype[1].green.medium};
+            background-color: ${color.green.medium};
           }
         }
 
         > span > span {
           a {
             padding: 0 4px;
-            background-color: ${getRGBA(color.pagetype[1].green.light, 0.6)};
+            background-color: ${getRGBA(color.green.light, 0.6)};
             border: 0;
-            color: ${color.core.black};
+            color: ${color.black};
             transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 
             &:hover {
-              background-color: ${color.pagetype[1].green.light};
+              background-color: ${color.green.light};
             }
           }
 
           & > p:first-of-type {
-            color: ${color.pagetype[1].green.light};
+            color: ${color.green.light};
           }
 
           p {
@@ -134,7 +143,7 @@ const StyledWindow = styled.div<Props>`
                 margin: 0 0 10px;
 
                 > span:first-of-type span {
-                  color: ${color.pagetype[1].green.light};
+                  color: ${color.green.light};
                 }
               }
             }
@@ -156,7 +165,7 @@ const StyledWindow = styled.div<Props>`
                     flex-direction: column;
                     margin: 0 0 10px;
 
-                    @media (min-width: ${breakpoint.mobile[4]}) {
+                    @media (min-width: ${viewport.mobile[4]}) {
                       flex-direction: row;
                       margin: 0;
 
@@ -190,7 +199,7 @@ const StyledWindow = styled.div<Props>`
                 }
 
                 span {
-                  color: ${color.pagetype[1].green.light};
+                  color: ${color.green.light};
                 }
               }
 
@@ -199,7 +208,7 @@ const StyledWindow = styled.div<Props>`
 
                 &:first-of-type {
                   width: 45%;
-                  color: ${color.pagetype[1].green.light};
+                  color: ${color.green.light};
                 }
 
                 &:last-of-type {
@@ -207,7 +216,7 @@ const StyledWindow = styled.div<Props>`
                   word-break: break-word;
                 }
 
-                @media (min-width: ${breakpoint.mobile[4]}) {
+                @media (min-width: ${viewport.mobile[4]}) {
                   &:first-of-type {
                     width: 33.33%;
                   }

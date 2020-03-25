@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import { getRGBA } from '../../../../../utility';
-import { breakpoint, color } from '../../../../../utility/constant';
+import { viewport, color } from '../../../../../utility/constant';
 import { backgroundStriped, padding, transition } from '../../../../../utility/mixin';
 
 const StyledHeader = styled.header`
@@ -8,10 +8,10 @@ const StyledHeader = styled.header`
 
   > div {
     div {
-      ${padding(true, '10px', '25px')};
+      ${padding('10px', '25px')};
 
       pre {
-        ${transition('font-size', '.1s')};
+        ${transition('font-size', 100)};
 
         &:first-of-type {
           font-size: 1.5vw;
@@ -21,7 +21,7 @@ const StyledHeader = styled.header`
           font-size: 1.7vw;
         }
 
-        @media (min-width: ${breakpoint.mobile[3]}) {
+        @media (min-width: ${viewport.mobile[3]}) {
           &:first-of-type {
             font-size: 0.725rem;
           }
@@ -32,7 +32,7 @@ const StyledHeader = styled.header`
           }
         }
 
-        @media (min-width: ${breakpoint.desktop[2]}) {
+        @media (min-width: ${viewport.desktop[2]}) {
           &:first-of-type {
             font-size: 1rem;
           }
@@ -47,7 +47,7 @@ const StyledHeader = styled.header`
 
   nav {
     ${backgroundStriped()};
-    ${padding(true)};
+    ${padding()};
     display: flex;
     justify-content: flex-start;
     width: 100%;
@@ -57,7 +57,7 @@ const StyledHeader = styled.header`
       width: 100%;
       max-width: 420px;
 
-      @media (min-width: ${breakpoint.desktop[3]}) {
+      @media (min-width: ${viewport.desktop[3]}) {
         max-width: none;
       }
 
@@ -73,24 +73,24 @@ const StyledHeader = styled.header`
           top: 1px;
           height: 33px;
           padding: 0 5px;
-          color: ${color.core.black};
+          color: ${color.black};
           font-size: 1.75rem;
           font-weight: 500;
           line-height: 1.175em;
           transition: background-color 0.2s ease-in-out, padding 0.2s ease-in-out;
 
-          @media (min-width: ${breakpoint.mobile[1]}) {
+          @media (min-width: ${viewport.mobile[1]}) {
             padding: 0 15px;
           }
         }
 
         &.is-current a {
-          background-color: ${getRGBA(color.pagetype[1].green.light, 0.5)};
+          background-color: ${getRGBA(color.green.light, 0.5)};
         }
 
         &.is-selected a,
         a:hover {
-          background-color: ${getRGBA(color.pagetype[1].green.light, 0.7)};
+          background-color: ${getRGBA(color.green.light, 0.7)};
         }
 
         span {
@@ -100,7 +100,7 @@ const StyledHeader = styled.header`
           }
         }
 
-        @media (min-width: ${breakpoint.desktop[3]}) {
+        @media (min-width: ${viewport.desktop[3]}) {
           &:not(:first-of-type) {
             margin: 0 0 0 25px;
           }
@@ -115,7 +115,7 @@ const StyledHeader = styled.header`
         }
       }
 
-      @media (min-width: ${breakpoint.tablet.portrait[1]}) {
+      @media (min-width: ${viewport.tablet.portrait[1]}) {
         li span {
           &:nth-of-type(5),
           &:nth-of-type(6) {

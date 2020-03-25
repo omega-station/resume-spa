@@ -1,13 +1,12 @@
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
-import anim from '../../../utility/anim';
-import { breakpoint, color } from '../../../utility/constant';
+import { animColorCycle, animOctoarm } from '../../../utility/mixin/anim';
+import { viewport, color } from '../../../utility/constant';
 import { transition } from '../../../utility/mixin';
 import { Props } from './definition';
 
 const StyledCorner = styled.a<Props>`
   ${props => css`
-    ${anim('color-cycle')};
     position: fixed;
     top: 0;
     right: 0;
@@ -28,19 +27,19 @@ const StyledCorner = styled.a<Props>`
 
       ${props.isSmall &&
         css`
-          width: 60px !important;
+          width: 80px !important;
         `}
 
-      @media (min-width: ${breakpoint.mobile[3]}) {
+      @media (min-width: ${viewport.mobile[3]}) {
         width: 100px;
       }
 
-      @media (min-width: ${breakpoint.tablet.landscape[0]}) {
+      @media (min-width: ${viewport.tablet.landscape[0]}) {
         width: 140px;
       }
 
       & path {
-        ${transition('fill', '0.3s', 'ease-out')};
+        ${transition('fill', 300, 'ease-out')};
 
         &:nth-of-type(1) {
           fill: ${props.fill};
@@ -60,38 +59,26 @@ const StyledCorner = styled.a<Props>`
     &:hover svg path {
       &:nth-of-type(2),
       &:nth-of-type(3) {
-        fill: ${color.core.white};
+        fill: ${color.white};
       }
 
       &:nth-of-type(1) {
         animation: none;
 
-        @media (min-width: ${breakpoint.mobile[2]}) {
-          animation: anim-color-cycle 800ms infinite;
+        @media (min-width: ${viewport.mobile[2]}) {
+          ${animColorCycle};
         }
       }
 
       &:nth-of-type(2) {
         animation: none;
 
-        @media (min-width: ${breakpoint.mobile[2]}) {
-          animation: anim-octoarm 700ms ease-out infinite;
+        @media (min-width: ${viewport.mobile[2]}) {
+          ${animOctoarm};
         }
       }
     }
 
-    @keyframes anim-octoarm {
-      0%,
-      75% 100% {
-        transform: rotate(0);
-      }
-      35% {
-        transform: rotate(-25deg);
-      }
-      85% {
-        transform: rotate(10deg);
-      }
-    }
   `}
 `;
 

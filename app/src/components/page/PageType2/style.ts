@@ -3,7 +3,7 @@ import { border, defaults, padding } from '../../../utility/mixin';
 
 const StyledPage = styled.div`
   ${defaults('page', '768px')};
-  ${padding(true, '25px')};
+  ${padding('25px')};
 
   a {
     text-decoration: underline;
@@ -69,7 +69,7 @@ const StyledPage = styled.div`
         }
 
         &.skillset {
-          ${border('2px', true)};
+          ${border(2, true)};
 
           > div span {
             ${border()};
