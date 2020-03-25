@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { breakpoint } from '../../../../utility/constant';
+import { viewport } from '../../../../utility/constant';
 
 const StyledSection = styled.div`
   .history {
@@ -10,7 +10,7 @@ const StyledSection = styled.div`
         display: flex;
         flex-direction: column;
 
-        @media (min-width: ${breakpoint.desktop[3]}) {
+        @media (min-width: ${viewport.desktop[3]}) {
           flex-direction: row;
         }
 
@@ -26,13 +26,13 @@ const StyledSection = styled.div`
             flex-basis: 66.66%;
             flex-direction: column;
 
-            @media (max-width: ${breakpoint.mobile[2]}) {
+            @media (max-width: ${viewport.mobile[2]}) {
               span:first-of-type {
                 white-space: normal;
               }
             }
 
-            @media (min-width: ${breakpoint.tablet.portrait[0]}) {
+            @media (min-width: ${viewport.tablet.portrait[0]}) {
               flex-direction: row;
 
               span:not(:first-of-type) {
@@ -44,7 +44,7 @@ const StyledSection = styled.div`
           &:last-of-type {
             flex-basis: 33.33%;
 
-            @media (min-width: ${breakpoint.desktop[3]}) {
+            @media (min-width: ${viewport.desktop[3]}) {
               text-align: right;
             }
           }

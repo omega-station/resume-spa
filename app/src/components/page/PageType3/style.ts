@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import WebFont from 'webfontloader';
-import { breakpoint, color } from '../../../utility/constant';
+import { color, viewport } from '../../../utility/constant';
 import { boxShadow, defaults, padding, transition } from '../../../utility/mixin';
 
 WebFont.load({
@@ -11,14 +11,10 @@ WebFont.load({
 
 const StyledPage = styled.div`
   ${defaults()};
-  ${padding(true)};
+  ${padding()};
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  * {
-    font-family: 'PT Sans', sans-serif;
-  }
 
   > div {
     ${transition('padding')};
@@ -28,16 +24,20 @@ const StyledPage = styled.div`
     min-height: 100%;
     padding: 170px 0 0;
 
-    @media (min-width: ${breakpoint.mobile[3]}) {
+    @media (min-width: ${viewport.mobile[3]}) {
       padding: 200px 0 0;
     }
 
-    @media (min-width: ${breakpoint.tablet.portrait[0]}) {
+    @media (min-width: ${viewport.tablet.portrait[0]}) {
       padding: 240px 0 0;
     }
 
-    @media (min-width: ${breakpoint.tablet.landscape[0]}) {
+    @media (min-width: ${viewport.tablet.landscape[0]}) {
       padding: 230px 0 0;
+    }
+
+    * {
+      font-family: 'PT Sans', sans-serif;
     }
 
     main,
@@ -45,11 +45,11 @@ const StyledPage = styled.div`
       a {
         display: inline-block;
         border-bottom: 1px solid transparent;
-        color: ${color.pagetype[3].red};
+        color: ${color.red.medium};
         line-height: 0.9em;
 
         &:hover {
-          border-bottom-color: ${color.pagetype[3].red};
+          border-bottom-color: ${color.red.medium};
         }
       }
     }
@@ -60,13 +60,13 @@ const StyledPage = styled.div`
       min-height: 100%;
       padding: 0;
 
-      @media (min-width: ${breakpoint.tablet.landscape[0]}) {
+      @media (min-width: ${viewport.tablet.landscape[0]}) {
         flex-direction: row;
       }
 
       > * {
         padding: 20px 0;
-        background-color: ${color.core.white};
+        background-color: ${color.white};
       }
 
       > aside {
@@ -78,16 +78,16 @@ const StyledPage = styled.div`
         margin: 10px 0 102px;
         padding: 0 0 40px;
 
-        @media (min-width: ${breakpoint.mobile[2]}) {
+        @media (min-width: ${viewport.mobile[2]}) {
           margin-bottom: 64px;
         }
 
-        @media (min-width: ${breakpoint.tablet.portrait[0]}) {
+        @media (min-width: ${viewport.tablet.portrait[0]}) {
           margin-bottom: 45px;
         }
 
-        @media (min-width: ${breakpoint.tablet.landscape[0]}) {
-          ${boxShadow('10px', 0, '25px', 0, 0.1)};
+        @media (min-width: ${viewport.tablet.landscape[0]}) {
+          ${boxShadow(10, 0, 25, 0, 0.1)};
           width: 200px;
           margin: 0;
           order: 0;
@@ -96,7 +96,7 @@ const StyledPage = styled.div`
         > div {
           h4 {
             margin: 0 0 6px;
-            color: ${color.pagetype[3].red};
+            color: ${color.red.medium};
             font-size: 0.9em;
             font-weight: 600;
           }
@@ -109,10 +109,10 @@ const StyledPage = styled.div`
             > div {
               padding: 5px;
               border-radius: 4px;
-              background-color: ${color.core.grey.light2};
+              background-color: ${color.grey.medium2};
 
               span {
-                color: ${color.core.white} !important;
+                color: ${color.white} !important;
                 word-break: break-all;
               }
             }
@@ -125,7 +125,7 @@ const StyledPage = styled.div`
             a {
               svg {
                 font-size: 64px;
-                color: ${color.pagetype[3].red};
+                color: ${color.red.medium};
 
                 &:last-of-type {
                   display: none;
@@ -149,7 +149,7 @@ const StyledPage = styled.div`
         width: 100%;
         padding: 30px 20px 40px;
 
-        @media (min-width: ${breakpoint.tablet.landscape[0]}) {
+        @media (min-width: ${viewport.tablet.landscape[0]}) {
           width: calc(100% - 200px);
           padding: 35px 60px 100px 40px;
         }
@@ -158,17 +158,17 @@ const StyledPage = styled.div`
           a {
             display: inline-block;
             border-bottom: 1px solid transparent;
-            color: ${color.pagetype[3].red};
+            color: ${color.red.medium};
             line-height: 0.9em;
 
             &:hover {
-              border-bottom-color: ${color.pagetype[3].red};
+              border-bottom-color: ${color.red.medium};
             }
           }
 
           h2 {
             margin: 0 0 20px;
-            color: ${color.pagetype[3].red};
+            color: ${color.red.medium};
             font-size: 1.4rem;
             font-weight: 600;
           }
@@ -216,7 +216,7 @@ const StyledPage = styled.div`
                     &:first-of-type {
                       margin: 0 0 8px;
 
-                      @media (min-width: ${breakpoint.desktop[3]}) {
+                      @media (min-width: ${viewport.desktop[3]}) {
                         margin: 0;
                       }
                     }
@@ -239,17 +239,17 @@ const StyledPage = styled.div`
                   font-size: 1rem;
 
                   &:first-of-type {
-                    color: ${color.pagetype[3].red2};
+                    color: ${color.red.dark};
                   }
 
                   &.proficiency {
                     font-size: 0.8rem;
-                    color: ${color.pagetype[3].red2};
+                    color: ${color.red.dark};
 
                     i {
                       position: relative;
                       top: 3px;
-                      color: ${color.pagetype[3].red};
+                      color: ${color.red.medium};
                       letter-spacing: 0.02em;
                     }
                   }

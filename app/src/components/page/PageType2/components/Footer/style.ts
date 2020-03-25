@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { breakpoint } from '../../../../../utility/constant';
+import { viewport } from '../../../../../utility/constant';
 import { border } from '../../../../../utility/mixin';
 
 const StyledFooter = styled.footer`
@@ -8,12 +8,12 @@ const StyledFooter = styled.footer`
 
   > div {
     &:nth-of-type(1) {
-      ${border('4px', true)};
+      ${border(4, true)};
       width: 100%;
       max-width: 300px;
       margin: 0 auto 40px;
 
-      @media (min-width: ${breakpoint.mobile[3]}) {
+      @media (min-width: ${viewport.mobile[3]}) {
         max-width: 680px;
       }
 
@@ -42,7 +42,7 @@ const StyledFooter = styled.footer`
             }
           }
 
-          @media (min-width: ${breakpoint.mobile[3]}) {
+          @media (min-width: ${viewport.mobile[3]}) {
             flex-direction: row;
 
             div {
@@ -98,7 +98,7 @@ const StyledFooter = styled.footer`
         }
       }
 
-      @media (min-width: ${breakpoint.mobile[3]}) {
+      @media (min-width: ${viewport.mobile[3]}) {
         flex-direction: row;
         height: 85px;
         margin: 0 0 40px;

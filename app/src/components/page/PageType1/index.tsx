@@ -85,7 +85,7 @@ const PageType1 = (): JSX.Element => {
 
   return (
     <StyledPage>
-      <GitHubCorner color={color.pagetype[1].green.medium} />
+      <GitHubCorner color={color.green.medium} />
       <Header />
       <main>
         <MenuSection isIndexed={true} onClickMenu={handleClickMenu} />

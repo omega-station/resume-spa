@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { breakpoint } from '../../../utility/constant';
+import { viewport } from '../../../utility/constant';
 
 const StyledMasthead = styled.div`
   .ascii {
@@ -18,7 +18,7 @@ const StyledMasthead = styled.div`
       display: none;
     }
 
-    @media (min-width: ${breakpoint.tablet.landscape[0]}) {
+    @media (min-width: ${viewport.tablet.landscape[0]}) {
       &.ascii-mobile {
         display: none;
       }

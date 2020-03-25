@@ -1,3 +1,4 @@
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import { section } from './constant';
 
 export interface Headings {
@@ -27,7 +28,14 @@ export const getHeadings = (data: any, allowed: number[] = []): Headings => {
   return headings;
 };
 
+export const getIconProp = (icon: string): IconProp => icon.split(/^(fa[brs])-(.+)$/).filter(x => x) as IconProp;
+
 export const getRandomElement = (array: any[]): any => array[Math.floor(Math.random() * array.length)];
+
+export const getRandomHash = (): string =>
+  Math.random()
+    .toString(36)
+    .substr(2, 5);
 
 export const getRandomInt = (min: number, max: number): number => {
   const _min: number = Math.ceil(min);
@@ -36,3 +44,25 @@ export const getRandomInt = (min: number, max: number): number => {
 };
 
 export const getRGBA = (rgb: string, alpha: number): string => rgb.replace('rgb', 'rgba').replace(')', `, ${alpha})`);
+
+export const getSlug = (value: string): string => value.toLowerCase().replace(/ /g, '-');
+
+export const shuffleArray = (array: any[]): any[] => {
+  let currentIndex = array.length,
+    temporaryValue,
+    randomIndex;
+
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+
+  return array;
+};

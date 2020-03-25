@@ -91,6 +91,7 @@ const GQL_FRAGMENT = {
             interestsIntro
             interestsPoints {
               item
+              icon
             }
           }
         }
@@ -116,6 +117,19 @@ const GQL_FRAGMENT = {
           resume {
             referencesHeading
             referencesIntro
+          }
+          aside {
+            resumeHeading
+            resumeImage {
+              mediaItemUrl
+              sizes(size: LARGE)
+              srcSet(size: LARGE)
+            }
+            resumeUrl {
+              ... on MediaItem {
+                mediaItemUrl
+              }
+            }
           }
         }
       `,

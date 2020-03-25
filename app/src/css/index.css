@@ -26,13 +26,16 @@ body.pagetype-1 {
   background-size: 4px 4px;
 }
 
+body.pagetype-2 {
+  background-color: white;
+}
+
 body.pagetype-3 {
   background-color: lightgray;
 }
 
-body.pagetype-2,
 body.pagetype-4 {
-  background-color: white;
+  background-color: rgb(240, 240, 240);
 }
 
 #root > .error,
