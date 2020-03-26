@@ -9,6 +9,7 @@ const GQL_QUERY = {
       }
       options {
         ...pages
+        ...pageContent
         ...contact
         ...sectionAbout
         ...sectionEducation
@@ -21,6 +22,7 @@ const GQL_QUERY = {
     }
     ${GQL_FRAGMENT.GENERAL_SETTINGS}
     ${GQL_FRAGMENT.OPTIONS.PAGES}
+    ${GQL_FRAGMENT.OPTIONS.PAGE_CONTENT}
     ${GQL_FRAGMENT.OPTIONS.RESUME.CONTACT}
     ${GQL_FRAGMENT.OPTIONS.RESUME.SECTION_ABOUT}
     ${GQL_FRAGMENT.OPTIONS.RESUME.SECTION_EDUCATION}

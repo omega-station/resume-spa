@@ -18,12 +18,12 @@ describe('SectionDefault', () => {
     expect(component).toMatchSnapshot();
   });
 
-  it('should render with type={default} prop', () => {
-    const component = render(
-      <MockedProvider mocks={mocks} addTypename={false} cache={cache}>
-        <SectionDefault type={defaults.type} />
-      </MockedProvider>
-    );
-    expect(component).toMatchSnapshot();
-  });
+  // it('should render with type={default} prop', () => {
+  //   const component = render(
+  //     <MockedProvider mocks={mocks} addTypename={false} cache={cache}>
+  //       <SectionDefault type={defaults.type} />
+  //     </MockedProvider>
+  //   );
+  //   expect(component).toMatchSnapshot();
+  // });
 });

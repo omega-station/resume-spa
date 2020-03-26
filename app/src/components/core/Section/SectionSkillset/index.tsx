@@ -15,22 +15,21 @@ export const getProficiencyString = (percentage: number | string, multiplier: nu
 };
 
 const SectionSkillset = (props: Props): JSX.Element => {
-  const { isWaypoint }: Props = { ...defaults, ...props };
+  const { isWaypoint, useSkillsetChart }: Props = { ...defaults, ...props };
   const { data, loading, error } = useQuery(GQL_QUERY);
-  const useChart: boolean = true; // add as prop
 
   if (loading) return <Loading />;
   if (error) return <Error />;
 
   const { skillsetAreas: areas, skillsetProficiency } = data.options.resume;
-  const proficiency = useChart ? shuffleArray(skillsetProficiency) : skillsetProficiency;
+  const proficiency = useSkillsetChart ? shuffleArray(skillsetProficiency) : skillsetProficiency;
 
   return (
     <StyledSection>
       <div className="skillset">
         {areas.map(
           (item: any, i: number): JSX.Element => (
-            <div key={`${item.area}-${i}`}>
+            <div key={`${item.area}-${i}`} className="body">
               <span>{item.area}</span>
               <span>{item.skills}</span>
             </div>
@@ -38,7 +37,7 @@ const SectionSkillset = (props: Props): JSX.Element => {
         )}
       </div>
       <div className="skillset">
-        {!useChart && (
+        {!useSkillsetChart && (
           <div className="head">
             <span>Skill</span>
             <span>Proficiency</span>
@@ -46,11 +45,11 @@ const SectionSkillset = (props: Props): JSX.Element => {
         )}
         {proficiency.map(
           (item: any, i: number): JSX.Element => (
-            <Fragment key={i}>
+            <Fragment key={item.skill}>
               {item.isVisible && (
                 <>
-                  {!useChart ? (
-                    <div>
+                  {!useSkillsetChart ? (
+                    <div className="body">
                       <span>{item.skill}</span>
                       <span className="proficiency">
                         <i>{getProficiencyString(item.proficiency)}</i>[{item.proficiency}%]

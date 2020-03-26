@@ -13,6 +13,6 @@ export interface Props extends Core {
 }
 
 export interface PropsStyled extends Core {
-  /** Index (for animation delay) */
-  index: number;
+  /** Animation values */
+  animation: { [key: string]: number };
 }

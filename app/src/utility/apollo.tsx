@@ -8,14 +8,15 @@ import { ApolloProvider } from 'react-apollo';
 const uri: string = `${process.env.REACT_APP_ENDPOINT_GRAPHQL_API}/graphql`;
 const link: ApolloLink = createHttpLink({ uri });
 
-const cache = new InMemoryCache({
+const cache: InMemoryCache = new InMemoryCache({
   addTypename: false,
   fragmentMatcher: { match: () => true },
 });
 
 const client = new ApolloClient({
   link,
-  cache: new InMemoryCache(),
+  cache,
+  // cache: new InMemoryCache(),
   connectToDevTools: true,
 });
 

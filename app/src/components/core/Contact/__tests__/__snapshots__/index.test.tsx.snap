@@ -2,8 +2,38 @@
 
 exports[`Contact should render with hasDescription={false} prop 1`] = `
 <DocumentFragment>
-  <div
-    class="css-berdxx"
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-0 ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-0 ul.contact-0 li:nth-of-type(2) {
+  display: none;
+  font-style: normal;
+  -webkit-animation: anim-blink 1.8s infinite;
+  animation: anim-blink 1.8s infinite;
+}
+
+@media (min-width:1280px) {
+  .emotion-0 ul.contact-0 li:nth-of-type(2) {
+    display: inline;
+  }
+}
+
+<div
+    class="emotion-0"
   >
     <ul
       class="contact-0"
@@ -19,7 +49,7 @@ exports[`Contact should render with hasDescription={false} prop 1`] = `
         501-1139 Barclay Street
       </li>
       <li>
-        Vancouver, BC 
+        Vancouver, BC
       </li>
       <li>
         V6E 1G8
@@ -47,8 +77,38 @@ Object {
 
 exports[`Contact should render with hasTitle={false} prop 1`] = `
 <DocumentFragment>
-  <div
-    class="css-berdxx"
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-0 ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-0 ul.contact-0 li:nth-of-type(2) {
+  display: none;
+  font-style: normal;
+  -webkit-animation: anim-blink 1.8s infinite;
+  animation: anim-blink 1.8s infinite;
+}
+
+@media (min-width:1280px) {
+  .emotion-0 ul.contact-0 li:nth-of-type(2) {
+    display: inline;
+  }
+}
+
+<div
+    class="emotion-0"
   >
     <ul
       class="contact-1"
@@ -57,7 +117,7 @@ exports[`Contact should render with hasTitle={false} prop 1`] = `
         501-1139 Barclay Street
       </li>
       <li>
-        Vancouver, BC 
+        Vancouver, BC
       </li>
       <li>
         V6E 1G8
@@ -79,8 +139,38 @@ exports[`Contact should render with hasTitle={false} prop 1`] = `
 
 exports[`Contact should render with hasTitle={true} prop 1`] = `
 <DocumentFragment>
-  <div
-    class="css-berdxx"
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-0 ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-0 ul.contact-0 li:nth-of-type(2) {
+  display: none;
+  font-style: normal;
+  -webkit-animation: anim-blink 1.8s infinite;
+  animation: anim-blink 1.8s infinite;
+}
+
+@media (min-width:1280px) {
+  .emotion-0 ul.contact-0 li:nth-of-type(2) {
+    display: inline;
+  }
+}
+
+<div
+    class="emotion-0"
   >
     <ul
       class="contact-0"
@@ -96,7 +186,7 @@ exports[`Contact should render with hasTitle={true} prop 1`] = `
         501-1139 Barclay Street
       </li>
       <li>
-        Vancouver, BC 
+        Vancouver, BC
       </li>
       <li>
         V6E 1G8
@@ -118,8 +208,38 @@ exports[`Contact should render with hasTitle={true} prop 1`] = `
 
 exports[`Contact should render with isPostalWithCity={false} prop 1`] = `
 <DocumentFragment>
-  <div
-    class="css-berdxx"
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-0 ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-0 ul.contact-0 li:nth-of-type(2) {
+  display: none;
+  font-style: normal;
+  -webkit-animation: anim-blink 1.8s infinite;
+  animation: anim-blink 1.8s infinite;
+}
+
+@media (min-width:1280px) {
+  .emotion-0 ul.contact-0 li:nth-of-type(2) {
+    display: inline;
+  }
+}
+
+<div
+    class="emotion-0"
   >
     <ul
       class="contact-0"
@@ -135,7 +255,7 @@ exports[`Contact should render with isPostalWithCity={false} prop 1`] = `
         501-1139 Barclay Street
       </li>
       <li>
-        Vancouver, BC 
+        Vancouver, BC
       </li>
       <li>
         V6E 1G8
@@ -157,8 +277,38 @@ exports[`Contact should render with isPostalWithCity={false} prop 1`] = `
 
 exports[`Contact should render with isPostalWithCity={true} prop 1`] = `
 <DocumentFragment>
-  <div
-    class="css-berdxx"
+  .emotion-0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.emotion-0 ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.emotion-0 ul.contact-0 li:nth-of-type(2) {
+  display: none;
+  font-style: normal;
+  -webkit-animation: anim-blink 1.8s infinite;
+  animation: anim-blink 1.8s infinite;
+}
+
+@media (min-width:1280px) {
+  .emotion-0 ul.contact-0 li:nth-of-type(2) {
+    display: inline;
+  }
+}
+
+<div
+    class="emotion-0"
   >
     <ul
       class="contact-0"
@@ -174,7 +324,7 @@ exports[`Contact should render with isPostalWithCity={true} prop 1`] = `
         501-1139 Barclay Street
       </li>
       <li>
-        Vancouver, BC V6E 1G8
+        Vancouver, BC  V6E 1G8
       </li>
       <li>
         604.790.6176
@@ -194,10 +344,63 @@ exports[`Contact should render with isPostalWithCity={true} prop 1`] = `
 exports[`Contact should render without props 1`] = `
 Object {
   "asFragment": [Function],
-  "baseElement": <body>
+  "baseElement": .emotion-0 {
+  padding: 15px 4.5% 35px;
+  -webkit-transition: padding 300 ease-in-out;
+  transition: padding 300 ease-in-out;
+  text-align: center;
+}
+
+@media (min-width:1024px) {
+  .emotion-0 {
+    padding: 15px 50px 35px;
+  }
+}
+
+.emotion-0 span {
+  left: 15px;
+}
+
+.emotion-0 span,
+.emotion-0 span svg {
+  position: relative;
+}
+
+.emotion-0 span,
+.emotion-0 span path {
+  font-size: 1rem !important;
+}
+
+.emotion-0 span svg {
+  color: rgba(128,128,128,0.3);
+}
+
+.emotion-0 span svg:nth-of-type(1) {
+  font-size: 3.5em !important;
+  -webkit-animation: anim-spin 2.5s linear infinite reverse;
+  animation: anim-spin 2.5s linear infinite reverse;
+}
+
+.emotion-0 span svg:nth-of-type(2) {
+  top: 6px;
+  left: -4px;
+  font-size: 2.25em !important;
+  -webkit-animation: anim-spin 2s linear infinite;
+  animation: anim-spin 2s linear infinite;
+}
+
+.emotion-0 span svg:nth-of-type(3) {
+  top: 23px;
+  right: 53px;
+  font-size: 1.5em !important;
+  -webkit-animation: anim-spin 1.5s linear infinite reverse;
+  animation: anim-spin 1.5s linear infinite reverse;
+}
+
+<body>
     <div>
       <div
-        class="loading css-1ilbg13"
+        class="loading emotion-0"
       >
         <span>
           <svg
@@ -249,9 +452,62 @@ Object {
       </div>
     </div>
   </body>,
-  "container": <div>
+  "container": .emotion-0 {
+  padding: 15px 4.5% 35px;
+  -webkit-transition: padding 300 ease-in-out;
+  transition: padding 300 ease-in-out;
+  text-align: center;
+}
+
+@media (min-width:1024px) {
+  .emotion-0 {
+    padding: 15px 50px 35px;
+  }
+}
+
+.emotion-0 span {
+  left: 15px;
+}
+
+.emotion-0 span,
+.emotion-0 span svg {
+  position: relative;
+}
+
+.emotion-0 span,
+.emotion-0 span path {
+  font-size: 1rem !important;
+}
+
+.emotion-0 span svg {
+  color: rgba(128,128,128,0.3);
+}
+
+.emotion-0 span svg:nth-of-type(1) {
+  font-size: 3.5em !important;
+  -webkit-animation: anim-spin 2.5s linear infinite reverse;
+  animation: anim-spin 2.5s linear infinite reverse;
+}
+
+.emotion-0 span svg:nth-of-type(2) {
+  top: 6px;
+  left: -4px;
+  font-size: 2.25em !important;
+  -webkit-animation: anim-spin 2s linear infinite;
+  animation: anim-spin 2s linear infinite;
+}
+
+.emotion-0 span svg:nth-of-type(3) {
+  top: 23px;
+  right: 53px;
+  font-size: 1.5em !important;
+  -webkit-animation: anim-spin 1.5s linear infinite reverse;
+  animation: anim-spin 1.5s linear infinite reverse;
+}
+
+<div>
     <div
-      class="loading css-1ilbg13"
+      class="loading emotion-0"
     >
       <span>
         <svg

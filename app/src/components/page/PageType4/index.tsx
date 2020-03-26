@@ -11,8 +11,8 @@ const PageType4 = (): JSX.Element => (
     <GitHubCorner />
     <Header />
     <main>
-      {section.map((type: string, i: number) => (
-        <Section key={i} type={type} hasEnhancedHeading={true} hasListItemCheck={true} />
+      {section.map((section: string, i: number) => (
+        <Section key={i} pagetype={4} section={section} hasEnhancedHeading={true} hasListItemCheck={true} hasResumeImage={true} useSkillsetChart={true} />
       ))}
     </main>
     <Footer />

@@ -20,8 +20,8 @@ const PageType2 = (): JSX.Element => {
       <GitHubCorner isLeft={true} />
       <Header />
       <main>
-        {section.map((type: string, i: number) => (
-          <Section key={i} type={type} />
+        {section.map((section: string, i: number) => (
+          <Section key={i} pagetype={2} section={section} />
         ))}
       </main>
       <Footer />

@@ -3,10 +3,67 @@
 exports[`Error should render with message={default} prop 1`] = `
 Object {
   "asFragment": [Function],
-  "baseElement": <body>
+  "baseElement": .emotion-0 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-0 div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  -webkit-perspective: 600px;
+  -moz-perspective: 600px;
+  -ms-perspective: 600px;
+  perspective: 600px;
+  -webkit-animation: anim-pulse 2s infinite;
+  animation: anim-pulse 2s infinite;
+}
+
+.emotion-0 span {
+  display: block;
+  margin: 0 !important;
+  color: darkred !important;
+  font-family: 'Courier New',Courier,monospace;
+  font-size: 3rem;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1em;
+}
+
+.emotion-0 span + span {
+  position: relative;
+  top: -8px;
+  top: -0.275em;
+  -webkit-transform: rotateX(250deg) scale(1.05);
+  -ms-transform: rotateX(250deg) scale(1.05);
+  transform: rotateX(250deg) scale(1.05);
+  -webkit-transform: rotateX(240deg) scale(1.005);
+  -ms-transform: rotateX(240deg) scale(1.005);
+  transform: rotateX(240deg) scale(1.005);
+  opacity: 0.15;
+  opacity: 0.35;
+}
+
+<body>
     <div>
       <div
-        class="error css-185ku87"
+        class="error emotion-0"
       >
         <div>
           <span>
@@ -51,9 +108,66 @@ Object {
       </div>
     </div>
   </body>,
-  "container": <div>
+  "container": .emotion-0 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-0 div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  -webkit-perspective: 600px;
+  -moz-perspective: 600px;
+  -ms-perspective: 600px;
+  perspective: 600px;
+  -webkit-animation: anim-pulse 2s infinite;
+  animation: anim-pulse 2s infinite;
+}
+
+.emotion-0 span {
+  display: block;
+  margin: 0 !important;
+  color: darkred !important;
+  font-family: 'Courier New',Courier,monospace;
+  font-size: 3rem;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1em;
+}
+
+.emotion-0 span + span {
+  position: relative;
+  top: -8px;
+  top: -0.275em;
+  -webkit-transform: rotateX(250deg) scale(1.05);
+  -ms-transform: rotateX(250deg) scale(1.05);
+  transform: rotateX(250deg) scale(1.05);
+  -webkit-transform: rotateX(240deg) scale(1.005);
+  -ms-transform: rotateX(240deg) scale(1.005);
+  transform: rotateX(240deg) scale(1.005);
+  opacity: 0.15;
+  opacity: 0.35;
+}
+
+<div>
     <div
-      class="error css-185ku87"
+      class="error emotion-0"
     >
       <div>
         <span>
@@ -154,10 +268,67 @@ Object {
 exports[`Error should render with message={default} prop 2`] = `
 Object {
   "asFragment": [Function],
-  "baseElement": <body>
+  "baseElement": .emotion-0 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-0 div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  -webkit-perspective: 600px;
+  -moz-perspective: 600px;
+  -ms-perspective: 600px;
+  perspective: 600px;
+  -webkit-animation: anim-pulse 2s infinite;
+  animation: anim-pulse 2s infinite;
+}
+
+.emotion-0 span {
+  display: block;
+  margin: 0 !important;
+  color: darkred !important;
+  font-family: 'Courier New',Courier,monospace;
+  font-size: 3rem;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1em;
+}
+
+.emotion-0 span + span {
+  position: relative;
+  top: -8px;
+  top: -0.275em;
+  -webkit-transform: rotateX(250deg) scale(1.05);
+  -ms-transform: rotateX(250deg) scale(1.05);
+  transform: rotateX(250deg) scale(1.05);
+  -webkit-transform: rotateX(240deg) scale(1.005);
+  -ms-transform: rotateX(240deg) scale(1.005);
+  transform: rotateX(240deg) scale(1.005);
+  opacity: 0.15;
+  opacity: 0.35;
+}
+
+<body>
     <div>
       <div
-        class="error css-185ku87"
+        class="error emotion-0"
       >
         <div>
           <span>
@@ -202,9 +373,66 @@ Object {
       </div>
     </div>
   </body>,
-  "container": <div>
+  "container": .emotion-0 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-0 div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  -webkit-perspective: 600px;
+  -moz-perspective: 600px;
+  -ms-perspective: 600px;
+  perspective: 600px;
+  -webkit-animation: anim-pulse 2s infinite;
+  animation: anim-pulse 2s infinite;
+}
+
+.emotion-0 span {
+  display: block;
+  margin: 0 !important;
+  color: darkred !important;
+  font-family: 'Courier New',Courier,monospace;
+  font-size: 3rem;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1em;
+}
+
+.emotion-0 span + span {
+  position: relative;
+  top: -8px;
+  top: -0.275em;
+  -webkit-transform: rotateX(250deg) scale(1.05);
+  -ms-transform: rotateX(250deg) scale(1.05);
+  transform: rotateX(250deg) scale(1.05);
+  -webkit-transform: rotateX(240deg) scale(1.005);
+  -ms-transform: rotateX(240deg) scale(1.005);
+  transform: rotateX(240deg) scale(1.005);
+  opacity: 0.15;
+  opacity: 0.35;
+}
+
+<div>
     <div
-      class="error css-185ku87"
+      class="error emotion-0"
     >
       <div>
         <span>
@@ -305,10 +533,67 @@ Object {
 exports[`Error should render without props 1`] = `
 Object {
   "asFragment": [Function],
-  "baseElement": <body>
+  "baseElement": .emotion-0 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-0 div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  -webkit-perspective: 600px;
+  -moz-perspective: 600px;
+  -ms-perspective: 600px;
+  perspective: 600px;
+  -webkit-animation: anim-pulse 2s infinite;
+  animation: anim-pulse 2s infinite;
+}
+
+.emotion-0 span {
+  display: block;
+  margin: 0 !important;
+  color: darkred !important;
+  font-family: 'Courier New',Courier,monospace;
+  font-size: 3rem;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1em;
+}
+
+.emotion-0 span + span {
+  position: relative;
+  top: -8px;
+  top: -0.275em;
+  -webkit-transform: rotateX(250deg) scale(1.05);
+  -ms-transform: rotateX(250deg) scale(1.05);
+  transform: rotateX(250deg) scale(1.05);
+  -webkit-transform: rotateX(240deg) scale(1.005);
+  -ms-transform: rotateX(240deg) scale(1.005);
+  transform: rotateX(240deg) scale(1.005);
+  opacity: 0.15;
+  opacity: 0.35;
+}
+
+<body>
     <div>
       <div
-        class="error css-185ku87"
+        class="error emotion-0"
       >
         <div>
           <span>
@@ -353,9 +638,66 @@ Object {
       </div>
     </div>
   </body>,
-  "container": <div>
+  "container": .emotion-0 {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.emotion-0 div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  position: relative;
+  -webkit-perspective: 600px;
+  -moz-perspective: 600px;
+  -ms-perspective: 600px;
+  perspective: 600px;
+  -webkit-animation: anim-pulse 2s infinite;
+  animation: anim-pulse 2s infinite;
+}
+
+.emotion-0 span {
+  display: block;
+  margin: 0 !important;
+  color: darkred !important;
+  font-family: 'Courier New',Courier,monospace;
+  font-size: 3rem;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1em;
+}
+
+.emotion-0 span + span {
+  position: relative;
+  top: -8px;
+  top: -0.275em;
+  -webkit-transform: rotateX(250deg) scale(1.05);
+  -ms-transform: rotateX(250deg) scale(1.05);
+  transform: rotateX(250deg) scale(1.05);
+  -webkit-transform: rotateX(240deg) scale(1.005);
+  -ms-transform: rotateX(240deg) scale(1.005);
+  transform: rotateX(240deg) scale(1.005);
+  opacity: 0.15;
+  opacity: 0.35;
+}
+
+<div>
     <div
-      class="error css-185ku87"
+      class="error emotion-0"
     >
       <div>
         <span>

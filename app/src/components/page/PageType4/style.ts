@@ -153,7 +153,7 @@ const StyledPage = styled.div`
               font-size: 1.7rem;
               line-height: 1.2em;
 
-              &.item-check {
+              &.item-icon {
                 width: 0;
                 margin: 0;
                 opacity: 0;
@@ -170,7 +170,7 @@ const StyledPage = styled.div`
         }
 
         &.waypoint ul {
-          ${animListItem(4, '50%', '30px')};
+          ${animListItem('about', 4, '50%', '30px')};
         }
       }
 
@@ -183,27 +183,26 @@ const StyledPage = styled.div`
             ${callout.defaults};
             width: 50%;
 
+            &:first-of-type {
+              > div {
+                span {
+                  font-size: 1.5rem;
+
+                  &:first-of-type {
+                    color: ${color.red.dark};
+                  }
+                }
+              }
+            }
+
             &:last-of-type {
               margin: 0 0 0 ${callout.margin};
               display: flex;
               flex-wrap: wrap;
 
               > div {
-                width: 20%;
-
-                span {
-                  font-size: 1.3rem;
-                }
-              }
-            }
-
-            > div {
-              span {
-                font-size: 1.5rem;
-
-                &:first-of-type {
-                  color: ${color.red.dark};
-                }
+                margin: 0;
+                flex-basis: 20%;
               }
             }
           }
@@ -314,11 +313,12 @@ const StyledPage = styled.div`
               width: calc(33.33% - ${callout.margin});
               min-height: 96px;
               margin: ${callout.margin} 0 0 ${callout.margin};
+              padding: 25px 40px;
 
               &:nth-of-type(4),
               &:nth-of-type(5),
               &:nth-of-type(6) {
-                .item-check {
+                .item-icon {
                   font-size: 1.9rem;
                 }
               }
@@ -328,11 +328,11 @@ const StyledPage = styled.div`
                 line-height: 1.2em;
                 width: 100%;
 
-                &.item-check {
+                &.item-icon {
                   width: 0;
                   opacity: 0;
                   margin: 0;
-                  color: ${color.grey.dark2};
+                  color: ${color.red.medium2};
                   filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.5));
 
                   svg {
@@ -345,7 +345,7 @@ const StyledPage = styled.div`
         }
 
         &.waypoint ul {
-          ${animListItem(6, '40%', '20px')};
+          ${animListItem('interests', 6, '30%', '40px')};
         }
       }
 

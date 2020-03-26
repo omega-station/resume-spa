@@ -1,43 +1,57 @@
 import React from 'react';
 import { useQuery } from 'react-apollo';
-import { getIconProp } from '../../../../utility';
-import { section } from '../../../../utility/constant';
+import { getIconProp, getImage } from '../../../../utility';
+import { section as _section } from '../../../../utility/constant';
 import FontAwesomeIcon from '../../../../utility/font-awesome';
 import Error from '../../../core/Error';
+import Link from '../../Link';
 import Loading from '../../Loading';
 import { Props } from '../definition';
 import defaults from './defaults';
 import { GQL_QUERY } from './graphql';
 import StyledSection from './style';
-import Link from '../../Link';
-import image from '../../../../images/2020/resume_paul-kevin-koehler.jpg';
 
 const SectionDefault = (props: Props): JSX.Element => {
-  const { type, hasListItemCheck }: Props = { ...defaults, ...props };
+  const { pagetype, section, hasListItemCheck, hasResumeImage }: Props = { ...defaults, ...props };
   const { data, loading, error } = useQuery(GQL_QUERY);
 
   if (loading) return <Loading />;
   if (error) return <Error />;
 
-  const { aboutIntro, aboutPoints, interestsIntro, interestsPoints, referencesIntro, metaCopy }: any = data.options.resume;
-  const resume: any = data.options.aside;
+  const settings: { [key: string]: string } = data.generalSettings;
+  const {
+    aboutIntro,
+    aboutPoints,
+    interestsIntro,
+    interestsPoints,
+    metaCopyIntro,
+    metaCopyOutro,
+    metaCopyPage,
+    referencesIntro,
+    referencesResume,
+  }: any = data.options.resume;
+
   let copy: string = '';
   let points: string[] = [];
+  let resume: any;
+  let resumeTitle: string = '';
 
-  switch (type) {
-    case section[0]:
+  switch (section) {
+    case _section[0]:
       copy = aboutIntro;
       points = aboutPoints;
       break;
-    case section[4]:
+    case _section[4]:
       copy = interestsIntro;
       points = interestsPoints;
       break;
-    case section[5]:
+    case _section[5]:
       copy = referencesIntro;
+      resume = referencesResume[0];
+      resumeTitle = `${settings.title} • ${settings.description}`;
       break;
-    case section[6]:
-      copy = metaCopy;
+    case _section[6]:
+      pagetype && (copy = `${metaCopyIntro}${metaCopyPage[pagetype - 1].copy}${metaCopyOutro}`);
       break;
   }
 
@@ -50,7 +64,7 @@ const SectionDefault = (props: Props): JSX.Element => {
             (point: any, i: number): JSX.Element => (
               <li key={i}>
                 {hasListItemCheck && (
-                  <span className="item-check">
+                  <span className="item-icon">
                     <FontAwesomeIcon icon={(point.icon && getIconProp(point.icon)) || ['fas', 'check-circle']} />
                   </span>
                 )}
@@ -60,9 +74,9 @@ const SectionDefault = (props: Props): JSX.Element => {
           )}
         </ul>
       )}
-      {type === section[5] && resume && (
-        <Link url={resume.resumeUrl.mediaItemUrl} title={resume.resumeHeading}>
-          <img src={image} alt={resume.resumeHeading} />
+      {hasResumeImage && resume && (
+        <Link url={resume.pdf.mediaItemUrl} title={resumeTitle}>
+          {getImage(resume.image, resumeTitle)}
         </Link>
       )}
     </StyledSection>

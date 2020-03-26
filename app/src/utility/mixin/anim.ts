@@ -1,7 +1,6 @@
 import { css, SerializedStyles } from '@emotion/core';
 import 'animate.css/animate.css';
-import { getRandomHash } from '..';
-import { viewport, section } from '../constant';
+import { section, viewport } from '../constant';
 
 export const animColorCycle: SerializedStyles = css`
   animation: anim-color-cycle 800ms infinite;
@@ -89,22 +88,28 @@ export const animOctoarm: SerializedStyles = css`
   }
 `;
 
-export const animListItem = (count: number, width: number | string = 0, margin: number | string = 0, duration: number = 700, delay: number = 500) => {
-  const name = `anim-list-${getRandomHash()}`;
+export const animListItem = (
+  name: string,
+  count: number,
+  width: number | string = 0,
+  margin: number | string = 0,
+  duration: number = 700,
+  delay: number = 500
+) => {
   return css`
     ${Array(count)
       .fill(0)
       .map((item: string, i: number): string => {
         const delay0 = i * delay;
         const delay1 = delay0 + duration;
-        return `li:nth-of-type(${i + 1}) .item-check {
-        animation: ${name} ${duration}ms ${delay0}ms ease-in-out forwards,
+        return `li:nth-of-type(${i + 1}) .item-icon {
+        animation: anim-list-${name} ${duration}ms ${delay0}ms ease-in-out forwards,
                    bounceIn ${duration}ms ${delay1}ms ease-in-out forwards;
         }`;
       })
       .join('')};
 
-    @keyframes ${name} {
+    @keyframes ${`anim-list-${name}`} {
       to {
         width: ${width};
         margin-right: ${margin};

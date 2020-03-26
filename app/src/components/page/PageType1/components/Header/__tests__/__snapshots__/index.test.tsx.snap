@@ -3,13 +3,212 @@
 exports[`Header should render without props 1`] = `
 Object {
   "asFragment": [Function],
-  "baseElement": <body>
+  "baseElement": .emotion-2 {
+  width: 100%;
+}
+
+.emotion-2 > div div {
+  padding: 10px 4.5% 25px;
+  -webkit-transition: padding 300 ease-in-out;
+  transition: padding 300 ease-in-out;
+}
+
+@media (min-width:1024px) {
+  .emotion-2 > div div {
+    padding: 10px 50px 25px;
+  }
+}
+
+.emotion-2 > div div pre {
+  -webkit-transition: font-size 100ms ease-in-out;
+  transition: font-size 100ms ease-in-out;
+}
+
+.emotion-2 > div div pre:first-of-type {
+  font-size: 1.5vw;
+}
+
+.emotion-2 > div div pre:last-of-type {
+  font-size: 1.7vw;
+}
+
+@media (min-width:640px) {
+  .emotion-2 > div div pre:first-of-type {
+    font-size: 0.725rem;
+  }
+
+  .emotion-2 > div div pre:last-of-type {
+    margin: -8px 0 0;
+    font-size: 0.825rem;
+  }
+}
+
+@media (min-width:1440px) {
+  .emotion-2 > div div pre:first-of-type {
+    font-size: 1rem;
+  }
+
+  .emotion-2 > div div pre:last-of-type {
+    font-size: 1.138rem;
+  }
+}
+
+.emotion-2 nav {
+  background-image: linear-gradient( 0deg, rgb(0,128,0) 25%, rgb(0,0,0) 25%, rgb(0,0,0) 50%, rgb(0,128,0) 50%, rgb(0,128,0) 75%, rgb(0,0,0) 75%, rgb(0,0,0) 100% );
+  background-size: 4px 4px;
+  padding: 0 4.5%;
+  -webkit-transition: padding 300 ease-in-out;
+  transition: padding 300 ease-in-out;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  width: 100%;
+  height: 35px;
+}
+
+@media (min-width:1024px) {
+  .emotion-2 nav {
+    padding: 0 50px;
+  }
+}
+
+.emotion-2 nav ul {
+  width: 100%;
+  max-width: 420px;
+}
+
+@media (min-width:1600px) {
+  .emotion-2 nav ul {
+    max-width: none;
+  }
+}
+
+.emotion-2 nav ul li.list-item-extra {
+  display: none;
+}
+
+.emotion-2 nav ul li a,
+.emotion-2 nav ul li span {
+  display: inline-block;
+  position: relative;
+  top: 1px;
+  height: 33px;
+  padding: 0 5px;
+  color: rgb(0,0,0);
+  font-size: 1.75rem;
+  font-weight: 500;
+  line-height: 1.175em;
+  -webkit-transition: background-color 0.2s ease-in-out,padding 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out,padding 0.2s ease-in-out;
+}
+
+@media (min-width:420px) {
+  .emotion-2 nav ul li a,
+  .emotion-2 nav ul li span {
+    padding: 0 15px;
+  }
+}
+
+.emotion-2 nav ul li.is-current a {
+  background-color: rgba(0,200,0,0.5);
+}
+
+.emotion-2 nav ul li.is-selected a,
+.emotion-2 nav ul li a:hover {
+  background-color: rgba(0,200,0,0.7);
+}
+
+.emotion-2 nav ul li span:nth-of-type(5),
+.emotion-2 nav ul li span:nth-of-type(6) {
+  display: none;
+}
+
+@media (min-width:1600px) {
+  .emotion-2 nav ul li:not(:first-of-type) {
+    margin: 0 0 0 25px;
+  }
+
+  .emotion-2 nav ul li:last-of-type {
+    margin-left: auto;
+  }
+
+  .emotion-2 nav ul li.list-item-extra {
+    display: block;
+  }
+}
+
+@media (min-width:800px) {
+  .emotion-2 nav ul li span:nth-of-type(5),
+  .emotion-2 nav ul li span:nth-of-type(6) {
+    display: inline-block;
+  }
+}
+
+.emotion-0 {
+  padding: 15px 4.5% 35px;
+  -webkit-transition: padding 300 ease-in-out;
+  transition: padding 300 ease-in-out;
+  text-align: center;
+}
+
+@media (min-width:1024px) {
+  .emotion-0 {
+    padding: 15px 50px 35px;
+  }
+}
+
+.emotion-0 span {
+  left: 15px;
+}
+
+.emotion-0 span,
+.emotion-0 span svg {
+  position: relative;
+}
+
+.emotion-0 span,
+.emotion-0 span path {
+  font-size: 1rem !important;
+}
+
+.emotion-0 span svg {
+  color: rgba(128,128,128,0.3);
+}
+
+.emotion-0 span svg:nth-of-type(1) {
+  font-size: 3.5em !important;
+  -webkit-animation: anim-spin 2.5s linear infinite reverse;
+  animation: anim-spin 2.5s linear infinite reverse;
+}
+
+.emotion-0 span svg:nth-of-type(2) {
+  top: 6px;
+  left: -4px;
+  font-size: 2.25em !important;
+  -webkit-animation: anim-spin 2s linear infinite;
+  animation: anim-spin 2s linear infinite;
+}
+
+.emotion-0 span svg:nth-of-type(3) {
+  top: 23px;
+  right: 53px;
+  font-size: 1.5em !important;
+  -webkit-animation: anim-spin 1.5s linear infinite reverse;
+  animation: anim-spin 1.5s linear infinite reverse;
+}
+
+<body>
     <div>
       <header
-        class="css-xsbx25"
+        class="emotion-2"
       >
         <div
-          class="loading css-1ilbg13"
+          class="loading emotion-0"
         >
           <span>
             <svg
@@ -60,7 +259,7 @@ Object {
           </span>
         </div>
         <div
-          class="loading css-1ilbg13"
+          class="loading emotion-0"
         >
           <span>
             <svg
@@ -113,12 +312,211 @@ Object {
       </header>
     </div>
   </body>,
-  "container": <div>
+  "container": .emotion-2 {
+  width: 100%;
+}
+
+.emotion-2 > div div {
+  padding: 10px 4.5% 25px;
+  -webkit-transition: padding 300 ease-in-out;
+  transition: padding 300 ease-in-out;
+}
+
+@media (min-width:1024px) {
+  .emotion-2 > div div {
+    padding: 10px 50px 25px;
+  }
+}
+
+.emotion-2 > div div pre {
+  -webkit-transition: font-size 100ms ease-in-out;
+  transition: font-size 100ms ease-in-out;
+}
+
+.emotion-2 > div div pre:first-of-type {
+  font-size: 1.5vw;
+}
+
+.emotion-2 > div div pre:last-of-type {
+  font-size: 1.7vw;
+}
+
+@media (min-width:640px) {
+  .emotion-2 > div div pre:first-of-type {
+    font-size: 0.725rem;
+  }
+
+  .emotion-2 > div div pre:last-of-type {
+    margin: -8px 0 0;
+    font-size: 0.825rem;
+  }
+}
+
+@media (min-width:1440px) {
+  .emotion-2 > div div pre:first-of-type {
+    font-size: 1rem;
+  }
+
+  .emotion-2 > div div pre:last-of-type {
+    font-size: 1.138rem;
+  }
+}
+
+.emotion-2 nav {
+  background-image: linear-gradient( 0deg, rgb(0,128,0) 25%, rgb(0,0,0) 25%, rgb(0,0,0) 50%, rgb(0,128,0) 50%, rgb(0,128,0) 75%, rgb(0,0,0) 75%, rgb(0,0,0) 100% );
+  background-size: 4px 4px;
+  padding: 0 4.5%;
+  -webkit-transition: padding 300 ease-in-out;
+  transition: padding 300 ease-in-out;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  width: 100%;
+  height: 35px;
+}
+
+@media (min-width:1024px) {
+  .emotion-2 nav {
+    padding: 0 50px;
+  }
+}
+
+.emotion-2 nav ul {
+  width: 100%;
+  max-width: 420px;
+}
+
+@media (min-width:1600px) {
+  .emotion-2 nav ul {
+    max-width: none;
+  }
+}
+
+.emotion-2 nav ul li.list-item-extra {
+  display: none;
+}
+
+.emotion-2 nav ul li a,
+.emotion-2 nav ul li span {
+  display: inline-block;
+  position: relative;
+  top: 1px;
+  height: 33px;
+  padding: 0 5px;
+  color: rgb(0,0,0);
+  font-size: 1.75rem;
+  font-weight: 500;
+  line-height: 1.175em;
+  -webkit-transition: background-color 0.2s ease-in-out,padding 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out,padding 0.2s ease-in-out;
+}
+
+@media (min-width:420px) {
+  .emotion-2 nav ul li a,
+  .emotion-2 nav ul li span {
+    padding: 0 15px;
+  }
+}
+
+.emotion-2 nav ul li.is-current a {
+  background-color: rgba(0,200,0,0.5);
+}
+
+.emotion-2 nav ul li.is-selected a,
+.emotion-2 nav ul li a:hover {
+  background-color: rgba(0,200,0,0.7);
+}
+
+.emotion-2 nav ul li span:nth-of-type(5),
+.emotion-2 nav ul li span:nth-of-type(6) {
+  display: none;
+}
+
+@media (min-width:1600px) {
+  .emotion-2 nav ul li:not(:first-of-type) {
+    margin: 0 0 0 25px;
+  }
+
+  .emotion-2 nav ul li:last-of-type {
+    margin-left: auto;
+  }
+
+  .emotion-2 nav ul li.list-item-extra {
+    display: block;
+  }
+}
+
+@media (min-width:800px) {
+  .emotion-2 nav ul li span:nth-of-type(5),
+  .emotion-2 nav ul li span:nth-of-type(6) {
+    display: inline-block;
+  }
+}
+
+.emotion-0 {
+  padding: 15px 4.5% 35px;
+  -webkit-transition: padding 300 ease-in-out;
+  transition: padding 300 ease-in-out;
+  text-align: center;
+}
+
+@media (min-width:1024px) {
+  .emotion-0 {
+    padding: 15px 50px 35px;
+  }
+}
+
+.emotion-0 span {
+  left: 15px;
+}
+
+.emotion-0 span,
+.emotion-0 span svg {
+  position: relative;
+}
+
+.emotion-0 span,
+.emotion-0 span path {
+  font-size: 1rem !important;
+}
+
+.emotion-0 span svg {
+  color: rgba(128,128,128,0.3);
+}
+
+.emotion-0 span svg:nth-of-type(1) {
+  font-size: 3.5em !important;
+  -webkit-animation: anim-spin 2.5s linear infinite reverse;
+  animation: anim-spin 2.5s linear infinite reverse;
+}
+
+.emotion-0 span svg:nth-of-type(2) {
+  top: 6px;
+  left: -4px;
+  font-size: 2.25em !important;
+  -webkit-animation: anim-spin 2s linear infinite;
+  animation: anim-spin 2s linear infinite;
+}
+
+.emotion-0 span svg:nth-of-type(3) {
+  top: 23px;
+  right: 53px;
+  font-size: 1.5em !important;
+  -webkit-animation: anim-spin 1.5s linear infinite reverse;
+  animation: anim-spin 1.5s linear infinite reverse;
+}
+
+<div>
     <header
-      class="css-xsbx25"
+      class="emotion-2"
     >
       <div
-        class="loading css-1ilbg13"
+        class="loading emotion-0"
       >
         <span>
           <svg
@@ -169,7 +567,7 @@ Object {
         </span>
       </div>
       <div
-        class="loading css-1ilbg13"
+        class="loading emotion-0"
       >
         <span>
           <svg

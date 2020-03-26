@@ -3,14 +3,456 @@
 exports[`PageType2 should render without props 1`] = `
 Object {
   "asFragment": [Function],
-  "baseElement": <body>
+  "baseElement": .emotion-10 {
+  position: relative;
+  min-width: 320px;
+  max-width: 768px;
+  height: 100%;
+  padding: 25px 4.5%;
+  -webkit-transition: padding 300 ease-in-out;
+  transition: padding 300 ease-in-out;
+}
+
+.emotion-10 nav {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@media (min-width:1024px) {
+  .emotion-10 {
+    padding: 25px 50px;
+  }
+}
+
+.emotion-10 a {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-10 main section:not(:last-of-type) {
+  margin: 0 0 40px;
+}
+
+.emotion-10 main section h2 {
+  margin: 0 0 10px;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.emotion-10 main section li,
+.emotion-10 main section p {
+  font-size: 1.25rem;
+  line-height: 1.3em;
+}
+
+.emotion-10 main section p {
+  width: 100%;
+}
+
+.emotion-10 main section p:not(:last-of-type) {
+  margin: 0 0 10px;
+}
+
+.emotion-10 main section ul {
+  margin: 10px 0 0;
+  padding: 0 0 0 25px;
+}
+
+.emotion-10 main section ul li {
+  list-style: disc;
+}
+
+.emotion-10 main section div.history > div span {
+  font-size: 1.25rem;
+}
+
+.emotion-10 main section div.history > div:first-of-type {
+  -webkit-flex-direction: column !important;
+  -ms-flex-direction: column !important;
+  flex-direction: column !important;
+  margin: 0 0 10px;
+}
+
+.emotion-10 main section div.history > div:first-of-type > span:last-of-type {
+  margin: 8px 0 0;
+  text-align: left;
+}
+
+.emotion-10 main section div.history > ul + ul span {
+  font-size: 1rem;
+  line-height: 1.3em;
+}
+
+.emotion-10 main section div.skillset {
+  border: 2px solid rgb(0,0,0);
+  padding: 2px;
+  border-top-color: rgb(140,140,140);
+  border-left-color: rgb(140,140,140);
+}
+
+.emotion-10 main section div.skillset > div span {
+  border: 1px solid rgb(0,0,0);
+  padding: 2px;
+  border-bottom-color: rgb(140,140,140);
+  border-right-color: rgb(140,140,140);
+}
+
+.emotion-0 {
+  position: fixed;
+  top: 0;
+  right: 0;
+  border: 0 !important;
+  z-index: 1000;
+  left: 0;
+  right: auto;
+  -webkit-transform: scale(-1,1);
+  -ms-transform: scale(-1,1);
+  transform: scale(-1,1);
+}
+
+.emotion-0 svg {
+  -webkit-transition: width 300ms ease-in-out;
+  transition: width 300ms ease-in-out;
+  display: block;
+  width: 60px;
+}
+
+@media (min-width:640px) {
+  .emotion-0 svg {
+    width: 100px;
+  }
+}
+
+@media (min-width:1024px) {
+  .emotion-0 svg {
+    width: 140px;
+  }
+}
+
+.emotion-0 svg path {
+  -webkit-transition: fill 300ms ease-out;
+  transition: fill 300ms ease-out;
+}
+
+.emotion-0 svg path:nth-of-type(1) {
+  fill: rgb(0,0,0);
+}
+
+.emotion-0 svg path:nth-of-type(2) {
+  -webkit-transform-origin: 130px 106px;
+  -ms-transform-origin: 130px 106px;
+  transform-origin: 130px 106px;
+}
+
+.emotion-0 svg path:nth-of-type(2),
+.emotion-0 svg path:nth-of-type(3) {
+  fill: rgb(255,255,255);
+}
+
+.emotion-0:hover svg path:nth-of-type(2),
+.emotion-0:hover svg path:nth-of-type(3) {
+  fill: rgb(255,255,255);
+}
+
+.emotion-0:hover svg path:nth-of-type(1) {
+  -webkit-animation: none;
+  animation: none;
+}
+
+@media (min-width:480px) {
+  .emotion-0:hover svg path:nth-of-type(1) {
+    -webkit-animation: anim-color-cycle 800ms infinite;
+    animation: anim-color-cycle 800ms infinite;
+  }
+
+@-webkit-keyframes anim-color-cycle {
+    0% {
+      fill: #80f31f;
+    }
+
+    5% {
+      fill: #a5de0b;
+    }
+
+    10% {
+      fill: #c7c101;
+    }
+
+    15% {
+      fill: #e39e03;
+    }
+
+    20% {
+      fill: #f6780f;
+    }
+
+    25% {
+      fill: #fe5326;
+    }
+
+    30% {
+      fill: #fb3244;
+    }
+
+    35% {
+      fill: #ed1868;
+    }
+
+    40% {
+      fill: #d5078e;
+    }
+
+    45% {
+      fill: #b601b3;
+    }
+
+    50% {
+      fill: #9106d3;
+    }
+
+    55% {
+      fill: #6b16ec;
+    }
+
+    60% {
+      fill: #472ffa;
+    }
+
+    65% {
+      fill: #2850fe;
+    }
+
+    70% {
+      fill: #1175f7;
+    }
+
+    75% {
+      fill: #039be5;
+    }
+
+    80% {
+      fill: #01beca;
+    }
+
+    85% {
+      fill: #0adca8;
+    }
+
+    90% {
+      fill: #1df283;
+    }
+
+    95% {
+      fill: #3afd5d;
+    }
+
+    100% {
+      fill: #5cfd3a;
+    }
+}
+
+@keyframes anim-color-cycle {
+    0% {
+      fill: #80f31f;
+    }
+
+    5% {
+      fill: #a5de0b;
+    }
+
+    10% {
+      fill: #c7c101;
+    }
+
+    15% {
+      fill: #e39e03;
+    }
+
+    20% {
+      fill: #f6780f;
+    }
+
+    25% {
+      fill: #fe5326;
+    }
+
+    30% {
+      fill: #fb3244;
+    }
+
+    35% {
+      fill: #ed1868;
+    }
+
+    40% {
+      fill: #d5078e;
+    }
+
+    45% {
+      fill: #b601b3;
+    }
+
+    50% {
+      fill: #9106d3;
+    }
+
+    55% {
+      fill: #6b16ec;
+    }
+
+    60% {
+      fill: #472ffa;
+    }
+
+    65% {
+      fill: #2850fe;
+    }
+
+    70% {
+      fill: #1175f7;
+    }
+
+    75% {
+      fill: #039be5;
+    }
+
+    80% {
+      fill: #01beca;
+    }
+
+    85% {
+      fill: #0adca8;
+    }
+
+    90% {
+      fill: #1df283;
+    }
+
+    95% {
+      fill: #3afd5d;
+    }
+
+    100% {
+      fill: #5cfd3a;
+    }
+}
+}
+
+.emotion-0:hover svg path:nth-of-type(2) {
+  -webkit-animation: none;
+  animation: none;
+}
+
+@media (min-width:480px) {
+  .emotion-0:hover svg path:nth-of-type(2) {
+    -webkit-animation: anim-octoarm 700ms ease-out infinite;
+    animation: anim-octoarm 700ms ease-out infinite;
+  }
+
+@-webkit-keyframes anim-octoarm {
+    0%, 75%, 100% {
+      -webkit-transform: rotate(0);
+      -ms-transform: rotate(0);
+      transform: rotate(0);
+    }
+
+    35% {
+      -webkit-transform: rotate(-25deg);
+      -ms-transform: rotate(-25deg);
+      transform: rotate(-25deg);
+    }
+
+    85% {
+      -webkit-transform: rotate(10deg);
+      -ms-transform: rotate(10deg);
+      transform: rotate(10deg);
+    }
+}
+
+@keyframes anim-octoarm {
+    0%, 75%, 100% {
+      -webkit-transform: rotate(0);
+      -ms-transform: rotate(0);
+      transform: rotate(0);
+    }
+
+    35% {
+      -webkit-transform: rotate(-25deg);
+      -ms-transform: rotate(-25deg);
+      transform: rotate(-25deg);
+    }
+
+    85% {
+      -webkit-transform: rotate(10deg);
+      -ms-transform: rotate(10deg);
+      transform: rotate(10deg);
+    }
+}
+}
+
+.emotion-1 {
+  padding: 15px 4.5% 35px;
+  -webkit-transition: padding 300 ease-in-out;
+  transition: padding 300 ease-in-out;
+  text-align: center;
+}
+
+@media (min-width:1024px) {
+  .emotion-1 {
+    padding: 15px 50px 35px;
+  }
+}
+
+.emotion-1 span {
+  left: 15px;
+}
+
+.emotion-1 span,
+.emotion-1 span svg {
+  position: relative;
+}
+
+.emotion-1 span,
+.emotion-1 span path {
+  font-size: 1rem !important;
+}
+
+.emotion-1 span svg {
+  color: rgba(128,128,128,0.3);
+}
+
+.emotion-1 span svg:nth-of-type(1) {
+  font-size: 3.5em !important;
+  -webkit-animation: anim-spin 2.5s linear infinite reverse;
+  animation: anim-spin 2.5s linear infinite reverse;
+}
+
+.emotion-1 span svg:nth-of-type(2) {
+  top: 6px;
+  left: -4px;
+  font-size: 2.25em !important;
+  -webkit-animation: anim-spin 2s linear infinite;
+  animation: anim-spin 2s linear infinite;
+}
+
+.emotion-1 span svg:nth-of-type(3) {
+  top: 23px;
+  right: 53px;
+  font-size: 1.5em !important;
+  -webkit-animation: anim-spin 1.5s linear infinite reverse;
+  animation: anim-spin 1.5s linear infinite reverse;
+}
+
+<body>
     <div>
       <div
-        class="css-1mtoeaq"
+        class="emotion-10"
       >
         <a
           aria-label="View source on GitHub"
-          class="css-myet74"
+          class="github-corner emotion-0"
           color="rgb(255, 255, 255)"
           fill="rgb(0, 0, 0)"
           href="https://github.com/omega-station/resume-spa"
@@ -32,219 +474,60 @@ Object {
             />
           </svg>
         </a>
-        <header
-          class="css-mrv2zi"
+        <div
+          class="loading emotion-1"
         >
-          <div
-            class="loading css-1ilbg13"
-          >
-            <span>
-              <svg
-                aria-hidden="true"
-                class="svg-inline--fa fa-cog fa-w-16 "
-                data-icon="cog"
-                data-prefix="fas"
-                focusable="false"
-                role="img"
-                viewBox="0 0 512 512"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M487.4 315.7l-42.6-24.6c4.3-23.2 4.3-47 0-70.2l42.6-24.6c4.9-2.8 7.1-8.6 5.5-14-11.1-35.6-30-67.8-54.7-94.6-3.8-4.1-10-5.1-14.8-2.3L380.8 110c-17.9-15.4-38.5-27.3-60.8-35.1V25.8c0-5.6-3.9-10.5-9.4-11.7-36.7-8.2-74.3-7.8-109.2 0-5.5 1.2-9.4 6.1-9.4 11.7V75c-22.2 7.9-42.8 19.8-60.8 35.1L88.7 85.5c-4.9-2.8-11-1.9-14.8 2.3-24.7 26.7-43.6 58.9-54.7 94.6-1.7 5.4.6 11.2 5.5 14L67.3 221c-4.3 23.2-4.3 47 0 70.2l-42.6 24.6c-4.9 2.8-7.1 8.6-5.5 14 11.1 35.6 30 67.8 54.7 94.6 3.8 4.1 10 5.1 14.8 2.3l42.6-24.6c17.9 15.4 38.5 27.3 60.8 35.1v49.2c0 5.6 3.9 10.5 9.4 11.7 36.7 8.2 74.3 7.8 109.2 0 5.5-1.2 9.4-6.1 9.4-11.7v-49.2c22.2-7.9 42.8-19.8 60.8-35.1l42.6 24.6c4.9 2.8 11 1.9 14.8-2.3 24.7-26.7 43.6-58.9 54.7-94.6 1.5-5.5-.7-11.3-5.6-14.1zM256 336c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z"
-                  fill="currentColor"
-                />
-              </svg>
-              <svg
-                aria-hidden="true"
-                class="svg-inline--fa fa-cog fa-w-16 "
-                data-icon="cog"
-                data-prefix="fas"
-                focusable="false"
-                role="img"
-                viewBox="0 0 512 512"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M487.4 315.7l-42.6-24.6c4.3-23.2 4.3-47 0-70.2l42.6-24.6c4.9-2.8 7.1-8.6 5.5-14-11.1-35.6-30-67.8-54.7-94.6-3.8-4.1-10-5.1-14.8-2.3L380.8 110c-17.9-15.4-38.5-27.3-60.8-35.1V25.8c0-5.6-3.9-10.5-9.4-11.7-36.7-8.2-74.3-7.8-109.2 0-5.5 1.2-9.4 6.1-9.4 11.7V75c-22.2 7.9-42.8 19.8-60.8 35.1L88.7 85.5c-4.9-2.8-11-1.9-14.8 2.3-24.7 26.7-43.6 58.9-54.7 94.6-1.7 5.4.6 11.2 5.5 14L67.3 221c-4.3 23.2-4.3 47 0 70.2l-42.6 24.6c-4.9 2.8-7.1 8.6-5.5 14 11.1 35.6 30 67.8 54.7 94.6 3.8 4.1 10 5.1 14.8 2.3l42.6-24.6c17.9 15.4 38.5 27.3 60.8 35.1v49.2c0 5.6 3.9 10.5 9.4 11.7 36.7 8.2 74.3 7.8 109.2 0 5.5-1.2 9.4-6.1 9.4-11.7v-49.2c22.2-7.9 42.8-19.8 60.8-35.1l42.6 24.6c4.9 2.8 11 1.9 14.8-2.3 24.7-26.7 43.6-58.9 54.7-94.6 1.5-5.5-.7-11.3-5.6-14.1zM256 336c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z"
-                  fill="currentColor"
-                />
-              </svg>
-              <svg
-                aria-hidden="true"
-                class="svg-inline--fa fa-cog fa-w-16 "
-                data-icon="cog"
-                data-prefix="fas"
-                focusable="false"
-                role="img"
-                viewBox="0 0 512 512"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M487.4 315.7l-42.6-24.6c4.3-23.2 4.3-47 0-70.2l42.6-24.6c4.9-2.8 7.1-8.6 5.5-14-11.1-35.6-30-67.8-54.7-94.6-3.8-4.1-10-5.1-14.8-2.3L380.8 110c-17.9-15.4-38.5-27.3-60.8-35.1V25.8c0-5.6-3.9-10.5-9.4-11.7-36.7-8.2-74.3-7.8-109.2 0-5.5 1.2-9.4 6.1-9.4 11.7V75c-22.2 7.9-42.8 19.8-60.8 35.1L88.7 85.5c-4.9-2.8-11-1.9-14.8 2.3-24.7 26.7-43.6 58.9-54.7 94.6-1.7 5.4.6 11.2 5.5 14L67.3 221c-4.3 23.2-4.3 47 0 70.2l-42.6 24.6c-4.9 2.8-7.1 8.6-5.5 14 11.1 35.6 30 67.8 54.7 94.6 3.8 4.1 10 5.1 14.8 2.3l42.6-24.6c17.9 15.4 38.5 27.3 60.8 35.1v49.2c0 5.6 3.9 10.5 9.4 11.7 36.7 8.2 74.3 7.8 109.2 0 5.5-1.2 9.4-6.1 9.4-11.7v-49.2c22.2-7.9 42.8-19.8 60.8-35.1l42.6 24.6c4.9 2.8 11 1.9 14.8-2.3 24.7-26.7 43.6-58.9 54.7-94.6 1.5-5.5-.7-11.3-5.6-14.1zM256 336c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z"
-                  fill="currentColor"
-                />
-              </svg>
-            </span>
-          </div>
-          <div>
-            <div
-              class="loading css-1ilbg13"
+          <span>
+            <svg
+              aria-hidden="true"
+              class="svg-inline--fa fa-cog fa-w-16 "
+              data-icon="cog"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              viewBox="0 0 512 512"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <span>
-                <svg
-                  aria-hidden="true"
-                  class="svg-inline--fa fa-cog fa-w-16 "
-                  data-icon="cog"
-                  data-prefix="fas"
-                  focusable="false"
-                  role="img"
-                  viewBox="0 0 512 512"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M487.4 315.7l-42.6-24.6c4.3-23.2 4.3-47 0-70.2l42.6-24.6c4.9-2.8 7.1-8.6 5.5-14-11.1-35.6-30-67.8-54.7-94.6-3.8-4.1-10-5.1-14.8-2.3L380.8 110c-17.9-15.4-38.5-27.3-60.8-35.1V25.8c0-5.6-3.9-10.5-9.4-11.7-36.7-8.2-74.3-7.8-109.2 0-5.5 1.2-9.4 6.1-9.4 11.7V75c-22.2 7.9-42.8 19.8-60.8 35.1L88.7 85.5c-4.9-2.8-11-1.9-14.8 2.3-24.7 26.7-43.6 58.9-54.7 94.6-1.7 5.4.6 11.2 5.5 14L67.3 221c-4.3 23.2-4.3 47 0 70.2l-42.6 24.6c-4.9 2.8-7.1 8.6-5.5 14 11.1 35.6 30 67.8 54.7 94.6 3.8 4.1 10 5.1 14.8 2.3l42.6-24.6c17.9 15.4 38.5 27.3 60.8 35.1v49.2c0 5.6 3.9 10.5 9.4 11.7 36.7 8.2 74.3 7.8 109.2 0 5.5-1.2 9.4-6.1 9.4-11.7v-49.2c22.2-7.9 42.8-19.8 60.8-35.1l42.6 24.6c4.9 2.8 11 1.9 14.8-2.3 24.7-26.7 43.6-58.9 54.7-94.6 1.5-5.5-.7-11.3-5.6-14.1zM256 336c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z"
-                    fill="currentColor"
-                  />
-                </svg>
-                <svg
-                  aria-hidden="true"
-                  class="svg-inline--fa fa-cog fa-w-16 "
-                  data-icon="cog"
-                  data-prefix="fas"
-                  focusable="false"
-                  role="img"
-                  viewBox="0 0 512 512"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M487.4 315.7l-42.6-24.6c4.3-23.2 4.3-47 0-70.2l42.6-24.6c4.9-2.8 7.1-8.6 5.5-14-11.1-35.6-30-67.8-54.7-94.6-3.8-4.1-10-5.1-14.8-2.3L380.8 110c-17.9-15.4-38.5-27.3-60.8-35.1V25.8c0-5.6-3.9-10.5-9.4-11.7-36.7-8.2-74.3-7.8-109.2 0-5.5 1.2-9.4 6.1-9.4 11.7V75c-22.2 7.9-42.8 19.8-60.8 35.1L88.7 85.5c-4.9-2.8-11-1.9-14.8 2.3-24.7 26.7-43.6 58.9-54.7 94.6-1.7 5.4.6 11.2 5.5 14L67.3 221c-4.3 23.2-4.3 47 0 70.2l-42.6 24.6c-4.9 2.8-7.1 8.6-5.5 14 11.1 35.6 30 67.8 54.7 94.6 3.8 4.1 10 5.1 14.8 2.3l42.6-24.6c17.9 15.4 38.5 27.3 60.8 35.1v49.2c0 5.6 3.9 10.5 9.4 11.7 36.7 8.2 74.3 7.8 109.2 0 5.5-1.2 9.4-6.1 9.4-11.7v-49.2c22.2-7.9 42.8-19.8 60.8-35.1l42.6 24.6c4.9 2.8 11 1.9 14.8-2.3 24.7-26.7 43.6-58.9 54.7-94.6 1.5-5.5-.7-11.3-5.6-14.1zM256 336c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z"
-                    fill="currentColor"
-                  />
-                </svg>
-                <svg
-                  aria-hidden="true"
-                  class="svg-inline--fa fa-cog fa-w-16 "
-                  data-icon="cog"
-                  data-prefix="fas"
-                  focusable="false"
-                  role="img"
-                  viewBox="0 0 512 512"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M487.4 315.7l-42.6-24.6c4.3-23.2 4.3-47 0-70.2l42.6-24.6c4.9-2.8 7.1-8.6 5.5-14-11.1-35.6-30-67.8-54.7-94.6-3.8-4.1-10-5.1-14.8-2.3L380.8 110c-17.9-15.4-38.5-27.3-60.8-35.1V25.8c0-5.6-3.9-10.5-9.4-11.7-36.7-8.2-74.3-7.8-109.2 0-5.5 1.2-9.4 6.1-9.4 11.7V75c-22.2 7.9-42.8 19.8-60.8 35.1L88.7 85.5c-4.9-2.8-11-1.9-14.8 2.3-24.7 26.7-43.6 58.9-54.7 94.6-1.7 5.4.6 11.2 5.5 14L67.3 221c-4.3 23.2-4.3 47 0 70.2l-42.6 24.6c-4.9 2.8-7.1 8.6-5.5 14 11.1 35.6 30 67.8 54.7 94.6 3.8 4.1 10 5.1 14.8 2.3l42.6-24.6c17.9 15.4 38.5 27.3 60.8 35.1v49.2c0 5.6 3.9 10.5 9.4 11.7 36.7 8.2 74.3 7.8 109.2 0 5.5-1.2 9.4-6.1 9.4-11.7v-49.2c22.2-7.9 42.8-19.8 60.8-35.1l42.6 24.6c4.9 2.8 11 1.9 14.8-2.3 24.7-26.7 43.6-58.9 54.7-94.6 1.5-5.5-.7-11.3-5.6-14.1zM256 336c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z"
-                    fill="currentColor"
-                  />
-                </svg>
-              </span>
-            </div>
-            <div
-              class="loading css-1ilbg13"
+              <path
+                d="M487.4 315.7l-42.6-24.6c4.3-23.2 4.3-47 0-70.2l42.6-24.6c4.9-2.8 7.1-8.6 5.5-14-11.1-35.6-30-67.8-54.7-94.6-3.8-4.1-10-5.1-14.8-2.3L380.8 110c-17.9-15.4-38.5-27.3-60.8-35.1V25.8c0-5.6-3.9-10.5-9.4-11.7-36.7-8.2-74.3-7.8-109.2 0-5.5 1.2-9.4 6.1-9.4 11.7V75c-22.2 7.9-42.8 19.8-60.8 35.1L88.7 85.5c-4.9-2.8-11-1.9-14.8 2.3-24.7 26.7-43.6 58.9-54.7 94.6-1.7 5.4.6 11.2 5.5 14L67.3 221c-4.3 23.2-4.3 47 0 70.2l-42.6 24.6c-4.9 2.8-7.1 8.6-5.5 14 11.1 35.6 30 67.8 54.7 94.6 3.8 4.1 10 5.1 14.8 2.3l42.6-24.6c17.9 15.4 38.5 27.3 60.8 35.1v49.2c0 5.6 3.9 10.5 9.4 11.7 36.7 8.2 74.3 7.8 109.2 0 5.5-1.2 9.4-6.1 9.4-11.7v-49.2c22.2-7.9 42.8-19.8 60.8-35.1l42.6 24.6c4.9 2.8 11 1.9 14.8-2.3 24.7-26.7 43.6-58.9 54.7-94.6 1.5-5.5-.7-11.3-5.6-14.1zM256 336c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z"
+                fill="currentColor"
+              />
+            </svg>
+            <svg
+              aria-hidden="true"
+              class="svg-inline--fa fa-cog fa-w-16 "
+              data-icon="cog"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              viewBox="0 0 512 512"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <span>
-                <svg
-                  aria-hidden="true"
-                  class="svg-inline--fa fa-cog fa-w-16 "
-                  data-icon="cog"
-                  data-prefix="fas"
-                  focusable="false"
-                  role="img"
-                  viewBox="0 0 512 512"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M487.4 315.7l-42.6-24.6c4.3-23.2 4.3-47 0-70.2l42.6-24.6c4.9-2.8 7.1-8.6 5.5-14-11.1-35.6-30-67.8-54.7-94.6-3.8-4.1-10-5.1-14.8-2.3L380.8 110c-17.9-15.4-38.5-27.3-60.8-35.1V25.8c0-5.6-3.9-10.5-9.4-11.7-36.7-8.2-74.3-7.8-109.2 0-5.5 1.2-9.4 6.1-9.4 11.7V75c-22.2 7.9-42.8 19.8-60.8 35.1L88.7 85.5c-4.9-2.8-11-1.9-14.8 2.3-24.7 26.7-43.6 58.9-54.7 94.6-1.7 5.4.6 11.2 5.5 14L67.3 221c-4.3 23.2-4.3 47 0 70.2l-42.6 24.6c-4.9 2.8-7.1 8.6-5.5 14 11.1 35.6 30 67.8 54.7 94.6 3.8 4.1 10 5.1 14.8 2.3l42.6-24.6c17.9 15.4 38.5 27.3 60.8 35.1v49.2c0 5.6 3.9 10.5 9.4 11.7 36.7 8.2 74.3 7.8 109.2 0 5.5-1.2 9.4-6.1 9.4-11.7v-49.2c22.2-7.9 42.8-19.8 60.8-35.1l42.6 24.6c4.9 2.8 11 1.9 14.8-2.3 24.7-26.7 43.6-58.9 54.7-94.6 1.5-5.5-.7-11.3-5.6-14.1zM256 336c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z"
-                    fill="currentColor"
-                  />
-                </svg>
-                <svg
-                  aria-hidden="true"
-                  class="svg-inline--fa fa-cog fa-w-16 "
-                  data-icon="cog"
-                  data-prefix="fas"
-                  focusable="false"
-                  role="img"
-                  viewBox="0 0 512 512"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M487.4 315.7l-42.6-24.6c4.3-23.2 4.3-47 0-70.2l42.6-24.6c4.9-2.8 7.1-8.6 5.5-14-11.1-35.6-30-67.8-54.7-94.6-3.8-4.1-10-5.1-14.8-2.3L380.8 110c-17.9-15.4-38.5-27.3-60.8-35.1V25.8c0-5.6-3.9-10.5-9.4-11.7-36.7-8.2-74.3-7.8-109.2 0-5.5 1.2-9.4 6.1-9.4 11.7V75c-22.2 7.9-42.8 19.8-60.8 35.1L88.7 85.5c-4.9-2.8-11-1.9-14.8 2.3-24.7 26.7-43.6 58.9-54.7 94.6-1.7 5.4.6 11.2 5.5 14L67.3 221c-4.3 23.2-4.3 47 0 70.2l-42.6 24.6c-4.9 2.8-7.1 8.6-5.5 14 11.1 35.6 30 67.8 54.7 94.6 3.8 4.1 10 5.1 14.8 2.3l42.6-24.6c17.9 15.4 38.5 27.3 60.8 35.1v49.2c0 5.6 3.9 10.5 9.4 11.7 36.7 8.2 74.3 7.8 109.2 0 5.5-1.2 9.4-6.1 9.4-11.7v-49.2c22.2-7.9 42.8-19.8 60.8-35.1l42.6 24.6c4.9 2.8 11 1.9 14.8-2.3 24.7-26.7 43.6-58.9 54.7-94.6 1.5-5.5-.7-11.3-5.6-14.1zM256 336c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z"
-                    fill="currentColor"
-                  />
-                </svg>
-                <svg
-                  aria-hidden="true"
-                  class="svg-inline--fa fa-cog fa-w-16 "
-                  data-icon="cog"
-                  data-prefix="fas"
-                  focusable="false"
-                  role="img"
-                  viewBox="0 0 512 512"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M487.4 315.7l-42.6-24.6c4.3-23.2 4.3-47 0-70.2l42.6-24.6c4.9-2.8 7.1-8.6 5.5-14-11.1-35.6-30-67.8-54.7-94.6-3.8-4.1-10-5.1-14.8-2.3L380.8 110c-17.9-15.4-38.5-27.3-60.8-35.1V25.8c0-5.6-3.9-10.5-9.4-11.7-36.7-8.2-74.3-7.8-109.2 0-5.5 1.2-9.4 6.1-9.4 11.7V75c-22.2 7.9-42.8 19.8-60.8 35.1L88.7 85.5c-4.9-2.8-11-1.9-14.8 2.3-24.7 26.7-43.6 58.9-54.7 94.6-1.7 5.4.6 11.2 5.5 14L67.3 221c-4.3 23.2-4.3 47 0 70.2l-42.6 24.6c-4.9 2.8-7.1 8.6-5.5 14 11.1 35.6 30 67.8 54.7 94.6 3.8 4.1 10 5.1 14.8 2.3l42.6-24.6c17.9 15.4 38.5 27.3 60.8 35.1v49.2c0 5.6 3.9 10.5 9.4 11.7 36.7 8.2 74.3 7.8 109.2 0 5.5-1.2 9.4-6.1 9.4-11.7v-49.2c22.2-7.9 42.8-19.8 60.8-35.1l42.6 24.6c4.9 2.8 11 1.9 14.8-2.3 24.7-26.7 43.6-58.9 54.7-94.6 1.5-5.5-.7-11.3-5.6-14.1zM256 336c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z"
-                    fill="currentColor"
-                  />
-                </svg>
-              </span>
-            </div>
-            <div
-              class="loading css-1ilbg13"
+              <path
+                d="M487.4 315.7l-42.6-24.6c4.3-23.2 4.3-47 0-70.2l42.6-24.6c4.9-2.8 7.1-8.6 5.5-14-11.1-35.6-30-67.8-54.7-94.6-3.8-4.1-10-5.1-14.8-2.3L380.8 110c-17.9-15.4-38.5-27.3-60.8-35.1V25.8c0-5.6-3.9-10.5-9.4-11.7-36.7-8.2-74.3-7.8-109.2 0-5.5 1.2-9.4 6.1-9.4 11.7V75c-22.2 7.9-42.8 19.8-60.8 35.1L88.7 85.5c-4.9-2.8-11-1.9-14.8 2.3-24.7 26.7-43.6 58.9-54.7 94.6-1.7 5.4.6 11.2 5.5 14L67.3 221c-4.3 23.2-4.3 47 0 70.2l-42.6 24.6c-4.9 2.8-7.1 8.6-5.5 14 11.1 35.6 30 67.8 54.7 94.6 3.8 4.1 10 5.1 14.8 2.3l42.6-24.6c17.9 15.4 38.5 27.3 60.8 35.1v49.2c0 5.6 3.9 10.5 9.4 11.7 36.7 8.2 74.3 7.8 109.2 0 5.5-1.2 9.4-6.1 9.4-11.7v-49.2c22.2-7.9 42.8-19.8 60.8-35.1l42.6 24.6c4.9 2.8 11 1.9 14.8-2.3 24.7-26.7 43.6-58.9 54.7-94.6 1.5-5.5-.7-11.3-5.6-14.1zM256 336c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z"
+                fill="currentColor"
+              />
+            </svg>
+            <svg
+              aria-hidden="true"
+              class="svg-inline--fa fa-cog fa-w-16 "
+              data-icon="cog"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              viewBox="0 0 512 512"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <span>
-                <svg
-                  aria-hidden="true"
-                  class="svg-inline--fa fa-cog fa-w-16 "
-                  data-icon="cog"
-                  data-prefix="fas"
-                  focusable="false"
-                  role="img"
-                  viewBox="0 0 512 512"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M487.4 315.7l-42.6-24.6c4.3-23.2 4.3-47 0-70.2l42.6-24.6c4.9-2.8 7.1-8.6 5.5-14-11.1-35.6-30-67.8-54.7-94.6-3.8-4.1-10-5.1-14.8-2.3L380.8 110c-17.9-15.4-38.5-27.3-60.8-35.1V25.8c0-5.6-3.9-10.5-9.4-11.7-36.7-8.2-74.3-7.8-109.2 0-5.5 1.2-9.4 6.1-9.4 11.7V75c-22.2 7.9-42.8 19.8-60.8 35.1L88.7 85.5c-4.9-2.8-11-1.9-14.8 2.3-24.7 26.7-43.6 58.9-54.7 94.6-1.7 5.4.6 11.2 5.5 14L67.3 221c-4.3 23.2-4.3 47 0 70.2l-42.6 24.6c-4.9 2.8-7.1 8.6-5.5 14 11.1 35.6 30 67.8 54.7 94.6 3.8 4.1 10 5.1 14.8 2.3l42.6-24.6c17.9 15.4 38.5 27.3 60.8 35.1v49.2c0 5.6 3.9 10.5 9.4 11.7 36.7 8.2 74.3 7.8 109.2 0 5.5-1.2 9.4-6.1 9.4-11.7v-49.2c22.2-7.9 42.8-19.8 60.8-35.1l42.6 24.6c4.9 2.8 11 1.9 14.8-2.3 24.7-26.7 43.6-58.9 54.7-94.6 1.5-5.5-.7-11.3-5.6-14.1zM256 336c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z"
-                    fill="currentColor"
-                  />
-                </svg>
-                <svg
-                  aria-hidden="true"
-                  class="svg-inline--fa fa-cog fa-w-16 "
-                  data-icon="cog"
-                  data-prefix="fas"
-                  focusable="false"
-                  role="img"
-                  viewBox="0 0 512 512"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M487.4 315.7l-42.6-24.6c4.3-23.2 4.3-47 0-70.2l42.6-24.6c4.9-2.8 7.1-8.6 5.5-14-11.1-35.6-30-67.8-54.7-94.6-3.8-4.1-10-5.1-14.8-2.3L380.8 110c-17.9-15.4-38.5-27.3-60.8-35.1V25.8c0-5.6-3.9-10.5-9.4-11.7-36.7-8.2-74.3-7.8-109.2 0-5.5 1.2-9.4 6.1-9.4 11.7V75c-22.2 7.9-42.8 19.8-60.8 35.1L88.7 85.5c-4.9-2.8-11-1.9-14.8 2.3-24.7 26.7-43.6 58.9-54.7 94.6-1.7 5.4.6 11.2 5.5 14L67.3 221c-4.3 23.2-4.3 47 0 70.2l-42.6 24.6c-4.9 2.8-7.1 8.6-5.5 14 11.1 35.6 30 67.8 54.7 94.6 3.8 4.1 10 5.1 14.8 2.3l42.6-24.6c17.9 15.4 38.5 27.3 60.8 35.1v49.2c0 5.6 3.9 10.5 9.4 11.7 36.7 8.2 74.3 7.8 109.2 0 5.5-1.2 9.4-6.1 9.4-11.7v-49.2c22.2-7.9 42.8-19.8 60.8-35.1l42.6 24.6c4.9 2.8 11 1.9 14.8-2.3 24.7-26.7 43.6-58.9 54.7-94.6 1.5-5.5-.7-11.3-5.6-14.1zM256 336c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z"
-                    fill="currentColor"
-                  />
-                </svg>
-                <svg
-                  aria-hidden="true"
-                  class="svg-inline--fa fa-cog fa-w-16 "
-                  data-icon="cog"
-                  data-prefix="fas"
-                  focusable="false"
-                  role="img"
-                  viewBox="0 0 512 512"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M487.4 315.7l-42.6-24.6c4.3-23.2 4.3-47 0-70.2l42.6-24.6c4.9-2.8 7.1-8.6 5.5-14-11.1-35.6-30-67.8-54.7-94.6-3.8-4.1-10-5.1-14.8-2.3L380.8 110c-17.9-15.4-38.5-27.3-60.8-35.1V25.8c0-5.6-3.9-10.5-9.4-11.7-36.7-8.2-74.3-7.8-109.2 0-5.5 1.2-9.4 6.1-9.4 11.7V75c-22.2 7.9-42.8 19.8-60.8 35.1L88.7 85.5c-4.9-2.8-11-1.9-14.8 2.3-24.7 26.7-43.6 58.9-54.7 94.6-1.7 5.4.6 11.2 5.5 14L67.3 221c-4.3 23.2-4.3 47 0 70.2l-42.6 24.6c-4.9 2.8-7.1 8.6-5.5 14 11.1 35.6 30 67.8 54.7 94.6 3.8 4.1 10 5.1 14.8 2.3l42.6-24.6c17.9 15.4 38.5 27.3 60.8 35.1v49.2c0 5.6 3.9 10.5 9.4 11.7 36.7 8.2 74.3 7.8 109.2 0 5.5-1.2 9.4-6.1 9.4-11.7v-49.2c22.2-7.9 42.8-19.8 60.8-35.1l42.6 24.6c4.9 2.8 11 1.9 14.8-2.3 24.7-26.7 43.6-58.9 54.7-94.6 1.5-5.5-.7-11.3-5.6-14.1zM256 336c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z"
-                    fill="currentColor"
-                  />
-                </svg>
-              </span>
-            </div>
-          </div>
-        </header>
+              <path
+                d="M487.4 315.7l-42.6-24.6c4.3-23.2 4.3-47 0-70.2l42.6-24.6c4.9-2.8 7.1-8.6 5.5-14-11.1-35.6-30-67.8-54.7-94.6-3.8-4.1-10-5.1-14.8-2.3L380.8 110c-17.9-15.4-38.5-27.3-60.8-35.1V25.8c0-5.6-3.9-10.5-9.4-11.7-36.7-8.2-74.3-7.8-109.2 0-5.5 1.2-9.4 6.1-9.4 11.7V75c-22.2 7.9-42.8 19.8-60.8 35.1L88.7 85.5c-4.9-2.8-11-1.9-14.8 2.3-24.7 26.7-43.6 58.9-54.7 94.6-1.7 5.4.6 11.2 5.5 14L67.3 221c-4.3 23.2-4.3 47 0 70.2l-42.6 24.6c-4.9 2.8-7.1 8.6-5.5 14 11.1 35.6 30 67.8 54.7 94.6 3.8 4.1 10 5.1 14.8 2.3l42.6-24.6c17.9 15.4 38.5 27.3 60.8 35.1v49.2c0 5.6 3.9 10.5 9.4 11.7 36.7 8.2 74.3 7.8 109.2 0 5.5-1.2 9.4-6.1 9.4-11.7v-49.2c22.2-7.9 42.8-19.8 60.8-35.1l42.6 24.6c4.9 2.8 11 1.9 14.8-2.3 24.7-26.7 43.6-58.9 54.7-94.6 1.5-5.5-.7-11.3-5.6-14.1zM256 336c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
+        </div>
         <main>
           <div
-            class="loading css-1ilbg13"
+            class="loading emotion-1"
           >
             <span>
               <svg
@@ -295,7 +578,7 @@ Object {
             </span>
           </div>
           <div
-            class="loading css-1ilbg13"
+            class="loading emotion-1"
           >
             <span>
               <svg
@@ -346,7 +629,7 @@ Object {
             </span>
           </div>
           <div
-            class="loading css-1ilbg13"
+            class="loading emotion-1"
           >
             <span>
               <svg
@@ -397,7 +680,7 @@ Object {
             </span>
           </div>
           <div
-            class="loading css-1ilbg13"
+            class="loading emotion-1"
           >
             <span>
               <svg
@@ -448,7 +731,7 @@ Object {
             </span>
           </div>
           <div
-            class="loading css-1ilbg13"
+            class="loading emotion-1"
           >
             <span>
               <svg
@@ -499,7 +782,7 @@ Object {
             </span>
           </div>
           <div
-            class="loading css-1ilbg13"
+            class="loading emotion-1"
           >
             <span>
               <svg
@@ -550,7 +833,7 @@ Object {
             </span>
           </div>
           <div
-            class="loading css-1ilbg13"
+            class="loading emotion-1"
           >
             <span>
               <svg
@@ -601,133 +884,509 @@ Object {
             </span>
           </div>
         </main>
-        <footer
-          class="css-mpmvk1"
+        <div
+          class="loading emotion-1"
         >
-          <div>
-            <div>
-              <div>
-                <img
-                  alt=""
-                  src="coding.webp"
-                />
-              </div>
-              <div>
-                <p>
-                  This
-                   
-                  <a
-                    href="https://en.wikipedia.org/wiki/Webring"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    Amazing Front-end Developer's Ring
-                  </a>
-                   
-                  site is owned by
-                   
-                  <a
-                    href="https://en.wikipedia.org/wiki/Webring"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    Paul Kevin Koehler
-                  </a>
-                  .
-                </p>
-                <p>
-                  Want to join the
-                   
-                  <a
-                    href="https://en.wikipedia.org/wiki/Webring"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                  >
-                    Amazing Front-end Developer's Ring
-                  </a>
-                  ?
-                </p>
-              </div>
-              <div>
-                <img
-                  alt=""
-                  src="reading.webp"
-                />
-              </div>
-            </div>
-            <div>
-              [
-              <a
-                href="https://en.wikipedia.org/wiki/Webring"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                Prev
-              </a>
-              ] [
-              <a
-                href="https://en.wikipedia.org/wiki/Webring"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                Next
-              </a>
-              ] [
-              <a
-                href="https://en.wikipedia.org/wiki/Webring"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                Random
-              </a>
-              ] [
-              <a
-                href="https://en.wikipedia.org/wiki/Webring"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                List
-              </a>
-              ]
-            </div>
-          </div>
-          <div>
-            <img
-              alt=""
-              src="uc-digger.gif"
-            />
-            <img
-              alt=""
-              src="uc-main.gif"
-            />
-            <img
-              alt=""
-              src="uc-digger.gif"
-            />
-          </div>
-          <div>
-            <a
-              href="https://www.hitwebcounter.com/"
-              rel="noopener noreferrer"
-              target="_blank"
+          <span>
+            <svg
+              aria-hidden="true"
+              class="svg-inline--fa fa-cog fa-w-16 "
+              data-icon="cog"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              viewBox="0 0 512 512"
+              xmlns="http://www.w3.org/2000/svg"
             >
-              <img
-                alt="hitwebcounter"
-                src="https://hitwebcounter.com/counter/counter.php?page=7200063&style=0038&nbdigits=7&type=page&initCount=325145"
+              <path
+                d="M487.4 315.7l-42.6-24.6c4.3-23.2 4.3-47 0-70.2l42.6-24.6c4.9-2.8 7.1-8.6 5.5-14-11.1-35.6-30-67.8-54.7-94.6-3.8-4.1-10-5.1-14.8-2.3L380.8 110c-17.9-15.4-38.5-27.3-60.8-35.1V25.8c0-5.6-3.9-10.5-9.4-11.7-36.7-8.2-74.3-7.8-109.2 0-5.5 1.2-9.4 6.1-9.4 11.7V75c-22.2 7.9-42.8 19.8-60.8 35.1L88.7 85.5c-4.9-2.8-11-1.9-14.8 2.3-24.7 26.7-43.6 58.9-54.7 94.6-1.7 5.4.6 11.2 5.5 14L67.3 221c-4.3 23.2-4.3 47 0 70.2l-42.6 24.6c-4.9 2.8-7.1 8.6-5.5 14 11.1 35.6 30 67.8 54.7 94.6 3.8 4.1 10 5.1 14.8 2.3l42.6-24.6c17.9 15.4 38.5 27.3 60.8 35.1v49.2c0 5.6 3.9 10.5 9.4 11.7 36.7 8.2 74.3 7.8 109.2 0 5.5-1.2 9.4-6.1 9.4-11.7v-49.2c22.2-7.9 42.8-19.8 60.8-35.1l42.6 24.6c4.9 2.8 11 1.9 14.8-2.3 24.7-26.7 43.6-58.9 54.7-94.6 1.5-5.5-.7-11.3-5.6-14.1zM256 336c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z"
+                fill="currentColor"
               />
-            </a>
-          </div>
-        </footer>
+            </svg>
+            <svg
+              aria-hidden="true"
+              class="svg-inline--fa fa-cog fa-w-16 "
+              data-icon="cog"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              viewBox="0 0 512 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M487.4 315.7l-42.6-24.6c4.3-23.2 4.3-47 0-70.2l42.6-24.6c4.9-2.8 7.1-8.6 5.5-14-11.1-35.6-30-67.8-54.7-94.6-3.8-4.1-10-5.1-14.8-2.3L380.8 110c-17.9-15.4-38.5-27.3-60.8-35.1V25.8c0-5.6-3.9-10.5-9.4-11.7-36.7-8.2-74.3-7.8-109.2 0-5.5 1.2-9.4 6.1-9.4 11.7V75c-22.2 7.9-42.8 19.8-60.8 35.1L88.7 85.5c-4.9-2.8-11-1.9-14.8 2.3-24.7 26.7-43.6 58.9-54.7 94.6-1.7 5.4.6 11.2 5.5 14L67.3 221c-4.3 23.2-4.3 47 0 70.2l-42.6 24.6c-4.9 2.8-7.1 8.6-5.5 14 11.1 35.6 30 67.8 54.7 94.6 3.8 4.1 10 5.1 14.8 2.3l42.6-24.6c17.9 15.4 38.5 27.3 60.8 35.1v49.2c0 5.6 3.9 10.5 9.4 11.7 36.7 8.2 74.3 7.8 109.2 0 5.5-1.2 9.4-6.1 9.4-11.7v-49.2c22.2-7.9 42.8-19.8 60.8-35.1l42.6 24.6c4.9 2.8 11 1.9 14.8-2.3 24.7-26.7 43.6-58.9 54.7-94.6 1.5-5.5-.7-11.3-5.6-14.1zM256 336c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z"
+                fill="currentColor"
+              />
+            </svg>
+            <svg
+              aria-hidden="true"
+              class="svg-inline--fa fa-cog fa-w-16 "
+              data-icon="cog"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              viewBox="0 0 512 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M487.4 315.7l-42.6-24.6c4.3-23.2 4.3-47 0-70.2l42.6-24.6c4.9-2.8 7.1-8.6 5.5-14-11.1-35.6-30-67.8-54.7-94.6-3.8-4.1-10-5.1-14.8-2.3L380.8 110c-17.9-15.4-38.5-27.3-60.8-35.1V25.8c0-5.6-3.9-10.5-9.4-11.7-36.7-8.2-74.3-7.8-109.2 0-5.5 1.2-9.4 6.1-9.4 11.7V75c-22.2 7.9-42.8 19.8-60.8 35.1L88.7 85.5c-4.9-2.8-11-1.9-14.8 2.3-24.7 26.7-43.6 58.9-54.7 94.6-1.7 5.4.6 11.2 5.5 14L67.3 221c-4.3 23.2-4.3 47 0 70.2l-42.6 24.6c-4.9 2.8-7.1 8.6-5.5 14 11.1 35.6 30 67.8 54.7 94.6 3.8 4.1 10 5.1 14.8 2.3l42.6-24.6c17.9 15.4 38.5 27.3 60.8 35.1v49.2c0 5.6 3.9 10.5 9.4 11.7 36.7 8.2 74.3 7.8 109.2 0 5.5-1.2 9.4-6.1 9.4-11.7v-49.2c22.2-7.9 42.8-19.8 60.8-35.1l42.6 24.6c4.9 2.8 11 1.9 14.8-2.3 24.7-26.7 43.6-58.9 54.7-94.6 1.5-5.5-.7-11.3-5.6-14.1zM256 336c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z"
+                fill="currentColor"
+              />
+            </svg>
+          </span>
+        </div>
       </div>
     </div>
   </body>,
-  "container": <div>
+  "container": .emotion-10 {
+  position: relative;
+  min-width: 320px;
+  max-width: 768px;
+  height: 100%;
+  padding: 25px 4.5%;
+  -webkit-transition: padding 300 ease-in-out;
+  transition: padding 300 ease-in-out;
+}
+
+.emotion-10 nav {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+@media (min-width:1024px) {
+  .emotion-10 {
+    padding: 25px 50px;
+  }
+}
+
+.emotion-10 a {
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+}
+
+.emotion-10 main section:not(:last-of-type) {
+  margin: 0 0 40px;
+}
+
+.emotion-10 main section h2 {
+  margin: 0 0 10px;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.emotion-10 main section li,
+.emotion-10 main section p {
+  font-size: 1.25rem;
+  line-height: 1.3em;
+}
+
+.emotion-10 main section p {
+  width: 100%;
+}
+
+.emotion-10 main section p:not(:last-of-type) {
+  margin: 0 0 10px;
+}
+
+.emotion-10 main section ul {
+  margin: 10px 0 0;
+  padding: 0 0 0 25px;
+}
+
+.emotion-10 main section ul li {
+  list-style: disc;
+}
+
+.emotion-10 main section div.history > div span {
+  font-size: 1.25rem;
+}
+
+.emotion-10 main section div.history > div:first-of-type {
+  -webkit-flex-direction: column !important;
+  -ms-flex-direction: column !important;
+  flex-direction: column !important;
+  margin: 0 0 10px;
+}
+
+.emotion-10 main section div.history > div:first-of-type > span:last-of-type {
+  margin: 8px 0 0;
+  text-align: left;
+}
+
+.emotion-10 main section div.history > ul + ul span {
+  font-size: 1rem;
+  line-height: 1.3em;
+}
+
+.emotion-10 main section div.skillset {
+  border: 2px solid rgb(0,0,0);
+  padding: 2px;
+  border-top-color: rgb(140,140,140);
+  border-left-color: rgb(140,140,140);
+}
+
+.emotion-10 main section div.skillset > div span {
+  border: 1px solid rgb(0,0,0);
+  padding: 2px;
+  border-bottom-color: rgb(140,140,140);
+  border-right-color: rgb(140,140,140);
+}
+
+.emotion-0 {
+  position: fixed;
+  top: 0;
+  right: 0;
+  border: 0 !important;
+  z-index: 1000;
+  left: 0;
+  right: auto;
+  -webkit-transform: scale(-1,1);
+  -ms-transform: scale(-1,1);
+  transform: scale(-1,1);
+}
+
+.emotion-0 svg {
+  -webkit-transition: width 300ms ease-in-out;
+  transition: width 300ms ease-in-out;
+  display: block;
+  width: 60px;
+}
+
+@media (min-width:640px) {
+  .emotion-0 svg {
+    width: 100px;
+  }
+}
+
+@media (min-width:1024px) {
+  .emotion-0 svg {
+    width: 140px;
+  }
+}
+
+.emotion-0 svg path {
+  -webkit-transition: fill 300ms ease-out;
+  transition: fill 300ms ease-out;
+}
+
+.emotion-0 svg path:nth-of-type(1) {
+  fill: rgb(0,0,0);
+}
+
+.emotion-0 svg path:nth-of-type(2) {
+  -webkit-transform-origin: 130px 106px;
+  -ms-transform-origin: 130px 106px;
+  transform-origin: 130px 106px;
+}
+
+.emotion-0 svg path:nth-of-type(2),
+.emotion-0 svg path:nth-of-type(3) {
+  fill: rgb(255,255,255);
+}
+
+.emotion-0:hover svg path:nth-of-type(2),
+.emotion-0:hover svg path:nth-of-type(3) {
+  fill: rgb(255,255,255);
+}
+
+.emotion-0:hover svg path:nth-of-type(1) {
+  -webkit-animation: none;
+  animation: none;
+}
+
+@media (min-width:480px) {
+  .emotion-0:hover svg path:nth-of-type(1) {
+    -webkit-animation: anim-color-cycle 800ms infinite;
+    animation: anim-color-cycle 800ms infinite;
+  }
+
+@-webkit-keyframes anim-color-cycle {
+    0% {
+      fill: #80f31f;
+    }
+
+    5% {
+      fill: #a5de0b;
+    }
+
+    10% {
+      fill: #c7c101;
+    }
+
+    15% {
+      fill: #e39e03;
+    }
+
+    20% {
+      fill: #f6780f;
+    }
+
+    25% {
+      fill: #fe5326;
+    }
+
+    30% {
+      fill: #fb3244;
+    }
+
+    35% {
+      fill: #ed1868;
+    }
+
+    40% {
+      fill: #d5078e;
+    }
+
+    45% {
+      fill: #b601b3;
+    }
+
+    50% {
+      fill: #9106d3;
+    }
+
+    55% {
+      fill: #6b16ec;
+    }
+
+    60% {
+      fill: #472ffa;
+    }
+
+    65% {
+      fill: #2850fe;
+    }
+
+    70% {
+      fill: #1175f7;
+    }
+
+    75% {
+      fill: #039be5;
+    }
+
+    80% {
+      fill: #01beca;
+    }
+
+    85% {
+      fill: #0adca8;
+    }
+
+    90% {
+      fill: #1df283;
+    }
+
+    95% {
+      fill: #3afd5d;
+    }
+
+    100% {
+      fill: #5cfd3a;
+    }
+}
+
+@keyframes anim-color-cycle {
+    0% {
+      fill: #80f31f;
+    }
+
+    5% {
+      fill: #a5de0b;
+    }
+
+    10% {
+      fill: #c7c101;
+    }
+
+    15% {
+      fill: #e39e03;
+    }
+
+    20% {
+      fill: #f6780f;
+    }
+
+    25% {
+      fill: #fe5326;
+    }
+
+    30% {
+      fill: #fb3244;
+    }
+
+    35% {
+      fill: #ed1868;
+    }
+
+    40% {
+      fill: #d5078e;
+    }
+
+    45% {
+      fill: #b601b3;
+    }
+
+    50% {
+      fill: #9106d3;
+    }
+
+    55% {
+      fill: #6b16ec;
+    }
+
+    60% {
+      fill: #472ffa;
+    }
+
+    65% {
+      fill: #2850fe;
+    }
+
+    70% {
+      fill: #1175f7;
+    }
+
+    75% {
+      fill: #039be5;
+    }
+
+    80% {
+      fill: #01beca;
+    }
+
+    85% {
+      fill: #0adca8;
+    }
+
+    90% {
+      fill: #1df283;
+    }
+
+    95% {
+      fill: #3afd5d;
+    }
+
+    100% {
+      fill: #5cfd3a;
+    }
+}
+}
+
+.emotion-0:hover svg path:nth-of-type(2) {
+  -webkit-animation: none;
+  animation: none;
+}
+
+@media (min-width:480px) {
+  .emotion-0:hover svg path:nth-of-type(2) {
+    -webkit-animation: anim-octoarm 700ms ease-out infinite;
+    animation: anim-octoarm 700ms ease-out infinite;
+  }
+
+@-webkit-keyframes anim-octoarm {
+    0%, 75%, 100% {
+      -webkit-transform: rotate(0);
+      -ms-transform: rotate(0);
+      transform: rotate(0);
+    }
+
+    35% {
+      -webkit-transform: rotate(-25deg);
+      -ms-transform: rotate(-25deg);
+      transform: rotate(-25deg);
+    }
+
+    85% {
+      -webkit-transform: rotate(10deg);
+      -ms-transform: rotate(10deg);
+      transform: rotate(10deg);
+    }
+}
+
+@keyframes anim-octoarm {
+    0%, 75%, 100% {
+      -webkit-transform: rotate(0);
+      -ms-transform: rotate(0);
+      transform: rotate(0);
+    }
+
+    35% {
+      -webkit-transform: rotate(-25deg);
+      -ms-transform: rotate(-25deg);
+      transform: rotate(-25deg);
+    }
+
+    85% {
+      -webkit-transform: rotate(10deg);
+      -ms-transform: rotate(10deg);
+      transform: rotate(10deg);
+    }
+}
+}
+
+.emotion-1 {
+  padding: 15px 4.5% 35px;
+  -webkit-transition: padding 300 ease-in-out;
+  transition: padding 300 ease-in-out;
+  text-align: center;
+}
+
+@media (min-width:1024px) {
+  .emotion-1 {
+    padding: 15px 50px 35px;
+  }
+}
+
+.emotion-1 span {
+  left: 15px;
+}
+
+.emotion-1 span,
+.emotion-1 span svg {
+  position: relative;
+}
+
+.emotion-1 span,
+.emotion-1 span path {
+  font-size: 1rem !important;
+}
+
+.emotion-1 span svg {
+  color: rgba(128,128,128,0.3);
+}
+
+.emotion-1 span svg:nth-of-type(1) {
+  font-size: 3.5em !important;
+  -webkit-animation: anim-spin 2.5s linear infinite reverse;
+  animation: anim-spin 2.5s linear infinite reverse;
+}
+
+.emotion-1 span svg:nth-of-type(2) {
+  top: 6px;
+  left: -4px;
+  font-size: 2.25em !important;
+  -webkit-animation: anim-spin 2s linear infinite;
+  animation: anim-spin 2s linear infinite;
+}
+
+.emotion-1 span svg:nth-of-type(3) {
+  top: 23px;
+  right: 53px;
+  font-size: 1.5em !important;
+  -webkit-animation: anim-spin 1.5s linear infinite reverse;
+  animation: anim-spin 1.5s linear infinite reverse;
+}
+
+<div>
     <div
-      class="css-1mtoeaq"
+      class="emotion-10"
     >
       <a
         aria-label="View source on GitHub"
-        class="css-myet74"
+        class="github-corner emotion-0"
         color="rgb(255, 255, 255)"
         fill="rgb(0, 0, 0)"
         href="https://github.com/omega-station/resume-spa"
@@ -749,219 +1408,60 @@ Object {
           />
         </svg>
       </a>
-      <header
-        class="css-mrv2zi"
+      <div
+        class="loading emotion-1"
       >
-        <div
-          class="loading css-1ilbg13"
-        >
-          <span>
-            <svg
-              aria-hidden="true"
-              class="svg-inline--fa fa-cog fa-w-16 "
-              data-icon="cog"
-              data-prefix="fas"
-              focusable="false"
-              role="img"
-              viewBox="0 0 512 512"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M487.4 315.7l-42.6-24.6c4.3-23.2 4.3-47 0-70.2l42.6-24.6c4.9-2.8 7.1-8.6 5.5-14-11.1-35.6-30-67.8-54.7-94.6-3.8-4.1-10-5.1-14.8-2.3L380.8 110c-17.9-15.4-38.5-27.3-60.8-35.1V25.8c0-5.6-3.9-10.5-9.4-11.7-36.7-8.2-74.3-7.8-109.2 0-5.5 1.2-9.4 6.1-9.4 11.7V75c-22.2 7.9-42.8 19.8-60.8 35.1L88.7 85.5c-4.9-2.8-11-1.9-14.8 2.3-24.7 26.7-43.6 58.9-54.7 94.6-1.7 5.4.6 11.2 5.5 14L67.3 221c-4.3 23.2-4.3 47 0 70.2l-42.6 24.6c-4.9 2.8-7.1 8.6-5.5 14 11.1 35.6 30 67.8 54.7 94.6 3.8 4.1 10 5.1 14.8 2.3l42.6-24.6c17.9 15.4 38.5 27.3 60.8 35.1v49.2c0 5.6 3.9 10.5 9.4 11.7 36.7 8.2 74.3 7.8 109.2 0 5.5-1.2 9.4-6.1 9.4-11.7v-49.2c22.2-7.9 42.8-19.8 60.8-35.1l42.6 24.6c4.9 2.8 11 1.9 14.8-2.3 24.7-26.7 43.6-58.9 54.7-94.6 1.5-5.5-.7-11.3-5.6-14.1zM256 336c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z"
-                fill="currentColor"
-              />
-            </svg>
-            <svg
-              aria-hidden="true"
-              class="svg-inline--fa fa-cog fa-w-16 "
-              data-icon="cog"
-              data-prefix="fas"
-              focusable="false"
-              role="img"
-              viewBox="0 0 512 512"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M487.4 315.7l-42.6-24.6c4.3-23.2 4.3-47 0-70.2l42.6-24.6c4.9-2.8 7.1-8.6 5.5-14-11.1-35.6-30-67.8-54.7-94.6-3.8-4.1-10-5.1-14.8-2.3L380.8 110c-17.9-15.4-38.5-27.3-60.8-35.1V25.8c0-5.6-3.9-10.5-9.4-11.7-36.7-8.2-74.3-7.8-109.2 0-5.5 1.2-9.4 6.1-9.4 11.7V75c-22.2 7.9-42.8 19.8-60.8 35.1L88.7 85.5c-4.9-2.8-11-1.9-14.8 2.3-24.7 26.7-43.6 58.9-54.7 94.6-1.7 5.4.6 11.2 5.5 14L67.3 221c-4.3 23.2-4.3 47 0 70.2l-42.6 24.6c-4.9 2.8-7.1 8.6-5.5 14 11.1 35.6 30 67.8 54.7 94.6 3.8 4.1 10 5.1 14.8 2.3l42.6-24.6c17.9 15.4 38.5 27.3 60.8 35.1v49.2c0 5.6 3.9 10.5 9.4 11.7 36.7 8.2 74.3 7.8 109.2 0 5.5-1.2 9.4-6.1 9.4-11.7v-49.2c22.2-7.9 42.8-19.8 60.8-35.1l42.6 24.6c4.9 2.8 11 1.9 14.8-2.3 24.7-26.7 43.6-58.9 54.7-94.6 1.5-5.5-.7-11.3-5.6-14.1zM256 336c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z"
-                fill="currentColor"
-              />
-            </svg>
-            <svg
-              aria-hidden="true"
-              class="svg-inline--fa fa-cog fa-w-16 "
-              data-icon="cog"
-              data-prefix="fas"
-              focusable="false"
-              role="img"
-              viewBox="0 0 512 512"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M487.4 315.7l-42.6-24.6c4.3-23.2 4.3-47 0-70.2l42.6-24.6c4.9-2.8 7.1-8.6 5.5-14-11.1-35.6-30-67.8-54.7-94.6-3.8-4.1-10-5.1-14.8-2.3L380.8 110c-17.9-15.4-38.5-27.3-60.8-35.1V25.8c0-5.6-3.9-10.5-9.4-11.7-36.7-8.2-74.3-7.8-109.2 0-5.5 1.2-9.4 6.1-9.4 11.7V75c-22.2 7.9-42.8 19.8-60.8 35.1L88.7 85.5c-4.9-2.8-11-1.9-14.8 2.3-24.7 26.7-43.6 58.9-54.7 94.6-1.7 5.4.6 11.2 5.5 14L67.3 221c-4.3 23.2-4.3 47 0 70.2l-42.6 24.6c-4.9 2.8-7.1 8.6-5.5 14 11.1 35.6 30 67.8 54.7 94.6 3.8 4.1 10 5.1 14.8 2.3l42.6-24.6c17.9 15.4 38.5 27.3 60.8 35.1v49.2c0 5.6 3.9 10.5 9.4 11.7 36.7 8.2 74.3 7.8 109.2 0 5.5-1.2 9.4-6.1 9.4-11.7v-49.2c22.2-7.9 42.8-19.8 60.8-35.1l42.6 24.6c4.9 2.8 11 1.9 14.8-2.3 24.7-26.7 43.6-58.9 54.7-94.6 1.5-5.5-.7-11.3-5.6-14.1zM256 336c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z"
-                fill="currentColor"
-              />
-            </svg>
-          </span>
-        </div>
-        <div>
-          <div
-            class="loading css-1ilbg13"
+        <span>
+          <svg
+            aria-hidden="true"
+            class="svg-inline--fa fa-cog fa-w-16 "
+            data-icon="cog"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            viewBox="0 0 512 512"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <span>
-              <svg
-                aria-hidden="true"
-                class="svg-inline--fa fa-cog fa-w-16 "
-                data-icon="cog"
-                data-prefix="fas"
-                focusable="false"
-                role="img"
-                viewBox="0 0 512 512"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M487.4 315.7l-42.6-24.6c4.3-23.2 4.3-47 0-70.2l42.6-24.6c4.9-2.8 7.1-8.6 5.5-14-11.1-35.6-30-67.8-54.7-94.6-3.8-4.1-10-5.1-14.8-2.3L380.8 110c-17.9-15.4-38.5-27.3-60.8-35.1V25.8c0-5.6-3.9-10.5-9.4-11.7-36.7-8.2-74.3-7.8-109.2 0-5.5 1.2-9.4 6.1-9.4 11.7V75c-22.2 7.9-42.8 19.8-60.8 35.1L88.7 85.5c-4.9-2.8-11-1.9-14.8 2.3-24.7 26.7-43.6 58.9-54.7 94.6-1.7 5.4.6 11.2 5.5 14L67.3 221c-4.3 23.2-4.3 47 0 70.2l-42.6 24.6c-4.9 2.8-7.1 8.6-5.5 14 11.1 35.6 30 67.8 54.7 94.6 3.8 4.1 10 5.1 14.8 2.3l42.6-24.6c17.9 15.4 38.5 27.3 60.8 35.1v49.2c0 5.6 3.9 10.5 9.4 11.7 36.7 8.2 74.3 7.8 109.2 0 5.5-1.2 9.4-6.1 9.4-11.7v-49.2c22.2-7.9 42.8-19.8 60.8-35.1l42.6 24.6c4.9 2.8 11 1.9 14.8-2.3 24.7-26.7 43.6-58.9 54.7-94.6 1.5-5.5-.7-11.3-5.6-14.1zM256 336c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z"
-                  fill="currentColor"
-                />
-              </svg>
-              <svg
-                aria-hidden="true"
-                class="svg-inline--fa fa-cog fa-w-16 "
-                data-icon="cog"
-                data-prefix="fas"
-                focusable="false"
-                role="img"
-                viewBox="0 0 512 512"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M487.4 315.7l-42.6-24.6c4.3-23.2 4.3-47 0-70.2l42.6-24.6c4.9-2.8 7.1-8.6 5.5-14-11.1-35.6-30-67.8-54.7-94.6-3.8-4.1-10-5.1-14.8-2.3L380.8 110c-17.9-15.4-38.5-27.3-60.8-35.1V25.8c0-5.6-3.9-10.5-9.4-11.7-36.7-8.2-74.3-7.8-109.2 0-5.5 1.2-9.4 6.1-9.4 11.7V75c-22.2 7.9-42.8 19.8-60.8 35.1L88.7 85.5c-4.9-2.8-11-1.9-14.8 2.3-24.7 26.7-43.6 58.9-54.7 94.6-1.7 5.4.6 11.2 5.5 14L67.3 221c-4.3 23.2-4.3 47 0 70.2l-42.6 24.6c-4.9 2.8-7.1 8.6-5.5 14 11.1 35.6 30 67.8 54.7 94.6 3.8 4.1 10 5.1 14.8 2.3l42.6-24.6c17.9 15.4 38.5 27.3 60.8 35.1v49.2c0 5.6 3.9 10.5 9.4 11.7 36.7 8.2 74.3 7.8 109.2 0 5.5-1.2 9.4-6.1 9.4-11.7v-49.2c22.2-7.9 42.8-19.8 60.8-35.1l42.6 24.6c4.9 2.8 11 1.9 14.8-2.3 24.7-26.7 43.6-58.9 54.7-94.6 1.5-5.5-.7-11.3-5.6-14.1zM256 336c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z"
-                  fill="currentColor"
-                />
-              </svg>
-              <svg
-                aria-hidden="true"
-                class="svg-inline--fa fa-cog fa-w-16 "
-                data-icon="cog"
-                data-prefix="fas"
-                focusable="false"
-                role="img"
-                viewBox="0 0 512 512"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M487.4 315.7l-42.6-24.6c4.3-23.2 4.3-47 0-70.2l42.6-24.6c4.9-2.8 7.1-8.6 5.5-14-11.1-35.6-30-67.8-54.7-94.6-3.8-4.1-10-5.1-14.8-2.3L380.8 110c-17.9-15.4-38.5-27.3-60.8-35.1V25.8c0-5.6-3.9-10.5-9.4-11.7-36.7-8.2-74.3-7.8-109.2 0-5.5 1.2-9.4 6.1-9.4 11.7V75c-22.2 7.9-42.8 19.8-60.8 35.1L88.7 85.5c-4.9-2.8-11-1.9-14.8 2.3-24.7 26.7-43.6 58.9-54.7 94.6-1.7 5.4.6 11.2 5.5 14L67.3 221c-4.3 23.2-4.3 47 0 70.2l-42.6 24.6c-4.9 2.8-7.1 8.6-5.5 14 11.1 35.6 30 67.8 54.7 94.6 3.8 4.1 10 5.1 14.8 2.3l42.6-24.6c17.9 15.4 38.5 27.3 60.8 35.1v49.2c0 5.6 3.9 10.5 9.4 11.7 36.7 8.2 74.3 7.8 109.2 0 5.5-1.2 9.4-6.1 9.4-11.7v-49.2c22.2-7.9 42.8-19.8 60.8-35.1l42.6 24.6c4.9 2.8 11 1.9 14.8-2.3 24.7-26.7 43.6-58.9 54.7-94.6 1.5-5.5-.7-11.3-5.6-14.1zM256 336c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z"
-                  fill="currentColor"
-                />
-              </svg>
-            </span>
-          </div>
-          <div
-            class="loading css-1ilbg13"
+            <path
+              d="M487.4 315.7l-42.6-24.6c4.3-23.2 4.3-47 0-70.2l42.6-24.6c4.9-2.8 7.1-8.6 5.5-14-11.1-35.6-30-67.8-54.7-94.6-3.8-4.1-10-5.1-14.8-2.3L380.8 110c-17.9-15.4-38.5-27.3-60.8-35.1V25.8c0-5.6-3.9-10.5-9.4-11.7-36.7-8.2-74.3-7.8-109.2 0-5.5 1.2-9.4 6.1-9.4 11.7V75c-22.2 7.9-42.8 19.8-60.8 35.1L88.7 85.5c-4.9-2.8-11-1.9-14.8 2.3-24.7 26.7-43.6 58.9-54.7 94.6-1.7 5.4.6 11.2 5.5 14L67.3 221c-4.3 23.2-4.3 47 0 70.2l-42.6 24.6c-4.9 2.8-7.1 8.6-5.5 14 11.1 35.6 30 67.8 54.7 94.6 3.8 4.1 10 5.1 14.8 2.3l42.6-24.6c17.9 15.4 38.5 27.3 60.8 35.1v49.2c0 5.6 3.9 10.5 9.4 11.7 36.7 8.2 74.3 7.8 109.2 0 5.5-1.2 9.4-6.1 9.4-11.7v-49.2c22.2-7.9 42.8-19.8 60.8-35.1l42.6 24.6c4.9 2.8 11 1.9 14.8-2.3 24.7-26.7 43.6-58.9 54.7-94.6 1.5-5.5-.7-11.3-5.6-14.1zM256 336c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z"
+              fill="currentColor"
+            />
+          </svg>
+          <svg
+            aria-hidden="true"
+            class="svg-inline--fa fa-cog fa-w-16 "
+            data-icon="cog"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            viewBox="0 0 512 512"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <span>
-              <svg
-                aria-hidden="true"
-                class="svg-inline--fa fa-cog fa-w-16 "
-                data-icon="cog"
-                data-prefix="fas"
-                focusable="false"
-                role="img"
-                viewBox="0 0 512 512"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M487.4 315.7l-42.6-24.6c4.3-23.2 4.3-47 0-70.2l42.6-24.6c4.9-2.8 7.1-8.6 5.5-14-11.1-35.6-30-67.8-54.7-94.6-3.8-4.1-10-5.1-14.8-2.3L380.8 110c-17.9-15.4-38.5-27.3-60.8-35.1V25.8c0-5.6-3.9-10.5-9.4-11.7-36.7-8.2-74.3-7.8-109.2 0-5.5 1.2-9.4 6.1-9.4 11.7V75c-22.2 7.9-42.8 19.8-60.8 35.1L88.7 85.5c-4.9-2.8-11-1.9-14.8 2.3-24.7 26.7-43.6 58.9-54.7 94.6-1.7 5.4.6 11.2 5.5 14L67.3 221c-4.3 23.2-4.3 47 0 70.2l-42.6 24.6c-4.9 2.8-7.1 8.6-5.5 14 11.1 35.6 30 67.8 54.7 94.6 3.8 4.1 10 5.1 14.8 2.3l42.6-24.6c17.9 15.4 38.5 27.3 60.8 35.1v49.2c0 5.6 3.9 10.5 9.4 11.7 36.7 8.2 74.3 7.8 109.2 0 5.5-1.2 9.4-6.1 9.4-11.7v-49.2c22.2-7.9 42.8-19.8 60.8-35.1l42.6 24.6c4.9 2.8 11 1.9 14.8-2.3 24.7-26.7 43.6-58.9 54.7-94.6 1.5-5.5-.7-11.3-5.6-14.1zM256 336c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z"
-                  fill="currentColor"
-                />
-              </svg>
-              <svg
-                aria-hidden="true"
-                class="svg-inline--fa fa-cog fa-w-16 "
-                data-icon="cog"
-                data-prefix="fas"
-                focusable="false"
-                role="img"
-                viewBox="0 0 512 512"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M487.4 315.7l-42.6-24.6c4.3-23.2 4.3-47 0-70.2l42.6-24.6c4.9-2.8 7.1-8.6 5.5-14-11.1-35.6-30-67.8-54.7-94.6-3.8-4.1-10-5.1-14.8-2.3L380.8 110c-17.9-15.4-38.5-27.3-60.8-35.1V25.8c0-5.6-3.9-10.5-9.4-11.7-36.7-8.2-74.3-7.8-109.2 0-5.5 1.2-9.4 6.1-9.4 11.7V75c-22.2 7.9-42.8 19.8-60.8 35.1L88.7 85.5c-4.9-2.8-11-1.9-14.8 2.3-24.7 26.7-43.6 58.9-54.7 94.6-1.7 5.4.6 11.2 5.5 14L67.3 221c-4.3 23.2-4.3 47 0 70.2l-42.6 24.6c-4.9 2.8-7.1 8.6-5.5 14 11.1 35.6 30 67.8 54.7 94.6 3.8 4.1 10 5.1 14.8 2.3l42.6-24.6c17.9 15.4 38.5 27.3 60.8 35.1v49.2c0 5.6 3.9 10.5 9.4 11.7 36.7 8.2 74.3 7.8 109.2 0 5.5-1.2 9.4-6.1 9.4-11.7v-49.2c22.2-7.9 42.8-19.8 60.8-35.1l42.6 24.6c4.9 2.8 11 1.9 14.8-2.3 24.7-26.7 43.6-58.9 54.7-94.6 1.5-5.5-.7-11.3-5.6-14.1zM256 336c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z"
-                  fill="currentColor"
-                />
-              </svg>
-              <svg
-                aria-hidden="true"
-                class="svg-inline--fa fa-cog fa-w-16 "
-                data-icon="cog"
-                data-prefix="fas"
-                focusable="false"
-                role="img"
-                viewBox="0 0 512 512"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M487.4 315.7l-42.6-24.6c4.3-23.2 4.3-47 0-70.2l42.6-24.6c4.9-2.8 7.1-8.6 5.5-14-11.1-35.6-30-67.8-54.7-94.6-3.8-4.1-10-5.1-14.8-2.3L380.8 110c-17.9-15.4-38.5-27.3-60.8-35.1V25.8c0-5.6-3.9-10.5-9.4-11.7-36.7-8.2-74.3-7.8-109.2 0-5.5 1.2-9.4 6.1-9.4 11.7V75c-22.2 7.9-42.8 19.8-60.8 35.1L88.7 85.5c-4.9-2.8-11-1.9-14.8 2.3-24.7 26.7-43.6 58.9-54.7 94.6-1.7 5.4.6 11.2 5.5 14L67.3 221c-4.3 23.2-4.3 47 0 70.2l-42.6 24.6c-4.9 2.8-7.1 8.6-5.5 14 11.1 35.6 30 67.8 54.7 94.6 3.8 4.1 10 5.1 14.8 2.3l42.6-24.6c17.9 15.4 38.5 27.3 60.8 35.1v49.2c0 5.6 3.9 10.5 9.4 11.7 36.7 8.2 74.3 7.8 109.2 0 5.5-1.2 9.4-6.1 9.4-11.7v-49.2c22.2-7.9 42.8-19.8 60.8-35.1l42.6 24.6c4.9 2.8 11 1.9 14.8-2.3 24.7-26.7 43.6-58.9 54.7-94.6 1.5-5.5-.7-11.3-5.6-14.1zM256 336c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z"
-                  fill="currentColor"
-                />
-              </svg>
-            </span>
-          </div>
-          <div
-            class="loading css-1ilbg13"
+            <path
+              d="M487.4 315.7l-42.6-24.6c4.3-23.2 4.3-47 0-70.2l42.6-24.6c4.9-2.8 7.1-8.6 5.5-14-11.1-35.6-30-67.8-54.7-94.6-3.8-4.1-10-5.1-14.8-2.3L380.8 110c-17.9-15.4-38.5-27.3-60.8-35.1V25.8c0-5.6-3.9-10.5-9.4-11.7-36.7-8.2-74.3-7.8-109.2 0-5.5 1.2-9.4 6.1-9.4 11.7V75c-22.2 7.9-42.8 19.8-60.8 35.1L88.7 85.5c-4.9-2.8-11-1.9-14.8 2.3-24.7 26.7-43.6 58.9-54.7 94.6-1.7 5.4.6 11.2 5.5 14L67.3 221c-4.3 23.2-4.3 47 0 70.2l-42.6 24.6c-4.9 2.8-7.1 8.6-5.5 14 11.1 35.6 30 67.8 54.7 94.6 3.8 4.1 10 5.1 14.8 2.3l42.6-24.6c17.9 15.4 38.5 27.3 60.8 35.1v49.2c0 5.6 3.9 10.5 9.4 11.7 36.7 8.2 74.3 7.8 109.2 0 5.5-1.2 9.4-6.1 9.4-11.7v-49.2c22.2-7.9 42.8-19.8 60.8-35.1l42.6 24.6c4.9 2.8 11 1.9 14.8-2.3 24.7-26.7 43.6-58.9 54.7-94.6 1.5-5.5-.7-11.3-5.6-14.1zM256 336c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z"
+              fill="currentColor"
+            />
+          </svg>
+          <svg
+            aria-hidden="true"
+            class="svg-inline--fa fa-cog fa-w-16 "
+            data-icon="cog"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            viewBox="0 0 512 512"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <span>
-              <svg
-                aria-hidden="true"
-                class="svg-inline--fa fa-cog fa-w-16 "
-                data-icon="cog"
-                data-prefix="fas"
-                focusable="false"
-                role="img"
-                viewBox="0 0 512 512"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M487.4 315.7l-42.6-24.6c4.3-23.2 4.3-47 0-70.2l42.6-24.6c4.9-2.8 7.1-8.6 5.5-14-11.1-35.6-30-67.8-54.7-94.6-3.8-4.1-10-5.1-14.8-2.3L380.8 110c-17.9-15.4-38.5-27.3-60.8-35.1V25.8c0-5.6-3.9-10.5-9.4-11.7-36.7-8.2-74.3-7.8-109.2 0-5.5 1.2-9.4 6.1-9.4 11.7V75c-22.2 7.9-42.8 19.8-60.8 35.1L88.7 85.5c-4.9-2.8-11-1.9-14.8 2.3-24.7 26.7-43.6 58.9-54.7 94.6-1.7 5.4.6 11.2 5.5 14L67.3 221c-4.3 23.2-4.3 47 0 70.2l-42.6 24.6c-4.9 2.8-7.1 8.6-5.5 14 11.1 35.6 30 67.8 54.7 94.6 3.8 4.1 10 5.1 14.8 2.3l42.6-24.6c17.9 15.4 38.5 27.3 60.8 35.1v49.2c0 5.6 3.9 10.5 9.4 11.7 36.7 8.2 74.3 7.8 109.2 0 5.5-1.2 9.4-6.1 9.4-11.7v-49.2c22.2-7.9 42.8-19.8 60.8-35.1l42.6 24.6c4.9 2.8 11 1.9 14.8-2.3 24.7-26.7 43.6-58.9 54.7-94.6 1.5-5.5-.7-11.3-5.6-14.1zM256 336c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z"
-                  fill="currentColor"
-                />
-              </svg>
-              <svg
-                aria-hidden="true"
-                class="svg-inline--fa fa-cog fa-w-16 "
-                data-icon="cog"
-                data-prefix="fas"
-                focusable="false"
-                role="img"
-                viewBox="0 0 512 512"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M487.4 315.7l-42.6-24.6c4.3-23.2 4.3-47 0-70.2l42.6-24.6c4.9-2.8 7.1-8.6 5.5-14-11.1-35.6-30-67.8-54.7-94.6-3.8-4.1-10-5.1-14.8-2.3L380.8 110c-17.9-15.4-38.5-27.3-60.8-35.1V25.8c0-5.6-3.9-10.5-9.4-11.7-36.7-8.2-74.3-7.8-109.2 0-5.5 1.2-9.4 6.1-9.4 11.7V75c-22.2 7.9-42.8 19.8-60.8 35.1L88.7 85.5c-4.9-2.8-11-1.9-14.8 2.3-24.7 26.7-43.6 58.9-54.7 94.6-1.7 5.4.6 11.2 5.5 14L67.3 221c-4.3 23.2-4.3 47 0 70.2l-42.6 24.6c-4.9 2.8-7.1 8.6-5.5 14 11.1 35.6 30 67.8 54.7 94.6 3.8 4.1 10 5.1 14.8 2.3l42.6-24.6c17.9 15.4 38.5 27.3 60.8 35.1v49.2c0 5.6 3.9 10.5 9.4 11.7 36.7 8.2 74.3 7.8 109.2 0 5.5-1.2 9.4-6.1 9.4-11.7v-49.2c22.2-7.9 42.8-19.8 60.8-35.1l42.6 24.6c4.9 2.8 11 1.9 14.8-2.3 24.7-26.7 43.6-58.9 54.7-94.6 1.5-5.5-.7-11.3-5.6-14.1zM256 336c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z"
-                  fill="currentColor"
-                />
-              </svg>
-              <svg
-                aria-hidden="true"
-                class="svg-inline--fa fa-cog fa-w-16 "
-                data-icon="cog"
-                data-prefix="fas"
-                focusable="false"
-                role="img"
-                viewBox="0 0 512 512"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M487.4 315.7l-42.6-24.6c4.3-23.2 4.3-47 0-70.2l42.6-24.6c4.9-2.8 7.1-8.6 5.5-14-11.1-35.6-30-67.8-54.7-94.6-3.8-4.1-10-5.1-14.8-2.3L380.8 110c-17.9-15.4-38.5-27.3-60.8-35.1V25.8c0-5.6-3.9-10.5-9.4-11.7-36.7-8.2-74.3-7.8-109.2 0-5.5 1.2-9.4 6.1-9.4 11.7V75c-22.2 7.9-42.8 19.8-60.8 35.1L88.7 85.5c-4.9-2.8-11-1.9-14.8 2.3-24.7 26.7-43.6 58.9-54.7 94.6-1.7 5.4.6 11.2 5.5 14L67.3 221c-4.3 23.2-4.3 47 0 70.2l-42.6 24.6c-4.9 2.8-7.1 8.6-5.5 14 11.1 35.6 30 67.8 54.7 94.6 3.8 4.1 10 5.1 14.8 2.3l42.6-24.6c17.9 15.4 38.5 27.3 60.8 35.1v49.2c0 5.6 3.9 10.5 9.4 11.7 36.7 8.2 74.3 7.8 109.2 0 5.5-1.2 9.4-6.1 9.4-11.7v-49.2c22.2-7.9 42.8-19.8 60.8-35.1l42.6 24.6c4.9 2.8 11 1.9 14.8-2.3 24.7-26.7 43.6-58.9 54.7-94.6 1.5-5.5-.7-11.3-5.6-14.1zM256 336c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z"
-                  fill="currentColor"
-                />
-              </svg>
-            </span>
-          </div>
-        </div>
-      </header>
+            <path
+              d="M487.4 315.7l-42.6-24.6c4.3-23.2 4.3-47 0-70.2l42.6-24.6c4.9-2.8 7.1-8.6 5.5-14-11.1-35.6-30-67.8-54.7-94.6-3.8-4.1-10-5.1-14.8-2.3L380.8 110c-17.9-15.4-38.5-27.3-60.8-35.1V25.8c0-5.6-3.9-10.5-9.4-11.7-36.7-8.2-74.3-7.8-109.2 0-5.5 1.2-9.4 6.1-9.4 11.7V75c-22.2 7.9-42.8 19.8-60.8 35.1L88.7 85.5c-4.9-2.8-11-1.9-14.8 2.3-24.7 26.7-43.6 58.9-54.7 94.6-1.7 5.4.6 11.2 5.5 14L67.3 221c-4.3 23.2-4.3 47 0 70.2l-42.6 24.6c-4.9 2.8-7.1 8.6-5.5 14 11.1 35.6 30 67.8 54.7 94.6 3.8 4.1 10 5.1 14.8 2.3l42.6-24.6c17.9 15.4 38.5 27.3 60.8 35.1v49.2c0 5.6 3.9 10.5 9.4 11.7 36.7 8.2 74.3 7.8 109.2 0 5.5-1.2 9.4-6.1 9.4-11.7v-49.2c22.2-7.9 42.8-19.8 60.8-35.1l42.6 24.6c4.9 2.8 11 1.9 14.8-2.3 24.7-26.7 43.6-58.9 54.7-94.6 1.5-5.5-.7-11.3-5.6-14.1zM256 336c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z"
+              fill="currentColor"
+            />
+          </svg>
+        </span>
+      </div>
       <main>
         <div
-          class="loading css-1ilbg13"
+          class="loading emotion-1"
         >
           <span>
             <svg
@@ -1012,7 +1512,7 @@ Object {
           </span>
         </div>
         <div
-          class="loading css-1ilbg13"
+          class="loading emotion-1"
         >
           <span>
             <svg
@@ -1063,7 +1563,7 @@ Object {
           </span>
         </div>
         <div
-          class="loading css-1ilbg13"
+          class="loading emotion-1"
         >
           <span>
             <svg
@@ -1114,7 +1614,7 @@ Object {
           </span>
         </div>
         <div
-          class="loading css-1ilbg13"
+          class="loading emotion-1"
         >
           <span>
             <svg
@@ -1165,7 +1665,7 @@ Object {
           </span>
         </div>
         <div
-          class="loading css-1ilbg13"
+          class="loading emotion-1"
         >
           <span>
             <svg
@@ -1216,7 +1716,7 @@ Object {
           </span>
         </div>
         <div
-          class="loading css-1ilbg13"
+          class="loading emotion-1"
         >
           <span>
             <svg
@@ -1267,7 +1767,7 @@ Object {
           </span>
         </div>
         <div
-          class="loading css-1ilbg13"
+          class="loading emotion-1"
         >
           <span>
             <svg
@@ -1318,123 +1818,57 @@ Object {
           </span>
         </div>
       </main>
-      <footer
-        class="css-mpmvk1"
+      <div
+        class="loading emotion-1"
       >
-        <div>
-          <div>
-            <div>
-              <img
-                alt=""
-                src="coding.webp"
-              />
-            </div>
-            <div>
-              <p>
-                This
-                 
-                <a
-                  href="https://en.wikipedia.org/wiki/Webring"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  Amazing Front-end Developer's Ring
-                </a>
-                 
-                site is owned by
-                 
-                <a
-                  href="https://en.wikipedia.org/wiki/Webring"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  Paul Kevin Koehler
-                </a>
-                .
-              </p>
-              <p>
-                Want to join the
-                 
-                <a
-                  href="https://en.wikipedia.org/wiki/Webring"
-                  rel="noopener noreferrer"
-                  target="_blank"
-                >
-                  Amazing Front-end Developer's Ring
-                </a>
-                ?
-              </p>
-            </div>
-            <div>
-              <img
-                alt=""
-                src="reading.webp"
-              />
-            </div>
-          </div>
-          <div>
-            [
-            <a
-              href="https://en.wikipedia.org/wiki/Webring"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              Prev
-            </a>
-            ] [
-            <a
-              href="https://en.wikipedia.org/wiki/Webring"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              Next
-            </a>
-            ] [
-            <a
-              href="https://en.wikipedia.org/wiki/Webring"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              Random
-            </a>
-            ] [
-            <a
-              href="https://en.wikipedia.org/wiki/Webring"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              List
-            </a>
-            ]
-          </div>
-        </div>
-        <div>
-          <img
-            alt=""
-            src="uc-digger.gif"
-          />
-          <img
-            alt=""
-            src="uc-main.gif"
-          />
-          <img
-            alt=""
-            src="uc-digger.gif"
-          />
-        </div>
-        <div>
-          <a
-            href="https://www.hitwebcounter.com/"
-            rel="noopener noreferrer"
-            target="_blank"
+        <span>
+          <svg
+            aria-hidden="true"
+            class="svg-inline--fa fa-cog fa-w-16 "
+            data-icon="cog"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            viewBox="0 0 512 512"
+            xmlns="http://www.w3.org/2000/svg"
           >
-            <img
-              alt="hitwebcounter"
-              src="https://hitwebcounter.com/counter/counter.php?page=7200063&style=0038&nbdigits=7&type=page&initCount=325145"
+            <path
+              d="M487.4 315.7l-42.6-24.6c4.3-23.2 4.3-47 0-70.2l42.6-24.6c4.9-2.8 7.1-8.6 5.5-14-11.1-35.6-30-67.8-54.7-94.6-3.8-4.1-10-5.1-14.8-2.3L380.8 110c-17.9-15.4-38.5-27.3-60.8-35.1V25.8c0-5.6-3.9-10.5-9.4-11.7-36.7-8.2-74.3-7.8-109.2 0-5.5 1.2-9.4 6.1-9.4 11.7V75c-22.2 7.9-42.8 19.8-60.8 35.1L88.7 85.5c-4.9-2.8-11-1.9-14.8 2.3-24.7 26.7-43.6 58.9-54.7 94.6-1.7 5.4.6 11.2 5.5 14L67.3 221c-4.3 23.2-4.3 47 0 70.2l-42.6 24.6c-4.9 2.8-7.1 8.6-5.5 14 11.1 35.6 30 67.8 54.7 94.6 3.8 4.1 10 5.1 14.8 2.3l42.6-24.6c17.9 15.4 38.5 27.3 60.8 35.1v49.2c0 5.6 3.9 10.5 9.4 11.7 36.7 8.2 74.3 7.8 109.2 0 5.5-1.2 9.4-6.1 9.4-11.7v-49.2c22.2-7.9 42.8-19.8 60.8-35.1l42.6 24.6c4.9 2.8 11 1.9 14.8-2.3 24.7-26.7 43.6-58.9 54.7-94.6 1.5-5.5-.7-11.3-5.6-14.1zM256 336c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z"
+              fill="currentColor"
             />
-          </a>
-        </div>
-      </footer>
+          </svg>
+          <svg
+            aria-hidden="true"
+            class="svg-inline--fa fa-cog fa-w-16 "
+            data-icon="cog"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            viewBox="0 0 512 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M487.4 315.7l-42.6-24.6c4.3-23.2 4.3-47 0-70.2l42.6-24.6c4.9-2.8 7.1-8.6 5.5-14-11.1-35.6-30-67.8-54.7-94.6-3.8-4.1-10-5.1-14.8-2.3L380.8 110c-17.9-15.4-38.5-27.3-60.8-35.1V25.8c0-5.6-3.9-10.5-9.4-11.7-36.7-8.2-74.3-7.8-109.2 0-5.5 1.2-9.4 6.1-9.4 11.7V75c-22.2 7.9-42.8 19.8-60.8 35.1L88.7 85.5c-4.9-2.8-11-1.9-14.8 2.3-24.7 26.7-43.6 58.9-54.7 94.6-1.7 5.4.6 11.2 5.5 14L67.3 221c-4.3 23.2-4.3 47 0 70.2l-42.6 24.6c-4.9 2.8-7.1 8.6-5.5 14 11.1 35.6 30 67.8 54.7 94.6 3.8 4.1 10 5.1 14.8 2.3l42.6-24.6c17.9 15.4 38.5 27.3 60.8 35.1v49.2c0 5.6 3.9 10.5 9.4 11.7 36.7 8.2 74.3 7.8 109.2 0 5.5-1.2 9.4-6.1 9.4-11.7v-49.2c22.2-7.9 42.8-19.8 60.8-35.1l42.6 24.6c4.9 2.8 11 1.9 14.8-2.3 24.7-26.7 43.6-58.9 54.7-94.6 1.5-5.5-.7-11.3-5.6-14.1zM256 336c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z"
+              fill="currentColor"
+            />
+          </svg>
+          <svg
+            aria-hidden="true"
+            class="svg-inline--fa fa-cog fa-w-16 "
+            data-icon="cog"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            viewBox="0 0 512 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M487.4 315.7l-42.6-24.6c4.3-23.2 4.3-47 0-70.2l42.6-24.6c4.9-2.8 7.1-8.6 5.5-14-11.1-35.6-30-67.8-54.7-94.6-3.8-4.1-10-5.1-14.8-2.3L380.8 110c-17.9-15.4-38.5-27.3-60.8-35.1V25.8c0-5.6-3.9-10.5-9.4-11.7-36.7-8.2-74.3-7.8-109.2 0-5.5 1.2-9.4 6.1-9.4 11.7V75c-22.2 7.9-42.8 19.8-60.8 35.1L88.7 85.5c-4.9-2.8-11-1.9-14.8 2.3-24.7 26.7-43.6 58.9-54.7 94.6-1.7 5.4.6 11.2 5.5 14L67.3 221c-4.3 23.2-4.3 47 0 70.2l-42.6 24.6c-4.9 2.8-7.1 8.6-5.5 14 11.1 35.6 30 67.8 54.7 94.6 3.8 4.1 10 5.1 14.8 2.3l42.6-24.6c17.9 15.4 38.5 27.3 60.8 35.1v49.2c0 5.6 3.9 10.5 9.4 11.7 36.7 8.2 74.3 7.8 109.2 0 5.5-1.2 9.4-6.1 9.4-11.7v-49.2c22.2-7.9 42.8-19.8 60.8-35.1l42.6 24.6c4.9 2.8 11 1.9 14.8-2.3 24.7-26.7 43.6-58.9 54.7-94.6 1.5-5.5-.7-11.3-5.6-14.1zM256 336c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z"
+              fill="currentColor"
+            />
+          </svg>
+        </span>
+      </div>
     </div>
   </div>,
   "debug": [Function],

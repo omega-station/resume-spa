@@ -1,8 +1,19 @@
 import React from 'react';
-import { coding, reading, ucDigger, ucMain } from '../../../../../images';
+import { QueryResult, useQuery } from 'react-apollo';
+import { getImage, getRandomInt } from '../../../../../utility';
+import Error from '../../../../core/Error';
+import Loading from '../../../../core/Loading';
+import { GQL_QUERY } from './graphql';
 import StyledFooter from './style';
 
 const Footer = (): JSX.Element => {
+  const { data, loading, error }: QueryResult = useQuery(GQL_QUERY);
+
+  if (loading) return <Loading />;
+  if (error) return <Error />;
+
+  const images: any = data.options.pageContent.pagetype2Images;
+
   const url = 'https://en.wikipedia.org/wiki/Webring';
   const counter = (
     <div>
@@ -11,13 +22,12 @@ const Footer = (): JSX.Element => {
       </a>
     </div>
   );
+
   return (
     <StyledFooter>
       <div>
         <div>
-          <div>
-            <img src={coding} alt="" />
-          </div>
+          <div>{getImage(images[getRandomInt(3, images.length - 1)])}</div>
           <div>
             <p>
               This{' '}
@@ -38,9 +48,7 @@ const Footer = (): JSX.Element => {
               ?
             </p>
           </div>
-          <div>
-            <img src={reading} alt="" />
-          </div>
+          <div>{getImage(images[getRandomInt(3, images.length - 1)])}</div>
         </div>
         <div>
           [
@@ -63,9 +71,9 @@ const Footer = (): JSX.Element => {
         </div>
       </div>
       <div>
-        <img src={ucDigger} alt="" />
-        <img src={ucMain} alt="" />
-        <img src={ucDigger} alt="" />
+        {getImage(images[1])}
+        {getImage(images[2])}
+        {getImage(images[1])}
       </div>
       {counter}
     </StyledFooter>

@@ -235,22 +235,29 @@ const StyledPage = styled.div`
                   display: none;
                 }
 
-                span {
-                  font-size: 1rem;
+                &.body {
+                  span {
+                    font-size: 1rem;
 
-                  &:first-of-type {
-                    color: ${color.red.dark};
-                  }
+                    &:first-of-type {
+                      color: ${color.red.dark};
+                    }
 
-                  &.proficiency {
-                    font-size: 0.8rem;
-                    color: ${color.red.dark};
+                    &.proficiency {
+                      font-size: 0.9rem;
 
-                    i {
-                      position: relative;
-                      top: 3px;
-                      color: ${color.red.medium};
-                      letter-spacing: 0.02em;
+                      &,
+                      i {
+                        color: ${color.red.medium};
+                        font-weight: 600;
+                      }
+
+                      i {
+                        position: relative;
+                        top: 3px;
+                        font-size: 1.05rem;
+                        letter-spacing: 0.03em;
+                      }
                     }
                   }
                 }

@@ -1,10 +1,11 @@
 import { MockedProvider } from '@apollo/react-testing';
 import { cleanup, render } from '@testing-library/react';
 import React from 'react';
+import { MemoryRouter } from 'react-router-dom';
+import { ParallaxProvider } from 'react-scroll-parallax';
 import PageType4 from '..';
 import { cache } from '../../../../utility/apollo';
 import mocks from '../../../../utility/graphql/mocks';
-import { MemoryRouter } from 'react-router-dom';
 
 afterEach(cleanup);
 
@@ -13,7 +14,9 @@ describe('PageType4', () => {
     const component = render(
       <MockedProvider mocks={mocks.pages} addTypename={false} cache={cache}>
         <MemoryRouter>
-          <PageType4 />
+          <ParallaxProvider>
+            <PageType4 />
+          </ParallaxProvider>
         </MemoryRouter>
       </MockedProvider>
     );
