@@ -7,13 +7,9 @@ const mocks = [
     },
     result: {
       data: {
-        generalSettings: {
-          description: 'Web Developer Extraordinaire',
-          title: 'Paul Kevin Koehler',
-        },
         options: {
-          images: {
-            header: [
+          pageContent: {
+            pagetype3Images: [
               {
                 mediaItemUrl: 'http://dev.resume-wp.omegastation.ca/wp-content/uploads/time-lapse-photo-of-stars-on-night-924824.jpg',
                 sizes: '(max-width: 1024px) 100vw, 1024px',
@@ -56,49 +52,23 @@ const mocks = [
                 srcSet:
                   'http://dev.resume-wp.omegastation.ca/wp-content/uploads/color-text-1279813-1024x171.jpg 1024w, http://dev.resume-wp.omegastation.ca/wp-content/uploads/color-text-1279813-300x50.jpg 300w, http://dev.resume-wp.omegastation.ca/wp-content/uploads/color-text-1279813-768x128.jpg 768w, http://dev.resume-wp.omegastation.ca/wp-content/uploads/color-text-1279813.jpg 1440w',
               },
+            ],
+            pagetype3AsideHeading: [
               {
-                mediaItemUrl: 'http://dev.resume-wp.omegastation.ca/wp-content/uploads/defocused-image-of-lights-255379.jpg',
-                sizes: '(max-width: 1024px) 100vw, 1024px',
-                srcSet:
-                  'http://dev.resume-wp.omegastation.ca/wp-content/uploads/defocused-image-of-lights-255379-1024x171.jpg 1024w, http://dev.resume-wp.omegastation.ca/wp-content/uploads/defocused-image-of-lights-255379-300x50.jpg 300w, http://dev.resume-wp.omegastation.ca/wp-content/uploads/defocused-image-of-lights-255379-768x128.jpg 768w, http://dev.resume-wp.omegastation.ca/wp-content/uploads/defocused-image-of-lights-255379.jpg 1440w',
+                heading: "Things I'm Good At",
               },
               {
-                mediaItemUrl: 'http://dev.resume-wp.omegastation.ca/wp-content/uploads/blurry-photo-of-lights-1266818.jpg',
-                sizes: '(max-width: 1024px) 100vw, 1024px',
-                srcSet:
-                  'http://dev.resume-wp.omegastation.ca/wp-content/uploads/blurry-photo-of-lights-1266818-1024x171.jpg 1024w, http://dev.resume-wp.omegastation.ca/wp-content/uploads/blurry-photo-of-lights-1266818-300x50.jpg 300w, http://dev.resume-wp.omegastation.ca/wp-content/uploads/blurry-photo-of-lights-1266818-768x128.jpg 768w, http://dev.resume-wp.omegastation.ca/wp-content/uploads/blurry-photo-of-lights-1266818.jpg 1440w',
-              },
-              {
-                mediaItemUrl: 'http://dev.resume-wp.omegastation.ca/wp-content/uploads/bokeh-of-lights-photography-1210276.jpg',
-                sizes: '(max-width: 1024px) 100vw, 1024px',
-                srcSet:
-                  'http://dev.resume-wp.omegastation.ca/wp-content/uploads/bokeh-of-lights-photography-1210276-1024x171.jpg 1024w, http://dev.resume-wp.omegastation.ca/wp-content/uploads/bokeh-of-lights-photography-1210276-300x50.jpg 300w, http://dev.resume-wp.omegastation.ca/wp-content/uploads/bokeh-of-lights-photography-1210276-768x128.jpg 768w, http://dev.resume-wp.omegastation.ca/wp-content/uploads/bokeh-of-lights-photography-1210276.jpg 1440w',
-              },
-              {
-                mediaItemUrl: 'http://dev.resume-wp.omegastation.ca/wp-content/uploads/abstract-painting-with-red-and-blue-colors-3435249.jpg',
-                sizes: '(max-width: 1024px) 100vw, 1024px',
-                srcSet:
-                  'http://dev.resume-wp.omegastation.ca/wp-content/uploads/abstract-painting-with-red-and-blue-colors-3435249-1024x171.jpg 1024w, http://dev.resume-wp.omegastation.ca/wp-content/uploads/abstract-painting-with-red-and-blue-colors-3435249-300x50.jpg 300w, http://dev.resume-wp.omegastation.ca/wp-content/uploads/abstract-painting-with-red-and-blue-colors-3435249-768x128.jpg 768w, http://dev.resume-wp.omegastation.ca/wp-content/uploads/abstract-painting-with-red-and-blue-colors-3435249.jpg 1440w',
-              },
-              {
-                mediaItemUrl: 'http://dev.resume-wp.omegastation.ca/wp-content/uploads/black-and-white-carbon-close-up-close-up-2092075.jpg',
-                sizes: '(max-width: 1024px) 100vw, 1024px',
-                srcSet:
-                  'http://dev.resume-wp.omegastation.ca/wp-content/uploads/black-and-white-carbon-close-up-close-up-2092075-1024x171.jpg 1024w, http://dev.resume-wp.omegastation.ca/wp-content/uploads/black-and-white-carbon-close-up-close-up-2092075-300x50.jpg 300w, http://dev.resume-wp.omegastation.ca/wp-content/uploads/black-and-white-carbon-close-up-close-up-2092075-768x128.jpg 768w, http://dev.resume-wp.omegastation.ca/wp-content/uploads/black-and-white-carbon-close-up-close-up-2092075.jpg 1440w',
+                heading: 'Download PDF',
               },
             ],
-          },
-          aside: {
-            resumeHeading: 'Download PDF',
-            resumeImage: {
-              mediaItemUrl: 'http://dev.resume-wp.omegastation.ca/wp-content/uploads/resume.jpg',
-              sizes: null,
-              srcSet: null,
-            },
-            resumeUrl: {
-              mediaItemUrl: 'http://dev.resume-wp.omegastation.ca/wp-content/uploads/resume_paul-kevin-koehler.pdf',
-            },
-            tagcloudHeading: "Things I'm Good At",
+            pagetype3AsideIcon: [
+              {
+                icon: 'far-file-pdf',
+              },
+              {
+                icon: 'fas-file-pdf',
+              },
+            ],
           },
           resume: {
             metaSections: [
@@ -129,6 +99,13 @@ const mocks = [
               {
                 name: 'meta',
                 heading: 'About This Website',
+              },
+            ],
+            referencesResume: [
+              {
+                url: {
+                  mediaItemUrl: 'http://dev.resume-wp.omegastation.ca/wp-content/uploads/resume_paul-kevin-koehler.pdf',
+                },
               },
             ],
             skillsetProficiency: [

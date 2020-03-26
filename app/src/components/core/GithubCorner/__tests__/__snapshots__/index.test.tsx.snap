@@ -3,11 +3,299 @@
 exports[`GitHubCorner should render with ariaLabel={default} prop 1`] = `
 Object {
   "asFragment": [Function],
-  "baseElement": <body>
+  "baseElement": .emotion-0 {
+  position: fixed;
+  top: 0;
+  right: 0;
+  border: 0 !important;
+  z-index: 1000;
+}
+
+.emotion-0 svg {
+  -webkit-transition: width 300ms ease-in-out;
+  transition: width 300ms ease-in-out;
+  display: block;
+  width: 60px;
+}
+
+@media (min-width:640px) {
+  .emotion-0 svg {
+    width: 100px;
+  }
+}
+
+@media (min-width:1024px) {
+  .emotion-0 svg {
+    width: 140px;
+  }
+}
+
+.emotion-0 svg path {
+  -webkit-transition: fill 300ms ease-out;
+  transition: fill 300ms ease-out;
+}
+
+.emotion-0 svg path:nth-of-type(1) {
+  fill: rgb(0,0,0);
+}
+
+.emotion-0 svg path:nth-of-type(2) {
+  -webkit-transform-origin: 130px 106px;
+  -ms-transform-origin: 130px 106px;
+  transform-origin: 130px 106px;
+}
+
+.emotion-0 svg path:nth-of-type(2),
+.emotion-0 svg path:nth-of-type(3) {
+  fill: rgb(255,255,255);
+}
+
+.emotion-0:hover svg path:nth-of-type(2),
+.emotion-0:hover svg path:nth-of-type(3) {
+  fill: rgb(255,255,255);
+}
+
+.emotion-0:hover svg path:nth-of-type(1) {
+  -webkit-animation: none;
+  animation: none;
+}
+
+@media (min-width:480px) {
+  .emotion-0:hover svg path:nth-of-type(1) {
+    -webkit-animation: anim-color-cycle 800ms infinite;
+    animation: anim-color-cycle 800ms infinite;
+  }
+
+@-webkit-keyframes anim-color-cycle {
+    0% {
+      fill: #80f31f;
+    }
+
+    5% {
+      fill: #a5de0b;
+    }
+
+    10% {
+      fill: #c7c101;
+    }
+
+    15% {
+      fill: #e39e03;
+    }
+
+    20% {
+      fill: #f6780f;
+    }
+
+    25% {
+      fill: #fe5326;
+    }
+
+    30% {
+      fill: #fb3244;
+    }
+
+    35% {
+      fill: #ed1868;
+    }
+
+    40% {
+      fill: #d5078e;
+    }
+
+    45% {
+      fill: #b601b3;
+    }
+
+    50% {
+      fill: #9106d3;
+    }
+
+    55% {
+      fill: #6b16ec;
+    }
+
+    60% {
+      fill: #472ffa;
+    }
+
+    65% {
+      fill: #2850fe;
+    }
+
+    70% {
+      fill: #1175f7;
+    }
+
+    75% {
+      fill: #039be5;
+    }
+
+    80% {
+      fill: #01beca;
+    }
+
+    85% {
+      fill: #0adca8;
+    }
+
+    90% {
+      fill: #1df283;
+    }
+
+    95% {
+      fill: #3afd5d;
+    }
+
+    100% {
+      fill: #5cfd3a;
+    }
+}
+
+@keyframes anim-color-cycle {
+    0% {
+      fill: #80f31f;
+    }
+
+    5% {
+      fill: #a5de0b;
+    }
+
+    10% {
+      fill: #c7c101;
+    }
+
+    15% {
+      fill: #e39e03;
+    }
+
+    20% {
+      fill: #f6780f;
+    }
+
+    25% {
+      fill: #fe5326;
+    }
+
+    30% {
+      fill: #fb3244;
+    }
+
+    35% {
+      fill: #ed1868;
+    }
+
+    40% {
+      fill: #d5078e;
+    }
+
+    45% {
+      fill: #b601b3;
+    }
+
+    50% {
+      fill: #9106d3;
+    }
+
+    55% {
+      fill: #6b16ec;
+    }
+
+    60% {
+      fill: #472ffa;
+    }
+
+    65% {
+      fill: #2850fe;
+    }
+
+    70% {
+      fill: #1175f7;
+    }
+
+    75% {
+      fill: #039be5;
+    }
+
+    80% {
+      fill: #01beca;
+    }
+
+    85% {
+      fill: #0adca8;
+    }
+
+    90% {
+      fill: #1df283;
+    }
+
+    95% {
+      fill: #3afd5d;
+    }
+
+    100% {
+      fill: #5cfd3a;
+    }
+}
+}
+
+.emotion-0:hover svg path:nth-of-type(2) {
+  -webkit-animation: none;
+  animation: none;
+}
+
+@media (min-width:480px) {
+  .emotion-0:hover svg path:nth-of-type(2) {
+    -webkit-animation: anim-octoarm 700ms ease-out infinite;
+    animation: anim-octoarm 700ms ease-out infinite;
+  }
+
+@-webkit-keyframes anim-octoarm {
+    0%, 75%, 100% {
+      -webkit-transform: rotate(0);
+      -ms-transform: rotate(0);
+      transform: rotate(0);
+    }
+
+    35% {
+      -webkit-transform: rotate(-25deg);
+      -ms-transform: rotate(-25deg);
+      transform: rotate(-25deg);
+    }
+
+    85% {
+      -webkit-transform: rotate(10deg);
+      -ms-transform: rotate(10deg);
+      transform: rotate(10deg);
+    }
+}
+
+@keyframes anim-octoarm {
+    0%, 75%, 100% {
+      -webkit-transform: rotate(0);
+      -ms-transform: rotate(0);
+      transform: rotate(0);
+    }
+
+    35% {
+      -webkit-transform: rotate(-25deg);
+      -ms-transform: rotate(-25deg);
+      transform: rotate(-25deg);
+    }
+
+    85% {
+      -webkit-transform: rotate(10deg);
+      -ms-transform: rotate(10deg);
+      transform: rotate(10deg);
+    }
+}
+}
+
+<body>
     <div>
       <a
         aria-label="View source on GitHub"
-        class="css-ux0sdd"
+        class="github-corner emotion-0"
         color="rgb(255, 255, 255)"
         fill="rgb(0, 0, 0)"
         href="https://github.com/omega-station/resume-spa"
@@ -31,10 +319,298 @@ Object {
       </a>
     </div>
   </body>,
-  "container": <div>
+  "container": .emotion-0 {
+  position: fixed;
+  top: 0;
+  right: 0;
+  border: 0 !important;
+  z-index: 1000;
+}
+
+.emotion-0 svg {
+  -webkit-transition: width 300ms ease-in-out;
+  transition: width 300ms ease-in-out;
+  display: block;
+  width: 60px;
+}
+
+@media (min-width:640px) {
+  .emotion-0 svg {
+    width: 100px;
+  }
+}
+
+@media (min-width:1024px) {
+  .emotion-0 svg {
+    width: 140px;
+  }
+}
+
+.emotion-0 svg path {
+  -webkit-transition: fill 300ms ease-out;
+  transition: fill 300ms ease-out;
+}
+
+.emotion-0 svg path:nth-of-type(1) {
+  fill: rgb(0,0,0);
+}
+
+.emotion-0 svg path:nth-of-type(2) {
+  -webkit-transform-origin: 130px 106px;
+  -ms-transform-origin: 130px 106px;
+  transform-origin: 130px 106px;
+}
+
+.emotion-0 svg path:nth-of-type(2),
+.emotion-0 svg path:nth-of-type(3) {
+  fill: rgb(255,255,255);
+}
+
+.emotion-0:hover svg path:nth-of-type(2),
+.emotion-0:hover svg path:nth-of-type(3) {
+  fill: rgb(255,255,255);
+}
+
+.emotion-0:hover svg path:nth-of-type(1) {
+  -webkit-animation: none;
+  animation: none;
+}
+
+@media (min-width:480px) {
+  .emotion-0:hover svg path:nth-of-type(1) {
+    -webkit-animation: anim-color-cycle 800ms infinite;
+    animation: anim-color-cycle 800ms infinite;
+  }
+
+@-webkit-keyframes anim-color-cycle {
+    0% {
+      fill: #80f31f;
+    }
+
+    5% {
+      fill: #a5de0b;
+    }
+
+    10% {
+      fill: #c7c101;
+    }
+
+    15% {
+      fill: #e39e03;
+    }
+
+    20% {
+      fill: #f6780f;
+    }
+
+    25% {
+      fill: #fe5326;
+    }
+
+    30% {
+      fill: #fb3244;
+    }
+
+    35% {
+      fill: #ed1868;
+    }
+
+    40% {
+      fill: #d5078e;
+    }
+
+    45% {
+      fill: #b601b3;
+    }
+
+    50% {
+      fill: #9106d3;
+    }
+
+    55% {
+      fill: #6b16ec;
+    }
+
+    60% {
+      fill: #472ffa;
+    }
+
+    65% {
+      fill: #2850fe;
+    }
+
+    70% {
+      fill: #1175f7;
+    }
+
+    75% {
+      fill: #039be5;
+    }
+
+    80% {
+      fill: #01beca;
+    }
+
+    85% {
+      fill: #0adca8;
+    }
+
+    90% {
+      fill: #1df283;
+    }
+
+    95% {
+      fill: #3afd5d;
+    }
+
+    100% {
+      fill: #5cfd3a;
+    }
+}
+
+@keyframes anim-color-cycle {
+    0% {
+      fill: #80f31f;
+    }
+
+    5% {
+      fill: #a5de0b;
+    }
+
+    10% {
+      fill: #c7c101;
+    }
+
+    15% {
+      fill: #e39e03;
+    }
+
+    20% {
+      fill: #f6780f;
+    }
+
+    25% {
+      fill: #fe5326;
+    }
+
+    30% {
+      fill: #fb3244;
+    }
+
+    35% {
+      fill: #ed1868;
+    }
+
+    40% {
+      fill: #d5078e;
+    }
+
+    45% {
+      fill: #b601b3;
+    }
+
+    50% {
+      fill: #9106d3;
+    }
+
+    55% {
+      fill: #6b16ec;
+    }
+
+    60% {
+      fill: #472ffa;
+    }
+
+    65% {
+      fill: #2850fe;
+    }
+
+    70% {
+      fill: #1175f7;
+    }
+
+    75% {
+      fill: #039be5;
+    }
+
+    80% {
+      fill: #01beca;
+    }
+
+    85% {
+      fill: #0adca8;
+    }
+
+    90% {
+      fill: #1df283;
+    }
+
+    95% {
+      fill: #3afd5d;
+    }
+
+    100% {
+      fill: #5cfd3a;
+    }
+}
+}
+
+.emotion-0:hover svg path:nth-of-type(2) {
+  -webkit-animation: none;
+  animation: none;
+}
+
+@media (min-width:480px) {
+  .emotion-0:hover svg path:nth-of-type(2) {
+    -webkit-animation: anim-octoarm 700ms ease-out infinite;
+    animation: anim-octoarm 700ms ease-out infinite;
+  }
+
+@-webkit-keyframes anim-octoarm {
+    0%, 75%, 100% {
+      -webkit-transform: rotate(0);
+      -ms-transform: rotate(0);
+      transform: rotate(0);
+    }
+
+    35% {
+      -webkit-transform: rotate(-25deg);
+      -ms-transform: rotate(-25deg);
+      transform: rotate(-25deg);
+    }
+
+    85% {
+      -webkit-transform: rotate(10deg);
+      -ms-transform: rotate(10deg);
+      transform: rotate(10deg);
+    }
+}
+
+@keyframes anim-octoarm {
+    0%, 75%, 100% {
+      -webkit-transform: rotate(0);
+      -ms-transform: rotate(0);
+      transform: rotate(0);
+    }
+
+    35% {
+      -webkit-transform: rotate(-25deg);
+      -ms-transform: rotate(-25deg);
+      transform: rotate(-25deg);
+    }
+
+    85% {
+      -webkit-transform: rotate(10deg);
+      -ms-transform: rotate(10deg);
+      transform: rotate(10deg);
+    }
+}
+}
+
+<div>
     <a
       aria-label="View source on GitHub"
-      class="css-ux0sdd"
+      class="github-corner emotion-0"
       color="rgb(255, 255, 255)"
       fill="rgb(0, 0, 0)"
       href="https://github.com/omega-station/resume-spa"
@@ -114,11 +690,299 @@ Object {
 exports[`GitHubCorner should render with color={default} prop 1`] = `
 Object {
   "asFragment": [Function],
-  "baseElement": <body>
+  "baseElement": .emotion-0 {
+  position: fixed;
+  top: 0;
+  right: 0;
+  border: 0 !important;
+  z-index: 1000;
+}
+
+.emotion-0 svg {
+  -webkit-transition: width 300ms ease-in-out;
+  transition: width 300ms ease-in-out;
+  display: block;
+  width: 60px;
+}
+
+@media (min-width:640px) {
+  .emotion-0 svg {
+    width: 100px;
+  }
+}
+
+@media (min-width:1024px) {
+  .emotion-0 svg {
+    width: 140px;
+  }
+}
+
+.emotion-0 svg path {
+  -webkit-transition: fill 300ms ease-out;
+  transition: fill 300ms ease-out;
+}
+
+.emotion-0 svg path:nth-of-type(1) {
+  fill: rgb(0,0,0);
+}
+
+.emotion-0 svg path:nth-of-type(2) {
+  -webkit-transform-origin: 130px 106px;
+  -ms-transform-origin: 130px 106px;
+  transform-origin: 130px 106px;
+}
+
+.emotion-0 svg path:nth-of-type(2),
+.emotion-0 svg path:nth-of-type(3) {
+  fill: rgb(255,255,255);
+}
+
+.emotion-0:hover svg path:nth-of-type(2),
+.emotion-0:hover svg path:nth-of-type(3) {
+  fill: rgb(255,255,255);
+}
+
+.emotion-0:hover svg path:nth-of-type(1) {
+  -webkit-animation: none;
+  animation: none;
+}
+
+@media (min-width:480px) {
+  .emotion-0:hover svg path:nth-of-type(1) {
+    -webkit-animation: anim-color-cycle 800ms infinite;
+    animation: anim-color-cycle 800ms infinite;
+  }
+
+@-webkit-keyframes anim-color-cycle {
+    0% {
+      fill: #80f31f;
+    }
+
+    5% {
+      fill: #a5de0b;
+    }
+
+    10% {
+      fill: #c7c101;
+    }
+
+    15% {
+      fill: #e39e03;
+    }
+
+    20% {
+      fill: #f6780f;
+    }
+
+    25% {
+      fill: #fe5326;
+    }
+
+    30% {
+      fill: #fb3244;
+    }
+
+    35% {
+      fill: #ed1868;
+    }
+
+    40% {
+      fill: #d5078e;
+    }
+
+    45% {
+      fill: #b601b3;
+    }
+
+    50% {
+      fill: #9106d3;
+    }
+
+    55% {
+      fill: #6b16ec;
+    }
+
+    60% {
+      fill: #472ffa;
+    }
+
+    65% {
+      fill: #2850fe;
+    }
+
+    70% {
+      fill: #1175f7;
+    }
+
+    75% {
+      fill: #039be5;
+    }
+
+    80% {
+      fill: #01beca;
+    }
+
+    85% {
+      fill: #0adca8;
+    }
+
+    90% {
+      fill: #1df283;
+    }
+
+    95% {
+      fill: #3afd5d;
+    }
+
+    100% {
+      fill: #5cfd3a;
+    }
+}
+
+@keyframes anim-color-cycle {
+    0% {
+      fill: #80f31f;
+    }
+
+    5% {
+      fill: #a5de0b;
+    }
+
+    10% {
+      fill: #c7c101;
+    }
+
+    15% {
+      fill: #e39e03;
+    }
+
+    20% {
+      fill: #f6780f;
+    }
+
+    25% {
+      fill: #fe5326;
+    }
+
+    30% {
+      fill: #fb3244;
+    }
+
+    35% {
+      fill: #ed1868;
+    }
+
+    40% {
+      fill: #d5078e;
+    }
+
+    45% {
+      fill: #b601b3;
+    }
+
+    50% {
+      fill: #9106d3;
+    }
+
+    55% {
+      fill: #6b16ec;
+    }
+
+    60% {
+      fill: #472ffa;
+    }
+
+    65% {
+      fill: #2850fe;
+    }
+
+    70% {
+      fill: #1175f7;
+    }
+
+    75% {
+      fill: #039be5;
+    }
+
+    80% {
+      fill: #01beca;
+    }
+
+    85% {
+      fill: #0adca8;
+    }
+
+    90% {
+      fill: #1df283;
+    }
+
+    95% {
+      fill: #3afd5d;
+    }
+
+    100% {
+      fill: #5cfd3a;
+    }
+}
+}
+
+.emotion-0:hover svg path:nth-of-type(2) {
+  -webkit-animation: none;
+  animation: none;
+}
+
+@media (min-width:480px) {
+  .emotion-0:hover svg path:nth-of-type(2) {
+    -webkit-animation: anim-octoarm 700ms ease-out infinite;
+    animation: anim-octoarm 700ms ease-out infinite;
+  }
+
+@-webkit-keyframes anim-octoarm {
+    0%, 75%, 100% {
+      -webkit-transform: rotate(0);
+      -ms-transform: rotate(0);
+      transform: rotate(0);
+    }
+
+    35% {
+      -webkit-transform: rotate(-25deg);
+      -ms-transform: rotate(-25deg);
+      transform: rotate(-25deg);
+    }
+
+    85% {
+      -webkit-transform: rotate(10deg);
+      -ms-transform: rotate(10deg);
+      transform: rotate(10deg);
+    }
+}
+
+@keyframes anim-octoarm {
+    0%, 75%, 100% {
+      -webkit-transform: rotate(0);
+      -ms-transform: rotate(0);
+      transform: rotate(0);
+    }
+
+    35% {
+      -webkit-transform: rotate(-25deg);
+      -ms-transform: rotate(-25deg);
+      transform: rotate(-25deg);
+    }
+
+    85% {
+      -webkit-transform: rotate(10deg);
+      -ms-transform: rotate(10deg);
+      transform: rotate(10deg);
+    }
+}
+}
+
+<body>
     <div>
       <a
         aria-label="View source on GitHub"
-        class="css-ux0sdd"
+        class="github-corner emotion-0"
         color="rgb(255, 255, 255)"
         fill="rgb(0, 0, 0)"
         href="https://github.com/omega-station/resume-spa"
@@ -142,10 +1006,298 @@ Object {
       </a>
     </div>
   </body>,
-  "container": <div>
+  "container": .emotion-0 {
+  position: fixed;
+  top: 0;
+  right: 0;
+  border: 0 !important;
+  z-index: 1000;
+}
+
+.emotion-0 svg {
+  -webkit-transition: width 300ms ease-in-out;
+  transition: width 300ms ease-in-out;
+  display: block;
+  width: 60px;
+}
+
+@media (min-width:640px) {
+  .emotion-0 svg {
+    width: 100px;
+  }
+}
+
+@media (min-width:1024px) {
+  .emotion-0 svg {
+    width: 140px;
+  }
+}
+
+.emotion-0 svg path {
+  -webkit-transition: fill 300ms ease-out;
+  transition: fill 300ms ease-out;
+}
+
+.emotion-0 svg path:nth-of-type(1) {
+  fill: rgb(0,0,0);
+}
+
+.emotion-0 svg path:nth-of-type(2) {
+  -webkit-transform-origin: 130px 106px;
+  -ms-transform-origin: 130px 106px;
+  transform-origin: 130px 106px;
+}
+
+.emotion-0 svg path:nth-of-type(2),
+.emotion-0 svg path:nth-of-type(3) {
+  fill: rgb(255,255,255);
+}
+
+.emotion-0:hover svg path:nth-of-type(2),
+.emotion-0:hover svg path:nth-of-type(3) {
+  fill: rgb(255,255,255);
+}
+
+.emotion-0:hover svg path:nth-of-type(1) {
+  -webkit-animation: none;
+  animation: none;
+}
+
+@media (min-width:480px) {
+  .emotion-0:hover svg path:nth-of-type(1) {
+    -webkit-animation: anim-color-cycle 800ms infinite;
+    animation: anim-color-cycle 800ms infinite;
+  }
+
+@-webkit-keyframes anim-color-cycle {
+    0% {
+      fill: #80f31f;
+    }
+
+    5% {
+      fill: #a5de0b;
+    }
+
+    10% {
+      fill: #c7c101;
+    }
+
+    15% {
+      fill: #e39e03;
+    }
+
+    20% {
+      fill: #f6780f;
+    }
+
+    25% {
+      fill: #fe5326;
+    }
+
+    30% {
+      fill: #fb3244;
+    }
+
+    35% {
+      fill: #ed1868;
+    }
+
+    40% {
+      fill: #d5078e;
+    }
+
+    45% {
+      fill: #b601b3;
+    }
+
+    50% {
+      fill: #9106d3;
+    }
+
+    55% {
+      fill: #6b16ec;
+    }
+
+    60% {
+      fill: #472ffa;
+    }
+
+    65% {
+      fill: #2850fe;
+    }
+
+    70% {
+      fill: #1175f7;
+    }
+
+    75% {
+      fill: #039be5;
+    }
+
+    80% {
+      fill: #01beca;
+    }
+
+    85% {
+      fill: #0adca8;
+    }
+
+    90% {
+      fill: #1df283;
+    }
+
+    95% {
+      fill: #3afd5d;
+    }
+
+    100% {
+      fill: #5cfd3a;
+    }
+}
+
+@keyframes anim-color-cycle {
+    0% {
+      fill: #80f31f;
+    }
+
+    5% {
+      fill: #a5de0b;
+    }
+
+    10% {
+      fill: #c7c101;
+    }
+
+    15% {
+      fill: #e39e03;
+    }
+
+    20% {
+      fill: #f6780f;
+    }
+
+    25% {
+      fill: #fe5326;
+    }
+
+    30% {
+      fill: #fb3244;
+    }
+
+    35% {
+      fill: #ed1868;
+    }
+
+    40% {
+      fill: #d5078e;
+    }
+
+    45% {
+      fill: #b601b3;
+    }
+
+    50% {
+      fill: #9106d3;
+    }
+
+    55% {
+      fill: #6b16ec;
+    }
+
+    60% {
+      fill: #472ffa;
+    }
+
+    65% {
+      fill: #2850fe;
+    }
+
+    70% {
+      fill: #1175f7;
+    }
+
+    75% {
+      fill: #039be5;
+    }
+
+    80% {
+      fill: #01beca;
+    }
+
+    85% {
+      fill: #0adca8;
+    }
+
+    90% {
+      fill: #1df283;
+    }
+
+    95% {
+      fill: #3afd5d;
+    }
+
+    100% {
+      fill: #5cfd3a;
+    }
+}
+}
+
+.emotion-0:hover svg path:nth-of-type(2) {
+  -webkit-animation: none;
+  animation: none;
+}
+
+@media (min-width:480px) {
+  .emotion-0:hover svg path:nth-of-type(2) {
+    -webkit-animation: anim-octoarm 700ms ease-out infinite;
+    animation: anim-octoarm 700ms ease-out infinite;
+  }
+
+@-webkit-keyframes anim-octoarm {
+    0%, 75%, 100% {
+      -webkit-transform: rotate(0);
+      -ms-transform: rotate(0);
+      transform: rotate(0);
+    }
+
+    35% {
+      -webkit-transform: rotate(-25deg);
+      -ms-transform: rotate(-25deg);
+      transform: rotate(-25deg);
+    }
+
+    85% {
+      -webkit-transform: rotate(10deg);
+      -ms-transform: rotate(10deg);
+      transform: rotate(10deg);
+    }
+}
+
+@keyframes anim-octoarm {
+    0%, 75%, 100% {
+      -webkit-transform: rotate(0);
+      -ms-transform: rotate(0);
+      transform: rotate(0);
+    }
+
+    35% {
+      -webkit-transform: rotate(-25deg);
+      -ms-transform: rotate(-25deg);
+      transform: rotate(-25deg);
+    }
+
+    85% {
+      -webkit-transform: rotate(10deg);
+      -ms-transform: rotate(10deg);
+      transform: rotate(10deg);
+    }
+}
+}
+
+<div>
     <a
       aria-label="View source on GitHub"
-      class="css-ux0sdd"
+      class="github-corner emotion-0"
       color="rgb(255, 255, 255)"
       fill="rgb(0, 0, 0)"
       href="https://github.com/omega-station/resume-spa"
@@ -225,11 +1377,299 @@ Object {
 exports[`GitHubCorner should render with fill={default} prop 1`] = `
 Object {
   "asFragment": [Function],
-  "baseElement": <body>
+  "baseElement": .emotion-0 {
+  position: fixed;
+  top: 0;
+  right: 0;
+  border: 0 !important;
+  z-index: 1000;
+}
+
+.emotion-0 svg {
+  -webkit-transition: width 300ms ease-in-out;
+  transition: width 300ms ease-in-out;
+  display: block;
+  width: 60px;
+}
+
+@media (min-width:640px) {
+  .emotion-0 svg {
+    width: 100px;
+  }
+}
+
+@media (min-width:1024px) {
+  .emotion-0 svg {
+    width: 140px;
+  }
+}
+
+.emotion-0 svg path {
+  -webkit-transition: fill 300ms ease-out;
+  transition: fill 300ms ease-out;
+}
+
+.emotion-0 svg path:nth-of-type(1) {
+  fill: rgb(0,0,0);
+}
+
+.emotion-0 svg path:nth-of-type(2) {
+  -webkit-transform-origin: 130px 106px;
+  -ms-transform-origin: 130px 106px;
+  transform-origin: 130px 106px;
+}
+
+.emotion-0 svg path:nth-of-type(2),
+.emotion-0 svg path:nth-of-type(3) {
+  fill: rgb(255,255,255);
+}
+
+.emotion-0:hover svg path:nth-of-type(2),
+.emotion-0:hover svg path:nth-of-type(3) {
+  fill: rgb(255,255,255);
+}
+
+.emotion-0:hover svg path:nth-of-type(1) {
+  -webkit-animation: none;
+  animation: none;
+}
+
+@media (min-width:480px) {
+  .emotion-0:hover svg path:nth-of-type(1) {
+    -webkit-animation: anim-color-cycle 800ms infinite;
+    animation: anim-color-cycle 800ms infinite;
+  }
+
+@-webkit-keyframes anim-color-cycle {
+    0% {
+      fill: #80f31f;
+    }
+
+    5% {
+      fill: #a5de0b;
+    }
+
+    10% {
+      fill: #c7c101;
+    }
+
+    15% {
+      fill: #e39e03;
+    }
+
+    20% {
+      fill: #f6780f;
+    }
+
+    25% {
+      fill: #fe5326;
+    }
+
+    30% {
+      fill: #fb3244;
+    }
+
+    35% {
+      fill: #ed1868;
+    }
+
+    40% {
+      fill: #d5078e;
+    }
+
+    45% {
+      fill: #b601b3;
+    }
+
+    50% {
+      fill: #9106d3;
+    }
+
+    55% {
+      fill: #6b16ec;
+    }
+
+    60% {
+      fill: #472ffa;
+    }
+
+    65% {
+      fill: #2850fe;
+    }
+
+    70% {
+      fill: #1175f7;
+    }
+
+    75% {
+      fill: #039be5;
+    }
+
+    80% {
+      fill: #01beca;
+    }
+
+    85% {
+      fill: #0adca8;
+    }
+
+    90% {
+      fill: #1df283;
+    }
+
+    95% {
+      fill: #3afd5d;
+    }
+
+    100% {
+      fill: #5cfd3a;
+    }
+}
+
+@keyframes anim-color-cycle {
+    0% {
+      fill: #80f31f;
+    }
+
+    5% {
+      fill: #a5de0b;
+    }
+
+    10% {
+      fill: #c7c101;
+    }
+
+    15% {
+      fill: #e39e03;
+    }
+
+    20% {
+      fill: #f6780f;
+    }
+
+    25% {
+      fill: #fe5326;
+    }
+
+    30% {
+      fill: #fb3244;
+    }
+
+    35% {
+      fill: #ed1868;
+    }
+
+    40% {
+      fill: #d5078e;
+    }
+
+    45% {
+      fill: #b601b3;
+    }
+
+    50% {
+      fill: #9106d3;
+    }
+
+    55% {
+      fill: #6b16ec;
+    }
+
+    60% {
+      fill: #472ffa;
+    }
+
+    65% {
+      fill: #2850fe;
+    }
+
+    70% {
+      fill: #1175f7;
+    }
+
+    75% {
+      fill: #039be5;
+    }
+
+    80% {
+      fill: #01beca;
+    }
+
+    85% {
+      fill: #0adca8;
+    }
+
+    90% {
+      fill: #1df283;
+    }
+
+    95% {
+      fill: #3afd5d;
+    }
+
+    100% {
+      fill: #5cfd3a;
+    }
+}
+}
+
+.emotion-0:hover svg path:nth-of-type(2) {
+  -webkit-animation: none;
+  animation: none;
+}
+
+@media (min-width:480px) {
+  .emotion-0:hover svg path:nth-of-type(2) {
+    -webkit-animation: anim-octoarm 700ms ease-out infinite;
+    animation: anim-octoarm 700ms ease-out infinite;
+  }
+
+@-webkit-keyframes anim-octoarm {
+    0%, 75%, 100% {
+      -webkit-transform: rotate(0);
+      -ms-transform: rotate(0);
+      transform: rotate(0);
+    }
+
+    35% {
+      -webkit-transform: rotate(-25deg);
+      -ms-transform: rotate(-25deg);
+      transform: rotate(-25deg);
+    }
+
+    85% {
+      -webkit-transform: rotate(10deg);
+      -ms-transform: rotate(10deg);
+      transform: rotate(10deg);
+    }
+}
+
+@keyframes anim-octoarm {
+    0%, 75%, 100% {
+      -webkit-transform: rotate(0);
+      -ms-transform: rotate(0);
+      transform: rotate(0);
+    }
+
+    35% {
+      -webkit-transform: rotate(-25deg);
+      -ms-transform: rotate(-25deg);
+      transform: rotate(-25deg);
+    }
+
+    85% {
+      -webkit-transform: rotate(10deg);
+      -ms-transform: rotate(10deg);
+      transform: rotate(10deg);
+    }
+}
+}
+
+<body>
     <div>
       <a
         aria-label="View source on GitHub"
-        class="css-ux0sdd"
+        class="github-corner emotion-0"
         color="rgb(255, 255, 255)"
         fill="rgb(0, 0, 0)"
         href="https://github.com/omega-station/resume-spa"
@@ -253,10 +1693,298 @@ Object {
       </a>
     </div>
   </body>,
-  "container": <div>
+  "container": .emotion-0 {
+  position: fixed;
+  top: 0;
+  right: 0;
+  border: 0 !important;
+  z-index: 1000;
+}
+
+.emotion-0 svg {
+  -webkit-transition: width 300ms ease-in-out;
+  transition: width 300ms ease-in-out;
+  display: block;
+  width: 60px;
+}
+
+@media (min-width:640px) {
+  .emotion-0 svg {
+    width: 100px;
+  }
+}
+
+@media (min-width:1024px) {
+  .emotion-0 svg {
+    width: 140px;
+  }
+}
+
+.emotion-0 svg path {
+  -webkit-transition: fill 300ms ease-out;
+  transition: fill 300ms ease-out;
+}
+
+.emotion-0 svg path:nth-of-type(1) {
+  fill: rgb(0,0,0);
+}
+
+.emotion-0 svg path:nth-of-type(2) {
+  -webkit-transform-origin: 130px 106px;
+  -ms-transform-origin: 130px 106px;
+  transform-origin: 130px 106px;
+}
+
+.emotion-0 svg path:nth-of-type(2),
+.emotion-0 svg path:nth-of-type(3) {
+  fill: rgb(255,255,255);
+}
+
+.emotion-0:hover svg path:nth-of-type(2),
+.emotion-0:hover svg path:nth-of-type(3) {
+  fill: rgb(255,255,255);
+}
+
+.emotion-0:hover svg path:nth-of-type(1) {
+  -webkit-animation: none;
+  animation: none;
+}
+
+@media (min-width:480px) {
+  .emotion-0:hover svg path:nth-of-type(1) {
+    -webkit-animation: anim-color-cycle 800ms infinite;
+    animation: anim-color-cycle 800ms infinite;
+  }
+
+@-webkit-keyframes anim-color-cycle {
+    0% {
+      fill: #80f31f;
+    }
+
+    5% {
+      fill: #a5de0b;
+    }
+
+    10% {
+      fill: #c7c101;
+    }
+
+    15% {
+      fill: #e39e03;
+    }
+
+    20% {
+      fill: #f6780f;
+    }
+
+    25% {
+      fill: #fe5326;
+    }
+
+    30% {
+      fill: #fb3244;
+    }
+
+    35% {
+      fill: #ed1868;
+    }
+
+    40% {
+      fill: #d5078e;
+    }
+
+    45% {
+      fill: #b601b3;
+    }
+
+    50% {
+      fill: #9106d3;
+    }
+
+    55% {
+      fill: #6b16ec;
+    }
+
+    60% {
+      fill: #472ffa;
+    }
+
+    65% {
+      fill: #2850fe;
+    }
+
+    70% {
+      fill: #1175f7;
+    }
+
+    75% {
+      fill: #039be5;
+    }
+
+    80% {
+      fill: #01beca;
+    }
+
+    85% {
+      fill: #0adca8;
+    }
+
+    90% {
+      fill: #1df283;
+    }
+
+    95% {
+      fill: #3afd5d;
+    }
+
+    100% {
+      fill: #5cfd3a;
+    }
+}
+
+@keyframes anim-color-cycle {
+    0% {
+      fill: #80f31f;
+    }
+
+    5% {
+      fill: #a5de0b;
+    }
+
+    10% {
+      fill: #c7c101;
+    }
+
+    15% {
+      fill: #e39e03;
+    }
+
+    20% {
+      fill: #f6780f;
+    }
+
+    25% {
+      fill: #fe5326;
+    }
+
+    30% {
+      fill: #fb3244;
+    }
+
+    35% {
+      fill: #ed1868;
+    }
+
+    40% {
+      fill: #d5078e;
+    }
+
+    45% {
+      fill: #b601b3;
+    }
+
+    50% {
+      fill: #9106d3;
+    }
+
+    55% {
+      fill: #6b16ec;
+    }
+
+    60% {
+      fill: #472ffa;
+    }
+
+    65% {
+      fill: #2850fe;
+    }
+
+    70% {
+      fill: #1175f7;
+    }
+
+    75% {
+      fill: #039be5;
+    }
+
+    80% {
+      fill: #01beca;
+    }
+
+    85% {
+      fill: #0adca8;
+    }
+
+    90% {
+      fill: #1df283;
+    }
+
+    95% {
+      fill: #3afd5d;
+    }
+
+    100% {
+      fill: #5cfd3a;
+    }
+}
+}
+
+.emotion-0:hover svg path:nth-of-type(2) {
+  -webkit-animation: none;
+  animation: none;
+}
+
+@media (min-width:480px) {
+  .emotion-0:hover svg path:nth-of-type(2) {
+    -webkit-animation: anim-octoarm 700ms ease-out infinite;
+    animation: anim-octoarm 700ms ease-out infinite;
+  }
+
+@-webkit-keyframes anim-octoarm {
+    0%, 75%, 100% {
+      -webkit-transform: rotate(0);
+      -ms-transform: rotate(0);
+      transform: rotate(0);
+    }
+
+    35% {
+      -webkit-transform: rotate(-25deg);
+      -ms-transform: rotate(-25deg);
+      transform: rotate(-25deg);
+    }
+
+    85% {
+      -webkit-transform: rotate(10deg);
+      -ms-transform: rotate(10deg);
+      transform: rotate(10deg);
+    }
+}
+
+@keyframes anim-octoarm {
+    0%, 75%, 100% {
+      -webkit-transform: rotate(0);
+      -ms-transform: rotate(0);
+      transform: rotate(0);
+    }
+
+    35% {
+      -webkit-transform: rotate(-25deg);
+      -ms-transform: rotate(-25deg);
+      transform: rotate(-25deg);
+    }
+
+    85% {
+      -webkit-transform: rotate(10deg);
+      -ms-transform: rotate(10deg);
+      transform: rotate(10deg);
+    }
+}
+}
+
+<div>
     <a
       aria-label="View source on GitHub"
-      class="css-ux0sdd"
+      class="github-corner emotion-0"
       color="rgb(255, 255, 255)"
       fill="rgb(0, 0, 0)"
       href="https://github.com/omega-station/resume-spa"
@@ -336,11 +2064,299 @@ Object {
 exports[`GitHubCorner should render with isLeft={false} prop 1`] = `
 Object {
   "asFragment": [Function],
-  "baseElement": <body>
+  "baseElement": .emotion-0 {
+  position: fixed;
+  top: 0;
+  right: 0;
+  border: 0 !important;
+  z-index: 1000;
+}
+
+.emotion-0 svg {
+  -webkit-transition: width 300ms ease-in-out;
+  transition: width 300ms ease-in-out;
+  display: block;
+  width: 60px;
+}
+
+@media (min-width:640px) {
+  .emotion-0 svg {
+    width: 100px;
+  }
+}
+
+@media (min-width:1024px) {
+  .emotion-0 svg {
+    width: 140px;
+  }
+}
+
+.emotion-0 svg path {
+  -webkit-transition: fill 300ms ease-out;
+  transition: fill 300ms ease-out;
+}
+
+.emotion-0 svg path:nth-of-type(1) {
+  fill: rgb(0,0,0);
+}
+
+.emotion-0 svg path:nth-of-type(2) {
+  -webkit-transform-origin: 130px 106px;
+  -ms-transform-origin: 130px 106px;
+  transform-origin: 130px 106px;
+}
+
+.emotion-0 svg path:nth-of-type(2),
+.emotion-0 svg path:nth-of-type(3) {
+  fill: rgb(255,255,255);
+}
+
+.emotion-0:hover svg path:nth-of-type(2),
+.emotion-0:hover svg path:nth-of-type(3) {
+  fill: rgb(255,255,255);
+}
+
+.emotion-0:hover svg path:nth-of-type(1) {
+  -webkit-animation: none;
+  animation: none;
+}
+
+@media (min-width:480px) {
+  .emotion-0:hover svg path:nth-of-type(1) {
+    -webkit-animation: anim-color-cycle 800ms infinite;
+    animation: anim-color-cycle 800ms infinite;
+  }
+
+@-webkit-keyframes anim-color-cycle {
+    0% {
+      fill: #80f31f;
+    }
+
+    5% {
+      fill: #a5de0b;
+    }
+
+    10% {
+      fill: #c7c101;
+    }
+
+    15% {
+      fill: #e39e03;
+    }
+
+    20% {
+      fill: #f6780f;
+    }
+
+    25% {
+      fill: #fe5326;
+    }
+
+    30% {
+      fill: #fb3244;
+    }
+
+    35% {
+      fill: #ed1868;
+    }
+
+    40% {
+      fill: #d5078e;
+    }
+
+    45% {
+      fill: #b601b3;
+    }
+
+    50% {
+      fill: #9106d3;
+    }
+
+    55% {
+      fill: #6b16ec;
+    }
+
+    60% {
+      fill: #472ffa;
+    }
+
+    65% {
+      fill: #2850fe;
+    }
+
+    70% {
+      fill: #1175f7;
+    }
+
+    75% {
+      fill: #039be5;
+    }
+
+    80% {
+      fill: #01beca;
+    }
+
+    85% {
+      fill: #0adca8;
+    }
+
+    90% {
+      fill: #1df283;
+    }
+
+    95% {
+      fill: #3afd5d;
+    }
+
+    100% {
+      fill: #5cfd3a;
+    }
+}
+
+@keyframes anim-color-cycle {
+    0% {
+      fill: #80f31f;
+    }
+
+    5% {
+      fill: #a5de0b;
+    }
+
+    10% {
+      fill: #c7c101;
+    }
+
+    15% {
+      fill: #e39e03;
+    }
+
+    20% {
+      fill: #f6780f;
+    }
+
+    25% {
+      fill: #fe5326;
+    }
+
+    30% {
+      fill: #fb3244;
+    }
+
+    35% {
+      fill: #ed1868;
+    }
+
+    40% {
+      fill: #d5078e;
+    }
+
+    45% {
+      fill: #b601b3;
+    }
+
+    50% {
+      fill: #9106d3;
+    }
+
+    55% {
+      fill: #6b16ec;
+    }
+
+    60% {
+      fill: #472ffa;
+    }
+
+    65% {
+      fill: #2850fe;
+    }
+
+    70% {
+      fill: #1175f7;
+    }
+
+    75% {
+      fill: #039be5;
+    }
+
+    80% {
+      fill: #01beca;
+    }
+
+    85% {
+      fill: #0adca8;
+    }
+
+    90% {
+      fill: #1df283;
+    }
+
+    95% {
+      fill: #3afd5d;
+    }
+
+    100% {
+      fill: #5cfd3a;
+    }
+}
+}
+
+.emotion-0:hover svg path:nth-of-type(2) {
+  -webkit-animation: none;
+  animation: none;
+}
+
+@media (min-width:480px) {
+  .emotion-0:hover svg path:nth-of-type(2) {
+    -webkit-animation: anim-octoarm 700ms ease-out infinite;
+    animation: anim-octoarm 700ms ease-out infinite;
+  }
+
+@-webkit-keyframes anim-octoarm {
+    0%, 75%, 100% {
+      -webkit-transform: rotate(0);
+      -ms-transform: rotate(0);
+      transform: rotate(0);
+    }
+
+    35% {
+      -webkit-transform: rotate(-25deg);
+      -ms-transform: rotate(-25deg);
+      transform: rotate(-25deg);
+    }
+
+    85% {
+      -webkit-transform: rotate(10deg);
+      -ms-transform: rotate(10deg);
+      transform: rotate(10deg);
+    }
+}
+
+@keyframes anim-octoarm {
+    0%, 75%, 100% {
+      -webkit-transform: rotate(0);
+      -ms-transform: rotate(0);
+      transform: rotate(0);
+    }
+
+    35% {
+      -webkit-transform: rotate(-25deg);
+      -ms-transform: rotate(-25deg);
+      transform: rotate(-25deg);
+    }
+
+    85% {
+      -webkit-transform: rotate(10deg);
+      -ms-transform: rotate(10deg);
+      transform: rotate(10deg);
+    }
+}
+}
+
+<body>
     <div>
       <a
         aria-label="View source on GitHub"
-        class="css-ux0sdd"
+        class="github-corner emotion-0"
         color="rgb(255, 255, 255)"
         fill="rgb(0, 0, 0)"
         href="https://github.com/omega-station/resume-spa"
@@ -364,10 +2380,298 @@ Object {
       </a>
     </div>
   </body>,
-  "container": <div>
+  "container": .emotion-0 {
+  position: fixed;
+  top: 0;
+  right: 0;
+  border: 0 !important;
+  z-index: 1000;
+}
+
+.emotion-0 svg {
+  -webkit-transition: width 300ms ease-in-out;
+  transition: width 300ms ease-in-out;
+  display: block;
+  width: 60px;
+}
+
+@media (min-width:640px) {
+  .emotion-0 svg {
+    width: 100px;
+  }
+}
+
+@media (min-width:1024px) {
+  .emotion-0 svg {
+    width: 140px;
+  }
+}
+
+.emotion-0 svg path {
+  -webkit-transition: fill 300ms ease-out;
+  transition: fill 300ms ease-out;
+}
+
+.emotion-0 svg path:nth-of-type(1) {
+  fill: rgb(0,0,0);
+}
+
+.emotion-0 svg path:nth-of-type(2) {
+  -webkit-transform-origin: 130px 106px;
+  -ms-transform-origin: 130px 106px;
+  transform-origin: 130px 106px;
+}
+
+.emotion-0 svg path:nth-of-type(2),
+.emotion-0 svg path:nth-of-type(3) {
+  fill: rgb(255,255,255);
+}
+
+.emotion-0:hover svg path:nth-of-type(2),
+.emotion-0:hover svg path:nth-of-type(3) {
+  fill: rgb(255,255,255);
+}
+
+.emotion-0:hover svg path:nth-of-type(1) {
+  -webkit-animation: none;
+  animation: none;
+}
+
+@media (min-width:480px) {
+  .emotion-0:hover svg path:nth-of-type(1) {
+    -webkit-animation: anim-color-cycle 800ms infinite;
+    animation: anim-color-cycle 800ms infinite;
+  }
+
+@-webkit-keyframes anim-color-cycle {
+    0% {
+      fill: #80f31f;
+    }
+
+    5% {
+      fill: #a5de0b;
+    }
+
+    10% {
+      fill: #c7c101;
+    }
+
+    15% {
+      fill: #e39e03;
+    }
+
+    20% {
+      fill: #f6780f;
+    }
+
+    25% {
+      fill: #fe5326;
+    }
+
+    30% {
+      fill: #fb3244;
+    }
+
+    35% {
+      fill: #ed1868;
+    }
+
+    40% {
+      fill: #d5078e;
+    }
+
+    45% {
+      fill: #b601b3;
+    }
+
+    50% {
+      fill: #9106d3;
+    }
+
+    55% {
+      fill: #6b16ec;
+    }
+
+    60% {
+      fill: #472ffa;
+    }
+
+    65% {
+      fill: #2850fe;
+    }
+
+    70% {
+      fill: #1175f7;
+    }
+
+    75% {
+      fill: #039be5;
+    }
+
+    80% {
+      fill: #01beca;
+    }
+
+    85% {
+      fill: #0adca8;
+    }
+
+    90% {
+      fill: #1df283;
+    }
+
+    95% {
+      fill: #3afd5d;
+    }
+
+    100% {
+      fill: #5cfd3a;
+    }
+}
+
+@keyframes anim-color-cycle {
+    0% {
+      fill: #80f31f;
+    }
+
+    5% {
+      fill: #a5de0b;
+    }
+
+    10% {
+      fill: #c7c101;
+    }
+
+    15% {
+      fill: #e39e03;
+    }
+
+    20% {
+      fill: #f6780f;
+    }
+
+    25% {
+      fill: #fe5326;
+    }
+
+    30% {
+      fill: #fb3244;
+    }
+
+    35% {
+      fill: #ed1868;
+    }
+
+    40% {
+      fill: #d5078e;
+    }
+
+    45% {
+      fill: #b601b3;
+    }
+
+    50% {
+      fill: #9106d3;
+    }
+
+    55% {
+      fill: #6b16ec;
+    }
+
+    60% {
+      fill: #472ffa;
+    }
+
+    65% {
+      fill: #2850fe;
+    }
+
+    70% {
+      fill: #1175f7;
+    }
+
+    75% {
+      fill: #039be5;
+    }
+
+    80% {
+      fill: #01beca;
+    }
+
+    85% {
+      fill: #0adca8;
+    }
+
+    90% {
+      fill: #1df283;
+    }
+
+    95% {
+      fill: #3afd5d;
+    }
+
+    100% {
+      fill: #5cfd3a;
+    }
+}
+}
+
+.emotion-0:hover svg path:nth-of-type(2) {
+  -webkit-animation: none;
+  animation: none;
+}
+
+@media (min-width:480px) {
+  .emotion-0:hover svg path:nth-of-type(2) {
+    -webkit-animation: anim-octoarm 700ms ease-out infinite;
+    animation: anim-octoarm 700ms ease-out infinite;
+  }
+
+@-webkit-keyframes anim-octoarm {
+    0%, 75%, 100% {
+      -webkit-transform: rotate(0);
+      -ms-transform: rotate(0);
+      transform: rotate(0);
+    }
+
+    35% {
+      -webkit-transform: rotate(-25deg);
+      -ms-transform: rotate(-25deg);
+      transform: rotate(-25deg);
+    }
+
+    85% {
+      -webkit-transform: rotate(10deg);
+      -ms-transform: rotate(10deg);
+      transform: rotate(10deg);
+    }
+}
+
+@keyframes anim-octoarm {
+    0%, 75%, 100% {
+      -webkit-transform: rotate(0);
+      -ms-transform: rotate(0);
+      transform: rotate(0);
+    }
+
+    35% {
+      -webkit-transform: rotate(-25deg);
+      -ms-transform: rotate(-25deg);
+      transform: rotate(-25deg);
+    }
+
+    85% {
+      -webkit-transform: rotate(10deg);
+      -ms-transform: rotate(10deg);
+      transform: rotate(10deg);
+    }
+}
+}
+
+<div>
     <a
       aria-label="View source on GitHub"
-      class="css-ux0sdd"
+      class="github-corner emotion-0"
       color="rgb(255, 255, 255)"
       fill="rgb(0, 0, 0)"
       href="https://github.com/omega-station/resume-spa"
@@ -447,11 +2751,304 @@ Object {
 exports[`GitHubCorner should render with isLeft={true} prop 1`] = `
 Object {
   "asFragment": [Function],
-  "baseElement": <body>
+  "baseElement": .emotion-0 {
+  position: fixed;
+  top: 0;
+  right: 0;
+  border: 0 !important;
+  z-index: 1000;
+  left: 0;
+  right: auto;
+  -webkit-transform: scale(-1,1);
+  -ms-transform: scale(-1,1);
+  transform: scale(-1,1);
+}
+
+.emotion-0 svg {
+  -webkit-transition: width 300ms ease-in-out;
+  transition: width 300ms ease-in-out;
+  display: block;
+  width: 60px;
+}
+
+@media (min-width:640px) {
+  .emotion-0 svg {
+    width: 100px;
+  }
+}
+
+@media (min-width:1024px) {
+  .emotion-0 svg {
+    width: 140px;
+  }
+}
+
+.emotion-0 svg path {
+  -webkit-transition: fill 300ms ease-out;
+  transition: fill 300ms ease-out;
+}
+
+.emotion-0 svg path:nth-of-type(1) {
+  fill: rgb(0,0,0);
+}
+
+.emotion-0 svg path:nth-of-type(2) {
+  -webkit-transform-origin: 130px 106px;
+  -ms-transform-origin: 130px 106px;
+  transform-origin: 130px 106px;
+}
+
+.emotion-0 svg path:nth-of-type(2),
+.emotion-0 svg path:nth-of-type(3) {
+  fill: rgb(255,255,255);
+}
+
+.emotion-0:hover svg path:nth-of-type(2),
+.emotion-0:hover svg path:nth-of-type(3) {
+  fill: rgb(255,255,255);
+}
+
+.emotion-0:hover svg path:nth-of-type(1) {
+  -webkit-animation: none;
+  animation: none;
+}
+
+@media (min-width:480px) {
+  .emotion-0:hover svg path:nth-of-type(1) {
+    -webkit-animation: anim-color-cycle 800ms infinite;
+    animation: anim-color-cycle 800ms infinite;
+  }
+
+@-webkit-keyframes anim-color-cycle {
+    0% {
+      fill: #80f31f;
+    }
+
+    5% {
+      fill: #a5de0b;
+    }
+
+    10% {
+      fill: #c7c101;
+    }
+
+    15% {
+      fill: #e39e03;
+    }
+
+    20% {
+      fill: #f6780f;
+    }
+
+    25% {
+      fill: #fe5326;
+    }
+
+    30% {
+      fill: #fb3244;
+    }
+
+    35% {
+      fill: #ed1868;
+    }
+
+    40% {
+      fill: #d5078e;
+    }
+
+    45% {
+      fill: #b601b3;
+    }
+
+    50% {
+      fill: #9106d3;
+    }
+
+    55% {
+      fill: #6b16ec;
+    }
+
+    60% {
+      fill: #472ffa;
+    }
+
+    65% {
+      fill: #2850fe;
+    }
+
+    70% {
+      fill: #1175f7;
+    }
+
+    75% {
+      fill: #039be5;
+    }
+
+    80% {
+      fill: #01beca;
+    }
+
+    85% {
+      fill: #0adca8;
+    }
+
+    90% {
+      fill: #1df283;
+    }
+
+    95% {
+      fill: #3afd5d;
+    }
+
+    100% {
+      fill: #5cfd3a;
+    }
+}
+
+@keyframes anim-color-cycle {
+    0% {
+      fill: #80f31f;
+    }
+
+    5% {
+      fill: #a5de0b;
+    }
+
+    10% {
+      fill: #c7c101;
+    }
+
+    15% {
+      fill: #e39e03;
+    }
+
+    20% {
+      fill: #f6780f;
+    }
+
+    25% {
+      fill: #fe5326;
+    }
+
+    30% {
+      fill: #fb3244;
+    }
+
+    35% {
+      fill: #ed1868;
+    }
+
+    40% {
+      fill: #d5078e;
+    }
+
+    45% {
+      fill: #b601b3;
+    }
+
+    50% {
+      fill: #9106d3;
+    }
+
+    55% {
+      fill: #6b16ec;
+    }
+
+    60% {
+      fill: #472ffa;
+    }
+
+    65% {
+      fill: #2850fe;
+    }
+
+    70% {
+      fill: #1175f7;
+    }
+
+    75% {
+      fill: #039be5;
+    }
+
+    80% {
+      fill: #01beca;
+    }
+
+    85% {
+      fill: #0adca8;
+    }
+
+    90% {
+      fill: #1df283;
+    }
+
+    95% {
+      fill: #3afd5d;
+    }
+
+    100% {
+      fill: #5cfd3a;
+    }
+}
+}
+
+.emotion-0:hover svg path:nth-of-type(2) {
+  -webkit-animation: none;
+  animation: none;
+}
+
+@media (min-width:480px) {
+  .emotion-0:hover svg path:nth-of-type(2) {
+    -webkit-animation: anim-octoarm 700ms ease-out infinite;
+    animation: anim-octoarm 700ms ease-out infinite;
+  }
+
+@-webkit-keyframes anim-octoarm {
+    0%, 75%, 100% {
+      -webkit-transform: rotate(0);
+      -ms-transform: rotate(0);
+      transform: rotate(0);
+    }
+
+    35% {
+      -webkit-transform: rotate(-25deg);
+      -ms-transform: rotate(-25deg);
+      transform: rotate(-25deg);
+    }
+
+    85% {
+      -webkit-transform: rotate(10deg);
+      -ms-transform: rotate(10deg);
+      transform: rotate(10deg);
+    }
+}
+
+@keyframes anim-octoarm {
+    0%, 75%, 100% {
+      -webkit-transform: rotate(0);
+      -ms-transform: rotate(0);
+      transform: rotate(0);
+    }
+
+    35% {
+      -webkit-transform: rotate(-25deg);
+      -ms-transform: rotate(-25deg);
+      transform: rotate(-25deg);
+    }
+
+    85% {
+      -webkit-transform: rotate(10deg);
+      -ms-transform: rotate(10deg);
+      transform: rotate(10deg);
+    }
+}
+}
+
+<body>
     <div>
       <a
         aria-label="View source on GitHub"
-        class="css-myet74"
+        class="github-corner emotion-0"
         color="rgb(255, 255, 255)"
         fill="rgb(0, 0, 0)"
         href="https://github.com/omega-station/resume-spa"
@@ -475,10 +3072,303 @@ Object {
       </a>
     </div>
   </body>,
-  "container": <div>
+  "container": .emotion-0 {
+  position: fixed;
+  top: 0;
+  right: 0;
+  border: 0 !important;
+  z-index: 1000;
+  left: 0;
+  right: auto;
+  -webkit-transform: scale(-1,1);
+  -ms-transform: scale(-1,1);
+  transform: scale(-1,1);
+}
+
+.emotion-0 svg {
+  -webkit-transition: width 300ms ease-in-out;
+  transition: width 300ms ease-in-out;
+  display: block;
+  width: 60px;
+}
+
+@media (min-width:640px) {
+  .emotion-0 svg {
+    width: 100px;
+  }
+}
+
+@media (min-width:1024px) {
+  .emotion-0 svg {
+    width: 140px;
+  }
+}
+
+.emotion-0 svg path {
+  -webkit-transition: fill 300ms ease-out;
+  transition: fill 300ms ease-out;
+}
+
+.emotion-0 svg path:nth-of-type(1) {
+  fill: rgb(0,0,0);
+}
+
+.emotion-0 svg path:nth-of-type(2) {
+  -webkit-transform-origin: 130px 106px;
+  -ms-transform-origin: 130px 106px;
+  transform-origin: 130px 106px;
+}
+
+.emotion-0 svg path:nth-of-type(2),
+.emotion-0 svg path:nth-of-type(3) {
+  fill: rgb(255,255,255);
+}
+
+.emotion-0:hover svg path:nth-of-type(2),
+.emotion-0:hover svg path:nth-of-type(3) {
+  fill: rgb(255,255,255);
+}
+
+.emotion-0:hover svg path:nth-of-type(1) {
+  -webkit-animation: none;
+  animation: none;
+}
+
+@media (min-width:480px) {
+  .emotion-0:hover svg path:nth-of-type(1) {
+    -webkit-animation: anim-color-cycle 800ms infinite;
+    animation: anim-color-cycle 800ms infinite;
+  }
+
+@-webkit-keyframes anim-color-cycle {
+    0% {
+      fill: #80f31f;
+    }
+
+    5% {
+      fill: #a5de0b;
+    }
+
+    10% {
+      fill: #c7c101;
+    }
+
+    15% {
+      fill: #e39e03;
+    }
+
+    20% {
+      fill: #f6780f;
+    }
+
+    25% {
+      fill: #fe5326;
+    }
+
+    30% {
+      fill: #fb3244;
+    }
+
+    35% {
+      fill: #ed1868;
+    }
+
+    40% {
+      fill: #d5078e;
+    }
+
+    45% {
+      fill: #b601b3;
+    }
+
+    50% {
+      fill: #9106d3;
+    }
+
+    55% {
+      fill: #6b16ec;
+    }
+
+    60% {
+      fill: #472ffa;
+    }
+
+    65% {
+      fill: #2850fe;
+    }
+
+    70% {
+      fill: #1175f7;
+    }
+
+    75% {
+      fill: #039be5;
+    }
+
+    80% {
+      fill: #01beca;
+    }
+
+    85% {
+      fill: #0adca8;
+    }
+
+    90% {
+      fill: #1df283;
+    }
+
+    95% {
+      fill: #3afd5d;
+    }
+
+    100% {
+      fill: #5cfd3a;
+    }
+}
+
+@keyframes anim-color-cycle {
+    0% {
+      fill: #80f31f;
+    }
+
+    5% {
+      fill: #a5de0b;
+    }
+
+    10% {
+      fill: #c7c101;
+    }
+
+    15% {
+      fill: #e39e03;
+    }
+
+    20% {
+      fill: #f6780f;
+    }
+
+    25% {
+      fill: #fe5326;
+    }
+
+    30% {
+      fill: #fb3244;
+    }
+
+    35% {
+      fill: #ed1868;
+    }
+
+    40% {
+      fill: #d5078e;
+    }
+
+    45% {
+      fill: #b601b3;
+    }
+
+    50% {
+      fill: #9106d3;
+    }
+
+    55% {
+      fill: #6b16ec;
+    }
+
+    60% {
+      fill: #472ffa;
+    }
+
+    65% {
+      fill: #2850fe;
+    }
+
+    70% {
+      fill: #1175f7;
+    }
+
+    75% {
+      fill: #039be5;
+    }
+
+    80% {
+      fill: #01beca;
+    }
+
+    85% {
+      fill: #0adca8;
+    }
+
+    90% {
+      fill: #1df283;
+    }
+
+    95% {
+      fill: #3afd5d;
+    }
+
+    100% {
+      fill: #5cfd3a;
+    }
+}
+}
+
+.emotion-0:hover svg path:nth-of-type(2) {
+  -webkit-animation: none;
+  animation: none;
+}
+
+@media (min-width:480px) {
+  .emotion-0:hover svg path:nth-of-type(2) {
+    -webkit-animation: anim-octoarm 700ms ease-out infinite;
+    animation: anim-octoarm 700ms ease-out infinite;
+  }
+
+@-webkit-keyframes anim-octoarm {
+    0%, 75%, 100% {
+      -webkit-transform: rotate(0);
+      -ms-transform: rotate(0);
+      transform: rotate(0);
+    }
+
+    35% {
+      -webkit-transform: rotate(-25deg);
+      -ms-transform: rotate(-25deg);
+      transform: rotate(-25deg);
+    }
+
+    85% {
+      -webkit-transform: rotate(10deg);
+      -ms-transform: rotate(10deg);
+      transform: rotate(10deg);
+    }
+}
+
+@keyframes anim-octoarm {
+    0%, 75%, 100% {
+      -webkit-transform: rotate(0);
+      -ms-transform: rotate(0);
+      transform: rotate(0);
+    }
+
+    35% {
+      -webkit-transform: rotate(-25deg);
+      -ms-transform: rotate(-25deg);
+      transform: rotate(-25deg);
+    }
+
+    85% {
+      -webkit-transform: rotate(10deg);
+      -ms-transform: rotate(10deg);
+      transform: rotate(10deg);
+    }
+}
+}
+
+<div>
     <a
       aria-label="View source on GitHub"
-      class="css-myet74"
+      class="github-corner emotion-0"
       color="rgb(255, 255, 255)"
       fill="rgb(0, 0, 0)"
       href="https://github.com/omega-station/resume-spa"
@@ -558,11 +3448,299 @@ Object {
 exports[`GitHubCorner should render with isSmall={false} prop 1`] = `
 Object {
   "asFragment": [Function],
-  "baseElement": <body>
+  "baseElement": .emotion-0 {
+  position: fixed;
+  top: 0;
+  right: 0;
+  border: 0 !important;
+  z-index: 1000;
+}
+
+.emotion-0 svg {
+  -webkit-transition: width 300ms ease-in-out;
+  transition: width 300ms ease-in-out;
+  display: block;
+  width: 60px;
+}
+
+@media (min-width:640px) {
+  .emotion-0 svg {
+    width: 100px;
+  }
+}
+
+@media (min-width:1024px) {
+  .emotion-0 svg {
+    width: 140px;
+  }
+}
+
+.emotion-0 svg path {
+  -webkit-transition: fill 300ms ease-out;
+  transition: fill 300ms ease-out;
+}
+
+.emotion-0 svg path:nth-of-type(1) {
+  fill: rgb(0,0,0);
+}
+
+.emotion-0 svg path:nth-of-type(2) {
+  -webkit-transform-origin: 130px 106px;
+  -ms-transform-origin: 130px 106px;
+  transform-origin: 130px 106px;
+}
+
+.emotion-0 svg path:nth-of-type(2),
+.emotion-0 svg path:nth-of-type(3) {
+  fill: rgb(255,255,255);
+}
+
+.emotion-0:hover svg path:nth-of-type(2),
+.emotion-0:hover svg path:nth-of-type(3) {
+  fill: rgb(255,255,255);
+}
+
+.emotion-0:hover svg path:nth-of-type(1) {
+  -webkit-animation: none;
+  animation: none;
+}
+
+@media (min-width:480px) {
+  .emotion-0:hover svg path:nth-of-type(1) {
+    -webkit-animation: anim-color-cycle 800ms infinite;
+    animation: anim-color-cycle 800ms infinite;
+  }
+
+@-webkit-keyframes anim-color-cycle {
+    0% {
+      fill: #80f31f;
+    }
+
+    5% {
+      fill: #a5de0b;
+    }
+
+    10% {
+      fill: #c7c101;
+    }
+
+    15% {
+      fill: #e39e03;
+    }
+
+    20% {
+      fill: #f6780f;
+    }
+
+    25% {
+      fill: #fe5326;
+    }
+
+    30% {
+      fill: #fb3244;
+    }
+
+    35% {
+      fill: #ed1868;
+    }
+
+    40% {
+      fill: #d5078e;
+    }
+
+    45% {
+      fill: #b601b3;
+    }
+
+    50% {
+      fill: #9106d3;
+    }
+
+    55% {
+      fill: #6b16ec;
+    }
+
+    60% {
+      fill: #472ffa;
+    }
+
+    65% {
+      fill: #2850fe;
+    }
+
+    70% {
+      fill: #1175f7;
+    }
+
+    75% {
+      fill: #039be5;
+    }
+
+    80% {
+      fill: #01beca;
+    }
+
+    85% {
+      fill: #0adca8;
+    }
+
+    90% {
+      fill: #1df283;
+    }
+
+    95% {
+      fill: #3afd5d;
+    }
+
+    100% {
+      fill: #5cfd3a;
+    }
+}
+
+@keyframes anim-color-cycle {
+    0% {
+      fill: #80f31f;
+    }
+
+    5% {
+      fill: #a5de0b;
+    }
+
+    10% {
+      fill: #c7c101;
+    }
+
+    15% {
+      fill: #e39e03;
+    }
+
+    20% {
+      fill: #f6780f;
+    }
+
+    25% {
+      fill: #fe5326;
+    }
+
+    30% {
+      fill: #fb3244;
+    }
+
+    35% {
+      fill: #ed1868;
+    }
+
+    40% {
+      fill: #d5078e;
+    }
+
+    45% {
+      fill: #b601b3;
+    }
+
+    50% {
+      fill: #9106d3;
+    }
+
+    55% {
+      fill: #6b16ec;
+    }
+
+    60% {
+      fill: #472ffa;
+    }
+
+    65% {
+      fill: #2850fe;
+    }
+
+    70% {
+      fill: #1175f7;
+    }
+
+    75% {
+      fill: #039be5;
+    }
+
+    80% {
+      fill: #01beca;
+    }
+
+    85% {
+      fill: #0adca8;
+    }
+
+    90% {
+      fill: #1df283;
+    }
+
+    95% {
+      fill: #3afd5d;
+    }
+
+    100% {
+      fill: #5cfd3a;
+    }
+}
+}
+
+.emotion-0:hover svg path:nth-of-type(2) {
+  -webkit-animation: none;
+  animation: none;
+}
+
+@media (min-width:480px) {
+  .emotion-0:hover svg path:nth-of-type(2) {
+    -webkit-animation: anim-octoarm 700ms ease-out infinite;
+    animation: anim-octoarm 700ms ease-out infinite;
+  }
+
+@-webkit-keyframes anim-octoarm {
+    0%, 75%, 100% {
+      -webkit-transform: rotate(0);
+      -ms-transform: rotate(0);
+      transform: rotate(0);
+    }
+
+    35% {
+      -webkit-transform: rotate(-25deg);
+      -ms-transform: rotate(-25deg);
+      transform: rotate(-25deg);
+    }
+
+    85% {
+      -webkit-transform: rotate(10deg);
+      -ms-transform: rotate(10deg);
+      transform: rotate(10deg);
+    }
+}
+
+@keyframes anim-octoarm {
+    0%, 75%, 100% {
+      -webkit-transform: rotate(0);
+      -ms-transform: rotate(0);
+      transform: rotate(0);
+    }
+
+    35% {
+      -webkit-transform: rotate(-25deg);
+      -ms-transform: rotate(-25deg);
+      transform: rotate(-25deg);
+    }
+
+    85% {
+      -webkit-transform: rotate(10deg);
+      -ms-transform: rotate(10deg);
+      transform: rotate(10deg);
+    }
+}
+}
+
+<body>
     <div>
       <a
         aria-label="View source on GitHub"
-        class="css-ux0sdd"
+        class="github-corner emotion-0"
         color="rgb(255, 255, 255)"
         fill="rgb(0, 0, 0)"
         href="https://github.com/omega-station/resume-spa"
@@ -586,10 +3764,298 @@ Object {
       </a>
     </div>
   </body>,
-  "container": <div>
+  "container": .emotion-0 {
+  position: fixed;
+  top: 0;
+  right: 0;
+  border: 0 !important;
+  z-index: 1000;
+}
+
+.emotion-0 svg {
+  -webkit-transition: width 300ms ease-in-out;
+  transition: width 300ms ease-in-out;
+  display: block;
+  width: 60px;
+}
+
+@media (min-width:640px) {
+  .emotion-0 svg {
+    width: 100px;
+  }
+}
+
+@media (min-width:1024px) {
+  .emotion-0 svg {
+    width: 140px;
+  }
+}
+
+.emotion-0 svg path {
+  -webkit-transition: fill 300ms ease-out;
+  transition: fill 300ms ease-out;
+}
+
+.emotion-0 svg path:nth-of-type(1) {
+  fill: rgb(0,0,0);
+}
+
+.emotion-0 svg path:nth-of-type(2) {
+  -webkit-transform-origin: 130px 106px;
+  -ms-transform-origin: 130px 106px;
+  transform-origin: 130px 106px;
+}
+
+.emotion-0 svg path:nth-of-type(2),
+.emotion-0 svg path:nth-of-type(3) {
+  fill: rgb(255,255,255);
+}
+
+.emotion-0:hover svg path:nth-of-type(2),
+.emotion-0:hover svg path:nth-of-type(3) {
+  fill: rgb(255,255,255);
+}
+
+.emotion-0:hover svg path:nth-of-type(1) {
+  -webkit-animation: none;
+  animation: none;
+}
+
+@media (min-width:480px) {
+  .emotion-0:hover svg path:nth-of-type(1) {
+    -webkit-animation: anim-color-cycle 800ms infinite;
+    animation: anim-color-cycle 800ms infinite;
+  }
+
+@-webkit-keyframes anim-color-cycle {
+    0% {
+      fill: #80f31f;
+    }
+
+    5% {
+      fill: #a5de0b;
+    }
+
+    10% {
+      fill: #c7c101;
+    }
+
+    15% {
+      fill: #e39e03;
+    }
+
+    20% {
+      fill: #f6780f;
+    }
+
+    25% {
+      fill: #fe5326;
+    }
+
+    30% {
+      fill: #fb3244;
+    }
+
+    35% {
+      fill: #ed1868;
+    }
+
+    40% {
+      fill: #d5078e;
+    }
+
+    45% {
+      fill: #b601b3;
+    }
+
+    50% {
+      fill: #9106d3;
+    }
+
+    55% {
+      fill: #6b16ec;
+    }
+
+    60% {
+      fill: #472ffa;
+    }
+
+    65% {
+      fill: #2850fe;
+    }
+
+    70% {
+      fill: #1175f7;
+    }
+
+    75% {
+      fill: #039be5;
+    }
+
+    80% {
+      fill: #01beca;
+    }
+
+    85% {
+      fill: #0adca8;
+    }
+
+    90% {
+      fill: #1df283;
+    }
+
+    95% {
+      fill: #3afd5d;
+    }
+
+    100% {
+      fill: #5cfd3a;
+    }
+}
+
+@keyframes anim-color-cycle {
+    0% {
+      fill: #80f31f;
+    }
+
+    5% {
+      fill: #a5de0b;
+    }
+
+    10% {
+      fill: #c7c101;
+    }
+
+    15% {
+      fill: #e39e03;
+    }
+
+    20% {
+      fill: #f6780f;
+    }
+
+    25% {
+      fill: #fe5326;
+    }
+
+    30% {
+      fill: #fb3244;
+    }
+
+    35% {
+      fill: #ed1868;
+    }
+
+    40% {
+      fill: #d5078e;
+    }
+
+    45% {
+      fill: #b601b3;
+    }
+
+    50% {
+      fill: #9106d3;
+    }
+
+    55% {
+      fill: #6b16ec;
+    }
+
+    60% {
+      fill: #472ffa;
+    }
+
+    65% {
+      fill: #2850fe;
+    }
+
+    70% {
+      fill: #1175f7;
+    }
+
+    75% {
+      fill: #039be5;
+    }
+
+    80% {
+      fill: #01beca;
+    }
+
+    85% {
+      fill: #0adca8;
+    }
+
+    90% {
+      fill: #1df283;
+    }
+
+    95% {
+      fill: #3afd5d;
+    }
+
+    100% {
+      fill: #5cfd3a;
+    }
+}
+}
+
+.emotion-0:hover svg path:nth-of-type(2) {
+  -webkit-animation: none;
+  animation: none;
+}
+
+@media (min-width:480px) {
+  .emotion-0:hover svg path:nth-of-type(2) {
+    -webkit-animation: anim-octoarm 700ms ease-out infinite;
+    animation: anim-octoarm 700ms ease-out infinite;
+  }
+
+@-webkit-keyframes anim-octoarm {
+    0%, 75%, 100% {
+      -webkit-transform: rotate(0);
+      -ms-transform: rotate(0);
+      transform: rotate(0);
+    }
+
+    35% {
+      -webkit-transform: rotate(-25deg);
+      -ms-transform: rotate(-25deg);
+      transform: rotate(-25deg);
+    }
+
+    85% {
+      -webkit-transform: rotate(10deg);
+      -ms-transform: rotate(10deg);
+      transform: rotate(10deg);
+    }
+}
+
+@keyframes anim-octoarm {
+    0%, 75%, 100% {
+      -webkit-transform: rotate(0);
+      -ms-transform: rotate(0);
+      transform: rotate(0);
+    }
+
+    35% {
+      -webkit-transform: rotate(-25deg);
+      -ms-transform: rotate(-25deg);
+      transform: rotate(-25deg);
+    }
+
+    85% {
+      -webkit-transform: rotate(10deg);
+      -ms-transform: rotate(10deg);
+      transform: rotate(10deg);
+    }
+}
+}
+
+<div>
     <a
       aria-label="View source on GitHub"
-      class="css-ux0sdd"
+      class="github-corner emotion-0"
       color="rgb(255, 255, 255)"
       fill="rgb(0, 0, 0)"
       href="https://github.com/omega-station/resume-spa"
@@ -669,11 +4135,299 @@ Object {
 exports[`GitHubCorner should render with isSmall={true} prop 1`] = `
 Object {
   "asFragment": [Function],
-  "baseElement": <body>
+  "baseElement": .emotion-0 {
+  position: fixed;
+  top: 0;
+  right: 0;
+  border: 0 !important;
+  z-index: 1000;
+}
+
+.emotion-0 svg {
+  -webkit-transition: width 300ms ease-in-out;
+  transition: width 300ms ease-in-out;
+  display: block;
+  width: 60px;
+}
+
+@media (min-width:640px) {
+  .emotion-0 svg {
+    width: 100px;
+  }
+}
+
+@media (min-width:1024px) {
+  .emotion-0 svg {
+    width: 140px;
+  }
+}
+
+.emotion-0 svg path {
+  -webkit-transition: fill 300ms ease-out;
+  transition: fill 300ms ease-out;
+}
+
+.emotion-0 svg path:nth-of-type(1) {
+  fill: rgb(0,0,0);
+}
+
+.emotion-0 svg path:nth-of-type(2) {
+  -webkit-transform-origin: 130px 106px;
+  -ms-transform-origin: 130px 106px;
+  transform-origin: 130px 106px;
+}
+
+.emotion-0 svg path:nth-of-type(2),
+.emotion-0 svg path:nth-of-type(3) {
+  fill: rgb(255,255,255);
+}
+
+.emotion-0:hover svg path:nth-of-type(2),
+.emotion-0:hover svg path:nth-of-type(3) {
+  fill: rgb(255,255,255);
+}
+
+.emotion-0:hover svg path:nth-of-type(1) {
+  -webkit-animation: none;
+  animation: none;
+}
+
+@media (min-width:480px) {
+  .emotion-0:hover svg path:nth-of-type(1) {
+    -webkit-animation: anim-color-cycle 800ms infinite;
+    animation: anim-color-cycle 800ms infinite;
+  }
+
+@-webkit-keyframes anim-color-cycle {
+    0% {
+      fill: #80f31f;
+    }
+
+    5% {
+      fill: #a5de0b;
+    }
+
+    10% {
+      fill: #c7c101;
+    }
+
+    15% {
+      fill: #e39e03;
+    }
+
+    20% {
+      fill: #f6780f;
+    }
+
+    25% {
+      fill: #fe5326;
+    }
+
+    30% {
+      fill: #fb3244;
+    }
+
+    35% {
+      fill: #ed1868;
+    }
+
+    40% {
+      fill: #d5078e;
+    }
+
+    45% {
+      fill: #b601b3;
+    }
+
+    50% {
+      fill: #9106d3;
+    }
+
+    55% {
+      fill: #6b16ec;
+    }
+
+    60% {
+      fill: #472ffa;
+    }
+
+    65% {
+      fill: #2850fe;
+    }
+
+    70% {
+      fill: #1175f7;
+    }
+
+    75% {
+      fill: #039be5;
+    }
+
+    80% {
+      fill: #01beca;
+    }
+
+    85% {
+      fill: #0adca8;
+    }
+
+    90% {
+      fill: #1df283;
+    }
+
+    95% {
+      fill: #3afd5d;
+    }
+
+    100% {
+      fill: #5cfd3a;
+    }
+}
+
+@keyframes anim-color-cycle {
+    0% {
+      fill: #80f31f;
+    }
+
+    5% {
+      fill: #a5de0b;
+    }
+
+    10% {
+      fill: #c7c101;
+    }
+
+    15% {
+      fill: #e39e03;
+    }
+
+    20% {
+      fill: #f6780f;
+    }
+
+    25% {
+      fill: #fe5326;
+    }
+
+    30% {
+      fill: #fb3244;
+    }
+
+    35% {
+      fill: #ed1868;
+    }
+
+    40% {
+      fill: #d5078e;
+    }
+
+    45% {
+      fill: #b601b3;
+    }
+
+    50% {
+      fill: #9106d3;
+    }
+
+    55% {
+      fill: #6b16ec;
+    }
+
+    60% {
+      fill: #472ffa;
+    }
+
+    65% {
+      fill: #2850fe;
+    }
+
+    70% {
+      fill: #1175f7;
+    }
+
+    75% {
+      fill: #039be5;
+    }
+
+    80% {
+      fill: #01beca;
+    }
+
+    85% {
+      fill: #0adca8;
+    }
+
+    90% {
+      fill: #1df283;
+    }
+
+    95% {
+      fill: #3afd5d;
+    }
+
+    100% {
+      fill: #5cfd3a;
+    }
+}
+}
+
+.emotion-0:hover svg path:nth-of-type(2) {
+  -webkit-animation: none;
+  animation: none;
+}
+
+@media (min-width:480px) {
+  .emotion-0:hover svg path:nth-of-type(2) {
+    -webkit-animation: anim-octoarm 700ms ease-out infinite;
+    animation: anim-octoarm 700ms ease-out infinite;
+  }
+
+@-webkit-keyframes anim-octoarm {
+    0%, 75%, 100% {
+      -webkit-transform: rotate(0);
+      -ms-transform: rotate(0);
+      transform: rotate(0);
+    }
+
+    35% {
+      -webkit-transform: rotate(-25deg);
+      -ms-transform: rotate(-25deg);
+      transform: rotate(-25deg);
+    }
+
+    85% {
+      -webkit-transform: rotate(10deg);
+      -ms-transform: rotate(10deg);
+      transform: rotate(10deg);
+    }
+}
+
+@keyframes anim-octoarm {
+    0%, 75%, 100% {
+      -webkit-transform: rotate(0);
+      -ms-transform: rotate(0);
+      transform: rotate(0);
+    }
+
+    35% {
+      -webkit-transform: rotate(-25deg);
+      -ms-transform: rotate(-25deg);
+      transform: rotate(-25deg);
+    }
+
+    85% {
+      -webkit-transform: rotate(10deg);
+      -ms-transform: rotate(10deg);
+      transform: rotate(10deg);
+    }
+}
+}
+
+<body>
     <div>
       <a
         aria-label="View source on GitHub"
-        class="css-ux0sdd"
+        class="github-corner emotion-0"
         color="rgb(255, 255, 255)"
         fill="rgb(0, 0, 0)"
         href="https://github.com/omega-station/resume-spa"
@@ -697,10 +4451,298 @@ Object {
       </a>
     </div>
   </body>,
-  "container": <div>
+  "container": .emotion-0 {
+  position: fixed;
+  top: 0;
+  right: 0;
+  border: 0 !important;
+  z-index: 1000;
+}
+
+.emotion-0 svg {
+  -webkit-transition: width 300ms ease-in-out;
+  transition: width 300ms ease-in-out;
+  display: block;
+  width: 60px;
+}
+
+@media (min-width:640px) {
+  .emotion-0 svg {
+    width: 100px;
+  }
+}
+
+@media (min-width:1024px) {
+  .emotion-0 svg {
+    width: 140px;
+  }
+}
+
+.emotion-0 svg path {
+  -webkit-transition: fill 300ms ease-out;
+  transition: fill 300ms ease-out;
+}
+
+.emotion-0 svg path:nth-of-type(1) {
+  fill: rgb(0,0,0);
+}
+
+.emotion-0 svg path:nth-of-type(2) {
+  -webkit-transform-origin: 130px 106px;
+  -ms-transform-origin: 130px 106px;
+  transform-origin: 130px 106px;
+}
+
+.emotion-0 svg path:nth-of-type(2),
+.emotion-0 svg path:nth-of-type(3) {
+  fill: rgb(255,255,255);
+}
+
+.emotion-0:hover svg path:nth-of-type(2),
+.emotion-0:hover svg path:nth-of-type(3) {
+  fill: rgb(255,255,255);
+}
+
+.emotion-0:hover svg path:nth-of-type(1) {
+  -webkit-animation: none;
+  animation: none;
+}
+
+@media (min-width:480px) {
+  .emotion-0:hover svg path:nth-of-type(1) {
+    -webkit-animation: anim-color-cycle 800ms infinite;
+    animation: anim-color-cycle 800ms infinite;
+  }
+
+@-webkit-keyframes anim-color-cycle {
+    0% {
+      fill: #80f31f;
+    }
+
+    5% {
+      fill: #a5de0b;
+    }
+
+    10% {
+      fill: #c7c101;
+    }
+
+    15% {
+      fill: #e39e03;
+    }
+
+    20% {
+      fill: #f6780f;
+    }
+
+    25% {
+      fill: #fe5326;
+    }
+
+    30% {
+      fill: #fb3244;
+    }
+
+    35% {
+      fill: #ed1868;
+    }
+
+    40% {
+      fill: #d5078e;
+    }
+
+    45% {
+      fill: #b601b3;
+    }
+
+    50% {
+      fill: #9106d3;
+    }
+
+    55% {
+      fill: #6b16ec;
+    }
+
+    60% {
+      fill: #472ffa;
+    }
+
+    65% {
+      fill: #2850fe;
+    }
+
+    70% {
+      fill: #1175f7;
+    }
+
+    75% {
+      fill: #039be5;
+    }
+
+    80% {
+      fill: #01beca;
+    }
+
+    85% {
+      fill: #0adca8;
+    }
+
+    90% {
+      fill: #1df283;
+    }
+
+    95% {
+      fill: #3afd5d;
+    }
+
+    100% {
+      fill: #5cfd3a;
+    }
+}
+
+@keyframes anim-color-cycle {
+    0% {
+      fill: #80f31f;
+    }
+
+    5% {
+      fill: #a5de0b;
+    }
+
+    10% {
+      fill: #c7c101;
+    }
+
+    15% {
+      fill: #e39e03;
+    }
+
+    20% {
+      fill: #f6780f;
+    }
+
+    25% {
+      fill: #fe5326;
+    }
+
+    30% {
+      fill: #fb3244;
+    }
+
+    35% {
+      fill: #ed1868;
+    }
+
+    40% {
+      fill: #d5078e;
+    }
+
+    45% {
+      fill: #b601b3;
+    }
+
+    50% {
+      fill: #9106d3;
+    }
+
+    55% {
+      fill: #6b16ec;
+    }
+
+    60% {
+      fill: #472ffa;
+    }
+
+    65% {
+      fill: #2850fe;
+    }
+
+    70% {
+      fill: #1175f7;
+    }
+
+    75% {
+      fill: #039be5;
+    }
+
+    80% {
+      fill: #01beca;
+    }
+
+    85% {
+      fill: #0adca8;
+    }
+
+    90% {
+      fill: #1df283;
+    }
+
+    95% {
+      fill: #3afd5d;
+    }
+
+    100% {
+      fill: #5cfd3a;
+    }
+}
+}
+
+.emotion-0:hover svg path:nth-of-type(2) {
+  -webkit-animation: none;
+  animation: none;
+}
+
+@media (min-width:480px) {
+  .emotion-0:hover svg path:nth-of-type(2) {
+    -webkit-animation: anim-octoarm 700ms ease-out infinite;
+    animation: anim-octoarm 700ms ease-out infinite;
+  }
+
+@-webkit-keyframes anim-octoarm {
+    0%, 75%, 100% {
+      -webkit-transform: rotate(0);
+      -ms-transform: rotate(0);
+      transform: rotate(0);
+    }
+
+    35% {
+      -webkit-transform: rotate(-25deg);
+      -ms-transform: rotate(-25deg);
+      transform: rotate(-25deg);
+    }
+
+    85% {
+      -webkit-transform: rotate(10deg);
+      -ms-transform: rotate(10deg);
+      transform: rotate(10deg);
+    }
+}
+
+@keyframes anim-octoarm {
+    0%, 75%, 100% {
+      -webkit-transform: rotate(0);
+      -ms-transform: rotate(0);
+      transform: rotate(0);
+    }
+
+    35% {
+      -webkit-transform: rotate(-25deg);
+      -ms-transform: rotate(-25deg);
+      transform: rotate(-25deg);
+    }
+
+    85% {
+      -webkit-transform: rotate(10deg);
+      -ms-transform: rotate(10deg);
+      transform: rotate(10deg);
+    }
+}
+}
+
+<div>
     <a
       aria-label="View source on GitHub"
-      class="css-ux0sdd"
+      class="github-corner emotion-0"
       color="rgb(255, 255, 255)"
       fill="rgb(0, 0, 0)"
       href="https://github.com/omega-station/resume-spa"
@@ -780,11 +4822,299 @@ Object {
 exports[`GitHubCorner should render with url={default} prop 1`] = `
 Object {
   "asFragment": [Function],
-  "baseElement": <body>
+  "baseElement": .emotion-0 {
+  position: fixed;
+  top: 0;
+  right: 0;
+  border: 0 !important;
+  z-index: 1000;
+}
+
+.emotion-0 svg {
+  -webkit-transition: width 300ms ease-in-out;
+  transition: width 300ms ease-in-out;
+  display: block;
+  width: 60px;
+}
+
+@media (min-width:640px) {
+  .emotion-0 svg {
+    width: 100px;
+  }
+}
+
+@media (min-width:1024px) {
+  .emotion-0 svg {
+    width: 140px;
+  }
+}
+
+.emotion-0 svg path {
+  -webkit-transition: fill 300ms ease-out;
+  transition: fill 300ms ease-out;
+}
+
+.emotion-0 svg path:nth-of-type(1) {
+  fill: rgb(0,0,0);
+}
+
+.emotion-0 svg path:nth-of-type(2) {
+  -webkit-transform-origin: 130px 106px;
+  -ms-transform-origin: 130px 106px;
+  transform-origin: 130px 106px;
+}
+
+.emotion-0 svg path:nth-of-type(2),
+.emotion-0 svg path:nth-of-type(3) {
+  fill: rgb(255,255,255);
+}
+
+.emotion-0:hover svg path:nth-of-type(2),
+.emotion-0:hover svg path:nth-of-type(3) {
+  fill: rgb(255,255,255);
+}
+
+.emotion-0:hover svg path:nth-of-type(1) {
+  -webkit-animation: none;
+  animation: none;
+}
+
+@media (min-width:480px) {
+  .emotion-0:hover svg path:nth-of-type(1) {
+    -webkit-animation: anim-color-cycle 800ms infinite;
+    animation: anim-color-cycle 800ms infinite;
+  }
+
+@-webkit-keyframes anim-color-cycle {
+    0% {
+      fill: #80f31f;
+    }
+
+    5% {
+      fill: #a5de0b;
+    }
+
+    10% {
+      fill: #c7c101;
+    }
+
+    15% {
+      fill: #e39e03;
+    }
+
+    20% {
+      fill: #f6780f;
+    }
+
+    25% {
+      fill: #fe5326;
+    }
+
+    30% {
+      fill: #fb3244;
+    }
+
+    35% {
+      fill: #ed1868;
+    }
+
+    40% {
+      fill: #d5078e;
+    }
+
+    45% {
+      fill: #b601b3;
+    }
+
+    50% {
+      fill: #9106d3;
+    }
+
+    55% {
+      fill: #6b16ec;
+    }
+
+    60% {
+      fill: #472ffa;
+    }
+
+    65% {
+      fill: #2850fe;
+    }
+
+    70% {
+      fill: #1175f7;
+    }
+
+    75% {
+      fill: #039be5;
+    }
+
+    80% {
+      fill: #01beca;
+    }
+
+    85% {
+      fill: #0adca8;
+    }
+
+    90% {
+      fill: #1df283;
+    }
+
+    95% {
+      fill: #3afd5d;
+    }
+
+    100% {
+      fill: #5cfd3a;
+    }
+}
+
+@keyframes anim-color-cycle {
+    0% {
+      fill: #80f31f;
+    }
+
+    5% {
+      fill: #a5de0b;
+    }
+
+    10% {
+      fill: #c7c101;
+    }
+
+    15% {
+      fill: #e39e03;
+    }
+
+    20% {
+      fill: #f6780f;
+    }
+
+    25% {
+      fill: #fe5326;
+    }
+
+    30% {
+      fill: #fb3244;
+    }
+
+    35% {
+      fill: #ed1868;
+    }
+
+    40% {
+      fill: #d5078e;
+    }
+
+    45% {
+      fill: #b601b3;
+    }
+
+    50% {
+      fill: #9106d3;
+    }
+
+    55% {
+      fill: #6b16ec;
+    }
+
+    60% {
+      fill: #472ffa;
+    }
+
+    65% {
+      fill: #2850fe;
+    }
+
+    70% {
+      fill: #1175f7;
+    }
+
+    75% {
+      fill: #039be5;
+    }
+
+    80% {
+      fill: #01beca;
+    }
+
+    85% {
+      fill: #0adca8;
+    }
+
+    90% {
+      fill: #1df283;
+    }
+
+    95% {
+      fill: #3afd5d;
+    }
+
+    100% {
+      fill: #5cfd3a;
+    }
+}
+}
+
+.emotion-0:hover svg path:nth-of-type(2) {
+  -webkit-animation: none;
+  animation: none;
+}
+
+@media (min-width:480px) {
+  .emotion-0:hover svg path:nth-of-type(2) {
+    -webkit-animation: anim-octoarm 700ms ease-out infinite;
+    animation: anim-octoarm 700ms ease-out infinite;
+  }
+
+@-webkit-keyframes anim-octoarm {
+    0%, 75%, 100% {
+      -webkit-transform: rotate(0);
+      -ms-transform: rotate(0);
+      transform: rotate(0);
+    }
+
+    35% {
+      -webkit-transform: rotate(-25deg);
+      -ms-transform: rotate(-25deg);
+      transform: rotate(-25deg);
+    }
+
+    85% {
+      -webkit-transform: rotate(10deg);
+      -ms-transform: rotate(10deg);
+      transform: rotate(10deg);
+    }
+}
+
+@keyframes anim-octoarm {
+    0%, 75%, 100% {
+      -webkit-transform: rotate(0);
+      -ms-transform: rotate(0);
+      transform: rotate(0);
+    }
+
+    35% {
+      -webkit-transform: rotate(-25deg);
+      -ms-transform: rotate(-25deg);
+      transform: rotate(-25deg);
+    }
+
+    85% {
+      -webkit-transform: rotate(10deg);
+      -ms-transform: rotate(10deg);
+      transform: rotate(10deg);
+    }
+}
+}
+
+<body>
     <div>
       <a
         aria-label="View source on GitHub"
-        class="css-ux0sdd"
+        class="github-corner emotion-0"
         color="rgb(255, 255, 255)"
         fill="rgb(0, 0, 0)"
         href="https://github.com/omega-station/resume-spa"
@@ -808,10 +5138,298 @@ Object {
       </a>
     </div>
   </body>,
-  "container": <div>
+  "container": .emotion-0 {
+  position: fixed;
+  top: 0;
+  right: 0;
+  border: 0 !important;
+  z-index: 1000;
+}
+
+.emotion-0 svg {
+  -webkit-transition: width 300ms ease-in-out;
+  transition: width 300ms ease-in-out;
+  display: block;
+  width: 60px;
+}
+
+@media (min-width:640px) {
+  .emotion-0 svg {
+    width: 100px;
+  }
+}
+
+@media (min-width:1024px) {
+  .emotion-0 svg {
+    width: 140px;
+  }
+}
+
+.emotion-0 svg path {
+  -webkit-transition: fill 300ms ease-out;
+  transition: fill 300ms ease-out;
+}
+
+.emotion-0 svg path:nth-of-type(1) {
+  fill: rgb(0,0,0);
+}
+
+.emotion-0 svg path:nth-of-type(2) {
+  -webkit-transform-origin: 130px 106px;
+  -ms-transform-origin: 130px 106px;
+  transform-origin: 130px 106px;
+}
+
+.emotion-0 svg path:nth-of-type(2),
+.emotion-0 svg path:nth-of-type(3) {
+  fill: rgb(255,255,255);
+}
+
+.emotion-0:hover svg path:nth-of-type(2),
+.emotion-0:hover svg path:nth-of-type(3) {
+  fill: rgb(255,255,255);
+}
+
+.emotion-0:hover svg path:nth-of-type(1) {
+  -webkit-animation: none;
+  animation: none;
+}
+
+@media (min-width:480px) {
+  .emotion-0:hover svg path:nth-of-type(1) {
+    -webkit-animation: anim-color-cycle 800ms infinite;
+    animation: anim-color-cycle 800ms infinite;
+  }
+
+@-webkit-keyframes anim-color-cycle {
+    0% {
+      fill: #80f31f;
+    }
+
+    5% {
+      fill: #a5de0b;
+    }
+
+    10% {
+      fill: #c7c101;
+    }
+
+    15% {
+      fill: #e39e03;
+    }
+
+    20% {
+      fill: #f6780f;
+    }
+
+    25% {
+      fill: #fe5326;
+    }
+
+    30% {
+      fill: #fb3244;
+    }
+
+    35% {
+      fill: #ed1868;
+    }
+
+    40% {
+      fill: #d5078e;
+    }
+
+    45% {
+      fill: #b601b3;
+    }
+
+    50% {
+      fill: #9106d3;
+    }
+
+    55% {
+      fill: #6b16ec;
+    }
+
+    60% {
+      fill: #472ffa;
+    }
+
+    65% {
+      fill: #2850fe;
+    }
+
+    70% {
+      fill: #1175f7;
+    }
+
+    75% {
+      fill: #039be5;
+    }
+
+    80% {
+      fill: #01beca;
+    }
+
+    85% {
+      fill: #0adca8;
+    }
+
+    90% {
+      fill: #1df283;
+    }
+
+    95% {
+      fill: #3afd5d;
+    }
+
+    100% {
+      fill: #5cfd3a;
+    }
+}
+
+@keyframes anim-color-cycle {
+    0% {
+      fill: #80f31f;
+    }
+
+    5% {
+      fill: #a5de0b;
+    }
+
+    10% {
+      fill: #c7c101;
+    }
+
+    15% {
+      fill: #e39e03;
+    }
+
+    20% {
+      fill: #f6780f;
+    }
+
+    25% {
+      fill: #fe5326;
+    }
+
+    30% {
+      fill: #fb3244;
+    }
+
+    35% {
+      fill: #ed1868;
+    }
+
+    40% {
+      fill: #d5078e;
+    }
+
+    45% {
+      fill: #b601b3;
+    }
+
+    50% {
+      fill: #9106d3;
+    }
+
+    55% {
+      fill: #6b16ec;
+    }
+
+    60% {
+      fill: #472ffa;
+    }
+
+    65% {
+      fill: #2850fe;
+    }
+
+    70% {
+      fill: #1175f7;
+    }
+
+    75% {
+      fill: #039be5;
+    }
+
+    80% {
+      fill: #01beca;
+    }
+
+    85% {
+      fill: #0adca8;
+    }
+
+    90% {
+      fill: #1df283;
+    }
+
+    95% {
+      fill: #3afd5d;
+    }
+
+    100% {
+      fill: #5cfd3a;
+    }
+}
+}
+
+.emotion-0:hover svg path:nth-of-type(2) {
+  -webkit-animation: none;
+  animation: none;
+}
+
+@media (min-width:480px) {
+  .emotion-0:hover svg path:nth-of-type(2) {
+    -webkit-animation: anim-octoarm 700ms ease-out infinite;
+    animation: anim-octoarm 700ms ease-out infinite;
+  }
+
+@-webkit-keyframes anim-octoarm {
+    0%, 75%, 100% {
+      -webkit-transform: rotate(0);
+      -ms-transform: rotate(0);
+      transform: rotate(0);
+    }
+
+    35% {
+      -webkit-transform: rotate(-25deg);
+      -ms-transform: rotate(-25deg);
+      transform: rotate(-25deg);
+    }
+
+    85% {
+      -webkit-transform: rotate(10deg);
+      -ms-transform: rotate(10deg);
+      transform: rotate(10deg);
+    }
+}
+
+@keyframes anim-octoarm {
+    0%, 75%, 100% {
+      -webkit-transform: rotate(0);
+      -ms-transform: rotate(0);
+      transform: rotate(0);
+    }
+
+    35% {
+      -webkit-transform: rotate(-25deg);
+      -ms-transform: rotate(-25deg);
+      transform: rotate(-25deg);
+    }
+
+    85% {
+      -webkit-transform: rotate(10deg);
+      -ms-transform: rotate(10deg);
+      transform: rotate(10deg);
+    }
+}
+}
+
+<div>
     <a
       aria-label="View source on GitHub"
-      class="css-ux0sdd"
+      class="github-corner emotion-0"
       color="rgb(255, 255, 255)"
       fill="rgb(0, 0, 0)"
       href="https://github.com/omega-station/resume-spa"
@@ -891,11 +5509,299 @@ Object {
 exports[`GitHubCorner should render without props 1`] = `
 Object {
   "asFragment": [Function],
-  "baseElement": <body>
+  "baseElement": .emotion-0 {
+  position: fixed;
+  top: 0;
+  right: 0;
+  border: 0 !important;
+  z-index: 1000;
+}
+
+.emotion-0 svg {
+  -webkit-transition: width 300ms ease-in-out;
+  transition: width 300ms ease-in-out;
+  display: block;
+  width: 60px;
+}
+
+@media (min-width:640px) {
+  .emotion-0 svg {
+    width: 100px;
+  }
+}
+
+@media (min-width:1024px) {
+  .emotion-0 svg {
+    width: 140px;
+  }
+}
+
+.emotion-0 svg path {
+  -webkit-transition: fill 300ms ease-out;
+  transition: fill 300ms ease-out;
+}
+
+.emotion-0 svg path:nth-of-type(1) {
+  fill: rgb(0,0,0);
+}
+
+.emotion-0 svg path:nth-of-type(2) {
+  -webkit-transform-origin: 130px 106px;
+  -ms-transform-origin: 130px 106px;
+  transform-origin: 130px 106px;
+}
+
+.emotion-0 svg path:nth-of-type(2),
+.emotion-0 svg path:nth-of-type(3) {
+  fill: rgb(255,255,255);
+}
+
+.emotion-0:hover svg path:nth-of-type(2),
+.emotion-0:hover svg path:nth-of-type(3) {
+  fill: rgb(255,255,255);
+}
+
+.emotion-0:hover svg path:nth-of-type(1) {
+  -webkit-animation: none;
+  animation: none;
+}
+
+@media (min-width:480px) {
+  .emotion-0:hover svg path:nth-of-type(1) {
+    -webkit-animation: anim-color-cycle 800ms infinite;
+    animation: anim-color-cycle 800ms infinite;
+  }
+
+@-webkit-keyframes anim-color-cycle {
+    0% {
+      fill: #80f31f;
+    }
+
+    5% {
+      fill: #a5de0b;
+    }
+
+    10% {
+      fill: #c7c101;
+    }
+
+    15% {
+      fill: #e39e03;
+    }
+
+    20% {
+      fill: #f6780f;
+    }
+
+    25% {
+      fill: #fe5326;
+    }
+
+    30% {
+      fill: #fb3244;
+    }
+
+    35% {
+      fill: #ed1868;
+    }
+
+    40% {
+      fill: #d5078e;
+    }
+
+    45% {
+      fill: #b601b3;
+    }
+
+    50% {
+      fill: #9106d3;
+    }
+
+    55% {
+      fill: #6b16ec;
+    }
+
+    60% {
+      fill: #472ffa;
+    }
+
+    65% {
+      fill: #2850fe;
+    }
+
+    70% {
+      fill: #1175f7;
+    }
+
+    75% {
+      fill: #039be5;
+    }
+
+    80% {
+      fill: #01beca;
+    }
+
+    85% {
+      fill: #0adca8;
+    }
+
+    90% {
+      fill: #1df283;
+    }
+
+    95% {
+      fill: #3afd5d;
+    }
+
+    100% {
+      fill: #5cfd3a;
+    }
+}
+
+@keyframes anim-color-cycle {
+    0% {
+      fill: #80f31f;
+    }
+
+    5% {
+      fill: #a5de0b;
+    }
+
+    10% {
+      fill: #c7c101;
+    }
+
+    15% {
+      fill: #e39e03;
+    }
+
+    20% {
+      fill: #f6780f;
+    }
+
+    25% {
+      fill: #fe5326;
+    }
+
+    30% {
+      fill: #fb3244;
+    }
+
+    35% {
+      fill: #ed1868;
+    }
+
+    40% {
+      fill: #d5078e;
+    }
+
+    45% {
+      fill: #b601b3;
+    }
+
+    50% {
+      fill: #9106d3;
+    }
+
+    55% {
+      fill: #6b16ec;
+    }
+
+    60% {
+      fill: #472ffa;
+    }
+
+    65% {
+      fill: #2850fe;
+    }
+
+    70% {
+      fill: #1175f7;
+    }
+
+    75% {
+      fill: #039be5;
+    }
+
+    80% {
+      fill: #01beca;
+    }
+
+    85% {
+      fill: #0adca8;
+    }
+
+    90% {
+      fill: #1df283;
+    }
+
+    95% {
+      fill: #3afd5d;
+    }
+
+    100% {
+      fill: #5cfd3a;
+    }
+}
+}
+
+.emotion-0:hover svg path:nth-of-type(2) {
+  -webkit-animation: none;
+  animation: none;
+}
+
+@media (min-width:480px) {
+  .emotion-0:hover svg path:nth-of-type(2) {
+    -webkit-animation: anim-octoarm 700ms ease-out infinite;
+    animation: anim-octoarm 700ms ease-out infinite;
+  }
+
+@-webkit-keyframes anim-octoarm {
+    0%, 75%, 100% {
+      -webkit-transform: rotate(0);
+      -ms-transform: rotate(0);
+      transform: rotate(0);
+    }
+
+    35% {
+      -webkit-transform: rotate(-25deg);
+      -ms-transform: rotate(-25deg);
+      transform: rotate(-25deg);
+    }
+
+    85% {
+      -webkit-transform: rotate(10deg);
+      -ms-transform: rotate(10deg);
+      transform: rotate(10deg);
+    }
+}
+
+@keyframes anim-octoarm {
+    0%, 75%, 100% {
+      -webkit-transform: rotate(0);
+      -ms-transform: rotate(0);
+      transform: rotate(0);
+    }
+
+    35% {
+      -webkit-transform: rotate(-25deg);
+      -ms-transform: rotate(-25deg);
+      transform: rotate(-25deg);
+    }
+
+    85% {
+      -webkit-transform: rotate(10deg);
+      -ms-transform: rotate(10deg);
+      transform: rotate(10deg);
+    }
+}
+}
+
+<body>
     <div>
       <a
         aria-label="View source on GitHub"
-        class="css-ux0sdd"
+        class="github-corner emotion-0"
         color="rgb(255, 255, 255)"
         fill="rgb(0, 0, 0)"
         href="https://github.com/omega-station/resume-spa"
@@ -919,10 +5825,298 @@ Object {
       </a>
     </div>
   </body>,
-  "container": <div>
+  "container": .emotion-0 {
+  position: fixed;
+  top: 0;
+  right: 0;
+  border: 0 !important;
+  z-index: 1000;
+}
+
+.emotion-0 svg {
+  -webkit-transition: width 300ms ease-in-out;
+  transition: width 300ms ease-in-out;
+  display: block;
+  width: 60px;
+}
+
+@media (min-width:640px) {
+  .emotion-0 svg {
+    width: 100px;
+  }
+}
+
+@media (min-width:1024px) {
+  .emotion-0 svg {
+    width: 140px;
+  }
+}
+
+.emotion-0 svg path {
+  -webkit-transition: fill 300ms ease-out;
+  transition: fill 300ms ease-out;
+}
+
+.emotion-0 svg path:nth-of-type(1) {
+  fill: rgb(0,0,0);
+}
+
+.emotion-0 svg path:nth-of-type(2) {
+  -webkit-transform-origin: 130px 106px;
+  -ms-transform-origin: 130px 106px;
+  transform-origin: 130px 106px;
+}
+
+.emotion-0 svg path:nth-of-type(2),
+.emotion-0 svg path:nth-of-type(3) {
+  fill: rgb(255,255,255);
+}
+
+.emotion-0:hover svg path:nth-of-type(2),
+.emotion-0:hover svg path:nth-of-type(3) {
+  fill: rgb(255,255,255);
+}
+
+.emotion-0:hover svg path:nth-of-type(1) {
+  -webkit-animation: none;
+  animation: none;
+}
+
+@media (min-width:480px) {
+  .emotion-0:hover svg path:nth-of-type(1) {
+    -webkit-animation: anim-color-cycle 800ms infinite;
+    animation: anim-color-cycle 800ms infinite;
+  }
+
+@-webkit-keyframes anim-color-cycle {
+    0% {
+      fill: #80f31f;
+    }
+
+    5% {
+      fill: #a5de0b;
+    }
+
+    10% {
+      fill: #c7c101;
+    }
+
+    15% {
+      fill: #e39e03;
+    }
+
+    20% {
+      fill: #f6780f;
+    }
+
+    25% {
+      fill: #fe5326;
+    }
+
+    30% {
+      fill: #fb3244;
+    }
+
+    35% {
+      fill: #ed1868;
+    }
+
+    40% {
+      fill: #d5078e;
+    }
+
+    45% {
+      fill: #b601b3;
+    }
+
+    50% {
+      fill: #9106d3;
+    }
+
+    55% {
+      fill: #6b16ec;
+    }
+
+    60% {
+      fill: #472ffa;
+    }
+
+    65% {
+      fill: #2850fe;
+    }
+
+    70% {
+      fill: #1175f7;
+    }
+
+    75% {
+      fill: #039be5;
+    }
+
+    80% {
+      fill: #01beca;
+    }
+
+    85% {
+      fill: #0adca8;
+    }
+
+    90% {
+      fill: #1df283;
+    }
+
+    95% {
+      fill: #3afd5d;
+    }
+
+    100% {
+      fill: #5cfd3a;
+    }
+}
+
+@keyframes anim-color-cycle {
+    0% {
+      fill: #80f31f;
+    }
+
+    5% {
+      fill: #a5de0b;
+    }
+
+    10% {
+      fill: #c7c101;
+    }
+
+    15% {
+      fill: #e39e03;
+    }
+
+    20% {
+      fill: #f6780f;
+    }
+
+    25% {
+      fill: #fe5326;
+    }
+
+    30% {
+      fill: #fb3244;
+    }
+
+    35% {
+      fill: #ed1868;
+    }
+
+    40% {
+      fill: #d5078e;
+    }
+
+    45% {
+      fill: #b601b3;
+    }
+
+    50% {
+      fill: #9106d3;
+    }
+
+    55% {
+      fill: #6b16ec;
+    }
+
+    60% {
+      fill: #472ffa;
+    }
+
+    65% {
+      fill: #2850fe;
+    }
+
+    70% {
+      fill: #1175f7;
+    }
+
+    75% {
+      fill: #039be5;
+    }
+
+    80% {
+      fill: #01beca;
+    }
+
+    85% {
+      fill: #0adca8;
+    }
+
+    90% {
+      fill: #1df283;
+    }
+
+    95% {
+      fill: #3afd5d;
+    }
+
+    100% {
+      fill: #5cfd3a;
+    }
+}
+}
+
+.emotion-0:hover svg path:nth-of-type(2) {
+  -webkit-animation: none;
+  animation: none;
+}
+
+@media (min-width:480px) {
+  .emotion-0:hover svg path:nth-of-type(2) {
+    -webkit-animation: anim-octoarm 700ms ease-out infinite;
+    animation: anim-octoarm 700ms ease-out infinite;
+  }
+
+@-webkit-keyframes anim-octoarm {
+    0%, 75%, 100% {
+      -webkit-transform: rotate(0);
+      -ms-transform: rotate(0);
+      transform: rotate(0);
+    }
+
+    35% {
+      -webkit-transform: rotate(-25deg);
+      -ms-transform: rotate(-25deg);
+      transform: rotate(-25deg);
+    }
+
+    85% {
+      -webkit-transform: rotate(10deg);
+      -ms-transform: rotate(10deg);
+      transform: rotate(10deg);
+    }
+}
+
+@keyframes anim-octoarm {
+    0%, 75%, 100% {
+      -webkit-transform: rotate(0);
+      -ms-transform: rotate(0);
+      transform: rotate(0);
+    }
+
+    35% {
+      -webkit-transform: rotate(-25deg);
+      -ms-transform: rotate(-25deg);
+      transform: rotate(-25deg);
+    }
+
+    85% {
+      -webkit-transform: rotate(10deg);
+      -ms-transform: rotate(10deg);
+      transform: rotate(10deg);
+    }
+}
+}
+
+<div>
     <a
       aria-label="View source on GitHub"
-      class="css-ux0sdd"
+      class="github-corner emotion-0"
       color="rgb(255, 255, 255)"
       fill="rgb(0, 0, 0)"
       href="https://github.com/omega-station/resume-spa"

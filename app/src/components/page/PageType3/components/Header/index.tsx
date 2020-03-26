@@ -8,6 +8,7 @@ import defaults from './defaults';
 import { Props } from './definition';
 import { GQL_QUERY } from './graphql';
 import StyledHeader from './style';
+import { getImage } from '../../../../../utility';
 
 const Header = (props: Props): JSX.Element => {
   const { section, isMenuOpen, onClickMenuItem, onClickMenuToggle } = { ...defaults, ...props };
@@ -17,9 +18,8 @@ const Header = (props: Props): JSX.Element => {
   if (error) return <Error />;
 
   const settings: any = data.generalSettings;
-  const images: any = data.options.images.header;
+  const image: any = data.options.pageContent.pagetype3Images[section];
   const sections: any = data.options.resume.metaSections;
-  const image = images[section];
 
   return (
     <StyledHeader isMenuOpen={isMenuOpen}>
@@ -31,7 +31,7 @@ const Header = (props: Props): JSX.Element => {
             <h1>{settings.title}</h1>
             <h2>{settings.description}</h2>
           </div>
-          <img src={image.mediaItemUrl} srcSet={image.srcSet} sizes={image.sizes} alt={`${settings.title} • ${settings.description}`} />
+          {getImage(image, `${settings.title} • ${settings.description}`)}
         </div>
       </div>
       <nav>

@@ -3,10 +3,63 @@
 exports[`PageMenu should render with items={default} prop 1`] = `
 Object {
   "asFragment": [Function],
-  "baseElement": <body>
+  "baseElement": .emotion-0 {
+  padding: 15px 4.5% 35px;
+  -webkit-transition: padding 300 ease-in-out;
+  transition: padding 300 ease-in-out;
+  text-align: center;
+}
+
+@media (min-width:1024px) {
+  .emotion-0 {
+    padding: 15px 50px 35px;
+  }
+}
+
+.emotion-0 span {
+  left: 15px;
+}
+
+.emotion-0 span,
+.emotion-0 span svg {
+  position: relative;
+}
+
+.emotion-0 span,
+.emotion-0 span path {
+  font-size: 1rem !important;
+}
+
+.emotion-0 span svg {
+  color: rgba(128,128,128,0.3);
+}
+
+.emotion-0 span svg:nth-of-type(1) {
+  font-size: 3.5em !important;
+  -webkit-animation: anim-spin 2.5s linear infinite reverse;
+  animation: anim-spin 2.5s linear infinite reverse;
+}
+
+.emotion-0 span svg:nth-of-type(2) {
+  top: 6px;
+  left: -4px;
+  font-size: 2.25em !important;
+  -webkit-animation: anim-spin 2s linear infinite;
+  animation: anim-spin 2s linear infinite;
+}
+
+.emotion-0 span svg:nth-of-type(3) {
+  top: 23px;
+  right: 53px;
+  font-size: 1.5em !important;
+  -webkit-animation: anim-spin 1.5s linear infinite reverse;
+  animation: anim-spin 1.5s linear infinite reverse;
+}
+
+<body>
     <div>
       <div
-        class="loading css-1ilbg13"
+        class="loading emotion-0"
       >
         <span>
           <svg
@@ -58,9 +111,62 @@ Object {
       </div>
     </div>
   </body>,
-  "container": <div>
+  "container": .emotion-0 {
+  padding: 15px 4.5% 35px;
+  -webkit-transition: padding 300 ease-in-out;
+  transition: padding 300 ease-in-out;
+  text-align: center;
+}
+
+@media (min-width:1024px) {
+  .emotion-0 {
+    padding: 15px 50px 35px;
+  }
+}
+
+.emotion-0 span {
+  left: 15px;
+}
+
+.emotion-0 span,
+.emotion-0 span svg {
+  position: relative;
+}
+
+.emotion-0 span,
+.emotion-0 span path {
+  font-size: 1rem !important;
+}
+
+.emotion-0 span svg {
+  color: rgba(128,128,128,0.3);
+}
+
+.emotion-0 span svg:nth-of-type(1) {
+  font-size: 3.5em !important;
+  -webkit-animation: anim-spin 2.5s linear infinite reverse;
+  animation: anim-spin 2.5s linear infinite reverse;
+}
+
+.emotion-0 span svg:nth-of-type(2) {
+  top: 6px;
+  left: -4px;
+  font-size: 2.25em !important;
+  -webkit-animation: anim-spin 2s linear infinite;
+  animation: anim-spin 2s linear infinite;
+}
+
+.emotion-0 span svg:nth-of-type(3) {
+  top: 23px;
+  right: 53px;
+  font-size: 1.5em !important;
+  -webkit-animation: anim-spin 1.5s linear infinite reverse;
+  animation: anim-spin 1.5s linear infinite reverse;
+}
+
+<div>
     <div
-      class="loading css-1ilbg13"
+      class="loading emotion-0"
     >
       <span>
         <svg
@@ -168,10 +274,63 @@ Object {
 exports[`PageMenu should render without props 1`] = `
 Object {
   "asFragment": [Function],
-  "baseElement": <body>
+  "baseElement": .emotion-0 {
+  padding: 15px 4.5% 35px;
+  -webkit-transition: padding 300 ease-in-out;
+  transition: padding 300 ease-in-out;
+  text-align: center;
+}
+
+@media (min-width:1024px) {
+  .emotion-0 {
+    padding: 15px 50px 35px;
+  }
+}
+
+.emotion-0 span {
+  left: 15px;
+}
+
+.emotion-0 span,
+.emotion-0 span svg {
+  position: relative;
+}
+
+.emotion-0 span,
+.emotion-0 span path {
+  font-size: 1rem !important;
+}
+
+.emotion-0 span svg {
+  color: rgba(128,128,128,0.3);
+}
+
+.emotion-0 span svg:nth-of-type(1) {
+  font-size: 3.5em !important;
+  -webkit-animation: anim-spin 2.5s linear infinite reverse;
+  animation: anim-spin 2.5s linear infinite reverse;
+}
+
+.emotion-0 span svg:nth-of-type(2) {
+  top: 6px;
+  left: -4px;
+  font-size: 2.25em !important;
+  -webkit-animation: anim-spin 2s linear infinite;
+  animation: anim-spin 2s linear infinite;
+}
+
+.emotion-0 span svg:nth-of-type(3) {
+  top: 23px;
+  right: 53px;
+  font-size: 1.5em !important;
+  -webkit-animation: anim-spin 1.5s linear infinite reverse;
+  animation: anim-spin 1.5s linear infinite reverse;
+}
+
+<body>
     <div>
       <div
-        class="loading css-1ilbg13"
+        class="loading emotion-0"
       >
         <span>
           <svg
@@ -223,9 +382,62 @@ Object {
       </div>
     </div>
   </body>,
-  "container": <div>
+  "container": .emotion-0 {
+  padding: 15px 4.5% 35px;
+  -webkit-transition: padding 300 ease-in-out;
+  transition: padding 300 ease-in-out;
+  text-align: center;
+}
+
+@media (min-width:1024px) {
+  .emotion-0 {
+    padding: 15px 50px 35px;
+  }
+}
+
+.emotion-0 span {
+  left: 15px;
+}
+
+.emotion-0 span,
+.emotion-0 span svg {
+  position: relative;
+}
+
+.emotion-0 span,
+.emotion-0 span path {
+  font-size: 1rem !important;
+}
+
+.emotion-0 span svg {
+  color: rgba(128,128,128,0.3);
+}
+
+.emotion-0 span svg:nth-of-type(1) {
+  font-size: 3.5em !important;
+  -webkit-animation: anim-spin 2.5s linear infinite reverse;
+  animation: anim-spin 2.5s linear infinite reverse;
+}
+
+.emotion-0 span svg:nth-of-type(2) {
+  top: 6px;
+  left: -4px;
+  font-size: 2.25em !important;
+  -webkit-animation: anim-spin 2s linear infinite;
+  animation: anim-spin 2s linear infinite;
+}
+
+.emotion-0 span svg:nth-of-type(3) {
+  top: 23px;
+  right: 53px;
+  font-size: 1.5em !important;
+  -webkit-animation: anim-spin 1.5s linear infinite reverse;
+  animation: anim-spin 1.5s linear infinite reverse;
+}
+
+<div>
     <div
-      class="loading css-1ilbg13"
+      class="loading emotion-0"
     >
       <span>
         <svg

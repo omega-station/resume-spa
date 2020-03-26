@@ -24,6 +24,38 @@ const GQL_FRAGMENT = {
       }
     `,
 
+    // gqlPages
+    PAGE_CONTENT: gql`
+      fragment pageContent on Options {
+        pageContent {
+          pagetype2Images {
+            mediaItemUrl
+            srcSet(size: LARGE)
+            sizes(size: LARGE)
+            title
+          }
+          pagetype3Images {
+            mediaItemUrl
+            sizes(size: LARGE)
+            srcSet(size: LARGE)
+            title
+          }
+          pagetype3AsideIcon {
+            icon
+          }
+          pagetype3AsideHeading {
+            heading
+          }
+          pagetype4Images {
+            mediaItemUrl
+            sizes(size: LARGE)
+            srcSet(size: LARGE)
+            title
+          }
+        }
+      }
+    `,
+
     RESUME: {
       // gqlDefault
       CONTACT: gql`
@@ -101,7 +133,11 @@ const GQL_FRAGMENT = {
       SECTION_META: gql`
         fragment sectionMeta on Options {
           resume {
-            metaCopy
+            metaCopyIntro
+            metaCopyOutro
+            metaCopyPage {
+              copy
+            }
             metaHeading
             metaSections {
               name
@@ -117,17 +153,17 @@ const GQL_FRAGMENT = {
           resume {
             referencesHeading
             referencesIntro
-          }
-          aside {
-            resumeHeading
-            resumeImage {
-              mediaItemUrl
-              sizes(size: LARGE)
-              srcSet(size: LARGE)
-            }
-            resumeUrl {
-              ... on MediaItem {
+            referencesResume {
+              image {
                 mediaItemUrl
+                sizes(size: LARGE)
+                srcSet(size: LARGE)
+                title
+              }
+              pdf {
+                ... on MediaItem {
+                  mediaItemUrl
+                }
               }
             }
           }

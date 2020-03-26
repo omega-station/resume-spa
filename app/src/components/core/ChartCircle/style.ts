@@ -16,9 +16,9 @@ const getColor = (percent: number): string => {
 
 const StyledChartCircle = styled.div<Props>`
   ${props => css`
-    display: block !important;
-    width: 33.33%;
-    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     svg {
       display: block;
@@ -41,14 +41,14 @@ const StyledChartCircle = styled.div<Props>`
 
           ${props.isWaypoint &&
             css`
-          animation: ${`anim-chart-${props.index} 1500ms ${props.index && props.index * 300}ms ease-out forwards`};
+          animation: ${`anim-chart-${props.animation.index} ${props.animation.duration * 1000}ms ${props.animation.delay * 1000}ms ease-out forwards`};
 
-          @keyframes anim-chart-${props.index} {
+          @keyframes anim-chart-${props.animation.index} {
             from {
               stroke-linecap: round;
             }
             to {
-              stroke-dasharray: ${props.percent - 3} 100;
+              stroke-dasharray: ${props.percent - props.animation.percent} 100;
               stroke-linecap: round;
             }
           }
@@ -62,6 +62,12 @@ const StyledChartCircle = styled.div<Props>`
         text-anchor: middle;
         transform: translate(18px, 21px);
       }
+    }
+
+    span {
+      color: ${color.black};
+      font-size: 1.35rem;
+      font-weight: 500;
     }
   `};
 `;

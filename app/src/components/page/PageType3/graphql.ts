@@ -6,24 +6,25 @@ export type gqlResume = any;
 export const GQL_QUERY = gql`
   query {
     options {
-      aside {
-        resumeHeading
-        resumeImage {
-          mediaItemUrl
-          sizes(size: LARGE)
-          srcSet(size: LARGE)
+      pageContent {
+        pagetype3AsideHeading {
+          heading
         }
-        resumeUrl {
-          ... on MediaItem {
-            mediaItemUrl
-          }
+        pagetype3AsideIcon {
+          icon
         }
-        tagcloudHeading
       }
       resume {
         metaSections {
           name
           heading
+        }
+        referencesResume {
+          pdf {
+            ... on MediaItem {
+              mediaItemUrl
+            }
+          }
         }
         skillsetProficiency {
           count: proficiency

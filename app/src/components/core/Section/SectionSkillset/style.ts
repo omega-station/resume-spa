@@ -20,37 +20,40 @@ const StyledSection = styled.div`
         text-align: center;
       }
 
-      span {
-        display: inline-block;
-        padding: 5px;
-        font-size: 1.2rem;
-        line-height: 1.3em;
-        overflow-wrap: anywhere;
+      &.head,
+      &.body {
+        span {
+          display: inline-block;
+          padding: 5px;
+          font-size: 1.2rem;
+          line-height: 1.3em;
+          overflow-wrap: anywhere;
 
-        &:not(:first-of-type) {
-          margin: 0 0 0 2px;
-        }
+          &:not(:first-of-type) {
+            margin: 0 0 0 2px;
+          }
 
-        &:first-of-type,
-        &.proficiency {
-          font-weight: 600;
-        }
+          &:first-of-type,
+          &.proficiency {
+            font-weight: 600;
+          }
 
-        &:first-of-type {
-          flex-basis: 33.33%;
-          min-width: 140px;
-        }
+          &:first-of-type {
+            flex-basis: 33.33%;
+            min-width: 140px;
+          }
 
-        &:last-of-type {
-          flex-basis: 66.66%;
-        }
+          &:last-of-type {
+            flex-basis: 66.66%;
+          }
 
-        &.proficiency i {
-          margin-right: 6px;
-          color: ${color.black};
-          font-size: 0.93rem;
-          font-style: normal;
-          letter-spacing: -0.1em;
+          &.proficiency i {
+            margin-right: 6px;
+            color: ${color.black};
+            font-size: 0.93rem;
+            font-style: normal;
+            letter-spacing: -0.1em;
+          }
         }
       }
     }

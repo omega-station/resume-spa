@@ -1,6 +1,6 @@
 import React from 'react';
 import { useQuery } from 'react-apollo';
-import { section } from '../../../../utility/constant';
+import { section as _section } from '../../../../utility/constant';
 import Error from '../../../core/Error';
 import Loading from '../../Loading';
 import { Props } from '../definition';
@@ -9,7 +9,7 @@ import { GQL_QUERY } from './graphql';
 import StyledSection from './style';
 
 const SectionHistory = (props: Props): JSX.Element => {
-  const { type }: Props = { ...defaults, ...props };
+  const { section }: Props = { ...defaults, ...props };
   const { data, loading, error } = useQuery(GQL_QUERY);
 
   if (loading) return <Loading />;
@@ -18,11 +18,11 @@ const SectionHistory = (props: Props): JSX.Element => {
   const { work, education } = data.options.resume;
   let history: any;
 
-  switch (type) {
-    case section[2]:
+  switch (section) {
+    case _section[2]:
       history = work;
       break;
-    case section[3]:
+    case _section[3]:
       history = education;
       break;
   }

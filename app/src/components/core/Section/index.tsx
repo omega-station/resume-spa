@@ -2,7 +2,7 @@ import React, { RefObject, useEffect, useRef, useState } from 'react';
 import { QueryResult, useQuery } from 'react-apollo';
 import { Waypoint } from 'react-waypoint';
 import { getHeadings } from '../../../utility';
-import { section } from '../../../utility/constant';
+import { section as _section } from '../../../utility/constant';
 import { GQL_QUERY } from '../../../utility/graphql';
 import Error from '../Error';
 import Loading from '../Loading';
@@ -14,7 +14,7 @@ import SectionSkillset from './SectionSkillset';
 import StyledSection from './style';
 
 const Section = (props: Props): JSX.Element => {
-  const { type, hasEnhancedHeading, hasListItemCheck }: Props = { ...defaults, ...props };
+  const { pagetype, section, hasEnhancedHeading, hasListItemCheck, hasResumeImage, useSkillsetChart }: Props = { ...defaults, ...props };
   const { data, loading, error }: QueryResult = useQuery(GQL_QUERY.HEADINGS);
   const refSection: RefObject<HTMLDivElement> = useRef() as RefObject<HTMLDivElement>;
   const [isWaypoint, setWaypoint] = useState(false);
@@ -38,7 +38,7 @@ const Section = (props: Props): JSX.Element => {
       window.addEventListener('scroll', handleScroll);
       return () => window.removeEventListener('scroll', handleScroll);
     }
-  }, [type, refSection, hasEnhancedHeading]);
+  }, [section, refSection, hasEnhancedHeading]);
 
   const handleWaypointEnter = (): void => {
     refSection.current?.classList.add('waypoint');
@@ -55,18 +55,20 @@ const Section = (props: Props): JSX.Element => {
   if (loading) return <Loading />;
   if (error) return <Error />;
 
-  const heading: string = getHeadings(data)[type as string];
+  const heading: string = getHeadings(data)[section as string];
 
-  let Component: (props: Props) => JSX.Element = SectionDefault;
-  if (type === section[2] || type === section[3]) {
-    Component = SectionHistory;
-  } else if (type === section[1]) {
-    Component = SectionSkillset;
+  let Section: (props: Props) => JSX.Element = SectionDefault;
+  if (section === _section[2] || section === _section[3]) {
+    Section = SectionHistory;
+  } else if (section === _section[1]) {
+    Section = SectionSkillset;
   }
 
+  // bottomOffset={`${window.innerHeight / 2}px`}
+
   return (
-    <Waypoint bottomOffset={`${window.innerHeight / 2}px`} fireOnRapidScroll={true} onEnter={() => handleWaypointEnter()} onLeave={() => handleWaypointLeave()}>
-      <StyledSection id={type} className={`section-${type}`} ref={refSection}>
+    <Waypoint fireOnRapidScroll={true} onEnter={() => handleWaypointEnter()} onLeave={() => handleWaypointLeave()}>
+      <StyledSection id={section} className={`section-${section}`} ref={refSection}>
         {hasEnhancedHeading ? (
           <h2>
             <span>{heading}</span>
@@ -75,7 +77,15 @@ const Section = (props: Props): JSX.Element => {
         ) : (
           <h2>{heading}</h2>
         )}
-        <Component type={type} isWaypoint={isWaypoint} hasEnhancedHeading={hasEnhancedHeading} hasListItemCheck={hasListItemCheck} />
+        <Section
+          pagetype={pagetype}
+          section={section}
+          isWaypoint={isWaypoint}
+          hasEnhancedHeading={hasEnhancedHeading}
+          hasListItemCheck={hasListItemCheck}
+          hasResumeImage={hasResumeImage}
+          useSkillsetChart={useSkillsetChart}
+        />
       </StyledSection>
     </Waypoint>
   );

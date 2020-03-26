@@ -30,7 +30,7 @@ export const color = {
   },
   red: {
     medium: 'rgb(173, 42, 36)',
-    medium2: 'rgb(120, 21, 18)',
+    medium2: 'rgb(130, 21, 18)',
     dark: 'rgb(97, 0, 0)',
   },
   white: 'rgb(255, 255, 255)',

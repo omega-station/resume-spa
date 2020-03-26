@@ -5,14 +5,14 @@ import React from 'react';
 import Section from '..';
 import { getHeadings } from '../../../../utility';
 import { withProvider } from '../../../../utility/apollo';
-import { section } from '../../../../utility/constant';
+import { section as _section } from '../../../../utility/constant';
 import { data } from '../../../../utility/graphql/data';
 
 storiesOf('core/Section', module)
   .addDecorator(withKnobs)
   .addDecorator(withProvider)
-  .add('default', () => <Section type={section[0]} />)
+  .add('default', () => <Section pagetype={0} section={_section[0]} />)
   .add('withKnobs', () => {
-    const type: string = select('Name', _.invert(getHeadings(data)), section[0]);
-    return <Section type={type} />;
+    const section: string = select('Section Name', _.invert(getHeadings(data)), _section[0]);
+    return <Section pagetype={0} section={section} />;
   });

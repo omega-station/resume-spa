@@ -22,7 +22,7 @@ export const getTyped = (section: number, resume: any): { [key: string]: string 
     case 5:
       return { heading: resume.referencesHeading, strings: resume.referencesIntro };
     case 6:
-      return { heading: resume.metaHeading, strings: resume.metaCopy };
+      return { heading: resume.metaHeading, strings: `${resume.metaCopyIntro}${resume.metaCopyPage[0].copy}${resume.metaCopyOutro}` };
     default:
       return { heading: '', strings: '' };
   }

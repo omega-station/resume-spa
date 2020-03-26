@@ -1,4 +1,5 @@
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
+import React from 'react';
 import { section } from './constant';
 
 export interface Headings {
@@ -30,12 +31,11 @@ export const getHeadings = (data: any, allowed: number[] = []): Headings => {
 
 export const getIconProp = (icon: string): IconProp => icon.split(/^(fa[brs])-(.+)$/).filter(x => x) as IconProp;
 
-export const getRandomElement = (array: any[]): any => array[Math.floor(Math.random() * array.length)];
+export const getImage = (image: { [key: string]: string }, title?: string): JSX.Element => (
+  <img src={image.mediaItemUrl} srcSet={image.srcSet} sizes={image.sizes} alt={title || image.title} title={title || image.title} />
+);
 
-export const getRandomHash = (): string =>
-  Math.random()
-    .toString(36)
-    .substr(2, 5);
+export const getRandomElement = (array: any[]): any => array[Math.floor(Math.random() * array.length)];
 
 export const getRandomInt = (min: number, max: number): number => {
   const _min: number = Math.ceil(min);
@@ -52,13 +52,13 @@ export const shuffleArray = (array: any[]): any[] => {
     temporaryValue,
     randomIndex;
 
-  // While there remain elements to shuffle...
+  // while there are elements to shuffle...
   while (0 !== currentIndex) {
-    // Pick a remaining element...
+    // pick a remaining element
     randomIndex = Math.floor(Math.random() * currentIndex);
     currentIndex -= 1;
 
-    // And swap it with the current element.
+    // swap it with the current element
     temporaryValue = array[currentIndex];
     array[currentIndex] = array[randomIndex];
     array[randomIndex] = temporaryValue;

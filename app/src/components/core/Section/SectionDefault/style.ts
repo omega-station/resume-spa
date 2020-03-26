@@ -11,7 +11,7 @@ const StyledSection = styled.div<PropsStyled>`
           display: flex;
           align-items: center;
 
-          .item-check {
+          .item-icon {
             display: block;
             text-align: center;
           }

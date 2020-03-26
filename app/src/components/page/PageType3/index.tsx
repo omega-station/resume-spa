@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { QueryResult, useQuery } from 'react-apollo';
 import { TagCloud } from 'react-tagcloud';
+import { getIconProp } from '../../../utility';
 import FontAwesomeIcon from '../../../utility/font-awesome';
 import Error from '../../core/Error';
 import GitHubCorner from '../../core/GitHubCorner';
@@ -40,39 +41,41 @@ const PageType3 = (): JSX.Element => {
   if (loading) return <Loading />;
   if (error) return <Error />;
 
-  const resume: gqlAside = data.options.aside;
+  const pageContent: gqlAside = data.options.pageContent;
   const sections: gqlResume = data.options.resume.metaSections;
+  const resume: gqlResume = data.options.resume.referencesResume[0];
+  const skillset: gqlResume = data.options.resume.skillsetProficiency;
 
   const cloud = {
     colorOptions: { hue: 'white', luminosity: 'dark' },
-    maxSize: 24,
+    maxSize: 23,
     minSize: 14,
-    tags: data.options.resume.skillsetProficiency.filter((x: any) => x.isTagcloud),
+    tags: skillset.filter((x: any) => x.isTagcloud),
   };
 
   return (
     <StyledPage>
-      <GitHubCorner isLeft={true} />
+      <GitHubCorner />
       <div>
         <Header section={section} isMenuOpen={isMenuOpen} onClickMenuItem={setSection} onClickMenuToggle={handleClickMenuToogle} />
         <main>
           <aside>
             <div>
-              <h4>{resume.tagcloudHeading}</h4>
+              <h4>{pageContent.pagetype3AsideHeading[0].heading}</h4>
               <TagCloud minSize={cloud.minSize} maxSize={cloud.maxSize} shuffle={true} tags={cloud.tags} colorOptions={cloud.colorOptions} />
             </div>
             <div>
-              <h4>{resume.resumeHeading}</h4>
-              <Link url={resume.resumeUrl.mediaItemUrl} title={resume.resumeHeading}>
+              <h4>{pageContent.pagetype3AsideHeading[1].heading}</h4>
+              <Link url={resume.pdf.mediaItemUrl} title={pageContent.pagetype3AsideHeading[1].heading}>
                 <>
-                  <FontAwesomeIcon icon={['far', 'file-pdf']} />
-                  <FontAwesomeIcon icon={['fas', 'file-pdf']} />
+                  <FontAwesomeIcon icon={getIconProp(pageContent.pagetype3AsideIcon[0].icon)} />
+                  <FontAwesomeIcon icon={getIconProp(pageContent.pagetype3AsideIcon[1].icon)} />
                 </>
               </Link>
             </div>
           </aside>
           <div>
-            <Section type={sections[section].name} />
+            <Section pagetype={3} section={sections[section].name} />
           </div>
         </main>
         <Footer />
