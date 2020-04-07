@@ -66,7 +66,7 @@ const StyledChartCircle = styled.div<Props>`
 
     span {
       color: ${color.black};
-      font-size: 1.35rem;
+      font-size: 1.35rem !important;
       font-weight: 500;
     }
   `};

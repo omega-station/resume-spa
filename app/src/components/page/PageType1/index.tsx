@@ -17,14 +17,13 @@ import { getTyped } from './utility/typed';
 
 const PageType1 = (): JSX.Element => {
   const { data, loading, error }: QueryResult = useQuery(GQL_QUERY.GLOBAL);
-
   const mode: RefString = useRef('section');
   const page: RefNumber = useRef(0);
   const section: RefNumber = useRef(0);
   const [sectionIndex, setSectionIndex] = useState<number>(-1);
   const [isWindowOpen, setIsWindowOpen] = useState<boolean>(false);
-  const width = window.screen.width;
-  const height = window.screen.height;
+  const width: number = window.screen.width;
+  const height: number = window.screen.height;
 
   useEffect(() => {
     const handleClick = (e: MouseEvent) => {

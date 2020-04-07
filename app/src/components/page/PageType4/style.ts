@@ -280,7 +280,7 @@ const StyledPage = styled.div`
               &:first-of-type {
                 span {
                   &:first-of-type {
-                    max-width: 85%;
+                    max-width: 90%;
 
                     span {
                       margin: 0;
@@ -318,8 +318,8 @@ const StyledPage = styled.div`
               &:nth-of-type(4),
               &:nth-of-type(5),
               &:nth-of-type(6) {
-                .item-icon {
-                  font-size: 1.9rem;
+                .item-icon svg {
+                  font-size: 3.4rem;
                 }
               }
 
@@ -332,11 +332,11 @@ const StyledPage = styled.div`
                   width: 0;
                   opacity: 0;
                   margin: 0;
-                  color: ${color.red.medium2};
-                  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.5));
+                  color: ${color.red.medium};
+                  filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.4));
 
                   svg {
-                    font-size: 1.5em;
+                    font-size: 3rem;
                   }
                 }
               }
@@ -357,30 +357,29 @@ const StyledPage = styled.div`
           perspective: 10000px;
 
           > a {
-            ${boxShadow(0, 0, 2, 0, 0.15)};
-            display: none;
+            ${boxShadow(0, 0, 3, 0, 0.1)};
             position: absolute;
-            top: -80px;
-            right: 80px;
-            transform: rotateX(-30deg) rotateY(8deg) rotateZ(30deg);
+            top: -50px;
+            right: 40px;
+            transform: rotateZ(20deg);
 
             img {
-              width: 200px;
+              width: 240px;
             }
           }
         }
 
         &.waypoint > div > a {
-          animation: anim-resume 1500ms 1500ms ease-in-out forwards;
+          animation: anim-resume 1200ms 800ms ease-in-out forwards;
+
           @keyframes anim-resume {
             to {
-              top: 25px;
-              right: 420px;
-              transform: rotateX(30deg) rotateY(15deg) rotateZ(-53deg) scale(3.8);
-
-              img {
-                width: 650px;
-              }
+              top: 180px;
+              top: 250px;
+              right: 220px;
+              right: 310px;
+              transform: rotateZ(-25deg) scale(3.2);
+              transform: rotateZ(-25deg) scale(4);
             }
           }
         }
