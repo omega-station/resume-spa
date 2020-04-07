@@ -17,6 +17,7 @@ const Footer = (): JSX.Element => {
 
   return (
     <StyledFooter>
+      <div className="overlay"></div>
       <ParallaxProvider>
         <ParallaxBanner
           layers={[

@@ -27,7 +27,7 @@ const Footer = (): JSX.Element => {
     <StyledFooter>
       <div>
         <div>
-          <div>{getImage(images[getRandomInt(3, images.length - 1)])}</div>
+          <div>{getImage(images[getRandomInt(3, images.length)])}</div>
           <div>
             <p>
               This{' '}
@@ -48,7 +48,7 @@ const Footer = (): JSX.Element => {
               ?
             </p>
           </div>
-          <div>{getImage(images[getRandomInt(3, images.length - 1)])}</div>
+          <div>{getImage(images[getRandomInt(3, images.length)])}</div>
         </div>
         <div>
           [
