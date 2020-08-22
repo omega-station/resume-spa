@@ -13,7 +13,6 @@
 /build_sb
 
 # misc
-/.vscode
 .DS_Store
 .env.local
 .env.development.local
