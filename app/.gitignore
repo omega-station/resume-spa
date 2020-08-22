@@ -10,9 +10,10 @@
 
 # production
 /build
-/build-sb
+/build_sb
 
 # misc
+/.vscode
 .DS_Store
 .env.local
 .env.development.local
