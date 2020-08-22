@@ -38,9 +38,6 @@ const StyledChartCircle = styled.div<Props>`
           stroke: ${getColor(props.percent)};
           stroke-dasharray: 0 100;
           stroke-width: 3;
-
-          ${props.isWaypoint &&
-            css`
           animation: ${`anim-chart-${props.animation.index} ${props.animation.duration * 1000}ms ${props.animation.delay * 1000}ms ease-out forwards`};
 
           @keyframes anim-chart-${props.animation.index} {
@@ -52,7 +49,6 @@ const StyledChartCircle = styled.div<Props>`
               stroke-linecap: round;
             }
           }
-          `}
         }
       }
 
@@ -65,9 +61,16 @@ const StyledChartCircle = styled.div<Props>`
     }
 
     span {
+      overflow: hidden;
+      display: block;
+      width: 100%;
+      height: 40px;
+      margin: 12px 0;
       color: ${color.black};
       font-size: 1.35rem !important;
       font-weight: 500;
+      line-height: 1em;
+      text-align: center;
     }
   `};
 `;

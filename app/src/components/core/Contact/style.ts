@@ -1,7 +1,8 @@
 import styled from '@emotion/styled';
 import { viewport } from '../../../utility/constant';
+import { PropsStyled as Props } from './definition';
 
-const StyledContact = styled.div`
+const StyledContact = styled.div<Props>`
   display: flex;
   flex-direction: column;
 
@@ -15,7 +16,7 @@ const StyledContact = styled.div`
           font-style: normal;
           animation: anim-blink 1.8s infinite;
 
-          @media (min-width: ${viewport.desktop[1]}) {
+          @media (min-width: ${props => (props.pageType === 1 ? viewport.desktop[1] : viewport.tablet.portrait[1])}) {
             display: inline;
           }
 
@@ -30,9 +31,6 @@ const StyledContact = styled.div`
           }
         }
       }
-    }
-
-    &.contact-1 {
     }
   }
 `;

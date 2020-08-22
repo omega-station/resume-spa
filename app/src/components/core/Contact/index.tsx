@@ -9,7 +9,7 @@ import { GQL_QUERY } from './graphql';
 import StyledContact from './style';
 
 const Contact = (props: Props): JSX.Element => {
-  const { hasDescription, hasTitle, isPostalWithCity }: Props = { ...defaults, ...props };
+  const { hasDescription, hasTitle, isPostalWithCity, pageType = 0 }: Props = { ...defaults, ...props };
   const { data, loading, error }: QueryResult = useQuery(GQL_QUERY);
 
   if (loading) return <Loading />;
@@ -19,7 +19,7 @@ const Contact = (props: Props): JSX.Element => {
   const settings: gqlDefault = data.generalSettings;
 
   return (
-    <StyledContact>
+    <StyledContact pageType={pageType}>
       {hasTitle && (
         <ul className="contact-0">
           <li>{settings.title}</li>

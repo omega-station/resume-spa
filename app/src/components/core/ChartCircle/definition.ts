@@ -2,7 +2,7 @@ interface Core {
   /** Percentage */
   percent: number;
   /** Is this element currently in the waypoint zone? */
-  isWaypoint?: boolean;
+  // isWaypoint?: boolean;
 }
 
 export interface Props extends Core {

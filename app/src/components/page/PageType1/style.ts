@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import { getRGBA } from '../../../utility';
-import { viewport, color } from '../../../utility/constant';
+import { color, viewport } from '../../../utility/constant';
 import { backgroundStriped, defaults, padding, transition } from '../../../utility/mixin';
 
 const StyledPage = styled.div`

@@ -3,8 +3,8 @@ import { cleanup, render } from '@testing-library/react';
 import React from 'react';
 import Section from '..';
 import { cache } from '../../../../utility/apollo';
-import defaults from '../defaults';
 import mocks from '../../../../utility/graphql/mocks';
+import defaults from '../defaults';
 
 afterEach(cleanup);
 
@@ -18,10 +18,10 @@ describe('Section', () => {
     expect(component).toMatchSnapshot();
   });
 
-  it('should render with type={default} prop', () => {
+  it('should render with section={default} prop', () => {
     const component = render(
       <MockedProvider mocks={mocks.headings} addTypename={false} cache={cache}>
-        <Section type={defaults.type} />
+        <Section section={defaults.section} />
       </MockedProvider>
     );
     expect(component).toMatchSnapshot();

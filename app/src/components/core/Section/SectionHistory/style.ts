@@ -35,8 +35,8 @@ const StyledSection = styled.div`
             @media (min-width: ${viewport.tablet.portrait[0]}) {
               flex-direction: row;
 
-              span:not(:first-of-type) {
-                margin: 0 0 0 5px;
+              span:not(:last-of-type) {
+                margin: 0 5px 0 0;
               }
             }
           }

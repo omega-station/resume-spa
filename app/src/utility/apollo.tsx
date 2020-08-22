@@ -5,7 +5,7 @@ import { createHttpLink } from 'apollo-link-http';
 import React from 'react';
 import { ApolloProvider } from 'react-apollo';
 
-const uri: string = `${process.env.REACT_APP_ENDPOINT_GRAPHQL_API}/graphql`;
+const uri: string = `${process.env.REACT_APP_ENDPOINT_GRAPHQL_API}`;
 const link: ApolloLink = createHttpLink({ uri });
 
 const cache: InMemoryCache = new InMemoryCache({
@@ -16,7 +16,6 @@ const cache: InMemoryCache = new InMemoryCache({
 const client = new ApolloClient({
   link,
   cache,
-  // cache: new InMemoryCache(),
   connectToDevTools: true,
 });
 

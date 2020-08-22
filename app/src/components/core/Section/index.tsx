@@ -64,10 +64,8 @@ const Section = (props: Props): JSX.Element => {
     Section = SectionSkillset;
   }
 
-  // bottomOffset={`${window.innerHeight / 2}px`}
-
   return (
-    <Waypoint fireOnRapidScroll={true} onEnter={() => handleWaypointEnter()} onLeave={() => handleWaypointLeave()}>
+    <Waypoint fireOnRapidScroll={true} onEnter={() => handleWaypointEnter()} onLeave={() => handleWaypointLeave()} bottomOffset={'20%'}>
       <StyledSection id={section} className={`section-${section}`} ref={refSection}>
         {hasEnhancedHeading ? (
           <h2>
@@ -77,15 +75,7 @@ const Section = (props: Props): JSX.Element => {
         ) : (
           <h2>{heading}</h2>
         )}
-        <Section
-          pagetype={pagetype}
-          section={section}
-          isWaypoint={isWaypoint}
-          hasEnhancedHeading={hasEnhancedHeading}
-          hasListItemCheck={hasListItemCheck}
-          hasResumeImage={hasResumeImage}
-          useSkillsetChart={useSkillsetChart}
-        />
+        <Section pagetype={pagetype} section={section} isWaypoint={isWaypoint} hasEnhancedHeading={hasEnhancedHeading} hasListItemCheck={hasListItemCheck} hasResumeImage={hasResumeImage} useSkillsetChart={useSkillsetChart} />
       </StyledSection>
     </Waypoint>
   );

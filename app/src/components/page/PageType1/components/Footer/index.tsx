@@ -5,7 +5,7 @@ import StyledFooter from './style';
 const Footer = (): JSX.Element => {
   return (
     <StyledFooter>
-      <Contact hasDescription={true} isPostalWithCity={true} />
+      <Contact pageType={1} hasDescription={true} isPostalWithCity={true} />
     </StyledFooter>
   );
 };

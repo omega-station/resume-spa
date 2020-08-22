@@ -2,7 +2,7 @@ export const viewport = {
   mobile: { ...['375px', '420px', '480px', '640px', '720px'] },
   tablet: {
     portrait: { ...['768px', '800px', '880px', '920px'] },
-    landscape: { ...['1024px'] },
+    landscape: { ...['1024px', '1080px'] },
   },
   desktop: { ...['1200px', '1280px', '1440px', '1600px', '1800px'] },
 };

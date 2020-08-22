@@ -18,10 +18,10 @@ describe('SectionDefault', () => {
     expect(component).toMatchSnapshot();
   });
 
-  it('should render with type={default} prop', () => {
+  it('should render with section={default} prop', () => {
     const component = render(
       <MockedProvider mocks={mocks} addTypename={false} cache={cache}>
-        <SectionDefault type={defaults.type} />
+        <SectionDefault section={defaults.section} />
       </MockedProvider>
     );
     expect(component).toMatchSnapshot();

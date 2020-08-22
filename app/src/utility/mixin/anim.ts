@@ -88,14 +88,7 @@ export const animOctoarm: SerializedStyles = css`
   }
 `;
 
-export const animListItem = (
-  name: string,
-  count: number,
-  width: number | string = 0,
-  margin: number | string = 0,
-  duration: number = 700,
-  delay: number = 500
-) => {
+export const animListItem = (name: string, count: number, width: number | string = 0, duration: number = 700, delay: number = 500, hasBounce = true) => {
   return css`
     ${Array(count)
       .fill(0)
@@ -103,8 +96,8 @@ export const animListItem = (
         const delay0 = i * delay;
         const delay1 = delay0 + duration;
         return `li:nth-of-type(${i + 1}) .item-icon {
-        animation: anim-list-${name} ${duration}ms ${delay0}ms ease-in-out forwards,
-                   bounceIn ${duration}ms ${delay1}ms ease-in-out forwards;
+        animation: anim-list-${name} ${duration}ms ${delay0}ms ease-in-out forwards
+                   ${hasBounce ? `, bounceIn ${duration}ms ${delay1}ms ease-in-out forwards` : ''};
         }`;
       })
       .join('')};
@@ -112,7 +105,6 @@ export const animListItem = (
     @keyframes ${`anim-list-${name}`} {
       to {
         width: ${width};
-        margin-right: ${margin};
       }
     }
   `;

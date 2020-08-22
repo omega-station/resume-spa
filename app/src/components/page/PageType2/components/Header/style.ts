@@ -57,7 +57,6 @@ const StyledHeader = styled.header`
 
     div {
       &:first-of-type {
-
         h1 {
           font-size: 2.85rem;
           margin: 0 0 6px;
@@ -67,7 +66,6 @@ const StyledHeader = styled.header`
             ${transition('font-size')};
             font-weight: 600;
             line-height: 1em;
-
           }
 
           & + h2 {
@@ -172,7 +170,7 @@ const StyledHeader = styled.header`
             display: none;
             width: 32px;
 
-            &:nth-of-type(-n+8) {
+            &:nth-of-type(-n + 8) {
               display: inline;
             }
 
@@ -187,7 +185,7 @@ const StyledHeader = styled.header`
             @media (min-width: ${viewport.tablet.portrait[2]}) {
               display: none !important;
 
-              &:nth-of-type(-n+4) {
+              &:nth-of-type(-n + 4) {
                 display: inline !important;
               }
             }

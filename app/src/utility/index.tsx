@@ -31,9 +31,7 @@ export const getHeadings = (data: any, allowed: number[] = []): Headings => {
 
 export const getIconProp = (icon: string): IconProp => icon.split(/^(fa[brs])-(.+)$/).filter(x => x) as IconProp;
 
-export const getImage = (image: { [key: string]: string }, title?: string): JSX.Element => (
-  <img src={image.mediaItemUrl} srcSet={image.srcSet} sizes={image.sizes} alt={title || image.title} title={title || image.title} />
-);
+export const getImage = (image: { [key: string]: string }, title?: string): JSX.Element => <img src={image.mediaItemUrl} srcSet={image.srcSet} sizes={image.sizes} alt={title || image.title} title={title || image.title} />;
 
 export const getRandomElement = (array: any[]): any => array[Math.floor(Math.random() * array.length)];
 

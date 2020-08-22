@@ -27,7 +27,7 @@ const StyledSection = styled.div`
           padding: 5px;
           font-size: 1.2rem;
           line-height: 1.3em;
-          overflow-wrap: anywhere;
+          /* overflow-wrap: anywhere; */
 
           &:not(:first-of-type) {
             margin: 0 0 0 2px;

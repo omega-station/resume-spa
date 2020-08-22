@@ -1,14 +1,15 @@
 import styled from '@emotion/styled';
-import { color } from '../../../../../utility/constant';
+import { getRGBA } from '../../../../../utility';
+import { color, viewport } from '../../../../../utility/constant';
 import { padding } from '../../../../../utility/mixin';
 import { anchor } from '../../style';
-import { getRGBA } from '../../../../../utility';
+
+const breakpoint = viewport.tablet.portrait[1];
 
 const StyledFooter = styled.footer`
   position: relative;
-  height: 180px;
   overflow: hidden;
-  background-color: ${color.white};
+  background-color: ${color.grey.light};
   z-index: 1000;
 
   .overlay {
@@ -27,27 +28,51 @@ const StyledFooter = styled.footer`
     ul {
       position: relative;
       z-index: 200;
+      flex-direction: column;
+
+      @media (min-width: ${breakpoint}) {
+        flex-direction: row;
+      }
 
       &:first-of-type {
-        margin: 0 0 8px;
+        margin: 0 0 20px;
 
         li {
           font-size: 2rem;
+          line-height: 1em;
 
-          &:not(:first-of-type) {
-            margin: 0 0 0 10px;
+          &:last-of-type {
+            font-size: 1.6rem;
+          }
+        }
+
+        @media (min-width: ${breakpoint}) {
+          margin: 0 0 8px;
+
+          li {
+            &:not(:first-of-type) {
+              margin: 0 0 0 10px;
+            }
+
+            &:last-of-type {
+              font-size: 2rem;
+            }
           }
         }
       }
 
       &:last-of-type {
+        @media (min-width: ${breakpoint}) {
+          li {
+            &:not(:first-of-type) {
+              margin: 0 0 0 20px;
+            }
+          }
+        }
+
         li {
           ${anchor};
           line-height: 1em;
-
-          &:not(:first-of-type) {
-            margin: 0 0 0 20px;
-          }
 
           a {
             position: relative;

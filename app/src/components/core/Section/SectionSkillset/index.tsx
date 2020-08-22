@@ -56,7 +56,7 @@ const SectionSkillset = (props: Props): JSX.Element => {
                       </span>
                     </div>
                   ) : (
-                    <ChartCircle isWaypoint={isWaypoint} index={i} label={item.skill} percent={item.proficiency} />
+                    <>{isWaypoint && <ChartCircle index={i} label={item.skill} percent={item.proficiency} />}</>
                   )}
                 </>
               )}

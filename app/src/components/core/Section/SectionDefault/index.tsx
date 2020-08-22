@@ -19,17 +19,7 @@ const SectionDefault = (props: Props): JSX.Element => {
   if (error) return <Error />;
 
   const settings: { [key: string]: string } = data.generalSettings;
-  const {
-    aboutIntro,
-    aboutPoints,
-    interestsIntro,
-    interestsPoints,
-    metaCopyIntro,
-    metaCopyOutro,
-    metaCopyPage,
-    referencesIntro,
-    referencesResume,
-  }: any = data.options.resume;
+  const { aboutIntro, aboutPoints, interestsIntro, interestsPoints, metaCopyIntro, metaCopyOutro, metaCopyPage, referencesIntro, referencesResume }: any = data.options.resume;
 
   let copy: string = '';
   let points: string[] = [];
@@ -68,7 +58,9 @@ const SectionDefault = (props: Props): JSX.Element => {
                     <FontAwesomeIcon icon={(point.icon && getIconProp(point.icon)) || ['fas', 'check-circle']} />
                   </span>
                 )}
-                <span>{point.item}</span>
+                <span>
+                  <span>{point.item}</span>
+                </span>
               </li>
             )
           )}
