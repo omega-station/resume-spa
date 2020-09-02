@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import { QueryResult, useQuery } from 'react-apollo';
-import { getImage } from '../../../../../utility';
+import { getImage, getRandomElement } from '../../../../../utility';
 import Contact from '../../../../core/Contact';
 import Error from '../../../../core/Error';
 import Loading from '../../../../core/Loading';
@@ -16,7 +16,7 @@ const Header = (): JSX.Element => {
   if (loading) return <Loading />;
   if (error) return <Error />;
 
-  const image: any = data.options.pageContent.pagetype2Images[0];
+  const image: any = getRandomElement(data.options.pageContent.pagetype2ImagesHeader);
   const items: JSX.Element = (
     <>
       {Array(21)

@@ -1,10 +1,12 @@
 import React from 'react';
+// import CountUp from 'react-count-up';
 import { useCountUp } from 'react-countup';
 import defaults from './defaults';
 import { Props } from './definition';
 import StyledChartCircle from './style';
 
 const ChartCircle = (props: Props) => {
+  // const { isVisible, index, label, percent }: Props = { ...defaults, ...props };
   const { index, label, percent }: Props = { ...defaults, ...props };
   const animation: { [key: string]: number } = {
     index,
@@ -13,8 +15,13 @@ const ChartCircle = (props: Props) => {
     percent: 3,
   };
 
-  // @ts-ignore
+  // const { countUp, reset, start } = useCountUp({ delay: animation.delay, duration: animation.duration, end: percent, start: 0, useEasing: true });
   const { countUp } = useCountUp({ delay: animation.delay, duration: animation.duration, end: percent, start: 0, useEasing: true });
+
+  // useEffect(() => {
+  //   !!isVisible && start();
+  //   return () => reset();
+  // }, [isVisible, reset, start]);
 
   return (
     <StyledChartCircle animation={animation} percent={percent}>
@@ -24,6 +31,7 @@ const ChartCircle = (props: Props) => {
         <text>{countUp}%</text>
       </svg>
       <span>{label}</span>
+      {/* <CountUp value={1000000} interval={5} incrementMin={1} incrementMax={10} /> */}
     </StyledChartCircle>
   );
 };

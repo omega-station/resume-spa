@@ -1,6 +1,6 @@
 import React from 'react';
 import { section } from '../../../utility/constant';
-import GitHubCorner from '../../core/GitHubCorner';
+import GitHub from '../../core/GitHub';
 import Section from '../../core/Section';
 import Footer from './components/Footer';
 import Header from './components/Header';
@@ -8,7 +8,7 @@ import StyledPage from './style';
 
 const PageType4 = (): JSX.Element => (
   <StyledPage>
-    <GitHubCorner />
+    <GitHub />
     <Header />
     <main>
       {section.map((section: string, i: number) => (

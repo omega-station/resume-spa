@@ -9,6 +9,8 @@ export interface Props {
   color?: string;
   /** Backround color */
   fill?: string;
+  /** Display Mode */
+  mode?: 'alternate' | 'circle' | 'square' | 'triangle';
   /** Link URL */
   url?: string;
 }

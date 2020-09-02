@@ -4,7 +4,7 @@ import { color } from '../../../utility/constant';
 import { Element, RefNumber, RefString } from '../../../utility/definition';
 import { GQL_QUERY } from '../../../utility/graphql';
 import Error from '../../core/Error';
-import GitHubCorner from '../../core/GitHubCorner';
+import GitHub from '../../core/GitHub';
 import Loading from '../../core/Loading';
 import MenuSection from '../../core/MenuSection';
 import Footer from './components/Footer';
@@ -84,7 +84,7 @@ const PageType1 = (): JSX.Element => {
 
   return (
     <StyledPage>
-      <GitHubCorner color={color.green.medium} />
+      <GitHub mode="alternate" color={color.green.medium} fill={color.black} />
       <Header />
       <main>
         <MenuSection isIndexed={true} onClickMenu={handleClickMenu} />

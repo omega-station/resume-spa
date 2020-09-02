@@ -2,9 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { QueryResult, useQuery } from 'react-apollo';
 import { TagCloud } from 'react-tagcloud';
 import { getIconProp } from '../../../utility';
+import { color } from '../../../utility/constant';
 import FontAwesomeIcon from '../../../utility/font-awesome';
 import Error from '../../core/Error';
-import GitHubCorner from '../../core/GitHubCorner';
+import GitHub from '../../core/GitHub';
 import Link from '../../core/Link';
 import Loading from '../../core/Loading';
 import Section from '../../core/Section';
@@ -55,7 +56,7 @@ const PageType3 = (): JSX.Element => {
 
   return (
     <StyledPage>
-      <GitHubCorner />
+      <GitHub fill={color.grey.light2} />
       <div>
         <Header section={section} isMenuOpen={isMenuOpen} onClickMenuItem={setSection} onClickMenuToggle={handleClickMenuToogle} />
         <main>

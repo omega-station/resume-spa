@@ -28,7 +28,25 @@ const GQL_FRAGMENT = {
     PAGE_CONTENT: gql`
       fragment pageContent on Options {
         pageContent {
-          pagetype2Images {
+          pagetype2ImagesHeader {
+            mediaItemUrl
+            srcSet(size: LARGE)
+            sizes(size: LARGE)
+            title
+          }
+          pagetype2ImagesFooter0 {
+            mediaItemUrl
+            srcSet(size: LARGE)
+            sizes(size: LARGE)
+            title
+          }
+          pagetype2ImagesFooter1 {
+            mediaItemUrl
+            srcSet(size: LARGE)
+            sizes(size: LARGE)
+            title
+          }
+          pagetype2ImagesFooter2 {
             mediaItemUrl
             srcSet(size: LARGE)
             sizes(size: LARGE)

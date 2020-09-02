@@ -7,7 +7,7 @@ export const GQL_QUERY = gql`
   query {
     options {
       pageContent {
-        pagetype2Images {
+        pagetype2ImagesHeader {
           mediaItemUrl
           sizes(size: LARGE)
           srcSet(size: LARGE)

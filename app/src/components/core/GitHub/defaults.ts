@@ -3,11 +3,11 @@ import { Props } from './definition';
 
 const defaults: Props = {
   isLeft: false,
-  isSmall: false,
   ariaLabel: 'View source on GitHub',
-  color: color.white,
-  fill: color.black,
-  url: 'https://github.com/omega-station/resume-spa',
+  color: color.black,
+  fill: color.white,
+  mode: 'square',
+  url: process.env.REACT_APP_URL_GITHUB,
 };
 
 export default defaults;

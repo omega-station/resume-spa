@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { viewport, color } from '../../../../../utility/constant';
+import { color, viewport } from '../../../../../utility/constant';
 import { border, transition } from '../../../../../utility/mixin';
 
 const StyledHeader = styled.header`
@@ -92,15 +92,15 @@ const StyledHeader = styled.header`
         margin: 12% auto 6%;
 
         ul {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
 
-          li {
-            ${border()}
+          &, li {
             display: flex;
             flex-direction: column;
             justify-content: center;
+          }
+
+          li {
+            ${border()}
             flex-basis: 25%;
             font-size: 1.15rem;
             font-weight: 600;

@@ -1,5 +1,4 @@
-import { MockedProvider } from '@apollo/react-testing';
-import { act, cleanup, render } from '@testing-library/react';
+import { cleanup, render } from '@testing-library/react';
 import React from 'react';
 import Error from '..';
 import defaults from '../defaults';

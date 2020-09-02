@@ -1,6 +1,6 @@
 import React from 'react';
 import { QueryResult, useQuery } from 'react-apollo';
-import { getImage, getRandomInt } from '../../../../../utility';
+import { getImage, getRandomElement } from '../../../../../utility';
 import Error from '../../../../core/Error';
 import Loading from '../../../../core/Loading';
 import { GQL_QUERY } from './graphql';
@@ -12,7 +12,12 @@ const Footer = (): JSX.Element => {
   if (loading) return <Loading />;
   if (error) return <Error />;
 
-  const images: any = data.options.pageContent.pagetype2Images;
+  const images: any[] = [
+    getRandomElement(data.options.pageContent.pagetype2ImagesFooter0),
+    getRandomElement(data.options.pageContent.pagetype2ImagesFooter0),
+    getRandomElement(data.options.pageContent.pagetype2ImagesFooter1),
+    getRandomElement(data.options.pageContent.pagetype2ImagesFooter2),
+  ];
 
   const url = 'https://en.wikipedia.org/wiki/Webring';
   const counter = (
@@ -27,7 +32,7 @@ const Footer = (): JSX.Element => {
     <StyledFooter>
       <div>
         <div>
-          <div>{getImage(images[getRandomInt(3, images.length)])}</div>
+          <div>{getImage(images[0])}</div>
           <div>
             <p>
               This{' '}
@@ -48,7 +53,7 @@ const Footer = (): JSX.Element => {
               ?
             </p>
           </div>
-          <div>{getImage(images[getRandomInt(3, images.length)])}</div>
+          <div>{getImage(images[1])}</div>
         </div>
         <div>
           [
@@ -71,9 +76,9 @@ const Footer = (): JSX.Element => {
         </div>
       </div>
       <div>
-        {getImage(images[1])}
         {getImage(images[2])}
-        {getImage(images[1])}
+        {getImage(images[3])}
+        {getImage(images[2])}
       </div>
       {counter}
     </StyledFooter>

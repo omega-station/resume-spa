@@ -1,13 +1,13 @@
 import React, { Fragment } from 'react';
 import { useQuery } from 'react-apollo';
+import { shuffleArray } from '../../../../utility';
 import Error from '../../../core/Error';
 import ChartCircle from '../../ChartCircle';
 import Loading from '../../Loading';
+import defaults from '../defaults';
+import { Props } from '../definition';
 import { GQL_QUERY } from './graphql';
 import StyledSection from './style';
-import { Props } from '../definition';
-import defaults from '../defaults';
-import { shuffleArray } from '../../../../utility';
 
 export const getProficiencyString = (percentage: number | string, multiplier: number = 3.5, char: string = '☻'): string => {
   const _percentage: number = typeof percentage === 'string' ? parseInt(percentage) : percentage;
@@ -48,15 +48,15 @@ const SectionSkillset = (props: Props): JSX.Element => {
             <Fragment key={item.skill}>
               {item.isVisible && (
                 <>
-                  {!useSkillsetChart ? (
+                  {useSkillsetChart ? (
+                    <ChartCircle isVisible={isWaypoint} index={i} label={item.skill} percent={item.proficiency} />
+                  ) : (
                     <div className="body">
                       <span>{item.skill}</span>
                       <span className="proficiency">
                         <i>{getProficiencyString(item.proficiency)}</i>[{item.proficiency}%]
                       </span>
                     </div>
-                  ) : (
-                    <>{isWaypoint && <ChartCircle index={i} label={item.skill} percent={item.proficiency} />}</>
                   )}
                 </>
               )}

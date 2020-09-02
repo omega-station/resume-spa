@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`GitHubCorner should render with ariaLabel={default} prop 1`] = `
+exports[`GitHub should render with ariaLabel={default} prop 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": .emotion-0 {
@@ -687,7 +687,7 @@ Object {
 }
 `;
 
-exports[`GitHubCorner should render with color={default} prop 1`] = `
+exports[`GitHub should render with color={default} prop 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": .emotion-0 {
@@ -1374,7 +1374,7 @@ Object {
 }
 `;
 
-exports[`GitHubCorner should render with fill={default} prop 1`] = `
+exports[`GitHub should render with fill={default} prop 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": .emotion-0 {
@@ -2061,7 +2061,7 @@ Object {
 }
 `;
 
-exports[`GitHubCorner should render with isLeft={false} prop 1`] = `
+exports[`GitHub should render with isLeft={false} prop 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": .emotion-0 {
@@ -2748,7 +2748,7 @@ Object {
 }
 `;
 
-exports[`GitHubCorner should render with isLeft={true} prop 1`] = `
+exports[`GitHub should render with isLeft={true} prop 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": .emotion-0 {
@@ -3445,7 +3445,7 @@ Object {
 }
 `;
 
-exports[`GitHubCorner should render with isSmall={false} prop 1`] = `
+exports[`GitHub should render with isSmall={false} prop 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": .emotion-0 {
@@ -4132,7 +4132,7 @@ Object {
 }
 `;
 
-exports[`GitHubCorner should render with isSmall={true} prop 1`] = `
+exports[`GitHub should render with isSmall={true} prop 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": .emotion-0 {
@@ -4819,7 +4819,7 @@ Object {
 }
 `;
 
-exports[`GitHubCorner should render with url={default} prop 1`] = `
+exports[`GitHub should render with url={default} prop 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": .emotion-0 {
@@ -5506,7 +5506,7 @@ Object {
 }
 `;
 
-exports[`GitHubCorner should render without props 1`] = `
+exports[`GitHub should render without props 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": .emotion-0 {

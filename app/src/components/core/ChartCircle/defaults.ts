@@ -1,6 +1,7 @@
 import { Props } from './definition';
 
 const defaults: Props = {
+  isVisible: false,
   index: 0,
   label: '',
   percent: 100,

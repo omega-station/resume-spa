@@ -1,8 +1,9 @@
 import styled from '@emotion/styled';
+import { viewport } from '../../../utility/constant';
 import { border, defaults, padding } from '../../../utility/mixin';
 
 const StyledPage = styled.div`
-  ${defaults('page', '768px')};
+  ${defaults('page', viewport.tablet.portrait[0])};
   ${padding('25px')};
 
   a {

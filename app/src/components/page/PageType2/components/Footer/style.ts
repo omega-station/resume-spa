@@ -28,6 +28,7 @@ const StyledFooter = styled.footer`
             display: flex;
             flex-direction: column;
             justify-content: center;
+            align-items: center;
 
             &:not(:first-of-type) {
               margin: 2px 0 0;
@@ -39,6 +40,10 @@ const StyledFooter = styled.footer`
               p {
                 margin: 0 0 5px;
               }
+            }
+
+            img {
+              display: block;
             }
           }
 
@@ -53,16 +58,7 @@ const StyledFooter = styled.footer`
               }
 
               &:not(:first-of-type) {
-                margin: 0 0 0 2px;
-              }
-
-              img {
-                display: block;
-                max-width: 300px;
-                max-height: 200px;
-                width: auto;
-                height: auto;
-                object-fit: cover;
+                margin: 0 0 0 3px;
               }
             }
           }
@@ -80,39 +76,24 @@ const StyledFooter = styled.footer`
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      margin: 0 0 40px;
 
       img {
-        position: relative;
-
-        &:first-of-type,
-        &:last-of-type {
-          height: 70px;
-        }
-
-        &:first-of-type {
-          top: 20px;
-        }
-
-        &:last-of-type {
-          top: -50px;
+        &:nth-of-type(2) {
+          margin: 4.5% 0;
         }
       }
 
       @media (min-width: ${viewport.mobile[3]}) {
         flex-direction: row;
-        height: 85px;
-        margin: 0 0 40px;
-        overflow: hidden;
 
         img {
-          &:first-of-type,
-          &:last-of-type {
-            top: 8px;
-          }
+          width: 15%;
 
           &:nth-of-type(2) {
-            top: 25px;
-            margin: 0 40px;
+            width: 61%;
+            max-width: 360px;
+            margin: 0 4.5%;
           }
         }
       }

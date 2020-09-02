@@ -1,8 +1,6 @@
 interface Core {
   /** Percentage */
   percent: number;
-  /** Is this element currently in the waypoint zone? */
-  // isWaypoint?: boolean;
 }
 
 export interface Props extends Core {
@@ -10,6 +8,8 @@ export interface Props extends Core {
   index: number;
   /** Label */
   label: string;
+  /** Is this element currently visible? */
+  isVisible?: boolean | undefined;
 }
 
 export interface PropsStyled extends Core {

@@ -4,7 +4,7 @@ import WebFont from 'webfontloader';
 import { getRGBA } from '../../../utility';
 import { color, viewport } from '../../../utility/constant';
 import { boxShadow, defaults, padding, transition } from '../../../utility/mixin';
-import { animListItem, animSlideIn, animSlideUp } from '../../../utility/mixin/anim';
+import { animListItem, animSlideUp } from '../../../utility/mixin/anim';
 
 WebFont.load({
   google: {
@@ -56,10 +56,6 @@ const callout = {
 const StyledPage = styled.div`
   ${defaults()};
   min-height: 100%;
-
-  .github-corner {
-    ${animSlideIn('X', 140, 500, 1000)};
-  }
 
   header,
   footer,
@@ -141,7 +137,7 @@ const StyledPage = styled.div`
         }
 
         @media (min-width: ${viewport.tablet.portrait[1]}) {
-          width: 90%;
+          /* width: 95%; */
 
           &:not(:last-of-type) {
             margin: 0 0 20px;
@@ -354,13 +350,6 @@ const StyledPage = styled.div`
             }
 
             > div {
-              span {
-                @media (max-width: ${viewport.tablet.portrait[1]}) {
-                  font-size: 1.3rem;
-                  line-height: 1.25em;
-                }
-              }
-
               &:first-of-type {
                 display: flex;
                 flex-direction: column;
@@ -373,6 +362,17 @@ const StyledPage = styled.div`
                     display: flex;
                     flex-wrap: wrap;
                   }
+                }
+              }
+
+              @media (max-width: ${viewport.tablet.portrait[1]}) {
+                &:first-of-type {
+                  margin: 0 0 5px;
+                }
+
+                span {
+                  font-size: 1.3rem;
+                  line-height: 1.25em;
                 }
               }
             }
@@ -485,17 +485,18 @@ const StyledPage = styled.div`
               min-height: 96px;
               padding: 0 !important;
 
-              &:not(:first-of-type) {
-                margin: 12px 0 0;
-              }
-
               @media (min-width: ${viewport.tablet.portrait[0]}) {
                 width: calc(50% - ${callout.margin});
                 margin: ${callout.margin} 0 0 ${callout.margin} !important;
               }
 
               @media (min-width: ${viewport.desktop[0]}) {
+                min-height: 149px;
                 width: calc(33.33% - ${callout.margin});
+              }
+
+              &:not(:first-of-type) {
+                margin: 12px 0 0;
               }
 
               &:nth-of-type(4),

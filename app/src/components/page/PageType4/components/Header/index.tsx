@@ -24,14 +24,10 @@ const Header = (): JSX.Element => {
       <ParallaxBanner
         layers={[
           {
+            amount: -0.65,
             image: image.mediaItemUrl,
-            amount: isMobile ? -0.65 : 0.5,
-            children: null,
           },
         ]}
-        style={{
-          height: `${isMobile ? 300 : 240}px`,
-        }}
       >
         <div className="content">
           <Masthead />

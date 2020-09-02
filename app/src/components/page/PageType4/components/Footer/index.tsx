@@ -19,20 +19,16 @@ const Footer = (): JSX.Element => {
   const image: any = data.options.pageContent.pagetype4Images[1];
 
   return (
-    <StyledFooter>
+    <StyledFooter isMobile={isMobile}>
       <div className="overlay"></div>
       <ParallaxProvider>
         <ParallaxBanner
           layers={[
             {
+              amount: 0.5,
               image: image.mediaItemUrl,
-              amount: 0.4,
-              children: null,
             },
           ]}
-          style={{
-            height: `${isMobile ? 300 : 180}px`,
-          }}
         >
           <div className="content">
             <Contact hasDescription={true} />

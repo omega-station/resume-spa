@@ -16,13 +16,12 @@ const animHeader = css`
 
 const StyledHeader = styled.header<Props>`
   ${animHeader};
+  ${transition('height')};
   overflow: hidden;
-  background-color: ${color.white};
   transform: ${props => `translateY(-${props.isMobile ? 300 : 240}px)`};
 
   &,
   .content {
-    ${transition('height')}
     height: ${props => `${props.isMobile ? 300 : 240}px`};
   }
 
@@ -32,12 +31,12 @@ const StyledHeader = styled.header<Props>`
 
   .content {
     ${padding('0px', '0px', ['4.5%', '100px'])}
-    ${transition('padding')}
     position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+    transition: height 300ms ease-in-out, padding 300ms ease-in-out;
 
     > div {
       display: flex;
@@ -110,7 +109,11 @@ const StyledHeader = styled.header<Props>`
         flex-direction: column;
         align-items: center;
         position: relative;
-        background-color: orange;
+        top: -5px;
+
+        @media (min-width: ${viewport.mobile[4]}) {
+          top: 0;
+        }
 
         li {
           ${boxShadow(0, 0, 4, 0, 0.4)};
@@ -119,9 +122,9 @@ const StyledHeader = styled.header<Props>`
           &:not(:last-of-type) {
             position: relative;
             margin: 0;
-            padding: 12px;
+            padding: 10px;
             border-radius: 50%;
-            transform: scale(0.75);
+            transform: scale(0.8);
             transition: background-color 200ms ease-in-out, transform 200ms ease-in-out;
             z-index: 100;
 
@@ -135,10 +138,12 @@ const StyledHeader = styled.header<Props>`
             }
 
             &.is-current {
-              transform: scale(0.9);
+              transform: scale(0.85);
             }
 
             @media (min-width: ${viewport.mobile[4]}) {
+              transform: scale(1);
+
               &.is-current,
               &:not(.is-current):hover {
                 transform: scale(1.4);

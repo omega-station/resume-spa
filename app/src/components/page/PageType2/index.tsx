@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { section } from '../../../utility/constant';
-import GitHubCorner from '../../core/GitHubCorner';
+import GitHub from '../../core/GitHub';
 import Section from '../../core/Section';
 import Cursor from './components/Cursor';
 import Footer from './components/Footer';
@@ -17,7 +17,7 @@ const PageType2 = (): JSX.Element => {
 
   return (
     <StyledPage>
-      <GitHubCorner isLeft={true} />
+      <GitHub />
       <Header />
       <main>
         {section.map((section: string, i: number) => (
