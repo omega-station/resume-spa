@@ -1,6 +1,6 @@
 import React from 'react';
 import { QueryResult, useQuery } from 'react-apollo';
-import { Helmet } from 'react-helmet';
+import Helmet from 'react-helmet';
 import GQL_QUERY from '../../../utility/graphql/query';
 import Error from '../../core/Error';
 import Loading from '../../core/Loading';
@@ -12,42 +12,37 @@ import defaults from './defaults';
 import { Props } from './definition';
 
 const Page = (props: Props) => {
-  const { type }: Props = { ...defaults, ...props };
+  const { name, type }: Props = { ...defaults, ...props };
   const { data, loading, error }: QueryResult = useQuery(GQL_QUERY.SETTINGS);
 
   if (loading) return <Loading />;
   if (error) return <Error />;
 
+  const PageType: (props: {}) => JSX.Element = [PageType1, PageType2, PageType3, PageType4][type - 1];
   const settings = data.generalSettings;
+  const path = `/favicon/type-${type}/`;
+  const title = `${settings.title} • ${settings.description} • ${name}`;
 
-  const getPage = (type: number): JSX.Element => {
-    const PageType: (props: {}) => JSX.Element = [PageType1, PageType2, PageType3, PageType4][type - 1];
-    const path = `/favicon/type-${type}/`;
-    return (
-      <>
-        <Helmet>
-          <meta name="description" content={`${settings.title} • ${settings.description}`} />
-          <meta name="msapplication-TileColor" content="#ffffff" />
-          <meta name="theme-color" content="#ffffff" />
+  return (
+    <>
+      <Helmet>
+        <meta name="description" content={title} />
+        <meta name="msapplication-TileColor" content="#ffffff" />
+        <meta name="theme-color" content="#ffffff" />
 
-          <title>
-            {settings.title} • {settings.description}
-          </title>
+        <title>{title}</title>
 
-          <link rel="apple-touch-icon" sizes="180x180" href={`${path}apple-touch-icon.png`} />
-          <link rel="icon" type="image/png" sizes="32x32" href={`${path}favicon-32x32.png`} />
-          <link rel="icon" type="image/png" sizes="16x16" href={`${path}favicon-16x16.png`} />
-          <link rel="manifest" href={`${path}site.webmanifest`} />
-          <link rel="mask-icon" href={`${path}safari-pinned-tab.svg`} color="#ffffff" />
+        <link rel="apple-touch-icon" sizes="180x180" href={`${path}apple-touch-icon.png`} />
+        <link rel="icon" type="image/png" sizes="32x32" href={`${path}favicon-32x32.png`} />
+        <link rel="icon" type="image/png" sizes="16x16" href={`${path}favicon-16x16.png`} />
+        <link rel="manifest" href={`${path}site.webmanifest`} />
+        <link rel="mask-icon" href={`${path}safari-pinned-tab.svg`} color="#ffffff" />
 
-          <body className={`pagetype-${type}`} />
-        </Helmet>
-        <PageType />
-      </>
-    );
-  };
-
-  return getPage(type as number);
+        <body className={`pagetype-${type}`} />
+      </Helmet>
+      <PageType />
+    </>
+  );
 };
 
 export default Page;

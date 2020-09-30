@@ -25,7 +25,7 @@ const Router = (): JSX.Element => {
             const { name, type }: PropsPage = item;
             return (
               <Route key={i} path={`/${name}`}>
-                <Page type={type} />
+                <Page name={name} type={type} />
               </Route>
             );
           }

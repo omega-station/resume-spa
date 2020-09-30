@@ -1,18 +1,17 @@
-interface Core {
-  /** Percentage */
-  percent: number;
-}
+interface Core {}
 
 export interface Props extends Core {
+  /** Is this element currently visible? */
+  isWaypoint?: boolean | undefined;
   /** Index */
   index: number;
   /** Label */
   label: string;
-  /** Is this element currently visible? */
-  isVisible?: boolean | undefined;
+  /** Percentage */
+  percent: number;
 }
 
 export interface PropsStyled extends Core {
   /** Animation values */
-  animation: { [key: string]: number };
+  animation: { [key: string]: any };
 }

@@ -1,7 +1,7 @@
 import { Props } from './definition';
 
 const defaults: Props = {
-  type: 1,
+  type: 4,
 };
 
 export default defaults;

@@ -16,6 +16,7 @@ export const anchor = css`
   a {
     display: inline-block;
     color: ${color.red.medium};
+    font-size: 1em;
     line-height: 0.9em;
 
     &:after {
@@ -97,6 +98,10 @@ const StyledPage = styled.div`
         }
       }
 
+      > div {
+        justify-content: center;
+      }
+
       > h2 {
         position: relative;
         margin: 0 0 8px;
@@ -131,14 +136,14 @@ const StyledPage = styled.div`
       p {
         ${anchor};
         width: 100%;
+        font-size: 1.5rem;
+        line-height: 1.2em;
 
         &:not(:last-of-type) {
-          margin: 0 0 8px;
+          margin: 0 0 12px;
         }
 
         @media (min-width: ${viewport.tablet.portrait[1]}) {
-          /* width: 95%; */
-
           &:not(:last-of-type) {
             margin: 0 0 20px;
           }
@@ -430,7 +435,6 @@ const StyledPage = styled.div`
         > div {
           @media (min-width: ${viewport.desktop[0]}) {
             flex-direction: row;
-            justify-content: space-between;
 
             .history {
               width: 33.33%;

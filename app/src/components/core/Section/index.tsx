@@ -65,7 +65,7 @@ const Section = (props: Props): JSX.Element => {
   }
 
   return (
-    <Waypoint fireOnRapidScroll={true} onEnter={() => handleWaypointEnter()} onLeave={() => handleWaypointLeave()} bottomOffset={'20%'}>
+    <Waypoint fireOnRapidScroll={true} onEnter={() => handleWaypointEnter()} onLeave={() => handleWaypointLeave()} bottomOffset="20%">
       <StyledSection id={section} className={`section-${section}`} ref={refSection}>
         {hasEnhancedHeading ? (
           <h2>

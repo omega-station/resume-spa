@@ -18,11 +18,11 @@ const StyledHeader = styled.header<Props>`
   ${animHeader};
   ${transition('height')};
   overflow: hidden;
-  transform: ${props => `translateY(-${props.isMobile ? 300 : 240}px)`};
+  transform: ${props => `translateY(-${props.height})`};
 
   &,
   .content {
-    height: ${props => `${props.isMobile ? 300 : 240}px`};
+    height: ${props => props.height};
   }
 
   .parallax-banner-layer-0 {

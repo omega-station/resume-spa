@@ -9,11 +9,24 @@ const breakpoint = viewport.tablet.portrait[1];
 
 const StyledFooter = styled.footer<Props>`
   ${transition('height')}
+  display: grid;
+  grid-template-columns: 1fr;
   position: relative;
   overflow: hidden;
-  height: ${props => `${props.isMobile ? 280 : 200}px`};
-  background-color: ${color.grey.light};
   z-index: 1000;
+
+  &,
+  > div {
+    grid-row-start: 1;
+    grid-column-start: 1;
+    width: 100%;
+    height: ${props => props.height};
+  }
+
+  &,
+  div {
+    background-color: ${color.grey.light};
+  }
 
   .content {
     ${padding('40px', '60px', ['4.5%', '100px'])};
@@ -77,12 +90,9 @@ const StyledFooter = styled.footer<Props>`
   }
 
   .overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
     z-index: 100;
 
-    background: ${color.grey.light};
+    background: ${color.white};
     background: linear-gradient(90deg, ${getRGBA(color.white, 1)} 0%, ${getRGBA(color.white, 0.8)} 33.33%, ${getRGBA(color.white, 0)} 100%);
   }
 `;

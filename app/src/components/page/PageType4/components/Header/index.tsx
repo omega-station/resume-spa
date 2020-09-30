@@ -16,11 +16,11 @@ const Header = (): JSX.Element => {
   if (loading) return <Loading />;
   if (error) return <Error />;
 
-  const isMobile: boolean = width <= 1080;
+  const height = `${width <= 1080 ? 300 : 240}px`;
   const image: any = data.options.pageContent.pagetype4Images[0];
 
   return (
-    <StyledHeader isMobile={isMobile}>
+    <StyledHeader height={height}>
       <ParallaxBanner
         layers={[
           {
@@ -28,6 +28,9 @@ const Header = (): JSX.Element => {
             image: image.mediaItemUrl,
           },
         ]}
+        style={{
+          height,
+        }}
       >
         <div className="content">
           <Masthead />

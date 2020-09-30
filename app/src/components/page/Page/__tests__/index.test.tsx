@@ -9,15 +9,6 @@ import defaults from '../defaults';
 afterEach(cleanup);
 
 describe('Page', () => {
-  it('should render without props', () => {
-    const component = render(
-      <MockedProvider mocks={mocks.settings} addTypename={false} cache={cache}>
-        <Page />
-      </MockedProvider>
-    );
-    expect(component).toMatchSnapshot();
-  });
-
   it('should render with type={default} prop', () => {
     const component = render(
       <MockedProvider mocks={mocks.settings} addTypename={false} cache={cache}>

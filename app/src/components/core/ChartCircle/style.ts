@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 import { color } from '../../../utility/constant';
 import { PropsStyled as Props } from './definition';
 
-const getColor = (percent: number): string => {
+const getColor = (percent: any): string => {
   switch (true) {
     case percent >= 85:
       return color.red.medium;
@@ -35,17 +35,17 @@ const StyledChartCircle = styled.div<Props>`
         }
 
         &:last-of-type {
-          stroke: ${getColor(props.percent)};
+          stroke: ${getColor(props.animation.percent)};
           stroke-dasharray: 0 100;
           stroke-width: 3;
-          animation: ${`anim-chart-${props.animation.index} ${props.animation.duration * 1000}ms ${props.animation.delay * 1000}ms ease-out forwards`};
+          animation: ${`anim-chart-${props.animation.key} ${props.animation.duration * 1000}ms ${props.animation.delay * 1000}ms ease-out forwards`};
 
-          @keyframes anim-chart-${props.animation.index} {
+          @keyframes anim-chart-${props.animation.key} {
             from {
               stroke-linecap: round;
             }
             to {
-              stroke-dasharray: ${props.percent - props.animation.percent} 100;
+              stroke-dasharray: ${props.animation.percent - props.animation.offset} 100;
               stroke-linecap: round;
             }
           }

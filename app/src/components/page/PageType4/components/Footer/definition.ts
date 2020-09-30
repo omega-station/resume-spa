@@ -1,4 +1,4 @@
 export interface PropsStyled {
-  /** Is Mobile? */
-  isMobile: boolean;
+  /** Height (in pixels) */
+  height: string;
 }

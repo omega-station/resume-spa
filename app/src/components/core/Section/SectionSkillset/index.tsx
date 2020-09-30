@@ -22,7 +22,7 @@ const SectionSkillset = (props: Props): JSX.Element => {
   if (error) return <Error />;
 
   const { skillsetAreas: areas, skillsetProficiency } = data.options.resume;
-  const proficiency = useSkillsetChart ? shuffleArray(skillsetProficiency) : skillsetProficiency;
+  const proficiency = (useSkillsetChart ? shuffleArray(skillsetProficiency) : skillsetProficiency).filter((item: any) => item.isVisible);
 
   return (
     <StyledSection>
@@ -45,20 +45,16 @@ const SectionSkillset = (props: Props): JSX.Element => {
         )}
         {proficiency.map(
           (item: any, i: number): JSX.Element => (
-            <Fragment key={item.skill}>
-              {item.isVisible && (
-                <>
-                  {useSkillsetChart ? (
-                    <ChartCircle isVisible={isWaypoint} index={i} label={item.skill} percent={item.proficiency} />
-                  ) : (
-                    <div className="body">
-                      <span>{item.skill}</span>
-                      <span className="proficiency">
-                        <i>{getProficiencyString(item.proficiency)}</i>[{item.proficiency}%]
-                      </span>
-                    </div>
-                  )}
-                </>
+            <Fragment key={`${item.skill}-${i}`}>
+              {useSkillsetChart ? (
+                <ChartCircle index={i} label={item.skill} percent={item.proficiency} isWaypoint={isWaypoint} />
+              ) : (
+                <div className="body">
+                  <span>{item.skill}</span>
+                  <span className="proficiency">
+                    <i>{getProficiencyString(item.proficiency)}</i>[{item.proficiency}%]
+                  </span>
+                </div>
               )}
             </Fragment>
           )

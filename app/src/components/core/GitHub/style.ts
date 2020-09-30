@@ -7,14 +7,14 @@ import { Props } from './definition';
 
 const StyledCorner = styled.a<Props>`
   ${props => css`
-    ${transition('opacity', 1000)};
-    opacity: 0;
     display: block;
     position: fixed;
-    z-index: 1000;
+    opacity: 0;
+    z-index: -1000;
 
     @media (min-width: ${viewport.desktop[0]}) {
       opacity: 1;
+      z-index: 1000;
     }
 
     svg {
@@ -29,22 +29,22 @@ const StyledCorner = styled.a<Props>`
       color: ${props.color};
       border: 0 !important;
       font-size: 4em;
-      transform: rotate(45deg) scale(0.75);
+      transform: rotate(45deg) scale(0.8);
 
       ${props.isLeft &&
         css`
-          transform: rotate(-45deg) scale(0.75);
+          transform: rotate(-45deg) scale(0.8);
         `}
 
       ${props.isSmall &&
         css`
-          transform: rotate(45deg) scale(0.6);
+          transform: rotate(45deg) scale(0.6) translate(0, -30px);
         `}
 
       ${props.isLeft &&
         props.isSmall &&
         css`
-          transform: rotate(-45deg) scale(0.6);
+          transform: rotate(-45deg) scale(0.6) translate(0, -30px);
         `}
 
       @media (min-width: ${viewport.mobile[2]}) {
@@ -95,7 +95,7 @@ const StyledCorner = styled.a<Props>`
 
       ${props.isLeft &&
         css`
-          left: 18px;
+          left: 24px;
           right: auto;
         `}
 

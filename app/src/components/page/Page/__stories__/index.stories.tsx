@@ -10,7 +10,7 @@ storiesOf('page/Page', module)
   .addDecorator(StoryRouter())
   .addDecorator(withKnobs)
   .addDecorator(withProvider)
-  .add('default', () => <Page />)
+  .add('default', () => <Page type={defaults.type} />)
   .add('withKnobs', () => {
     const type: string = options(
       'Type',

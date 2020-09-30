@@ -15,11 +15,11 @@ const Footer = (): JSX.Element => {
   if (loading) return <Loading />;
   if (error) return <Error />;
 
-  const isMobile: boolean = width <= 800;
+  const height = `${width <= 800 ? 280 : 200}px`;
   const image: any = data.options.pageContent.pagetype4Images[1];
 
   return (
-    <StyledFooter isMobile={isMobile}>
+    <StyledFooter height={height}>
       <div className="overlay"></div>
       <ParallaxProvider>
         <ParallaxBanner
@@ -29,6 +29,9 @@ const Footer = (): JSX.Element => {
               image: image.mediaItemUrl,
             },
           ]}
+          style={{
+            height,
+          }}
         >
           <div className="content">
             <Contact hasDescription={true} />
