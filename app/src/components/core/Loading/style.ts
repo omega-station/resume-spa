@@ -3,7 +3,12 @@ import { padding } from '../../../utility/mixin';
 
 const StyledLoading = styled.div`
   ${padding('15px', '35px')};
-  text-align: center;
+  min-width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
   span {
     left: 15px;

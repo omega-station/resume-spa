@@ -1,13 +1,13 @@
 import { optionsKnob as options, withKnobs } from '@storybook/addon-knobs';
 import { storiesOf } from '@storybook/react';
 import React from 'react';
-import StoryRouter from 'storybook-react-router';
+// import StoryRouter from 'storybook-react-router';
 import Page from '..';
 import { withProvider } from '../../../../utility/apollo';
 import defaults from '../defaults';
 
 storiesOf('page/Page', module)
-  .addDecorator(StoryRouter())
+  // .addDecorator(StoryRouter())
   .addDecorator(withKnobs)
   .addDecorator(withProvider)
   .add('default', () => <Page type={defaults.type} />)

@@ -26,14 +26,7 @@ export const setPageKeys = (e: KeyboardEvent, page: RefNumber, mode: RefString):
   setMenuKeys('page', mode, page, e, 'ArrowLeft', 'ArrowRight', 0, 3);
 };
 
-export const setSectionKeys = (
-  e: KeyboardEvent,
-  section: RefNumber,
-  mode: RefString,
-  sectionIndex: number,
-  setSectionIndex: Function,
-  setIsWindowOpen: Function
-): void => {
+export const setSectionKeys = (e: KeyboardEvent, section: RefNumber, mode: RefString, sectionIndex: number, setSectionIndex: Function, setIsWindowOpen: Function): void => {
   const key: number = parseInt(e.key);
 
   if (key >= 1 && key <= 7) {
@@ -76,7 +69,7 @@ const setMenuKeys = (
       link?.click();
     }
 
-    console.log('setMenuKeys :: trigger', type, index.current, sectionIndex);
+    // console.log('setMenuKeys :: trigger', type, index.current, sectionIndex);
     if (type === 'section' && index.current !== sectionIndex && setSectionIndex && setIsWindowOpen) {
       // console.log('setMenuKeys :: trigger', type, index.current, sectionIndex);
       resetSection(index.current, setSectionIndex, setIsWindowOpen);

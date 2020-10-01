@@ -23,7 +23,7 @@ export const getHeadings = (data: any, allowed: number[] = []): Headings => {
         return obj;
       }, {});
     headings = _headings;
-    console.log(_section, _headings);
+    // console.log(_section, _headings);
   }
 
   return headings;

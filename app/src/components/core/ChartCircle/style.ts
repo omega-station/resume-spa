@@ -54,9 +54,16 @@ const StyledChartCircle = styled.div<Props>`
 
       text {
         fill: ${color.grey.dark};
-        font-size: 0.65rem;
+        font-size: 0;
         text-anchor: middle;
-        transform: translate(18px, 21px);
+        animation: ${`anim-text-${props.animation.key} ${props.animation.duration * 500}ms ${props.animation.delay * 1000}ms forwards`};
+
+        @keyframes anim-text-${props.animation.key} {
+          to {
+            font-size: 0.65rem;
+            font-size: 0.75rem;
+          }
+        }
       }
     }
 

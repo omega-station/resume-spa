@@ -1,5 +1,232 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`ChartCircle should render with index={default}, label={default} and percent={default} props 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": .emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0 svg {
+  display: block;
+  margin: 0 auto;
+  max-width: 85%;
+  max-height: 250px;
+}
+
+.emotion-0 svg path {
+  fill: none;
+}
+
+.emotion-0 svg path:first-of-type {
+  stroke: rgb(200,200,200);
+  stroke-width: 4;
+}
+
+.emotion-0 svg path:last-of-type {
+  stroke: rgb(173,42,36);
+  stroke-dasharray: 0 100;
+  stroke-width: 3;
+  -webkit-animation: anim-chart--0 2000ms 0ms ease-out forwards;
+  animation: anim-chart--0 2000ms 0ms ease-out forwards;
+}
+
+.emotion-0 svg text {
+  fill: rgb(60,60,60);
+  font-size: 0;
+  text-anchor: middle;
+  -webkit-animation: anim-text--0 1000ms 0ms forwards;
+  animation: anim-text--0 1000ms 0ms forwards;
+}
+
+.emotion-0 span {
+  overflow: hidden;
+  display: block;
+  width: 100%;
+  height: 40px;
+  margin: 12px 0;
+  color: rgb(0,0,0);
+  font-size: 1.35rem !important;
+  font-weight: 500;
+  line-height: 1em;
+  text-align: center;
+}
+
+<body>
+    <div>
+      <div
+        class="emotion-0"
+      >
+        <svg
+          aria-hidden="true"
+          viewBox="0 0 36 36"
+        >
+          <path
+            d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+          />
+          <path
+            d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+          />
+          <text
+            x="50%"
+            y="60%"
+          >
+            100
+            %
+          </text>
+        </svg>
+        <span />
+      </div>
+    </div>
+  </body>,
+  "container": .emotion-0 {
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.emotion-0 svg {
+  display: block;
+  margin: 0 auto;
+  max-width: 85%;
+  max-height: 250px;
+}
+
+.emotion-0 svg path {
+  fill: none;
+}
+
+.emotion-0 svg path:first-of-type {
+  stroke: rgb(200,200,200);
+  stroke-width: 4;
+}
+
+.emotion-0 svg path:last-of-type {
+  stroke: rgb(173,42,36);
+  stroke-dasharray: 0 100;
+  stroke-width: 3;
+  -webkit-animation: anim-chart--0 2000ms 0ms ease-out forwards;
+  animation: anim-chart--0 2000ms 0ms ease-out forwards;
+}
+
+.emotion-0 svg text {
+  fill: rgb(60,60,60);
+  font-size: 0;
+  text-anchor: middle;
+  -webkit-animation: anim-text--0 1000ms 0ms forwards;
+  animation: anim-text--0 1000ms 0ms forwards;
+}
+
+.emotion-0 span {
+  overflow: hidden;
+  display: block;
+  width: 100%;
+  height: 40px;
+  margin: 12px 0;
+  color: rgb(0,0,0);
+  font-size: 1.35rem !important;
+  font-weight: 500;
+  line-height: 1em;
+  text-align: center;
+}
+
+<div>
+    <div
+      class="emotion-0"
+    >
+      <svg
+        aria-hidden="true"
+        viewBox="0 0 36 36"
+      >
+        <path
+          d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+        />
+        <path
+          d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+        />
+        <text
+          x="50%"
+          y="60%"
+        >
+          100
+          %
+        </text>
+      </svg>
+      <span />
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
 exports[`ChartCircle should render with label={default} and percent={default} props 1`] = `
 Object {
   "asFragment": [Function],

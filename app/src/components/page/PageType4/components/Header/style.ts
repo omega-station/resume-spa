@@ -125,7 +125,7 @@ const StyledHeader = styled.header<Props>`
             padding: 10px;
             border-radius: 50%;
             transform: scale(0.8);
-            transition: background-color 200ms ease-in-out, transform 200ms ease-in-out;
+            transition: background-color 250ms ease-in-out, transform 250ms ease-in-out;
             z-index: 100;
 
             &.is-current,
@@ -144,8 +144,11 @@ const StyledHeader = styled.header<Props>`
             @media (min-width: ${viewport.mobile[4]}) {
               transform: scale(1);
 
-              &.is-current,
               &:not(.is-current):hover {
+                transform: scale(1.2);
+              }
+
+              &.is-current {
                 transform: scale(1.4);
               }
             }

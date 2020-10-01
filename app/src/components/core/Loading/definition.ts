@@ -1,4 +1,1 @@
-export interface Props {
-  /** Text message */
-  message?: string;
-}
+export interface Props {}
