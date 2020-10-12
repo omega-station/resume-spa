@@ -156,7 +156,6 @@ const StyledPage = styled.div`
       }
 
       &:nth-of-type(1) {
-
         > div {
           div {
             margin: 0 0 calc(${callout.margin} / 1.5);
@@ -266,14 +265,14 @@ const StyledPage = styled.div`
             ${callout.defaults};
             width: 100%;
 
-            /* @media (min-width: ${viewport.tablet.landscape[0]}) {
+            @media (min-width: ${viewport.tablet.landscape[0]}) {
               width: 50%;
 
               &:first-of-type {
                 order: 0 !important;
                 margin: 0 ${callout.margin} 0 0 !important;
               }
-            } */
+            }
 
             &:first-of-type {
               order: 1;
@@ -311,7 +310,6 @@ const StyledPage = styled.div`
             &:last-of-type {
               padding-bottom: 0;
               display: flex;
-              display: none;
               flex-wrap: wrap;
 
               > div {

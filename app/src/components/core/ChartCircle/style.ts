@@ -38,7 +38,7 @@ const StyledChartCircle = styled.div<Props>`
           stroke: ${getColor(props.animation.percent)};
           stroke-dasharray: 0 100;
           stroke-width: 3;
-          animation: ${`anim-chart-${props.animation.key} ${props.animation.duration * 1000}ms ${props.animation.delay * 1000}ms ease-out forwards`};
+          animation: ${`anim-chart-${props.animation.key} ${props.animation.duration}ms ${props.animation.delay}ms ease-out forwards`};
 
           @keyframes anim-chart-${props.animation.key} {
             from {
@@ -54,16 +54,8 @@ const StyledChartCircle = styled.div<Props>`
 
       text {
         fill: ${color.grey.dark};
-        font-size: 0;
+        font-size: 0.85rem;
         text-anchor: middle;
-        animation: ${`anim-text-${props.animation.key} ${props.animation.duration * 500}ms ${props.animation.delay * 1000}ms forwards`};
-
-        @keyframes anim-text-${props.animation.key} {
-          to {
-            font-size: 0.65rem;
-            font-size: 0.75rem;
-          }
-        }
       }
     }
 
