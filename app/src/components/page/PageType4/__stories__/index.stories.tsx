@@ -1,10 +1,18 @@
-import { storiesOf } from '@storybook/react';
 import React from 'react';
-// import StoryRouter from 'storybook-react-router';
 import PageType4 from '..';
-import { withProvider } from '../../../../utility/apollo';
+import { ApolloProvider, client } from '../../../../utility/apollo';
 
-storiesOf('page/Page/PageType4', module)
-  // .addDecorator(StoryRouter())
-  .addDecorator(withProvider)
-  .add('default', () => <PageType4 />);
+export const Default = () => <PageType4 />;
+Default.storyName = 'default';
+
+export default {
+  component: PageType4,
+  title: 'page/Page/PageType4',
+  decorators: [
+    (Story: Function) => (
+      <ApolloProvider client={client}>
+        <Story />
+      </ApolloProvider>
+    ),
+  ],
+};

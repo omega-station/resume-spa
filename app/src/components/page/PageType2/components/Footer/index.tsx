@@ -37,7 +37,7 @@ const Footer = (): JSX.Element => {
             <p>
               This{' '}
               <a href={url} target="_blank" rel="noopener noreferrer">
-                Amazing Front-end Developer's Ring
+                Amazing Frontend Developer's Ring
               </a>{' '}
               site is owned by{' '}
               <a href={url} target="_blank" rel="noopener noreferrer">
@@ -48,7 +48,7 @@ const Footer = (): JSX.Element => {
             <p>
               Want to join the{' '}
               <a href={url} target="_blank" rel="noopener noreferrer">
-                Amazing Front-end Developer's Ring
+                Amazing Frontend Developer's Ring
               </a>
               ?
             </p>

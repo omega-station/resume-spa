@@ -1,8 +1,18 @@
-import { storiesOf } from '@storybook/react';
 import React from 'react';
 import SectionSkillset from '..';
-import { withProvider } from '../../../../../utility/apollo';
+import { ApolloProvider, client } from '../../../../../utility/apollo';
 
-storiesOf('core/Section/SectionSkillset', module)
-  .addDecorator(withProvider)
-  .add('default', () => <SectionSkillset />);
+export const Default = () => <SectionSkillset />;
+Default.storyName = 'default';
+
+export default {
+  component: SectionSkillset,
+  title: 'core/Section/SectionSkillset',
+  decorators: [
+    (Story: Function) => (
+      <ApolloProvider client={client}>
+        <Story />
+      </ApolloProvider>
+    ),
+  ],
+};

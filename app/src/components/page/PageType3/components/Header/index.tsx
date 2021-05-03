@@ -1,5 +1,6 @@
 import React from 'react';
 import { QueryResult, useQuery } from 'react-apollo';
+import { getImage } from '../../../../../utility';
 import FontAwesomeIcon from '../../../../../utility/font-awesome';
 import Error from '../../../../core/Error';
 import Loading from '../../../../core/Loading';
@@ -8,11 +9,25 @@ import defaults from './defaults';
 import { Props } from './definition';
 import { GQL_QUERY } from './graphql';
 import StyledHeader from './style';
-import { getImage } from '../../../../../utility';
+
+// const preload = (images: any[], i: number = 0) => {
+//   if (images?.length > i) {
+//     const img = new Image();
+//     img.onload = () => {
+//       preload(images, i + 1);
+//     };
+//     img.src = images[i].mediaItemUrl;
+//     console.log(img.src);
+//   }
+// };
 
 const Header = (props: Props): JSX.Element => {
   const { section, isMenuOpen, onClickMenuItem, onClickMenuToggle } = { ...defaults, ...props };
   const { data, loading, error }: QueryResult = useQuery(GQL_QUERY);
+
+  // useEffect(() => {
+  //   preload(data?.options.pageContent.pagetype3Images);
+  // }, [data]);
 
   if (loading) return <Loading />;
   if (error) return <Error />;

@@ -15,7 +15,7 @@ export const getProficiencyString = (percentage: number | string, multiplier: nu
 };
 
 const SectionSkillset = (props: Props): JSX.Element => {
-  const { isWaypoint, useSkillsetChart }: Props = { ...defaults, ...props };
+  const { useSkillsetChart }: Props = { ...defaults, ...props };
   const { data, loading, error } = useQuery(GQL_QUERY);
 
   if (loading) return <Loading />;
@@ -47,7 +47,7 @@ const SectionSkillset = (props: Props): JSX.Element => {
           (item: any, i: number): JSX.Element => (
             <Fragment key={`${item.skill}-${i}`}>
               {useSkillsetChart ? (
-                <ChartCircle index={i} label={item.skill} percent={item.proficiency} isWaypoint={isWaypoint} />
+                <ChartCircle index={i} label={item.skill} percent={item.proficiency} />
               ) : (
                 <div className="body">
                   <span>{item.skill}</span>

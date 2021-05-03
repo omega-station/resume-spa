@@ -54,6 +54,12 @@ const callout = {
   margin: '30px',
 };
 
+const hideLast = (display: boolean = false) => css`
+  &:last-of-type {
+    display: ${display ? 'none' : 'block'};
+  }
+`;
+
 const StyledPage = styled.div`
   ${defaults()};
   min-height: 100%;
@@ -192,7 +198,6 @@ const StyledPage = styled.div`
             li {
               ${callout.defaults};
               width: 100%;
-              /* min-height: 180px; */
               padding: 0;
 
               &:not(:first-of-type) {
@@ -317,14 +322,17 @@ const StyledPage = styled.div`
                 flex-basis: 50%;
 
                 @media (min-width: ${viewport.mobile[2]}) {
+                  ${hideLast(true)}
                   flex-basis: 33.33%;
                 }
 
                 @media (min-width: ${viewport.mobile[3]}) {
+                  ${hideLast()}
                   flex-basis: 25%;
                 }
 
                 @media (min-width: ${viewport.tablet.portrait[1]}) {
+                  ${hideLast(true)}
                   flex-basis: 20%;
                 }
 
@@ -333,10 +341,12 @@ const StyledPage = styled.div`
                 }
 
                 @media (min-width: ${viewport.desktop[1]}) {
+                  ${hideLast()}
                   flex-basis: 25%;
                 }
 
                 @media (min-width: ${viewport.desktop[3]}) {
+                  ${hideLast(true)}
                   flex-basis: 20%;
                 }
               }

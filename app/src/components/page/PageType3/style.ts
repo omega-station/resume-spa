@@ -9,6 +9,10 @@ WebFont.load({
   },
 });
 
+const width = {
+  aside: 215,
+};
+
 const StyledPage = styled.div`
   ${defaults()};
   ${padding()};
@@ -88,7 +92,7 @@ const StyledPage = styled.div`
 
         @media (min-width: ${viewport.tablet.landscape[0]}) {
           ${boxShadow(10, 0, 25, 0, 0.1)};
-          width: 200px;
+          width: ${width.aside}px;
           margin: 0;
           order: 0;
         }
@@ -150,7 +154,7 @@ const StyledPage = styled.div`
         padding: 30px 20px 40px;
 
         @media (min-width: ${viewport.tablet.landscape[0]}) {
-          width: calc(100% - 200px);
+          width: calc(100% - ${width.aside}px);
           padding: 35px 60px 100px 40px;
         }
 

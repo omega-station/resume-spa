@@ -1,8 +1,12 @@
-import { withKnobs } from '@storybook/addon-knobs';
-import { storiesOf } from '@storybook/react';
 import React from 'react';
 import Loading from '..';
+import defaults from '../defaults';
 
-storiesOf('core/Loading', module)
-  .addDecorator(withKnobs)
-  .add('default', () => <Loading />);
+export const WithArgs = (args: any) => <Loading {...args} />;
+WithArgs.storyName = 'with Controls';
+
+export default {
+  component: Loading,
+  title: 'core/Loading',
+  args: { ...defaults },
+};

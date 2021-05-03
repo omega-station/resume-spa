@@ -1,11 +1,11 @@
 import React from 'react';
 import { QueryResult, useQuery } from 'react-apollo';
+import GQL_QUERY from '../../../utility/graphql/query';
 import { heading, subheading } from '../../core/Masthead/ascii';
 import Error from '../Error';
 import Loading from '../Loading';
 import defaults from './defaults';
 import { Props } from './definition';
-import GQL_QUERY from '../../../utility/graphql/query';
 import StyledMasthead from './style';
 
 const MenuPage = (props: Props): JSX.Element => {
@@ -19,7 +19,7 @@ const MenuPage = (props: Props): JSX.Element => {
 
   return (
     <StyledMasthead>
-      {settings !== null && isAscii === false ? (
+      {settings && isAscii === false ? (
         <>
           <h1>{settings.title}</h1>
           <h2>{settings.description}</h2>

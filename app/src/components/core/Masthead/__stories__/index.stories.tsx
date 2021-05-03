@@ -1,15 +1,20 @@
-import { boolean, withKnobs } from '@storybook/addon-knobs';
-import { storiesOf } from '@storybook/react';
 import React from 'react';
 import Masthead from '..';
-import { withProvider } from '../../../../utility/apollo';
+import { ApolloProvider, client } from '../../../../utility/apollo';
 import defaults from '../defaults';
 
-storiesOf('core/Masthead', module)
-  .addDecorator(withKnobs)
-  .addDecorator(withProvider)
-  .add('default', () => <Masthead />)
-  .add('withKnobs', () => {
-    const isAscii: boolean = boolean('Is Ascii?', defaults.isAscii as boolean);
-    return <Masthead isAscii={isAscii} />;
-  });
+export const WithArgs = (args: any) => <Masthead {...args} />;
+WithArgs.storyName = 'with Controls';
+
+export default {
+  component: Masthead,
+  title: 'core/Masthead',
+  args: { ...defaults },
+  decorators: [
+    (Story: Function) => (
+      <ApolloProvider client={client}>
+        <Story />
+      </ApolloProvider>
+    ),
+  ],
+};

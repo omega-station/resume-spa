@@ -1,5 +1,18 @@
-import { storiesOf } from '@storybook/react';
 import React from 'react';
 import Footer from '..';
+import { ApolloProvider, client } from '../../../../../../utility/apollo';
 
-storiesOf('page/Page/PageType2/Footer', module).add('default', () => <Footer />);
+export const Default = () => <Footer />;
+Default.storyName = 'default';
+
+export default {
+  component: Footer,
+  title: 'page/Page/PageType2/Footer',
+  decorators: [
+    (Story: Function) => (
+      <ApolloProvider client={client}>
+        <Story />
+      </ApolloProvider>
+    ),
+  ],
+};

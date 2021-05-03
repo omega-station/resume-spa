@@ -43,13 +43,11 @@ const Section = (props: Props): JSX.Element => {
   const handleWaypointEnter = (): void => {
     refSection.current?.classList.add('waypoint');
     setWaypoint(true);
-    // console.log('handleWaypointEnter', refSection.current?.classList);
   };
 
   const handleWaypointLeave = (): void => {
     refSection.current?.classList.remove('waypoint');
     setWaypoint(false);
-    // console.log('handleWaypointLeave', refSection.current?.classList);
   };
 
   if (loading) return <Loading />;
@@ -57,15 +55,15 @@ const Section = (props: Props): JSX.Element => {
 
   const heading: string = getHeadings(data)[section as string];
 
-  let Section: (props: Props) => JSX.Element = SectionDefault;
+  let SectionComponent: (props: Props) => JSX.Element = SectionDefault;
   if (section === _section[2] || section === _section[3]) {
-    Section = SectionHistory;
+    SectionComponent = SectionHistory;
   } else if (section === _section[1]) {
-    Section = SectionSkillset;
+    SectionComponent = SectionSkillset;
   }
 
   return (
-    <Waypoint fireOnRapidScroll={true} onEnter={handleWaypointEnter} onLeave={handleWaypointLeave} bottomOffset="30%">
+    <Waypoint fireOnRapidScroll={true} onEnter={handleWaypointEnter} onLeave={handleWaypointLeave} bottomOffset="20%">
       <StyledSection id={section} className={`section-${section}`} ref={refSection}>
         {hasEnhancedHeading ? (
           <h2>
@@ -75,7 +73,7 @@ const Section = (props: Props): JSX.Element => {
         ) : (
           <h2>{heading}</h2>
         )}
-        <Section
+        <SectionComponent
           pagetype={pagetype}
           section={section}
           isWaypoint={isWaypoint}

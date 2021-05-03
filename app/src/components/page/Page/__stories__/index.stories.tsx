@@ -1,27 +1,27 @@
-import { optionsKnob as options, withKnobs } from '@storybook/addon-knobs';
-import { storiesOf } from '@storybook/react';
 import React from 'react';
-// import StoryRouter from 'storybook-react-router';
 import Page from '..';
-import { withProvider } from '../../../../utility/apollo';
-import defaults from '../defaults';
+import { ApolloProvider, client } from '../../../../utility/apollo';
 
-storiesOf('page/Page', module)
-  // .addDecorator(StoryRouter())
-  .addDecorator(withKnobs)
-  .addDecorator(withProvider)
-  .add('default', () => <Page type={defaults.type} />)
-  .add('withKnobs', () => {
-    const type: string = options(
-      'Type',
-      {
-        One: '1',
-        Two: '2',
-        Three: '3',
-        Four: '4',
+export const WithArgs = (args: any) => <Page {...args} />;
+WithArgs.storyName = 'with Controls';
+
+export default {
+  component: Page,
+  title: 'page/Page',
+  // args: { ...defaults },
+  argTypes: {
+    type: {
+      control: {
+        type: 'inline-radio',
+        options: ['1', '2', '3', '4'],
       },
-      (defaults.type as number).toString(),
-      { display: 'inline-radio' }
-    );
-    return <Page type={parseInt(type)} />;
-  });
+    },
+  },
+  decorators: [
+    (Story: Function) => (
+      <ApolloProvider client={client}>
+        <Story />
+      </ApolloProvider>
+    ),
+  ],
+};

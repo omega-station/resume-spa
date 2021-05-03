@@ -62,8 +62,13 @@ const StyledSection = styled.div`
 
           span {
             &:first-of-type {
-              min-width: 120px;
-              max-width: 120px;
+              min-width: 100px;
+              max-width: 100px;
+
+              @media (min-width: ${viewport.tablet.portrait[1]}) {
+                min-width: 130px;
+                max-width: 130px;
+              }
             }
           }
         }

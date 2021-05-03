@@ -8,10 +8,16 @@ import defaults from './defaults';
 import { PageProps, Props } from './definition';
 import StyledNav from './style';
 
+interface Location {
+  from: {
+    pathname: string;
+  };
+}
+
 const MenuPage = (props: Props): JSX.Element => {
   const { items }: Props = { ...defaults, ...props };
   const { data, loading, error }: QueryResult = useQuery(GQL_QUERY.PAGES);
-  const location: any = useLocation();
+  const location = useLocation<Location>();
 
   if (loading) return <Loading />;
   if (error) return <Error />;

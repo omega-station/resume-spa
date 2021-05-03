@@ -4,7 +4,7 @@
 
 import { useEffect, useState } from 'react';
 
-const useAnimateValue = (start: number, end: number, duration: number, delay: number) => {
+const useAnimateValue = (start: number, end: number, delay: number, duration: number) => {
   const [countUp, setCountUp] = useState(0);
 
   useEffect(() => {

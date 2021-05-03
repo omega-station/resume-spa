@@ -1,24 +1,29 @@
-import { number, withKnobs } from '@storybook/addon-knobs';
-import { storiesOf } from '@storybook/react';
 import React from 'react';
-// import StoryRouter from 'storybook-react-router';
 import Header from '..';
-import { withProvider } from '../../../../../../utility/apollo';
-import defaults from '../defaults';
+import { ApolloProvider, client } from '../../../../../../utility/apollo';
 
-storiesOf('page/Page/PageType3/Header', module)
-  // .addDecorator(StoryRouter())
-  .addDecorator(withKnobs)
-  .addDecorator(withProvider)
-  .add('default', () => (
-    <Header section={defaults.section} isMenuOpen={defaults.isMenuOpen} onClickMenuItem={defaults.onClickMenuItem} onClickMenuToggle={defaults.onClickMenuToggle} />
-  ))
-  .add('withKnobs', () => {
-    const section: number = number('Section', defaults.section, {
-      range: true,
-      min: 0,
-      max: 6,
-      step: 1,
-    });
-    return <Header section={section} isMenuOpen={defaults.isMenuOpen} onClickMenuItem={defaults.onClickMenuItem} onClickMenuToggle={defaults.onClickMenuToggle} />;
-  });
+export const WithArgs = (args: any) => <Header {...args} />;
+WithArgs.storyName = 'with Controls';
+
+export default {
+  component: Header,
+  title: 'page/Page/PageType3/Header',
+  argTypes: {
+    section: {
+      defaultValue: 0,
+      control: {
+        type: 'inline-radio',
+        options: Array(7)
+          .fill(0)
+          .map((v, i) => i),
+      },
+    },
+  },
+  decorators: [
+    (Story: Function) => (
+      <ApolloProvider client={client}>
+        <Story />
+      </ApolloProvider>
+    ),
+  ],
+};

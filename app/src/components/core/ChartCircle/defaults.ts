@@ -1,10 +1,10 @@
 import { Props } from './definition';
 
 const defaults: Props = {
-  isWaypoint: false,
   index: 0,
   label: '',
   percent: 100,
+  duration: 1500,
 };
 
 export default defaults;

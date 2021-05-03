@@ -5,7 +5,7 @@
   src: url('../fonts/FixedsysExcelsior300.woff') format('woff');
 }
 
-@font-face {
+/* @font-face {
   font-family: 'Less Perfect DOS VGA';
   src: url('../fonts/LessPerfectDOSVGA.woff2') format('woff2'), url('../fonts/LessPerfectDOSVGA.woff') format('woff');
   font-weight: normal;
@@ -17,4 +17,4 @@
   src: url('../fonts/MorePerfectDOSVGA.woff2') format('woff2'), url('../fonts/MorePerfectDOSVGA.woff') format('woff');
   font-weight: normal;
   font-style: normal;
-}
+} */

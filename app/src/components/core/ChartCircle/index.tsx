@@ -6,16 +6,16 @@ import { Props } from './definition';
 import StyledChartCircle from './style';
 
 const ChartCircle = (props: Props) => {
-  const { index, label, percent }: Props = { ...defaults, ...props };
-  const animation: { [key: string]: string | number } = {
+  const { index, label, percent, duration }: Props = { ...defaults, ...props };
+  const animation: { [key: string]: number | string } = {
     key: `${label.replace(/[ +]+/g, '-')}-${index}`,
-    percent,
     delay: _.round(index * 0.275, 2) * 1000,
-    duration: 1500,
+    duration: duration as number,
     offset: 3,
+    percent,
   };
 
-  const countUp = useAnimateValue(0, percent, animation.duration as number, animation.delay as number);
+  const countUp = useAnimateValue(0, percent, animation.delay as number, animation.duration as number);
 
   return (
     <StyledChartCircle animation={animation}>

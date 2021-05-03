@@ -1,18 +1,28 @@
-import { select, withKnobs } from '@storybook/addon-knobs';
-import { storiesOf } from '@storybook/react';
-import _ from 'lodash';
 import React from 'react';
 import Section from '..';
 import { getHeadings } from '../../../../utility';
-import { withProvider } from '../../../../utility/apollo';
-import { section as _section } from '../../../../utility/constant';
+import { ApolloProvider, client } from '../../../../utility/apollo';
 import { data } from '../../../../utility/graphql/data';
 
-storiesOf('core/Section', module)
-  .addDecorator(withKnobs)
-  .addDecorator(withProvider)
-  .add('default', () => <Section pagetype={0} section={_section[0]} />)
-  .add('withKnobs', () => {
-    const section: string = select('Section Name', _.invert(getHeadings(data)), _section[0]);
-    return <Section pagetype={0} section={section} />;
-  });
+export const WithArgs = (args: any) => <Section {...args} />;
+WithArgs.storyName = 'with Controls';
+
+export default {
+  component: Section,
+  title: 'core/Section',
+  argTypes: {
+    section: {
+      control: {
+        type: 'select',
+        options: Object.keys(getHeadings(data)),
+      },
+    },
+  },
+  decorators: [
+    (Story: Function) => (
+      <ApolloProvider client={client}>
+        <Story />
+      </ApolloProvider>
+    ),
+  ],
+};
