@@ -1,8 +1,8 @@
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
-import { color, viewport } from '../../../utility/constant';
-import { transition } from '../../../utility/mixin';
-import { animColorCycle, animOctoarm } from '../../../utility/mixin/anim';
+import { color, viewport } from 'utility/constant';
+import { transition } from 'utility/mixin';
+import { animColorCycle, animOctoarm } from 'utility/mixin/anim';
 import { Props } from './definition';
 
 const StyledCorner = styled.a<Props>`
@@ -32,20 +32,20 @@ const StyledCorner = styled.a<Props>`
       transform: rotate(45deg) scale(0.8);
 
       ${props.isLeft &&
-        css`
-          transform: rotate(-45deg) scale(0.8);
-        `}
+      css`
+        transform: rotate(-45deg) scale(0.8);
+      `}
 
       ${props.isSmall &&
-        css`
-          transform: rotate(45deg) scale(0.6) translate(0, -30px);
-        `}
+      css`
+        transform: rotate(45deg) scale(0.6) translate(0, -30px);
+      `}
 
       ${props.isLeft &&
-        props.isSmall &&
-        css`
-          transform: rotate(-45deg) scale(0.6) translate(0, -30px);
-        `}
+      props.isSmall &&
+      css`
+        transform: rotate(-45deg) scale(0.6) translate(0, -30px);
+      `}
 
       @media (min-width: ${viewport.mobile[2]}) {
         &:hover svg path {
@@ -60,10 +60,10 @@ const StyledCorner = styled.a<Props>`
       right: 15px;
 
       ${props.isLeft &&
-        css`
-          left: 15px;
-          right: auto;
-        `}
+      css`
+        left: 15px;
+        right: auto;
+      `}
     }
 
     &.mode-circle,
@@ -94,10 +94,10 @@ const StyledCorner = styled.a<Props>`
       right: 24px;
 
       ${props.isLeft &&
-        css`
-          left: 24px;
-          right: auto;
-        `}
+      css`
+        left: 24px;
+        right: auto;
+      `}
 
       span {
         transform: scale(1.05);
@@ -115,11 +115,11 @@ const StyledCorner = styled.a<Props>`
       border: 0 !important;
 
       ${props.isLeft &&
-        css`
-          left: 0;
-          right: auto;
-          transform: scale(-1, 1);
-        `}
+      css`
+        left: 0;
+        right: auto;
+        transform: scale(-1, 1);
+      `}
 
       svg {
         ${transition('width')}
@@ -127,9 +127,9 @@ const StyledCorner = styled.a<Props>`
         width: 60px;
 
         ${props.isSmall &&
-          css`
-            width: 80px !important;
-          `}
+        css`
+          width: 80px !important;
+        `}
 
         @media (min-width: ${viewport.mobile[3]}) {
           width: 100px;

@@ -1,9 +1,9 @@
 import styled from '@emotion/styled';
-import { viewport } from '../../../../../utility/constant';
-import { border } from '../../../../../utility/mixin';
+import { viewport } from 'utility/constant';
+import { border } from 'utility/mixin';
 
 const StyledFooter = styled.footer`
-  margin: 120px 0 50px;
+  padding: 80px 0 40px;
   text-align: center;
 
   > div {

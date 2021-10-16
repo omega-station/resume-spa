@@ -1,15 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './css/index.css';
-import App from './components/core/App';
+import App from 'components/core/App';
 import * as serviceWorker from './serviceWorker';
 
 const elRoot = document.getElementById('root');
 ReactDOM.render(<App />, elRoot);
 
 if (module.hot) {
-  module.hot.accept('./components/core/App', () => {
-    const NextApp = require('./components/core/App').default;
+  module.hot.accept('components/core/App', () => {
+    const NextApp = require('components/core/App').default;
     ReactDOM.render(<NextApp />, elRoot);
   });
 }

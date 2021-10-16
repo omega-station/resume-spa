@@ -1,6 +1,6 @@
 import React from 'react';
-import Masthead from '../../../../core/Masthead';
-import MenuPage from '../../../../core/MenuPage';
+import Masthead from 'components/core/Masthead';
+import MenuPage from 'components/core/MenuPage';
 import StyledHeader from './style';
 
 const Header = (): JSX.Element => {

@@ -4,8 +4,8 @@ import React from 'react';
 import { MemoryRouter } from 'react-router-dom';
 import { ParallaxProvider } from 'react-scroll-parallax';
 import Header from '..';
-import { cache } from '../../../../../../utility/apollo';
-import mocks from '../../../../../../utility/graphql/mocks';
+import { cache } from 'utility/apollo';
+import mocks from 'utility/graphql/mocks';
 
 afterEach(cleanup);
 

@@ -2,9 +2,9 @@ import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 import WebFont from 'webfontloader';
 import { getRGBA } from '../../../utility';
-import { color, viewport } from '../../../utility/constant';
-import { boxShadow, defaults, padding, transition } from '../../../utility/mixin';
-import { animListItem, animSlideUp } from '../../../utility/mixin/anim';
+import { color, viewport } from 'utility/constant';
+import { boxShadow, defaults, padding, transition } from 'utility/mixin';
+import { animListItem, animSlideUp } from 'utility/mixin/anim';
 
 WebFont.load({
   google: {
@@ -35,8 +35,7 @@ export const anchor = css`
 
 const callout = {
   defaults: css`
-    ${boxShadow(0, 1, 4, 0, 0.2)};
-    ${transition('transform', 400)};
+    ${transition('box-shadow', 400)};
     margin: 0;
     padding: 10px;
     background-color: ${color.grey.light};
@@ -48,7 +47,7 @@ const callout = {
     }
 
     &:hover {
-      transform: scale(1.02) translateY(0);
+      ${boxShadow(0, 2, 4, 1, 0.15)};
     }
   `,
   margin: '30px',

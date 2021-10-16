@@ -2,9 +2,9 @@ import { MockedProvider } from '@apollo/react-testing';
 import { cleanup, render } from '@testing-library/react';
 import React from 'react';
 import Masthead from '..';
-import { cache } from '../../../../utility/apollo';
+import { cache } from 'utility/apollo';
 import defaults from '../defaults';
-import mocks from '../../../../utility/graphql/mocks';
+import mocks from 'utility/graphql/mocks';
 
 afterEach(cleanup);
 

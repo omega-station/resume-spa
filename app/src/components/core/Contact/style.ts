@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { viewport } from '../../../utility/constant';
+import { viewport } from 'utility/constant';
 import { PropsStyled as Props } from './definition';
 
 const StyledContact = styled.div<Props>`

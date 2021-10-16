@@ -1,9 +1,9 @@
+import Error from 'components/core/Error';
+import Loading from 'components/core/Loading';
 import React from 'react';
 import { QueryResult, useQuery } from 'react-apollo';
 import Helmet from 'react-helmet';
-import GQL_QUERY from '../../../utility/graphql/query';
-import Error from '../../core/Error';
-import Loading from '../../core/Loading';
+import GQL_QUERY from 'utility/graphql/query';
 import PageType1 from '../PageType1';
 import PageType2 from '../PageType2';
 import PageType3 from '../PageType3';

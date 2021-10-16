@@ -1,7 +1,7 @@
 import React from 'react';
 import { QueryResult, useQuery } from 'react-apollo';
 import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
-import { GQL_QUERY } from '../../../utility/graphql';
+import { GQL_QUERY } from 'utility/graphql';
 import Page from '../../page/Page';
 import { Props as PropsPage } from '../../page/Page/definition';
 import Error from '../Error';

@@ -3,8 +3,8 @@ import { cleanup, render } from '@testing-library/react';
 import React from 'react';
 import { MemoryRouter } from 'react-router-dom';
 import Router from '..';
-import { cache } from '../../../../utility/apollo';
-import mocks from '../../../../utility/graphql/mocks';
+import { cache } from 'utility/apollo';
+import mocks from 'utility/graphql/mocks';
 
 afterEach(cleanup);
 

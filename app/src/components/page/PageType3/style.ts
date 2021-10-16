@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import WebFont from 'webfontloader';
-import { color, viewport } from '../../../utility/constant';
-import { boxShadow, defaults, padding, transition } from '../../../utility/mixin';
+import { color, viewport } from 'utility/constant';
+import { boxShadow, defaults, padding, transition } from 'utility/mixin';
 
 WebFont.load({
   google: {

@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
-import { boxShadow, padding } from '../../../../../utility/mixin';
-import { color, viewport } from '../../../../../utility/constant';
+import { boxShadow, padding } from 'utility/mixin';
+import { color, viewport } from 'utility/constant';
 
 const StyledFooter = styled.footer`
   ${padding()};

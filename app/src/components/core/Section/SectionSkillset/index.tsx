@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { useQuery } from 'react-apollo';
 import { shuffleArray } from '../../../../utility';
-import Error from '../../../core/Error';
+import Error from 'components/core/Error';
 import ChartCircle from '../../ChartCircle';
 import Loading from '../../Loading';
 import defaults from '../defaults';

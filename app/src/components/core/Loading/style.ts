@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { padding } from '../../../utility/mixin';
+import { padding } from 'utility/mixin';
 
 const StyledLoading = styled.div`
   ${padding('15px', '35px')};

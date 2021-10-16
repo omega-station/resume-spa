@@ -3,7 +3,7 @@ import { cleanup, render } from '@testing-library/react';
 import React from 'react';
 import { MemoryRouter } from 'react-router-dom';
 import Header from '..';
-import { cache } from '../../../../../../utility/apollo';
+import { cache } from 'utility/apollo';
 import defaults from '../defaults';
 import mocks from '../mocks';
 
@@ -14,12 +14,7 @@ describe('Header', () => {
     const component = render(
       <MockedProvider mocks={mocks} addTypename={false} cache={cache}>
         <MemoryRouter>
-          <Header
-            section={defaults.section}
-            isMenuOpen={defaults.isMenuOpen}
-            onClickMenuItem={defaults.onClickMenuItem}
-            onClickMenuToggle={defaults.onClickMenuToggle}
-          />
+          <Header section={defaults.section} isMenuOpen={defaults.isMenuOpen} onClickMenuItem={defaults.onClickMenuItem} onClickMenuToggle={defaults.onClickMenuToggle} />
         </MemoryRouter>
       </MockedProvider>
     );

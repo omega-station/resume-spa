@@ -1,5 +1,5 @@
 import React from 'react';
-import { ApolloProvider, client } from '../../../utility/apollo';
+import { ApolloProvider, client } from 'utility/apollo';
 import Router from '../Router';
 import { ParallaxProvider } from 'react-scroll-parallax';
 

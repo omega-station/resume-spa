@@ -1,8 +1,8 @@
 import React from 'react';
 import Section from '..';
 import { getHeadings } from '../../../../utility';
-import { ApolloProvider, client } from '../../../../utility/apollo';
-import { data } from '../../../../utility/graphql/data';
+import { ApolloProvider, client } from 'utility/apollo';
+import { data } from 'utility/graphql/data';
 
 export const WithArgs = (args: any) => <Section {...args} />;
 WithArgs.storyName = 'with Controls';

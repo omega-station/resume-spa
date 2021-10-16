@@ -1,33 +1,19 @@
+import Error from 'components/core/Error';
+import Loading from 'components/core/Loading';
+import MenuPage from 'components/core/MenuPage';
 import React from 'react';
 import { QueryResult, useQuery } from 'react-apollo';
-import { getImage } from '../../../../../utility';
-import FontAwesomeIcon from '../../../../../utility/font-awesome';
-import Error from '../../../../core/Error';
-import Loading from '../../../../core/Loading';
-import MenuPage from '../../../../core/MenuPage';
+import Helmet from 'react-helmet';
+import { getImage } from 'utility';
+import FontAwesomeIcon from 'utility/font-awesome';
 import defaults from './defaults';
 import { Props } from './definition';
 import { GQL_QUERY } from './graphql';
 import StyledHeader from './style';
 
-// const preload = (images: any[], i: number = 0) => {
-//   if (images?.length > i) {
-//     const img = new Image();
-//     img.onload = () => {
-//       preload(images, i + 1);
-//     };
-//     img.src = images[i].mediaItemUrl;
-//     console.log(img.src);
-//   }
-// };
-
 const Header = (props: Props): JSX.Element => {
   const { section, isMenuOpen, onClickMenuItem, onClickMenuToggle } = { ...defaults, ...props };
   const { data, loading, error }: QueryResult = useQuery(GQL_QUERY);
-
-  // useEffect(() => {
-  //   preload(data?.options.pageContent.pagetype3Images);
-  // }, [data]);
 
   if (loading) return <Loading />;
   if (error) return <Error />;
@@ -37,31 +23,39 @@ const Header = (props: Props): JSX.Element => {
   const sections: any = data.options.resume.metaSections;
 
   return (
-    <StyledHeader isMenuOpen={isMenuOpen}>
-      <MenuPage />
-      <div>
+    <>
+      <Helmet>
+        {data?.options.pageContent.pagetype3Images.map((image: { [key: string]: string }) => {
+          // @ts-ignore
+          return <link rel="preload" as="image" imagesrcset={image.srcSet} imagesizes={image.sizes}></link>;
+        })}
+      </Helmet>
+      <StyledHeader isMenuOpen={isMenuOpen}>
+        <MenuPage />
         <div>
-          <div className="overlay"></div>
-          <div className="copy">
-            <h1>{settings.title}</h1>
-            <h2>{settings.description}</h2>
+          <div>
+            <div className="overlay"></div>
+            <div className="copy">
+              <h1>{settings.title}</h1>
+              <h2>{settings.description}</h2>
+            </div>
+            {getImage(image, `${settings.title} • ${settings.description}`)}
           </div>
-          {getImage(image, `${settings.title} • ${settings.description}`)}
         </div>
-      </div>
-      <nav>
-        <ul>
-          {sections.map((item: { [key: string]: string }, i: number) => (
-            <li key={item.name} data-section={item.name} className={i === section ? 'is-current' : ''} onClick={() => onClickMenuItem(i)}>
-              {item.heading}
+        <nav>
+          <ul>
+            {sections.map((item: { [key: string]: string }, i: number) => (
+              <li key={item.name} data-section={item.name} className={i === section ? 'is-current' : ''} onClick={() => onClickMenuItem(i)}>
+                {item.heading}
+              </li>
+            ))}
+            <li className="item-toggle" onClick={() => onClickMenuToggle()}>
+              <FontAwesomeIcon icon={['fas', 'ellipsis-v']} />
             </li>
-          ))}
-          <li className="item-toggle" onClick={() => onClickMenuToggle()}>
-            <FontAwesomeIcon icon={['fas', 'ellipsis-v']} />
-          </li>
-        </ul>
-      </nav>
-    </StyledHeader>
+          </ul>
+        </nav>
+      </StyledHeader>
+    </>
   );
 };
 

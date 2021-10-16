@@ -1,7 +1,7 @@
 import React from 'react';
 import { useQuery } from 'react-apollo';
-import { section as _section } from '../../../../utility/constant';
-import Error from '../../../core/Error';
+import { section as _section } from 'utility/constant';
+import Error from 'components/core/Error';
 import Loading from '../../Loading';
 import { Props } from '../definition';
 import defaults from './defaults';

@@ -1,5 +1,5 @@
 import gql from 'graphql-tag';
-import GQL_FRAGMENT from '../../../utility/graphql/fragment';
+import GQL_FRAGMENT from 'utility/graphql/fragment';
 
 const GQL_QUERY = gql`
   query {

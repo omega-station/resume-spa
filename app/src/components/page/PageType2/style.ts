@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
-import { viewport } from '../../../utility/constant';
-import { border, defaults, padding } from '../../../utility/mixin';
+import { viewport } from 'utility/constant';
+import { border, defaults, padding } from 'utility/mixin';
 
 const StyledPage = styled.div`
   ${defaults('page', viewport.tablet.portrait[0])};

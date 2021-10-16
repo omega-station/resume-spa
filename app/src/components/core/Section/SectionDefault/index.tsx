@@ -1,9 +1,9 @@
 import React from 'react';
 import { useQuery } from 'react-apollo';
 import { getIconProp, getImage } from '../../../../utility';
-import { section as _section } from '../../../../utility/constant';
-import FontAwesomeIcon from '../../../../utility/font-awesome';
-import Error from '../../../core/Error';
+import { section as _section } from 'utility/constant';
+import FontAwesomeIcon from 'utility/font-awesome';
+import Error from 'components/core/Error';
 import Link from '../../Link';
 import Loading from '../../Loading';
 import { Props } from '../definition';

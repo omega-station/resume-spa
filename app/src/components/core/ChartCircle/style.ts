@@ -1,6 +1,6 @@
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
-import { color } from '../../../utility/constant';
+import { color } from 'utility/constant';
 import { PropsStyled as Props } from './definition';
 
 const getColor = (percent: number): string => {

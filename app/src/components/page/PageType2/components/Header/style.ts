@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
-import { color, viewport } from '../../../../../utility/constant';
-import { border, transition } from '../../../../../utility/mixin';
+import { color, viewport } from 'utility/constant';
+import { border, transition } from 'utility/mixin';
 
 const StyledHeader = styled.header`
   > nav {
@@ -92,8 +92,8 @@ const StyledHeader = styled.header`
         margin: 12% auto 6%;
 
         ul {
-
-          &, li {
+          &,
+          li {
             display: flex;
             flex-direction: column;
             justify-content: center;

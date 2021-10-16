@@ -1,4 +1,4 @@
-import { getProficiencyString as getProf } from '../../../core/Section/SectionSkillset';
+import { getProficiencyString as getProf } from 'components/core/Section/SectionSkillset';
 
 export const getTyped = (section: number, resume: any): { [key: string]: string } => {
   switch (section) {
@@ -66,9 +66,7 @@ const getSkillset = (resume: any): string[] => {
   const dash = (count: number): string => `&ndash;`.repeat(count);
   const header = (value1: string, value2: string): string => `<div class="header"><span>${value1}</span><span>${value2}</span></div>`;
 
-  const areas = resume.skillsetAreas
-    .map((item: { area: string; skills: string }) => `<div><span>${item.area}:</span><span>${item.skills}</span></div>`)
-    .join('');
+  const areas = resume.skillsetAreas.map((item: { area: string; skills: string }) => `<div><span>${item.area}:</span><span>${item.skills}</span></div>`).join('');
 
   const proficiency = `${header('Skill', 'Proficiency')}${header(dash(5), dash(11))}
     ${resume.skillsetProficiency

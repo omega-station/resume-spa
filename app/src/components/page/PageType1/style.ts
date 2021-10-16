@@ -1,10 +1,13 @@
 import styled from '@emotion/styled';
 import { getRGBA } from '../../../utility';
-import { color, viewport } from '../../../utility/constant';
-import { backgroundStriped, defaults, padding, transition } from '../../../utility/mixin';
+import { color, viewport } from 'utility/constant';
+import { backgroundStriped, defaults, padding, transition } from 'utility/mixin';
 
 const StyledPage = styled.div`
   ${defaults()};
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 
   * {
     color: ${color.green.medium};

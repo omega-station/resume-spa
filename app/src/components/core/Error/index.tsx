@@ -1,6 +1,6 @@
 import React from 'react';
 import { getIconProp } from '../../../utility';
-import FontAwesomeIcon from '../../../utility/font-awesome';
+import FontAwesomeIcon from 'utility/font-awesome';
 import { Props } from './definition';
 import StyledError from './style';
 

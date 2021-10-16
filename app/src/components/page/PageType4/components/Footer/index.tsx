@@ -1,10 +1,10 @@
 import React from 'react';
 import { QueryResult, useQuery } from 'react-apollo';
 import { ParallaxBanner, ParallaxProvider } from 'react-scroll-parallax';
-import { useWindowWidth } from '../../../../../utility/hook';
-import Contact from '../../../../core/Contact';
-import Error from '../../../../core/Error';
-import Loading from '../../../../core/Loading';
+import { useWindowWidth } from 'utility/hook';
+import Contact from 'components/core/Contact';
+import Error from 'components/core/Error';
+import Loading from 'components/core/Loading';
 import { GQL_QUERY } from './graphql';
 import StyledFooter from './style';
 

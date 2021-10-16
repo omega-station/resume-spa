@@ -1,6 +1,6 @@
 import React from 'react';
 import SectionSkillset from '..';
-import { ApolloProvider, client } from '../../../../../utility/apollo';
+import { ApolloProvider, client } from 'utility/apollo';
 
 export const Default = () => <SectionSkillset />;
 Default.storyName = 'default';

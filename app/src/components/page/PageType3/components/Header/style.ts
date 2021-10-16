@@ -1,8 +1,8 @@
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 import { getRGBA } from '../../../../../utility';
-import { viewport, color } from '../../../../../utility/constant';
-import { boxShadow, transition } from '../../../../../utility/mixin';
+import { viewport, color } from 'utility/constant';
+import { boxShadow, transition } from 'utility/mixin';
 import { PropsStyled } from './definition';
 
 const StyledHeader = styled.header<PropsStyled>`

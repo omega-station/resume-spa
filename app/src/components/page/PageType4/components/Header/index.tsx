@@ -1,11 +1,11 @@
 import React from 'react';
 import { QueryResult, useQuery } from 'react-apollo';
 import { ParallaxBanner } from 'react-scroll-parallax';
-import { useWindowWidth } from '../../../../../utility/hook';
-import Error from '../../../../core/Error';
-import Loading from '../../../../core/Loading';
-import Masthead from '../../../../core/Masthead';
-import MenuPage from '../../../../core/MenuPage';
+import { useWindowWidth } from 'utility/hook';
+import Error from 'components/core/Error';
+import Loading from 'components/core/Loading';
+import Masthead from 'components/core/Masthead';
+import MenuPage from 'components/core/MenuPage';
 import { GQL_QUERY } from './graphql';
 import StyledHeader from './style';
 

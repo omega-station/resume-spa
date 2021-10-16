@@ -1,12 +1,12 @@
 import React, { Fragment } from 'react';
 import { QueryResult, useQuery } from 'react-apollo';
 import { getImage, getRandomElement } from '../../../../../utility';
-import Contact from '../../../../core/Contact';
-import Error from '../../../../core/Error';
-import Loading from '../../../../core/Loading';
-import Masthead from '../../../../core/Masthead';
-import MenuPage from '../../../../core/MenuPage';
-import MenuSection from '../../../../core/MenuSection';
+import Contact from 'components/core/Contact';
+import Error from 'components/core/Error';
+import Loading from 'components/core/Loading';
+import Masthead from 'components/core/Masthead';
+import MenuPage from 'components/core/MenuPage';
+import MenuSection from 'components/core/MenuSection';
 import { GQL_QUERY } from './graphql';
 import StyledHeader from './style';
 

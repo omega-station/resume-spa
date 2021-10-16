@@ -1,7 +1,7 @@
 import React from 'react';
 import { QueryResult, useQuery } from 'react-apollo';
-import { gqlDefault } from '../../../utility/graphql/definition';
-import Error from '../../core/Error';
+import { gqlDefault } from 'utility/graphql/definition';
+import Error from 'components/core/Error';
 import Loading from '../Loading';
 import defaults from './defaults';
 import { Props } from './definition';

@@ -1,6 +1,6 @@
 import React from 'react';
 import Page from '..';
-import { ApolloProvider, client } from '../../../../utility/apollo';
+import { ApolloProvider, client } from 'utility/apollo';
 
 export const WithArgs = (args: any) => <Page {...args} />;
 WithArgs.storyName = 'with Controls';

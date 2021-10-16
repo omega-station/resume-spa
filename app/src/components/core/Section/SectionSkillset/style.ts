@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { color } from '../../../../utility/constant';
+import { color } from 'utility/constant';
 
 const StyledSection = styled.div`
   .skillset {

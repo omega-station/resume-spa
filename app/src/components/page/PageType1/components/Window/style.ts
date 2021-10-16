@@ -1,8 +1,8 @@
 import { css } from '@emotion/core';
 import styled from '@emotion/styled';
 import { getRGBA } from '../../../../../utility';
-import { viewport, color } from '../../../../../utility/constant';
-import { backgroundStriped } from '../../../../../utility/mixin';
+import { viewport, color } from 'utility/constant';
+import { backgroundStriped } from 'utility/mixin';
 import { StylesProps as Props } from './definition';
 
 const StyledWindow = styled.div<Props>`

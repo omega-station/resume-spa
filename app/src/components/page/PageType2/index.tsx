@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
-import { section } from '../../../utility/constant';
-import GitHub from '../../core/GitHub';
-import Section from '../../core/Section';
+import { section } from 'utility/constant';
+import GitHub from 'components/core/GitHub';
+import Section from 'components/core/Section';
 import Cursor from './components/Cursor';
 import Footer from './components/Footer';
 import Header from './components/Header';

@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { getRGBA } from '../../../../../utility';
-import { color, viewport } from '../../../../../utility/constant';
-import { padding, transition } from '../../../../../utility/mixin';
+import { color, viewport } from 'utility/constant';
+import { padding, transition } from 'utility/mixin';
 import { anchor } from '../../style';
 import { PropsStyled as Props } from './definition';
 

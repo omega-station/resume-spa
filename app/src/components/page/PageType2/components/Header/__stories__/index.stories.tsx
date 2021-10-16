@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from '..';
-import { ApolloProvider, client } from '../../../../../../utility/apollo';
+import { ApolloProvider, client } from 'utility/apollo';
 
 export const Default = () => <Header />;
 Default.storyName = 'default';

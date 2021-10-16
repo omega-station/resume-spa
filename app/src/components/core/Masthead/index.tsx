@@ -1,7 +1,7 @@
 import React from 'react';
 import { QueryResult, useQuery } from 'react-apollo';
-import GQL_QUERY from '../../../utility/graphql/query';
-import { heading, subheading } from '../../core/Masthead/ascii';
+import GQL_QUERY from 'utility/graphql/query';
+import { heading, subheading } from 'components/core/Masthead/ascii';
 import Error from '../Error';
 import Loading from '../Loading';
 import defaults from './defaults';

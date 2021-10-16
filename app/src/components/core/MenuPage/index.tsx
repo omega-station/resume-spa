@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { QueryResult, useQuery } from 'react-apollo';
 import { Link, useLocation } from 'react-router-dom';
-import { GQL_QUERY } from '../../../utility/graphql';
+import { GQL_QUERY } from 'utility/graphql';
 import Error from '../Error';
 import Loading from '../Loading';
 import defaults from './defaults';

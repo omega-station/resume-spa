@@ -2,7 +2,7 @@ import { MockedProvider } from '@apollo/react-testing';
 import { cleanup, render } from '@testing-library/react';
 import React from 'react';
 import SectionSkillset from '..';
-import { cache } from '../../../../../utility/apollo';
+import { cache } from 'utility/apollo';
 import mocks from '../mocks';
 
 afterEach(cleanup);

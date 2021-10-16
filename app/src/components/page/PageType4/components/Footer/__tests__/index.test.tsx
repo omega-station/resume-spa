@@ -2,8 +2,8 @@ import { MockedProvider } from '@apollo/react-testing';
 import { cleanup, render } from '@testing-library/react';
 import React from 'react';
 import Footer from '..';
-import { cache } from '../../../../../../utility/apollo';
-import mocks from '../../../../../core/Contact/mocks';
+import { cache } from 'utility/apollo';
+import mocks from 'components/core/Contact/mocks';
 
 afterEach(cleanup);
 

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Contact from '../../../../core/Contact';
+import Contact from 'components/core/Contact';
 import StyledFooter from './style';
 
 const Footer = (): JSX.Element => {

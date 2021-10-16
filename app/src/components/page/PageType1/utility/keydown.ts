@@ -1,4 +1,4 @@
-import { Element, RefNumber, RefString } from '../../../../utility/definition';
+import { Element, RefNumber, RefString } from 'utility/definition';
 
 export const resetSection = (index: number, setSectionIndex: Function, setIsWindowOpen: Function): void => {
   setSectionIndex(index);

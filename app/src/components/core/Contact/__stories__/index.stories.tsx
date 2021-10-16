@@ -1,6 +1,6 @@
 import React from 'react';
 import Contact from '..';
-import { ApolloProvider, client } from '../../../../utility/apollo';
+import { ApolloProvider, client } from 'utility/apollo';
 import defaults from '../defaults';
 
 export const WithArgs = (args: any) => <Contact {...args} />;

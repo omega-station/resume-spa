@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { getIconProp } from '../../../utility';
-import FontAwesomeIcon from '../../../utility/font-awesome';
+import FontAwesomeIcon from 'utility/font-awesome';
 import defaults from './defaults';
 import { Props } from './definition';
 import StyledCorner from './style';
@@ -16,7 +16,18 @@ const GitHub = (props: Props) => {
   }, [isSmall]);
 
   return (
-    <StyledCorner className={`github-corner mode-${mode}`} isLeft={isLeft} isSmall={isSmall} aria-label={ariaLabel} color={color} fill={fill} href={url} mode={mode} target="_blank" rel="noopener noreferrer">
+    <StyledCorner
+      className={`github-corner mode-${mode}`}
+      isLeft={isLeft}
+      isSmall={isSmall}
+      aria-label={ariaLabel}
+      color={color}
+      fill={fill}
+      href={url}
+      mode={mode}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       {(mode === 'alternate' || mode === 'circle' || mode === 'square') && (
         <span>
           {mode === 'alternate' && <FontAwesomeIcon icon={getIconProp('fab-github-alt')} />}

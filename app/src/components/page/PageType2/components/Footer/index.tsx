@@ -1,8 +1,8 @@
 import React from 'react';
 import { QueryResult, useQuery } from 'react-apollo';
 import { getImage, getRandomElement } from '../../../../../utility';
-import Error from '../../../../core/Error';
-import Loading from '../../../../core/Loading';
+import Error from 'components/core/Error';
+import Loading from 'components/core/Loading';
 import { GQL_QUERY } from './graphql';
 import StyledFooter from './style';
 

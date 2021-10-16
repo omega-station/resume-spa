@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import { getRGBA } from '../../../../../utility';
-import { viewport, color } from '../../../../../utility/constant';
-import { backgroundStriped, padding, transition } from '../../../../../utility/mixin';
+import { viewport, color } from 'utility/constant';
+import { backgroundStriped, padding, transition } from 'utility/mixin';
 
 const StyledHeader = styled.header`
   width: 100%;
@@ -23,22 +23,12 @@ const StyledHeader = styled.header`
 
         @media (min-width: ${viewport.mobile[3]}) {
           &:first-of-type {
-            font-size: 0.725rem;
+            font-size: 0.8vw;
           }
 
           &:last-of-type {
             margin: -8px 0 0;
-            font-size: 0.825rem;
-          }
-        }
-
-        @media (min-width: ${viewport.desktop[2]}) {
-          &:first-of-type {
-            font-size: 1rem;
-          }
-
-          &:last-of-type {
-            font-size: 1.138rem;
+            font-size: 0.9vw;
           }
         }
       }

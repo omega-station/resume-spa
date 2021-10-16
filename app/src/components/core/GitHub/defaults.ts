@@ -1,4 +1,4 @@
-import { color } from '../../../utility/constant';
+import { color } from 'utility/constant';
 import { Props } from './definition';
 
 const defaults: Props = {

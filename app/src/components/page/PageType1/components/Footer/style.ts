@@ -1,11 +1,12 @@
 import styled from '@emotion/styled';
-import { viewport, color } from '../../../../../utility/constant';
-import { padding } from '../../../../../utility/mixin';
+import { viewport, color } from 'utility/constant';
+import { padding } from 'utility/mixin';
 
 const StyledFooter = styled.footer`
   ${padding('10px', '15px')};
   display: flex;
   align-items: center;
+  margin: auto 0 0;
   border-top: 3px solid ${color.green.medium};
 
   @media (min-width: ${viewport.desktop[3]}) {

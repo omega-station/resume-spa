@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-import { viewport } from '../../../utility/constant';
 
 const StyledMasthead = styled.div`
   .ascii {
@@ -18,7 +17,8 @@ const StyledMasthead = styled.div`
       display: none;
     }
 
-    @media (min-width: ${viewport.tablet.landscape[0]}) {
+    @media (min-width: 1360px) {
+      // TODO: Add to constants
       &.ascii-mobile {
         display: none;
       }

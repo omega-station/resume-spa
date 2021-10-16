@@ -1,6 +1,6 @@
 import React from 'react';
 import PageType3 from '..';
-import { ApolloProvider, client } from '../../../../utility/apollo';
+import { ApolloProvider, client } from 'utility/apollo';
 
 export const Default = () => <PageType3 />;
 Default.storyName = 'default';
