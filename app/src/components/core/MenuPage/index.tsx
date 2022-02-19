@@ -8,16 +8,10 @@ import defaults from './defaults';
 import { PageProps, Props } from './definition';
 import StyledNav from './style';
 
-interface Location {
-  from: {
-    pathname: string;
-  };
-}
-
 const MenuPage = (props: Props): JSX.Element => {
   const { items }: Props = { ...defaults, ...props };
   const { data, loading, error }: QueryResult = useQuery(GQL_QUERY.PAGES);
-  const location = useLocation<Location>();
+  const location = useLocation();
 
   if (loading) return <Loading />;
   if (error) return <Error />;
@@ -29,21 +23,19 @@ const MenuPage = (props: Props): JSX.Element => {
     <StyledNav>
       {visiblePages.length > 1 && (
         <ul className="menu-page">
-          {pages.map(
-            (item: PageProps, i: number): JSX.Element => {
-              const isCurrent: string = location.pathname.includes(item.name) ? 'is-current' : '';
-              const isSelected: string = i === 0 ? 'is-selected' : '';
-              return (
-                <Fragment key={i}>
-                  {item.isVisible && (
-                    <li className={`menu-page-${i} ${isCurrent} ${isSelected}`}>
-                      <Link to={`/${item.name}`}>{item.name}</Link>
-                    </li>
-                  )}
-                </Fragment>
-              );
-            }
-          )}
+          {pages.map((item: PageProps, i: number): JSX.Element => {
+            const isCurrent: string = location.pathname.includes(item.name) ? 'is-current' : '';
+            const isSelected: string = i === 0 ? 'is-selected' : '';
+            return (
+              <Fragment key={i}>
+                {item.isVisible && (
+                  <li className={`menu-page-${i} ${isCurrent} ${isSelected}`}>
+                    <Link to={`/${item.name}`}>{item.name}</Link>
+                  </li>
+                )}
+              </Fragment>
+            );
+          })}
           {items &&
             items.map(
               (item: JSX.Element, i: number): JSX.Element => (

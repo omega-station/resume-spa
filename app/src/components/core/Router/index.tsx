@@ -1,6 +1,6 @@
 import React from 'react';
 import { QueryResult, useQuery } from 'react-apollo';
-import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { GQL_QUERY } from 'utility/graphql';
 import Page from '../../page/Page';
 import { Props as PropsPage } from '../../page/Page/definition';
@@ -15,23 +15,18 @@ const Router = (): JSX.Element => {
 
   const pages: any = data && data.options.pages;
   const items: any = data && data.options.pages.items;
-  const frontpage: string = items && items[pages.pageFront - 1].name;
+  const frontpage: any = items && items[pages.pageFront - 1];
 
   return (
     <BrowserRouter>
-      <Switch>
+      <Routes>
+        <Route path="/" element={<Page name={frontpage.name} type={frontpage.type} />} />
         {items.map(
-          (item: PropsPage, i: number): JSX.Element => {
-            const { name, type }: PropsPage = item;
-            return (
-              <Route key={i} path={`/${name}`}>
-                <Page name={name} type={type} />
-              </Route>
-            );
-          }
+          (item: PropsPage, i: number): JSX.Element => (
+            <Route key={i} path={`/${item.name}`} element={<Page name={item.name} type={item.type} />} />
+          )
         )}
-        <Route render={() => <Redirect exact from="/" to={`/${frontpage}`} />} />
-      </Switch>
+      </Routes>
     </BrowserRouter>
   );
 };

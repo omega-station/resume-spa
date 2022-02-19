@@ -8,12 +8,11 @@ import Header from './components/Header';
 import StyledPage from './style';
 
 const PageType2 = (): JSX.Element => {
-  const cursor: Cursor = new Cursor();
-
   useEffect(() => {
+    const cursor: Cursor = new Cursor();
     cursor.create();
     return () => cursor.destroy();
-  }, [cursor]);
+  }, []);
 
   return (
     <StyledPage>
